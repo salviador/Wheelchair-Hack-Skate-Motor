@@ -1,0 +1,4823 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         13/Dec/2021  15:03:21
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\BLE_GATT_Client.c
+#    Command line                 =
+#        -f "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Debug\Obj\BLE_GATT_Client.o.rsp"
+#        ("C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\BLE_GATT_Client.c" -D USE_FULL_LL_DRIVER -D STEVAL_IDB011V1 -D
+#        CONFIG_DEVICE_BLUENRG_LP -D CONFIG_HW_SMPS_10uH -D
+#        CONFIG_HW_HSE_TUNE=32 -D USER_BUTTON=BSP_PUSH1 -D CONFIG_HW_LS_XTAL -D
+#        BLE_STACK_CUSTOM_CONF -D CLIENT -D USE_HAL_DRIVER -lC
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Debug\List\Middlewares" --diag_suppress Pe1665 -o
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Debug\Obj\Middlewares" --no_cse --no_unroll --no_inline
+#        --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M0+ -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick Client\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers\Peripherals_Drivers\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers\CMSIS\Device\ST\BlueNRG_LP\Include\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\hal\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\PKAMGR\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\RNGMGR\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\AESMGR\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\BLECNTR\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers\CMSIS\Include\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers/BSP/STEVAL-IDB011V1/Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers\BSP\Common\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers\BSP\Components\lps22hh_STdC\driver\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers\BSP\Components\lsm6dsox_STdC\driver\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\BLE_Application\layers_inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\Bluetooth_LE\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\BLE_Application\OTA\inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\NVMDB\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\BLE_Application\Profiles\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\cryptolib\inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\cryptolib\inc\Common\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\cryptolib\inc\AES\\" -On) --dependencies=n
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Debug\Obj\Middlewares\BLE_GATT_Client.o.d"
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Debug\List\Middlewares\BLE_GATT_Client.lst
+#    Object file                  =
+#        C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Debug\Obj\Middlewares\BLE_GATT_Client.o
+#    Runtime model:                  
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  0
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#      __iar_require _Printf      =  flags,widths
+#
+###############################################################################
+
+C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick Client\BLE_GATT_Client.c
+      1          #include <stdio.h>
+      2          #include <string.h>
+      3          #include "ble_const.h" 
+      4          #include "bluenrg_lp_stack.h"
+      5          #include "OTA_btl.h" 
+      6          
+      7          #include "BLE_GATT_Client.h"
+      8          #include "rf_driver_hal_vtimer.h"
+
+  #define FLASH_PAGE_SIZE                 0x00000800U  /*!< FLASH Page Size, 2KBytes */
+          ^
+"C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick Client\Drivers\Peripherals_Drivers\Inc\rf_driver_hal_flash.h",406  Warning[Pa181]: 
+          incompatible redefinition of macro "FLASH_PAGE_SIZE" (defined at line
+          41 of "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+          Client\Middlewares\ST\BLE_Application\OTA\inc\OTA_btl.h")
+      9          #include "gap_profile.h"
+     10          #include "clock.h"
+     11          #include "BLE_GATT_Service_config.h"
+     12          
+     13          
+     14          #include <stdlib.h>
+     15          
+     16          #include "bluenrg_lp_it.h"
+     17          #include "ble_const.h"
+     18          
+     19          #include "bluenrg_lp_evb_com.h"
+     20          #include "bluenrg_lp_evb_button.h"
+     21          #include "gap_profile.h"
+     22          #include "gatt_profile.h"
+     23          
+     24          
+     25          
+     26          /* Private typedef -----------------------------------------------------------*/
+     27          /* Private define ------------------------------------------------------------*/
+     28          #ifndef DEBUG
+     29          #define DEBUG 1
+     30          #endif
+     31          
+     32          #if DEBUG
+     33          #include <stdio.h>
+     34          #define PRINTF(...) printf(__VA_ARGS__)
+     35          #else
+     36          #define PRINTF(...)
+     37          #endif
+     38          
+     39          #define UPDATE_CONN_PARAM 1 //0
+     40          #define ADV_INTERVAL_MIN_MS  200
+     41          #define ADV_INTERVAL_MAX_MS  200
+     42          
+     43          #define CONN_INTERVAL_MIN       (20*100/125)    //   20 ms
+     44          #define CONN_INTERVAL_MAX       (20*100/125)    //   20 ms
+     45          #define SUPERVISION_TIMEOUT     (1000/10)       // 1000 ms
+     46          #define CE_LENGTH               (7*1000/625)
+     47          
+     48          
+     49          
+     50          
+     51          #define BD_ADDR_MASTER      0xe0, 0x00, 0x00, 0xE1, 0x80, 0x02
+     52          
+     53          #define SCAN_INTERVAL           (100*1000/625)  //  100 ms
+     54          #define SCAN_WINDOW             (100*1000/625)  //  100 ms
+     55          
+     56          
+
+   \                                 In section .data, align 4
+     57          static uint8_t Service_uuid[16] = {
+   \                     Service_uuid:
+   \        0x0   0x3D 0x23          DC8 61, 35, 51, 160, 222, 249, 66, 136, 48, 50, 18, 215, 17, 55, 52
+
+   \              0x33 0xA0    
+
+   \              0xDE 0xF9    
+
+   \              0x42 0x88    
+
+   \              0x30 0x32    
+
+   \              0x12 0xD7    
+
+   \              0x11 0x37    
+
+   \              0x34
+   \        0xF   0xDA               DC8 218
+     58              /* LSB <--------------------------------------------------------------------------------> MSB */
+     59                  0x3d, 0x23, 0x33, 0xa0, 0xde, 0xf9,     0x42, 0x88,     0x30, 0x32, 0x12, 0xd7,     0x11, 0x37, 0x34, 0xda
+     60          };
+     61          
+
+   \                                 In section .data, align 4
+     62          static uint8_t Char_TX_uuid[16] = {
+   \                     Char_TX_uuid:
+   \        0x0   0x3D 0x23          DC8 61, 35, 51, 160, 222, 248, 66, 136, 48, 50, 18, 215, 17, 55, 52
+
+   \              0x33 0xA0    
+
+   \              0xDE 0xF8    
+
+   \              0x42 0x88    
+
+   \              0x30 0x32    
+
+   \              0x12 0xD7    
+
+   \              0x11 0x37    
+
+   \              0x34
+   \        0xF   0xDA               DC8 218
+     63              /* LSB <--------------------------------------------------------------------------------> MSB */
+     64                  0x3d, 0x23, 0x33, 0xa0, 0xde, 0xf8,     0x42, 0x88,     0x30, 0x32, 0x12, 0xd7,     0x11, 0x37, 0x34, 0xda
+     65          };
+     66          
+
+   \                                 In section .data, align 4
+     67          static uint8_t Char_RX_uuid[16] = {
+   \                     Char_RX_uuid:
+   \        0x0   0x3D 0x23          DC8 61, 35, 51, 160, 222, 247, 66, 136, 48, 50, 18, 215, 17, 55, 52
+
+   \              0x33 0xA0    
+
+   \              0xDE 0xF7    
+
+   \              0x42 0x88    
+
+   \              0x30 0x32    
+
+   \              0x12 0xD7    
+
+   \              0x11 0x37    
+
+   \              0x34
+   \        0xF   0xDA               DC8 218
+     68              /* LSB <--------------------------------------------------------------------------------> MSB */
+     69                  0x3d, 0x23, 0x33, 0xa0, 0xde, 0xf7,     0x42, 0x88,     0x30, 0x32, 0x12, 0xd7,     0x11, 0x37, 0x34, 0xda
+     70          };
+     71          
+     72          
+     73          
+     74          
+     75          #define BD_ADDR_SLAVE       0xF5, 0x97, 0xB3, 0xA1, 0xDF, 0x7C
+     76          
+     77          
+     78          
+     79          
+     80          /* States of the state machine used to discover services, enable notifications and
+     81            write the offset into the slaves.
+     82          */
+     83          
+     84          typedef enum{
+     85            IDLE = 0,
+     86            SCAN_START,
+     87            SCANNING_DONE,
+     88            
+     89            EXCHANGE_CONFIG,
+     90            EXCHANGING_CONFIG,
+     91            START_SERVICE_DISCOVERY,
+     92            DISCOVERING_SERVICES,
+     93            START_CHAR_DISCOVERY,
+     94            DISCOVERING_CHARATTERISTIC,
+     95            
+     96              //Abilita notifiche se ci sono
+     97            ENABLE_TX_CHAR_NOTIFICATIONS,
+     98            ENABLING_TX_CHAR_NOTIFICATIONS,
+     99            
+    100            DONE,
+    101            CONNECT,
+    102            DISCONNECT,
+    103            
+    104            DONE_CONNESSO,
+    105            
+    106          } MasterState;
+    107          
+    108          
+    109          typedef enum{
+    110            PAIRING_IDLE = 0,
+    111            START_PAIRING,
+    112            PAIRING,
+    113            PAIRING_DONE
+    114          } MasterPairingState;
+    115          
+    116          
+    117          // Type of the structure used to store the state related to each server/slave
+    118          typedef struct _slave {
+    119            uint8_t  address_type;
+    120            uint8_t  address[6];
+    121            uint16_t conn_handle;
+    122            MasterState state;
+    123            MasterState resume_state;
+    124            MasterPairingState pairing_state;
+    125            uint8_t is_in_pairing_mode;
+    126            
+    127              //sostituire nomi con i miei servizi
+    128            uint16_t service_start_handle;
+    129            uint16_t service_end_handle;
+    130            
+    131            //charatteristic uuid da aggiungere come servono
+    132            
+    133            uint16_t tx_handle;
+    134            uint16_t rx_handle;
+    135            
+    136            
+    137            
+    138          }slave_device;
+    139          
+    140          
+
+   \                                 In section .bss, align 4
+    141          slave_device slaves;
+   \                     slaves:
+   \        0x0                      DS8 24
+    142          
+    143          
+    144          
+    145          
+    146          
+    147          
+    148          
+    149          
+    150          
+    151          
+    152          //***************************** GATT ___INIT___*****************************
+    153          //***************************** GATT ___INIT___*****************************
+    154          //***************************** GATT ___INIT___*****************************
+    155          //***************************** GATT ___INIT___*****************************
+    156          //***************************** GATT ___INIT___*****************************
+    157          //***************************** GATT ___INIT___*****************************
+    158          
+    159          
+
+   \                                 In section .text, align 2, keep-with-next
+    160          uint8_t BLE_GATT_Client_DeviceInit()
+    161          {
+   \                     BLE_GATT_Client_DeviceInit: (+1)
+   \        0x0   0xB5F0             PUSH     {R4-R7,LR}
+   \        0x2   0xB089             SUB      SP,SP,#+36
+    162            uint8_t ret;
+    163          
+    164            uint8_t bdaddr[] = {BD_ADDR_MASTER};
+   \        0x4   0xA807             ADD      R0,SP,#+28
+   \        0x6   0x....             LDR      R1,??DataTable1
+   \        0x8   0xC90C             LDM      R1!,{R2,R3}
+   \        0xA   0xC00C             STM      R0!,{R2,R3}
+   \        0xC   0x3908             SUBS     R1,R1,#+8
+   \        0xE   0x3808             SUBS     R0,R0,#+8
+    165          
+    166            uint16_t service_handle, dev_name_char_handle, appearance_char_handle;
+    167            uint8_t device_name[] = {'B', 'L', 'E', ' ', 'T', 'e', 's', 't'};
+   \       0x10   0xA805             ADD      R0,SP,#+20
+   \       0x12   0x....             LDR      R1,??DataTable1_1
+   \       0x14   0xC90C             LDM      R1!,{R2,R3}
+   \       0x16   0xC00C             STM      R0!,{R2,R3}
+   \       0x18   0x3908             SUBS     R1,R1,#+8
+   \       0x1A   0x3808             SUBS     R0,R0,#+8
+    168            static uint8_t adv_data[] = {0x02,AD_TYPE_FLAGS, FLAG_BIT_LE_GENERAL_DISCOVERABLE_MODE|FLAG_BIT_BR_EDR_NOT_SUPPORTED,
+                                  ^
+Warning[Pe177]: variable "adv_data" was declared but never referenced
+    169                                        9, AD_TYPE_COMPLETE_LOCAL_NAME,'B', 'L', 'E', ' ', 'T', 'e', 's', 't'};
+    170          
+    171            
+    172            /* Configure Public address */
+    173            ret = aci_hal_write_config_data(CONFIG_DATA_PUBADDR_OFFSET, CONFIG_DATA_PUBADDR_LEN, bdaddr);
+   \       0x1C   0xAA07             ADD      R2,SP,#+28
+   \       0x1E   0x2106             MOVS     R1,#+6
+   \       0x20   0x2000             MOVS     R0,#+0
+   \       0x22   0x.... 0x....      BL       aci_hal_write_config_data
+   \       0x26   0x0004             MOVS     R4,R0
+    174            if(ret != BLE_STATUS_SUCCESS) {
+   \       0x28   0x0020             MOVS     R0,R4
+   \       0x2A   0xB2C0             UXTB     R0,R0
+   \       0x2C   0x2800             CMP      R0,#+0
+   \       0x2E   0xD007             BEQ      ??BLE_GATT_Client_DeviceInit_0
+    175              PRINTF("aci_hal_write_config_data() failed: 0x%02x\r\n", ret);
+   \       0x30   0x0021             MOVS     R1,R4
+   \       0x32   0xB2C9             UXTB     R1,R1
+   \       0x34   0x....             LDR      R0,??DataTable1_2
+   \       0x36   0x.... 0x....      BL       printf
+    176              return ret;
+   \       0x3A   0x0020             MOVS     R0,R4
+   \       0x3C   0xB2C0             UXTB     R0,R0
+   \       0x3E   0xE09D             B        ??BLE_GATT_Client_DeviceInit_1
+    177            }
+    178          
+    179            
+    180            /* Set the TX power 0 dBm */
+    181            aci_hal_set_tx_power_level(0, 10);
+   \                     ??BLE_GATT_Client_DeviceInit_0: (+1)
+   \       0x40   0x210A             MOVS     R1,#+10
+   \       0x42   0x2000             MOVS     R0,#+0
+   \       0x44   0x.... 0x....      BL       aci_hal_set_tx_power_level
+    182            
+    183            /* GATT Init */
+    184            ret = aci_gatt_srv_init();
+   \       0x48   0x.... 0x....      BL       aci_gatt_srv_init
+   \       0x4C   0x0005             MOVS     R5,R0
+    185            if (ret != BLE_STATUS_SUCCESS) {
+   \       0x4E   0x0028             MOVS     R0,R5
+   \       0x50   0xB2C0             UXTB     R0,R0
+   \       0x52   0x2800             CMP      R0,#+0
+   \       0x54   0xD007             BEQ      ??BLE_GATT_Client_DeviceInit_2
+    186              PRINTF("aci_gatt_srv_init() failed: 0x%02x\r\n", ret);
+   \       0x56   0x0029             MOVS     R1,R5
+   \       0x58   0xB2C9             UXTB     R1,R1
+   \       0x5A   0x....             LDR      R0,??DataTable3
+   \       0x5C   0x.... 0x....      BL       printf
+    187              return ret;
+   \       0x60   0x0028             MOVS     R0,R5
+   \       0x62   0xB2C0             UXTB     R0,R0
+   \       0x64   0xE08A             B        ??BLE_GATT_Client_DeviceInit_1
+    188            }
+    189            
+    190            /* GAP Init */
+    191            ret = aci_gap_init(GAP_CENTRAL_ROLE, 0, 0x07, 0x00, &service_handle, &dev_name_char_handle, &appearance_char_handle);
+   \                     ??BLE_GATT_Client_DeviceInit_2: (+1)
+   \       0x66   0xA803             ADD      R0,SP,#+12
+   \       0x68   0x9002             STR      R0,[SP, #+8]
+   \       0x6A   0xA803             ADD      R0,SP,#+12
+   \       0x6C   0x1C80             ADDS     R0,R0,#+2
+   \       0x6E   0x9001             STR      R0,[SP, #+4]
+   \       0x70   0xA804             ADD      R0,SP,#+16
+   \       0x72   0x9000             STR      R0,[SP, #+0]
+   \       0x74   0x2300             MOVS     R3,#+0
+   \       0x76   0x2207             MOVS     R2,#+7
+   \       0x78   0x2100             MOVS     R1,#+0
+   \       0x7A   0x2004             MOVS     R0,#+4
+   \       0x7C   0x.... 0x....      BL       aci_gap_init
+   \       0x80   0x0004             MOVS     R4,R0
+    192            if (ret != BLE_STATUS_SUCCESS) {
+   \       0x82   0x0020             MOVS     R0,R4
+   \       0x84   0xB2C0             UXTB     R0,R0
+   \       0x86   0x2800             CMP      R0,#+0
+   \       0x88   0xD007             BEQ      ??BLE_GATT_Client_DeviceInit_3
+    193              PRINTF("aci_gap_init() failed: 0x%02x\r\n", ret);
+   \       0x8A   0x0021             MOVS     R1,R4
+   \       0x8C   0xB2C9             UXTB     R1,R1
+   \       0x8E   0x....             LDR      R0,??DataTable3_1
+   \       0x90   0x.... 0x....      BL       printf
+    194              return ret;
+   \       0x94   0x0020             MOVS     R0,R4
+   \       0x96   0xB2C0             UXTB     R0,R0
+   \       0x98   0xE070             B        ??BLE_GATT_Client_DeviceInit_1
+    195            }
+    196           
+    197            /* Update device name */
+    198            Gap_profile_set_dev_name(0, sizeof(device_name), device_name);
+   \                     ??BLE_GATT_Client_DeviceInit_3: (+1)
+   \       0x9A   0xAA05             ADD      R2,SP,#+20
+   \       0x9C   0x2108             MOVS     R1,#+8
+   \       0x9E   0x2000             MOVS     R0,#+0
+   \       0xA0   0x.... 0x....      BL       Gap_profile_set_dev_name
+    199            
+    200            /* Set the IO capability */
+    201            ret = aci_gap_set_io_capability(IO_CAP_DISPLAY_ONLY);
+   \       0xA4   0x2000             MOVS     R0,#+0
+   \       0xA6   0x.... 0x....      BL       aci_gap_set_io_capability
+   \       0xAA   0x0005             MOVS     R5,R0
+    202            if(ret){
+   \       0xAC   0x0028             MOVS     R0,R5
+   \       0xAE   0xB2C0             UXTB     R0,R0
+   \       0xB0   0x2800             CMP      R0,#+0
+   \       0xB2   0xD007             BEQ      ??BLE_GATT_Client_DeviceInit_4
+    203              PRINTF("aci_gap_set_io_capability() failed: 0x%02x\r\n", ret);
+   \       0xB4   0x0029             MOVS     R1,R5
+   \       0xB6   0xB2C9             UXTB     R1,R1
+   \       0xB8   0x....             LDR      R0,??DataTable3_2
+   \       0xBA   0x.... 0x....      BL       printf
+    204              return ret;
+   \       0xBE   0x0028             MOVS     R0,R5
+   \       0xC0   0xB2C0             UXTB     R0,R0
+   \       0xC2   0xE05B             B        ??BLE_GATT_Client_DeviceInit_1
+    205            }
+    206          
+    207          /*
+    208            ret = aci_gap_set_authentication_requirement(BONDING,
+    209                                                         MITM_PROTECTION_REQUIRED,
+    210                                                         SC_IS_NOT_SUPPORTED,
+    211                                                         KEYPRESS_IS_NOT_SUPPORTED,
+    212                                                         7, 
+    213                                                         16,
+    214                                                         USE_FIXED_PIN_FOR_PAIRING,
+    215                                                         123456);
+    216          */
+    217          /*
+    218            ret = aci_gap_set_authentication_requirement(NO_BONDING,
+    219                                                         MITM_PROTECTION_NOT_REQUIRED,
+    220                                                         SC_IS_NOT_SUPPORTED,
+    221                                                         KEYPRESS_IS_NOT_SUPPORTED,
+    222                                                         7, 
+    223                                                         16,
+    224                                                         USE_FIXED_PIN_FOR_PAIRING,
+    225                                                         123456);
+    226            //Per password FIXED
+    227            ret= aci_gap_set_auth_requirement(BONDING, 
+    228                                              MITM_PROTECTION_REQUIRED,
+    229                                              SC_IS_SUPPORTED, 
+    230                                              KEYPRESS_IS_NOT_SUPPORTED,
+    231                                              7, 
+    232                                              16, 
+    233                                              0x00, 
+    234                                              0x123456, 
+    235                                              0x00 );
+    236          
+    237            if(ret != BLE_STATUS_SUCCESS) {
+    238              PRINTF("aci_gap_set_authentication_requirement()failed: 0x%02x\r\n", ret);
+    239              return ret;
+    240            }
+    241            */
+    242            
+    243            ret = aci_gap_set_scan_configuration(DUPLICATE_FILTER_ENABLED, SCAN_ACCEPT_ALL, LE_1M_PHY_BIT, PASSIVE_SCAN, SCAN_INTERVAL, SCAN_WINDOW);
+   \                     ??BLE_GATT_Client_DeviceInit_4: (+1)
+   \       0xC4   0x20A0             MOVS     R0,#+160
+   \       0xC6   0x9001             STR      R0,[SP, #+4]
+   \       0xC8   0x20A0             MOVS     R0,#+160
+   \       0xCA   0x9000             STR      R0,[SP, #+0]
+   \       0xCC   0x2300             MOVS     R3,#+0
+   \       0xCE   0x2201             MOVS     R2,#+1
+   \       0xD0   0x2100             MOVS     R1,#+0
+   \       0xD2   0x2001             MOVS     R0,#+1
+   \       0xD4   0x.... 0x....      BL       aci_gap_set_scan_configuration
+   \       0xD8   0x4669             MOV      R1,SP
+   \       0xDA   0x7208             STRB     R0,[R1, #+8]
+    244            printf("Scan configuration for LE_1M_PHY: 0x%02X\n", ret);
+   \       0xDC   0x4668             MOV      R0,SP
+   \       0xDE   0x7A01             LDRB     R1,[R0, #+8]
+   \       0xE0   0x....             LDR      R0,??DataTable3_3
+   \       0xE2   0x.... 0x....      BL       printf
+    245            
+    246            ret = aci_gap_set_scan_configuration(DUPLICATE_FILTER_ENABLED, SCAN_ACCEPT_ALL, LE_CODED_PHY_BIT, PASSIVE_SCAN, SCAN_INTERVAL, SCAN_WINDOW);  
+   \       0xE6   0x20A0             MOVS     R0,#+160
+   \       0xE8   0x9001             STR      R0,[SP, #+4]
+   \       0xEA   0x20A0             MOVS     R0,#+160
+   \       0xEC   0x9000             STR      R0,[SP, #+0]
+   \       0xEE   0x2300             MOVS     R3,#+0
+   \       0xF0   0x2204             MOVS     R2,#+4
+   \       0xF2   0x2100             MOVS     R1,#+0
+   \       0xF4   0x2001             MOVS     R0,#+1
+   \       0xF6   0x.... 0x....      BL       aci_gap_set_scan_configuration
+   \       0xFA   0x0007             MOVS     R7,R0
+    247            printf("Scan configuration for LE_CODED_PHY: 0x%02X\n", ret);
+   \       0xFC   0x0039             MOVS     R1,R7
+   \       0xFE   0xB2C9             UXTB     R1,R1
+   \      0x100   0x....             LDR      R0,??DataTable3_4
+   \      0x102   0x.... 0x....      BL       printf
+    248            
+    249            ret = aci_gap_set_connection_configuration(LE_1M_PHY_BIT, CONN_INTERVAL_MIN, CONN_INTERVAL_MAX, 0, SUPERVISION_TIMEOUT, CE_LENGTH, CE_LENGTH);
+   \      0x106   0x200B             MOVS     R0,#+11
+   \      0x108   0x9002             STR      R0,[SP, #+8]
+   \      0x10A   0x200B             MOVS     R0,#+11
+   \      0x10C   0x9001             STR      R0,[SP, #+4]
+   \      0x10E   0x2064             MOVS     R0,#+100
+   \      0x110   0x9000             STR      R0,[SP, #+0]
+   \      0x112   0x2300             MOVS     R3,#+0
+   \      0x114   0x2210             MOVS     R2,#+16
+   \      0x116   0x2110             MOVS     R1,#+16
+   \      0x118   0x2001             MOVS     R0,#+1
+   \      0x11A   0x.... 0x....      BL       aci_gap_set_connection_configuration
+   \      0x11E   0x0006             MOVS     R6,R0
+    250            printf("Connection configuration for LE_1M_PHY:  0x%02X\n", ret);
+   \      0x120   0x0031             MOVS     R1,R6
+   \      0x122   0xB2C9             UXTB     R1,R1
+   \      0x124   0x....             LDR      R0,??DataTable3_5
+   \      0x126   0x.... 0x....      BL       printf
+    251            
+    252            ret = aci_gap_set_connection_configuration(LE_CODED_PHY_BIT, CONN_INTERVAL_MIN, CONN_INTERVAL_MAX, 0, SUPERVISION_TIMEOUT, CE_LENGTH, CE_LENGTH);  
+   \      0x12A   0x200B             MOVS     R0,#+11
+   \      0x12C   0x9002             STR      R0,[SP, #+8]
+   \      0x12E   0x200B             MOVS     R0,#+11
+   \      0x130   0x9001             STR      R0,[SP, #+4]
+   \      0x132   0x2064             MOVS     R0,#+100
+   \      0x134   0x9000             STR      R0,[SP, #+0]
+   \      0x136   0x2300             MOVS     R3,#+0
+   \      0x138   0x2210             MOVS     R2,#+16
+   \      0x13A   0x2110             MOVS     R1,#+16
+   \      0x13C   0x2004             MOVS     R0,#+4
+   \      0x13E   0x.... 0x....      BL       aci_gap_set_connection_configuration
+   \      0x142   0x0004             MOVS     R4,R0
+    253            printf("Connection configuration for LE_CODED_PHY: 0x%02X\n", ret);
+   \      0x144   0x0021             MOVS     R1,R4
+   \      0x146   0xB2C9             UXTB     R1,R1
+   \      0x148   0x....             LDR      R0,??DataTable4
+   \      0x14A   0x.... 0x....      BL       printf
+    254          
+    255              
+    256            PRINTF("BLE Stack Initialized with SUCCESS\n");
+   \      0x14E   0x....             LDR      R0,??DataTable4_1
+   \      0x150   0x.... 0x....      BL       printf
+    257          
+    258            /*
+    259              hci_le_extended_advertising_report_event(). The end of the procedure is indicated by
+    260              aci_gap_proc_complete_event() event callback with Procedure_Code parameter equal to
+    261              GAP_GENERAL_DISCOVERY_PROC (0x1).
+    262            */
+    263           
+    264             slaves.state = IDLE;
+   \      0x154   0x....             LDR      R0,??DataTable6
+   \      0x156   0x0001             MOVS     R1,R0
+   \      0x158   0x310A             ADDS     R1,R1,#+10
+   \      0x15A   0x2200             MOVS     R2,#+0
+   \      0x15C   0x0013             MOVS     R3,R2
+   \      0x15E   0x700B             STRB     R3,[R1, #+0]
+    265             slaves.pairing_state = PAIRING_IDLE;
+   \      0x160   0x0013             MOVS     R3,R2
+   \      0x162   0x7303             STRB     R3,[R0, #+12]
+    266             
+    267             slaves.tx_handle = 0;
+   \      0x164   0x0013             MOVS     R3,R2
+   \      0x166   0x8243             STRH     R3,[R0, #+18]
+    268             slaves.rx_handle = 0;
+   \      0x168   0x0013             MOVS     R3,R2
+   \      0x16A   0x8283             STRH     R3,[R0, #+20]
+    269             slaves.conn_handle = 0;
+   \      0x16C   0x0013             MOVS     R3,R2
+   \      0x16E   0x8103             STRH     R3,[R0, #+8]
+    270             slaves.service_start_handle = 0;
+   \      0x170   0x0013             MOVS     R3,R2
+   \      0x172   0x81C3             STRH     R3,[R0, #+14]
+    271             slaves.service_end_handle = 0;
+   \      0x174   0x8202             STRH     R2,[R0, #+16]
+    272          
+    273             
+    274             
+    275              // CONNETTI o SCANSIONA
+    276             //slaves.state = CONNECT;
+    277             slaves.state = SCAN_START;
+   \      0x176   0x2001             MOVS     R0,#+1
+   \      0x178   0x7008             STRB     R0,[R1, #+0]
+    278          
+    279          
+    280             
+    281            return BLE_STATUS_SUCCESS;
+   \      0x17A   0x2000             MOVS     R0,#+0
+   \                     ??BLE_GATT_Client_DeviceInit_1: (+1)
+   \      0x17C   0xB009             ADD      SP,SP,#+36
+   \      0x17E   0xBDF0             POP      {R4-R7,PC}
+    282          }
+    283          
+    284          
+    285          
+
+   \                                 In section .text, align 2, keep-with-next
+    286          void Connect(void)
+    287          {  
+   \                     Connect: (+1)
+   \        0x0   0xB51C             PUSH     {R2-R4,LR}
+    288            tBleStatus ret;
+    289            uint8_t phy_bit;
+                           ^
+Warning[Pe177]: variable "phy_bit" was declared but never referenced
+    290            
+    291            tBDAddr bdaddr = {BD_ADDR_SLAVE}; 
+   \        0x2   0x4668             MOV      R0,SP
+   \        0x4   0x....             LDR      R1,??DataTable5
+   \        0x6   0xC90C             LDM      R1!,{R2,R3}
+   \        0x8   0xC00C             STM      R0!,{R2,R3}
+   \        0xA   0x3908             SUBS     R1,R1,#+8
+   \        0xC   0x3808             SUBS     R0,R0,#+8
+    292            
+    293            ret = aci_gap_create_connection(LE_1M_PHY_BIT, PUBLIC_ADDR, bdaddr);
+   \        0xE   0x466A             MOV      R2,SP
+   \       0x10   0x2100             MOVS     R1,#+0
+   \       0x12   0x2001             MOVS     R0,#+1
+   \       0x14   0x.... 0x....      BL       aci_gap_create_connection
+   \       0x18   0x0004             MOVS     R4,R0
+    294            
+    295            if (ret != BLE_STATUS_SUCCESS)
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0xB2C0             UXTB     R0,R0
+   \       0x1E   0x2800             CMP      R0,#+0
+   \       0x20   0xD005             BEQ      ??Connect_0
+    296            {
+    297              printf("Error while starting connection: 0x%02x\r\n", ret);
+   \       0x22   0x0021             MOVS     R1,R4
+   \       0x24   0xB2C9             UXTB     R1,R1
+   \       0x26   0x....             LDR      R0,??DataTable5_1
+   \       0x28   0x.... 0x....      BL       printf
+    298              return;
+   \       0x2C   0xE002             B        ??Connect_1
+    299            }
+    300            
+    301            printf("Connecting \r\n");
+   \                     ??Connect_0: (+1)
+   \       0x2E   0x....             LDR      R0,??DataTable8
+   \       0x30   0x.... 0x....      BL       printf
+    302            
+    303          }
+   \                     ??Connect_1: (+1)
+   \       0x34   0xBD13             POP      {R0,R1,R4,PC}
+    304          
+    305          
+    306          
+
+   \                                 In section .text, align 2, keep-with-next
+    307          void CancelConnect(void)
+    308          {
+   \                     CancelConnect: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    309            aci_gap_terminate_proc(GAP_DIRECT_CONNECTION_ESTABLISHMENT_PROC);
+   \        0x2   0x2006             MOVS     R0,#+6
+   \        0x4   0x.... 0x....      BL       aci_gap_terminate_proc
+    310          }
+   \        0x8   0xBD01             POP      {R0,PC}
+    311          
+    312          
+    313          
+
+   \                                 In section .bss, align 4
+    314          tClockTime temp_TIME1;
+   \                     temp_TIME1:
+   \        0x0                      DS8 4
+    315          
+    316          
+
+   \                                 In section .text, align 2, keep-with-next
+    317          void APP_Tick(void)
+    318          {
+   \                     APP_Tick: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+    319            uint8_t ret = 0; 
+   \        0x2   0x2500             MOVS     R5,#+0
+   \        0x4   0x002E             MOVS     R6,R5
+    320          
+    321            
+    322            
+    323              //---- STATE Machine Master
+    324            
+    325          
+    326             // == Future Paring State ==
+    327            switch(slaves.pairing_state){
+   \        0x6   0x....             LDR      R4,??DataTable6
+   \        0x8   0x7B20             LDRB     R0,[R4, #+12]
+   \        0xA   0x2801             CMP      R0,#+1
+   \        0xC   0xD0FF             BEQ      ??APP_Tick_0
+    328              case START_PAIRING:
+    329          
+    330                break;
+    331              default:
+    332          
+    333                break;
+    334            }
+    335          
+    336             // == BLE master==
+    337            switch(slaves.state){
+   \                     ??APP_Tick_1: (+1)
+   \                     ??APP_Tick_0: (+1)
+   \        0xE   0x7AA0             LDRB     R0,[R4, #+10]
+   \       0x10   0x2800             CMP      R0,#+0
+   \       0x12   0xD012             BEQ      ??APP_Tick_2
+   \       0x14   0x2801             CMP      R0,#+1
+   \       0x16   0xD011             BEQ      ??APP_Tick_3
+   \       0x18   0x2802             CMP      R0,#+2
+   \       0x1A   0xD016             BEQ      ??APP_Tick_4
+   \       0x1C   0x2803             CMP      R0,#+3
+   \       0x1E   0xD01C             BEQ      ??APP_Tick_5
+   \       0x20   0x2805             CMP      R0,#+5
+   \       0x22   0xD028             BEQ      ??APP_Tick_6
+   \       0x24   0x2807             CMP      R0,#+7
+   \       0x26   0xD034             BEQ      ??APP_Tick_7
+   \       0x28   0x2809             CMP      R0,#+9
+   \       0x2A   0xD042             BEQ      ??APP_Tick_8
+   \       0x2C   0x280C             CMP      R0,#+12
+   \       0x2E   0xD00D             BEQ      ??APP_Tick_9
+   \       0x30   0x280D             CMP      R0,#+13
+   \       0x32   0xD00E             BEQ      ??APP_Tick_10
+   \       0x34   0x280E             CMP      R0,#+14
+   \       0x36   0xD052             BEQ      ??APP_Tick_11
+   \       0x38   0xE073             B        ??APP_Tick_12
+    338              case IDLE:
+    339              
+    340              break;
+   \                     ??APP_Tick_2: (+1)
+   \       0x3A   0xE072             B        ??APP_Tick_12
+    341          
+    342            
+    343              case SCAN_START:
+    344                //Se trova UUID Corrispondente si connette in automatico , se si vuole connettere manuale COMMENTARE il contenuto di--> hci_le_advertising_report_event
+    345                 aci_gap_start_procedure(0x01,0x01,0,0);               //START SCAN !!!! response EVENT pag 67 
+   \                     ??APP_Tick_3: (+1)
+   \       0x3C   0x2300             MOVS     R3,#+0
+   \       0x3E   0x2200             MOVS     R2,#+0
+   \       0x40   0x2101             MOVS     R1,#+1
+   \       0x42   0x2001             MOVS     R0,#+1
+   \       0x44   0x.... 0x....      BL       aci_gap_start_procedure
+    346              break;
+   \       0x48   0xE06B             B        ??APP_Tick_12
+    347              
+    348              case SCANNING_DONE:
+    349                  // Se trovi un address MAC corrispondende allora "slaves.state = CONNECT"
+    350              break;
+   \                     ??APP_Tick_4: (+1)
+   \       0x4A   0xE06A             B        ??APP_Tick_12
+    351          
+    352              
+    353              
+    354              case CONNECT:
+    355                Connect();
+   \                     ??APP_Tick_9: (+1)
+   \       0x4C   0x.... 0x....      BL       Connect
+    356              break;
+   \       0x50   0xE067             B        ??APP_Tick_12
+    357            
+    358              case DISCONNECT:
+    359                CancelConnect();
+   \                     ??APP_Tick_10: (+1)
+   \       0x52   0x.... 0x....      BL       CancelConnect
+    360                slaves.state = IDLE;  
+   \       0x56   0x72A5             STRB     R5,[R4, #+10]
+    361               break;
+   \       0x58   0xE063             B        ??APP_Tick_12
+    362              
+    363              case EXCHANGE_CONFIG:
+    364              {
+    365                /* Exchange ATT MTU */        
+    366                ret = aci_gatt_clt_exchange_config(slaves.conn_handle);
+   \                     ??APP_Tick_5: (+1)
+   \       0x5A   0x8920             LDRH     R0,[R4, #+8]
+   \       0x5C   0x.... 0x....      BL       aci_gatt_clt_exchange_config
+   \       0x60   0x0006             MOVS     R6,R0
+    367                if(ret == BLE_STATUS_SUCCESS){
+   \       0x62   0x0030             MOVS     R0,R6
+   \       0x64   0xB2C0             UXTB     R0,R0
+   \       0x66   0x2800             CMP      R0,#+0
+   \       0x68   0xD102             BNE      ??APP_Tick_13
+    368                  slaves.state = EXCHANGING_CONFIG;               //wait event -> aci_gatt_clt_proc_complete_event -> START_SERVICE_DISCOVERY
+   \       0x6A   0x2004             MOVS     R0,#+4
+   \       0x6C   0x72A0             STRB     R0,[R4, #+10]
+   \       0x6E   0xE001             B        ??APP_Tick_14
+    369                }
+    370                else {
+    371                  slaves.state = DISCONNECT;
+   \                     ??APP_Tick_13: (+1)
+   \       0x70   0x200D             MOVS     R0,#+13
+   \       0x72   0x72A0             STRB     R0,[R4, #+10]
+    372                }        
+    373              }
+    374              break;      
+   \                     ??APP_Tick_14: (+1)
+   \       0x74   0xE055             B        ??APP_Tick_12
+    375          
+    376              case START_SERVICE_DISCOVERY:
+    377              {
+    378                /* Start discovery of all primary services */
+    379                ret = aci_gatt_clt_disc_all_primary_services(slaves.conn_handle); //wait 2 event -> aci_att_clt_read_by_group_type_resp_event & aci_gatt_clt_proc_complete_event
+   \                     ??APP_Tick_6: (+1)
+   \       0x76   0x8920             LDRH     R0,[R4, #+8]
+   \       0x78   0x.... 0x....      BL       aci_gatt_clt_disc_all_primary_services
+   \       0x7C   0x0006             MOVS     R6,R0
+    380                if(ret == BLE_STATUS_SUCCESS){
+   \       0x7E   0x0030             MOVS     R0,R6
+   \       0x80   0xB2C0             UXTB     R0,R0
+   \       0x82   0x2800             CMP      R0,#+0
+   \       0x84   0xD102             BNE      ??APP_Tick_15
+    381                  slaves.state = DISCOVERING_SERVICES;
+   \       0x86   0x2006             MOVS     R0,#+6
+   \       0x88   0x72A0             STRB     R0,[R4, #+10]
+   \       0x8A   0xE001             B        ??APP_Tick_16
+    382                }
+    383                else {
+    384                  slaves.state = DISCONNECT;
+   \                     ??APP_Tick_15: (+1)
+   \       0x8C   0x200D             MOVS     R0,#+13
+   \       0x8E   0x72A0             STRB     R0,[R4, #+10]
+    385                }      
+    386              }
+    387              break;
+   \                     ??APP_Tick_16: (+1)
+   \       0x90   0xE047             B        ??APP_Tick_12
+    388          
+    389              case START_CHAR_DISCOVERY:
+    390                {
+    391                  /* Start characteristic discovery for Serial Port Service */
+    392                  ret = aci_gatt_clt_disc_all_char_of_service(slaves.conn_handle, slaves.service_start_handle, slaves.service_end_handle);
+   \                     ??APP_Tick_7: (+1)
+   \       0x92   0x8A22             LDRH     R2,[R4, #+16]
+   \       0x94   0x89E1             LDRH     R1,[R4, #+14]
+   \       0x96   0x8920             LDRH     R0,[R4, #+8]
+   \       0x98   0x.... 0x....      BL       aci_gatt_clt_disc_all_char_of_service
+   \       0x9C   0x0006             MOVS     R6,R0
+    393                  //PRINTF_DBG2("aci_gatt_clt_disc_all_char_of_service() for Serial Port service: 0x%02X\r\n", ret);
+    394                  if(ret == 0){
+   \       0x9E   0x0030             MOVS     R0,R6
+   \       0xA0   0xB2C0             UXTB     R0,R0
+   \       0xA2   0x2800             CMP      R0,#+0
+   \       0xA4   0xD102             BNE      ??APP_Tick_17
+    395                    slaves.state = DISCOVERING_CHARATTERISTIC;
+   \       0xA6   0x2008             MOVS     R0,#+8
+   \       0xA8   0x72A0             STRB     R0,[R4, #+10]
+   \       0xAA   0xE001             B        ??APP_Tick_18
+    396                  }
+    397                  else {
+    398                    slaves.state = DISCONNECT;
+   \                     ??APP_Tick_17: (+1)
+   \       0xAC   0x200D             MOVS     R0,#+13
+   \       0xAE   0x72A0             STRB     R0,[R4, #+10]
+    399                  }      
+    400                }
+    401                break;
+   \                     ??APP_Tick_18: (+1)
+   \       0xB0   0xE037             B        ??APP_Tick_12
+    402          
+    403                
+    404              //Se ci sono abilita le notifiche sui charatteristic    
+    405              case ENABLE_TX_CHAR_NOTIFICATIONS:
+    406                {
+    407                  /* Enable notifications for TX characteristic */
+    408                  
+    409                  static uint8_t client_char_conf_data[] = {0x01, 0x00}; // Enable notifications
+    410                  
+    411                  ret = aci_gatt_clt_write(slaves.conn_handle, slaves.rx_handle+2, 2, client_char_conf_data);
+   \                     ??APP_Tick_8: (+1)
+   \       0xB2   0x....             LDR      R3,??DataTable9
+   \       0xB4   0x2202             MOVS     R2,#+2
+   \       0xB6   0x8AA1             LDRH     R1,[R4, #+20]
+   \       0xB8   0x1C89             ADDS     R1,R1,#+2
+   \       0xBA   0xB289             UXTH     R1,R1
+   \       0xBC   0x8920             LDRH     R0,[R4, #+8]
+   \       0xBE   0x.... 0x....      BL       aci_gatt_clt_write
+   \       0xC2   0x0006             MOVS     R6,R0
+    412          
+    413                  if(ret == 0){
+   \       0xC4   0x0030             MOVS     R0,R6
+   \       0xC6   0xB2C0             UXTB     R0,R0
+   \       0xC8   0x2800             CMP      R0,#+0
+   \       0xCA   0xD102             BNE      ??APP_Tick_19
+    414                    slaves.state = ENABLING_TX_CHAR_NOTIFICATIONS;
+   \       0xCC   0x200A             MOVS     R0,#+10
+   \       0xCE   0x72A0             STRB     R0,[R4, #+10]
+   \       0xD0   0xE004             B        ??APP_Tick_20
+    415                  }
+    416                  else if(ret == BLE_STATUS_INSUFFICIENT_RESOURCES){
+   \                     ??APP_Tick_19: (+1)
+   \       0xD2   0x0030             MOVS     R0,R6
+   \       0xD4   0xB2C0             UXTB     R0,R0
+   \       0xD6   0x2888             CMP      R0,#+136
+   \       0xD8   0xD000             BEQ      ??APP_Tick_20
+    417                    // Retry later
+    418                  }
+    419                  else {
+    420                    slaves.state = IDLE;
+   \       0xDA   0x72A5             STRB     R5,[R4, #+10]
+    421                  }
+    422                }
+    423                break;
+   \                     ??APP_Tick_20: (+1)
+   \       0xDC   0xE021             B        ??APP_Tick_12
+    424          
+    425                
+    426              case DONE_CONNESSO:
+    427                
+    428                
+    429                if( (Clock_Time() - temp_TIME1 ) > 1000){
+   \                     ??APP_Tick_11: (+1)
+   \       0xDE   0x.... 0x....      BL       Clock_Time
+   \       0xE2   0x....             LDR      R5,??DataTable10
+   \       0xE4   0x6829             LDR      R1,[R5, #+0]
+   \       0xE6   0x1A40             SUBS     R0,R0,R1
+   \       0xE8   0x....             LDR      R1,??DataTable10_1
+   \       0xEA   0x4288             CMP      R0,R1
+   \       0xEC   0xD319             BCC      ??APP_Tick_21
+    430                  temp_TIME1 = Clock_Time();
+   \       0xEE   0x.... 0x....      BL       Clock_Time
+   \       0xF2   0x6028             STR      R0,[R5, #+0]
+    431          
+    432                  
+    433                  PRINTF("CONNESSO DONE.... !!");
+   \       0xF4   0x....             LDR      R0,??DataTable10_2
+   \       0xF6   0x.... 0x....      BL       printf
+    434          
+    435                  static uint8_t client_char_conf_data[] = {0xCC, 0xDD}; // Enable notifications
+    436          
+    437                  ret = aci_gatt_clt_write(slaves.conn_handle, slaves.tx_handle+1, 2, client_char_conf_data);     //Conferma di ricevuta in --> aci_gatt_clt_proc_complete_event
+   \       0xFA   0x....             LDR      R3,??DataTable10_3
+   \       0xFC   0x2202             MOVS     R2,#+2
+   \       0xFE   0x8A61             LDRH     R1,[R4, #+18]
+   \      0x100   0x1C49             ADDS     R1,R1,#+1
+   \      0x102   0xB289             UXTH     R1,R1
+   \      0x104   0x8920             LDRH     R0,[R4, #+8]
+   \      0x106   0x.... 0x....      BL       aci_gatt_clt_write
+   \      0x10A   0x0006             MOVS     R6,R0
+    438                  //ret = aci_gatt_clt_write_without_resp(slaves.conn_handle, slaves.tx_handle+1, 2, client_char_conf_data);  //Invio SENZA conferma    
+    439          
+    440                  if(ret == 0){
+   \      0x10C   0x0030             MOVS     R0,R6
+   \      0x10E   0xB2C0             UXTB     R0,R0
+   \      0x110   0x2800             CMP      R0,#+0
+   \      0x112   0xD103             BNE      ??APP_Tick_22
+    441                            PRINTF("write Ok!!");
+   \      0x114   0x....             LDR      R0,??DataTable10_4
+   \      0x116   0x.... 0x....      BL       printf
+   \      0x11A   0xE002             B        ??APP_Tick_21
+    442                  }
+    443                  else {
+    444                            PRINTF("write error!!");
+   \                     ??APP_Tick_22: (+1)
+   \      0x11C   0x....             LDR      R0,??DataTable11
+   \      0x11E   0x.... 0x....      BL       printf
+    445          
+    446                  }
+    447                  
+    448          /*
+    449          
+    450                  ret = aci_gatt_clt_read(slaves.conn_handle, slaves.rx_handle+1); // -->aci_att_clt_read_resp_event
+    451                  if(ret == 0){
+    452                            PRINTF("Read Ok!!");
+    453                  }
+    454                  else {
+    455                            PRINTF("Read error!!");
+    456          
+    457                  }
+    458          
+    459          
+    460          
+    461          */
+    462          
+    463          
+    464          
+    465          
+    466          
+    467          
+    468                  
+    469                }
+    470                
+    471                
+    472                
+    473                
+    474              break;
+    475              
+    476              
+    477              
+    478              
+    479              
+    480            }
+    481          
+    482            
+    483            
+    484            
+    485            
+    486            
+    487            
+    488            
+    489            
+    490            
+    491            
+    492            
+    493            
+    494            
+    495            
+    496            
+    497            
+    498          }
+   \                     ??APP_Tick_21: (+1)
+   \                     ??APP_Tick_12: (+1)
+   \      0x122   0xBD70             POP      {R4-R6,PC}
+
+   \                                 In section .data, align 2
+   \                     `APP_Tick{2}{3}{13}::client_char_conf_data`:
+   \        0x0   0x01 0x00          DC8 1, 0
+
+   \                                 In section .data, align 2
+   \                     `APP_Tick{2}{3}{17}{18}::client_char_conf_data`:
+   \        0x0   0xCC 0xDD          DC8 204, 221
+    499          
+    500          
+    501          
+    502          
+    503          
+    504          
+    505          
+    506          /* ***************** BlueNRG-LP Stack Callbacks ********************************/
+    507          /* ***************** BlueNRG-LP Stack Callbacks ********************************/
+    508          /* ***************** BlueNRG-LP Stack Callbacks ********************************/
+    509          /* ***************** BlueNRG-LP Stack Callbacks ********************************/
+    510          /* ***************** BlueNRG-LP Stack Callbacks ********************************/
+    511          /* ***************** BlueNRG-LP Stack Callbacks ********************************/
+    512          /* ***************** BlueNRG-LP Stack Callbacks ********************************/
+    513          
+    514          
+    515          
+    516          
+    517          
+    518          /* ***************** SCAN Callbacks *****************************/
+    519          /* ***************** SCAN Callbacks *****************************/
+    520          /* ***************** SCAN Callbacks *****************************/
+    521          /* ***************** SCAN Callbacks *****************************/
+    522          /* ***************** SCAN Callbacks *****************************/
+    523          /* ***************** SCAN Callbacks *****************************/
+    524          
+    525          //Quando finisce la scansione
+    526          /*******************************************************************************
+    527           * Function Name  : aci_gap_proc_complete_event.
+    528           * Description    : This event indicates the end of a GAP procedure.
+    529           * Input          : See file bluenrg1_events.h
+    530           * Output         : See file bluenrg1_events.h
+    531           * Return         : See file bluenrg1_events.h
+    532           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    533          void aci_gap_proc_complete_event(uint8_t Procedure_Code,
+    534                                           uint8_t Status,
+    535                                           uint8_t Data_Length,
+    536                                           uint8_t Data[])
+    537          {
+   \                     aci_gap_proc_complete_event: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000F             MOVS     R7,R1
+   \        0x6   0x0015             MOVS     R5,R2
+   \        0x8   0x001E             MOVS     R6,R3
+    538          
+    539            //slaves.state = SCANNING_DONE;
+    540            PRINTF("[Event]       aci_gap_proc_complete_event\r\n");
+   \        0xA   0x....             LDR      R0,??DataTable11_1
+   \        0xC   0x.... 0x....      BL       printf
+    541          }
+   \       0x10   0xBDF1             POP      {R0,R4-R7,PC}
+    542          
+    543          
+    544          // CONNETTI x UUID
+    545          
+
+   \                                 In section .text, align 2, keep-with-next
+    546          void hci_le_advertising_report_event(uint8_t Num_Reports,
+    547                                               Advertising_Report_t Advertising_Report[])
+    548          {
+   \                     hci_le_advertising_report_event: (+1)
+   \        0x0   0xB5F1             PUSH     {R0,R4-R7,LR}
+   \        0x2   0xB082             SUB      SP,SP,#+8
+   \        0x4   0x000D             MOVS     R5,R1
+    549            uint8_t AD_len, AD_type;
+    550            uint8_t i = 0;
+   \        0x6   0x2700             MOVS     R7,#+0
+   \        0x8   0x003C             MOVS     R4,R7
+    551            tBleStatus ret;
+    552              
+    553            
+    554            PRINTF("Address: ");
+   \        0xA   0x....             LDR      R0,??DataTable10_5
+   \        0xC   0x.... 0x....      BL       printf
+    555            PRINTF("%X ",Advertising_Report[0].Address[0]);
+   \       0x10   0x....             ADR      R6,??DataTable10_6
+   \       0x12   0x78A9             LDRB     R1,[R5, #+2]
+   \       0x14   0x0030             MOVS     R0,R6
+   \       0x16   0x.... 0x....      BL       printf
+    556            PRINTF("%X ",Advertising_Report[0].Address[1]);
+   \       0x1A   0x78E9             LDRB     R1,[R5, #+3]
+   \       0x1C   0x0030             MOVS     R0,R6
+   \       0x1E   0x.... 0x....      BL       printf
+    557            PRINTF("%X ",Advertising_Report[0].Address[2]);
+   \       0x22   0x7929             LDRB     R1,[R5, #+4]
+   \       0x24   0x0030             MOVS     R0,R6
+   \       0x26   0x.... 0x....      BL       printf
+    558            PRINTF("%X ",Advertising_Report[0].Address[3]);
+   \       0x2A   0x7969             LDRB     R1,[R5, #+5]
+   \       0x2C   0x0030             MOVS     R0,R6
+   \       0x2E   0x.... 0x....      BL       printf
+    559            PRINTF("%X ",Advertising_Report[0].Address[4]);
+   \       0x32   0x79A9             LDRB     R1,[R5, #+6]
+   \       0x34   0x0030             MOVS     R0,R6
+   \       0x36   0x.... 0x....      BL       printf
+    560            PRINTF("%X ",Advertising_Report[0].Address[5]);
+   \       0x3A   0x79E9             LDRB     R1,[R5, #+7]
+   \       0x3C   0x0030             MOVS     R0,R6
+   \       0x3E   0x.... 0x....      BL       printf
+    561            PRINTF("\r\n");
+   \       0x42   0x....             ADR      R0,??DataTable11_2
+   \       0x44   0x.... 0x....      BL       printf
+    562            
+    563            
+    564            while(i < Advertising_Report[0].Data_Length){
+   \                     ??hci_le_advertising_report_event_0: (+1)
+   \       0x48   0x0020             MOVS     R0,R4
+   \       0x4A   0x7A29             LDRB     R1,[R5, #+8]
+   \       0x4C   0xB2C0             UXTB     R0,R0
+   \       0x4E   0x4288             CMP      R0,R1
+   \       0x50   0xD234             BCS      ??hci_le_advertising_report_event_1
+    565              AD_len = Advertising_Report[0].Data[i];
+   \       0x52   0x68E8             LDR      R0,[R5, #+12]
+   \       0x54   0x0021             MOVS     R1,R4
+   \       0x56   0xB2C9             UXTB     R1,R1
+   \       0x58   0x5C40             LDRB     R0,[R0, R1]
+   \       0x5A   0x4669             MOV      R1,SP
+   \       0x5C   0x7048             STRB     R0,[R1, #+1]
+    566              AD_type = Advertising_Report[0].Data[i+1];    
+   \       0x5E   0x68E8             LDR      R0,[R5, #+12]
+   \       0x60   0x0021             MOVS     R1,R4
+   \       0x62   0xB2C9             UXTB     R1,R1
+   \       0x64   0x1840             ADDS     R0,R0,R1
+   \       0x66   0x7840             LDRB     R0,[R0, #+1]
+   \       0x68   0x4669             MOV      R1,SP
+   \       0x6A   0x7008             STRB     R0,[R1, #+0]
+    567              if(AD_type ==  0x07){ //AD_TYPE_128_BIT_UUID_SERVICE_DATA){
+   \       0x6C   0x4668             MOV      R0,SP
+   \       0x6E   0x7800             LDRB     R0,[R0, #+0]
+   \       0x70   0x2807             CMP      R0,#+7
+   \       0x72   0xD11E             BNE      ??hci_le_advertising_report_event_2
+    568                
+    569                // Search for Service UUID
+    570                
+    571                if(memcmp(&Advertising_Report[0].Data[i+2], Service_uuid, sizeof(Service_uuid))==0 ){ //&& Advertising_Report[0].Data[i+18] == SERVICE_DATA_TO_SEARCH_FOR
+   \       0x74   0x2210             MOVS     R2,#+16
+   \       0x76   0x....             LDR      R1,??DataTable11_3
+   \       0x78   0x68E8             LDR      R0,[R5, #+12]
+   \       0x7A   0x0023             MOVS     R3,R4
+   \       0x7C   0xB2DB             UXTB     R3,R3
+   \       0x7E   0x18C0             ADDS     R0,R0,R3
+   \       0x80   0x1C80             ADDS     R0,R0,#+2
+   \       0x82   0x.... 0x....      BL       memcmp
+   \       0x86   0x2800             CMP      R0,#+0
+   \       0x88   0xD113             BNE      ??hci_le_advertising_report_event_2
+    572                  // Device found!
+    573                  aci_gap_terminate_proc(GAP_GENERAL_CONNECTION_ESTABLISHMENT_PROC);
+   \       0x8A   0x2003             MOVS     R0,#+3
+   \       0x8C   0x.... 0x....      BL       aci_gap_terminate_proc
+    574                  aci_gap_terminate_proc(0x01);
+   \       0x90   0x2001             MOVS     R0,#+1
+   \       0x92   0x.... 0x....      BL       aci_gap_terminate_proc
+    575                  
+    576                  ret = aci_gap_create_connection(LE_1M_PHY_BIT, Advertising_Report[0].Address_Type, Advertising_Report[0].Address);        
+   \       0x96   0x1CAA             ADDS     R2,R5,#+2
+   \       0x98   0x7869             LDRB     R1,[R5, #+1]
+   \       0x9A   0x2001             MOVS     R0,#+1
+   \       0x9C   0x.... 0x....      BL       aci_gap_create_connection
+   \       0xA0   0x0006             MOVS     R6,R0
+    577                  PRINTF("aci_gap_create_connection %02X\r\n", ret);
+   \       0xA2   0x0031             MOVS     R1,R6
+   \       0xA4   0xB2C9             UXTB     R1,R1
+   \       0xA6   0x....             LDR      R0,??DataTable11_4
+   \       0xA8   0x.... 0x....      BL       printf
+    578          
+    579                  
+    580                  //Connect();
+    581                  slaves.state = IDLE;
+   \       0xAC   0x....             LDR      R0,??DataTable6
+   \       0xAE   0x7287             STRB     R7,[R0, #+10]
+    582          
+    583                  
+    584                  return;
+   \       0xB0   0xE007             B        ??hci_le_advertising_report_event_3
+    585                }
+    586                
+    587                
+    588              }
+    589              i += AD_len+1;
+   \                     ??hci_le_advertising_report_event_2: (+1)
+   \       0xB2   0x4668             MOV      R0,SP
+   \       0xB4   0x7840             LDRB     R0,[R0, #+1]
+   \       0xB6   0x1824             ADDS     R4,R4,R0
+   \       0xB8   0x1C64             ADDS     R4,R4,#+1
+   \       0xBA   0xE7C5             B        ??hci_le_advertising_report_event_0
+    590            }
+    591          
+    592            PRINTF("BLE *******SEARCH******* \r\n");
+   \                     ??hci_le_advertising_report_event_1: (+1)
+   \       0xBC   0x....             LDR      R0,??DataTable12
+   \       0xBE   0x.... 0x....      BL       printf
+    593          }
+   \                     ??hci_le_advertising_report_event_3: (+1)
+   \       0xC2   0xBDF7             POP      {R0-R2,R4-R7,PC}
+    594          
+    595          /* This callback is called when an advertising report is received */
+
+   \                                 In section .text, align 2, keep-with-next
+    596          void hci_le_extended_advertising_report_event(uint8_t Num_Reports,
+    597                                                        Extended_Advertising_Report_t Extended_Advertising_Report[])
+    598          {
+   \                     hci_le_extended_advertising_report_event: (+1)
+   \        0x0   0xB5F1             PUSH     {R0,R4-R7,LR}
+   \        0x2   0xB086             SUB      SP,SP,#+24
+   \        0x4   0x000C             MOVS     R4,R1
+    599            Advertising_Report_t Advertising_Report;
+    600            Advertising_Report.Address_Type = Extended_Advertising_Report[0].Address_Type;
+   \        0x6   0xAE01             ADD      R6,SP,#+4
+   \        0x8   0x78A0             LDRB     R0,[R4, #+2]
+   \        0xA   0x7070             STRB     R0,[R6, #+1]
+    601            memcpy(Advertising_Report.Address, Extended_Advertising_Report[0].Address, 6);
+   \        0xC   0x2506             MOVS     R5,#+6
+   \        0xE   0x1CE0             ADDS     R0,R4,#+3
+   \       0x10   0x9000             STR      R0,[SP, #+0]
+   \       0x12   0xA801             ADD      R0,SP,#+4
+   \       0x14   0x1C87             ADDS     R7,R0,#+2
+   \       0x16   0x002A             MOVS     R2,R5
+   \       0x18   0x9900             LDR      R1,[SP, #+0]
+   \       0x1A   0x0038             MOVS     R0,R7
+   \       0x1C   0x.... 0x....      BL       __aeabi_memcpy
+    602            Advertising_Report.Data_Length = Extended_Advertising_Report[0].Data_Length;
+   \       0x20   0x7DE0             LDRB     R0,[R4, #+23]
+   \       0x22   0x7230             STRB     R0,[R6, #+8]
+    603            Advertising_Report.Data = Extended_Advertising_Report[0].Data;
+   \       0x24   0x69A0             LDR      R0,[R4, #+24]
+   \       0x26   0x9004             STR      R0,[SP, #+16]
+    604            Advertising_Report.RSSI = Extended_Advertising_Report[0].RSSI;
+   \       0x28   0x7B60             LDRB     R0,[R4, #+13]
+   \       0x2A   0x7430             STRB     R0,[R6, #+16]
+    605            hci_le_advertising_report_event(1, &Advertising_Report);
+   \       0x2C   0xA901             ADD      R1,SP,#+4
+   \       0x2E   0x2001             MOVS     R0,#+1
+   \       0x30   0x.... 0x....      BL       hci_le_advertising_report_event
+    606          }
+   \       0x34   0xB007             ADD      SP,SP,#+28
+   \       0x36   0xBDF0             POP      {R4-R7,PC}
+    607          
+    608          
+    609          
+    610          
+
+   \                                 In section .text, align 2, keep-with-next
+    611          void aci_gap_bond_lost_event(void)
+    612          {  
+   \                     aci_gap_bond_lost_event: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    613            PRINTF("aci_gap_bond_lost_event\r\n");
+   \        0x2   0x....             LDR      R0,??DataTable13
+   \        0x4   0x.... 0x....      BL       printf
+    614          }
+   \        0x8   0xBD01             POP      {R0,PC}
+    615          
+    616          
+    617          
+    618          
+    619          
+    620          
+    621          
+    622          
+    623          
+    624          
+    625          /* ***************** Callbacks WRITE , READ , NOTIFICATION ***** PAG-69 ****************/
+    626          /* ***************** Callbacks WRITE , READ , NOTIFICATION ***** PAG-69 ****************/
+    627          /* ***************** Callbacks WRITE , READ , NOTIFICATION ***** PAG-69 ****************/
+    628          /* ***************** Callbacks WRITE , READ , NOTIFICATION ***** PAG-69 ****************/
+    629          /* ***************** Callbacks WRITE , READ , NOTIFICATION ***** PAG-69 ****************/
+    630          /* ***************** Callbacks WRITE , READ , NOTIFICATION ***** PAG-69 ****************/
+    631          /* ***************** Callbacks WRITE , READ , NOTIFICATION ***** PAG-69 ****************/
+    632          /* ***************** Callbacks WRITE , READ , NOTIFICATION ***** PAG-69 ****************/
+    633          
+    634          
+    635          /*******************************************************************************
+    636           * Function Name  : aci_gatt_clt_notification_event.
+    637           * Description    : This event occurs when a notification is received.
+    638           * Input          : See file bluenrg1_events.h
+    639           * Output         : See file bluenrg1_events.h
+    640           * Return         : See file bluenrg1_events.h
+    641           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    642          void aci_gatt_clt_notification_event(uint16_t Connection_Handle,
+    643                                               uint16_t Attribute_Handle,
+    644                                               uint16_t Attribute_Value_Length,
+    645                                               uint8_t Attribute_Value[])
+    646          { 
+   \                     aci_gatt_clt_notification_event: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x0007             MOVS     R7,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0014             MOVS     R4,R2
+    647            uint16_t attr_handle;
+                            ^
+Warning[Pe177]: variable "attr_handle" was declared but never referenced
+    648           
+    649            if(Attribute_Handle == slaves.rx_handle + 1)
+   \        0x8   0x0028             MOVS     R0,R5
+   \        0xA   0xB280             UXTH     R0,R0
+   \        0xC   0x....             LDR      R1,??DataTable6
+   \        0xE   0x8A89             LDRH     R1,[R1, #+20]
+   \       0x10   0x1C49             ADDS     R1,R1,#+1
+   \       0x12   0x4288             CMP      R0,R1
+   \       0x14   0xD113             BNE      ??aci_gatt_clt_notification_event_0
+    650            {
+    651              uint32_t counter;
+    652              
+    653              counter = LE_TO_HOST_32(Attribute_Value);
+   \       0x16   0x9800             LDR      R0,[SP, #+0]
+   \       0x18   0x7800             LDRB     R0,[R0, #+0]
+   \       0x1A   0x9900             LDR      R1,[SP, #+0]
+   \       0x1C   0x7849             LDRB     R1,[R1, #+1]
+   \       0x1E   0x0209             LSLS     R1,R1,#+8
+   \       0x20   0x4301             ORRS     R1,R1,R0
+   \       0x22   0x9800             LDR      R0,[SP, #+0]
+   \       0x24   0x7880             LDRB     R0,[R0, #+2]
+   \       0x26   0x0400             LSLS     R0,R0,#+16
+   \       0x28   0x4308             ORRS     R0,R0,R1
+   \       0x2A   0x9900             LDR      R1,[SP, #+0]
+   \       0x2C   0x78C9             LDRB     R1,[R1, #+3]
+   \       0x2E   0x060E             LSLS     R6,R1,#+24
+   \       0x30   0x4306             ORRS     R6,R6,R0
+    654              
+    655              PRINTF("Notification from server : %d (%d bytes)\n", counter, Attribute_Value_Length);
+   \       0x32   0x0022             MOVS     R2,R4
+   \       0x34   0xB292             UXTH     R2,R2
+   \       0x36   0x0031             MOVS     R1,R6
+   \       0x38   0x....             LDR      R0,??DataTable13_1
+   \       0x3A   0x.... 0x....      BL       printf
+    656              
+    657            }  
+    658          
+    659            PRINTF("[EVENT]        aci_gatt_clt_notification_event\r\n");
+   \                     ??aci_gatt_clt_notification_event_0: (+1)
+   \       0x3E   0x....             LDR      R0,??DataTable14
+   \       0x40   0x.... 0x....      BL       printf
+    660          
+    661          }
+   \       0x44   0xBDF1             POP      {R0,R4-R7,PC}
+    662          
+    663          
+
+   \                                 In section .text, align 2, keep-with-next
+    664          void aci_att_clt_read_resp_event(uint16_t Connection_Handle,
+    665                                           uint16_t Event_Data_Length,
+    666                                           uint8_t Attribute_Value[])
+    667          {
+   \                     aci_att_clt_read_resp_event: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x0006             MOVS     R6,R0
+   \        0x4   0x000C             MOVS     R4,R1
+   \        0x6   0x0017             MOVS     R7,R2
+    668            
+    669            
+    670             PRINTF("[EVENT]        aci_att_clt_read_resp_event\r\n");
+   \        0x8   0x....             LDR      R0,??DataTable13_2
+   \        0xA   0x.... 0x....      BL       printf
+    671          
+    672             PRINTF("read: ");
+   \        0xE   0x....             LDR      R0,??DataTable13_3
+   \       0x10   0x.... 0x....      BL       printf
+    673          
+    674             for(int i = 0 ; i < Event_Data_Length; i++){
+   \       0x14   0x2500             MOVS     R5,#+0
+   \                     ??aci_att_clt_read_resp_event_0: (+1)
+   \       0x16   0x0020             MOVS     R0,R4
+   \       0x18   0xB280             UXTH     R0,R0
+   \       0x1A   0x4285             CMP      R5,R0
+   \       0x1C   0xDA05             BGE      ??aci_att_clt_read_resp_event_1
+    675                PRINTF("%2X", Attribute_Value[i]);
+   \       0x1E   0x5D79             LDRB     R1,[R7, R5]
+   \       0x20   0x....             ADR      R0,??DataTable13_4
+   \       0x22   0x.... 0x....      BL       printf
+    676             }
+   \       0x26   0x1C6D             ADDS     R5,R5,#+1
+   \       0x28   0xE7F5             B        ??aci_att_clt_read_resp_event_0
+    677             PRINTF("\r\n");
+   \                     ??aci_att_clt_read_resp_event_1: (+1)
+   \       0x2A   0x....             ADR      R0,??DataTable11_2
+   \       0x2C   0x.... 0x....      BL       printf
+    678          
+    679             
+    680          
+    681          }
+   \       0x30   0xBDF1             POP      {R0,R4-R7,PC}
+    682          
+    683          
+    684          
+    685          
+    686          
+    687          
+    688          
+    689          
+    690          
+    691          
+    692          
+    693          
+    694          /* ***************** Callbacks DISCOVERY SERVICE and CHARATTERISTIC ****************/
+    695          /* ***************** Callbacks DISCOVERY SERVICE and CHARATTERISTIC ****************/
+    696          /* ***************** Callbacks DISCOVERY SERVICE and CHARATTERISTIC ****************/
+    697          /* ***************** Callbacks DISCOVERY SERVICE and CHARATTERISTIC ****************/
+    698          /* ***************** Callbacks DISCOVERY SERVICE and CHARATTERISTIC ****************/
+    699          /* ***************** Callbacks DISCOVERY SERVICE and CHARATTERISTIC ****************/
+    700          /* ***************** Callbacks DISCOVERY SERVICE and CHARATTERISTIC ****************/
+    701          /* ***************** Callbacks DISCOVERY SERVICE and CHARATTERISTIC ****************/
+    702          
+    703          
+    704          
+    705          
+    706          
+    707          /*******************************************************************************
+    708           * Function Name  : aci_gatt_clt_disc_read_char_by_uuid_resp_event.
+    709           * Description    : This event occurs when a discovery read characteristic by UUID response.
+    710           * Input          : See file bluenrg1_events.h
+    711           * Output         : See file bluenrg1_events.h
+    712           * Return         : See file bluenrg1_events.h
+    713           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    714          void aci_gatt_clt_disc_read_char_by_uuid_resp_event(uint16_t Connection_Handle,
+    715                                                          uint16_t Attribute_Handle,
+    716                                                          uint8_t Attribute_Value_Length,
+    717                                                          uint8_t Attribute_Value[])
+    718          {
+   \                     aci_gatt_clt_disc_read_char_by_uuid_resp_event: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000F             MOVS     R7,R1
+   \        0x6   0x0015             MOVS     R5,R2
+   \        0x8   0x001E             MOVS     R6,R3
+    719              PRINTF("[EVENT]        aci_gatt_clt_disc_read_char_by_uuid_resp_event\r\n");
+   \        0xA   0x....             LDR      R0,??DataTable15
+   \        0xC   0x.... 0x....      BL       printf
+    720          }
+   \       0x10   0xBDF1             POP      {R0,R4-R7,PC}
+    721          
+    722          
+
+   \                                 In section .text, align 2, keep-with-next
+    723          void print_uuid(uint8_t *uuid)
+    724          {
+   \                     print_uuid: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+    725            for(int i = 0; i < 16; i++)
+   \        0x4   0x2500             MOVS     R5,#+0
+   \                     ??print_uuid_0: (+1)
+   \        0x6   0x2D10             CMP      R5,#+16
+   \        0x8   0xDA05             BGE      ??print_uuid_1
+    726              PRINTF("%02X",uuid[i]);
+   \        0xA   0x5D61             LDRB     R1,[R4, R5]
+   \        0xC   0x....             LDR      R0,??DataTable15_1
+   \        0xE   0x.... 0x....      BL       printf
+   \       0x12   0x1C6D             ADDS     R5,R5,#+1
+   \       0x14   0xE7F7             B        ??print_uuid_0
+    727          }
+   \                     ??print_uuid_1: (+1)
+   \       0x16   0xBD31             POP      {R0,R4,R5,PC}
+    728          
+    729          
+
+   \                                 In section .text, align 2, keep-with-next
+    730          void aci_att_clt_read_by_type_resp_event(uint16_t Connection_Handle,
+    731                                               uint8_t Handle_Value_Pair_Length,
+    732                                               uint16_t Data_Length,
+    733                                               uint8_t Handle_Value_Pair_Data[])
+    734          {
+   \                     aci_att_clt_read_by_type_resp_event: (+1)
+   \        0x0   0xB5F7             PUSH     {R0-R2,R4-R7,LR}
+   \        0x2   0x001E             MOVS     R6,R3
+    735            uint16_t handle;
+    736            
+    737            switch(slaves.state){
+   \        0x4   0x....             LDR      R5,??DataTable14_1
+   \        0x6   0x7AA8             LDRB     R0,[R5, #+10]
+   \        0x8   0x2808             CMP      R0,#+8
+   \        0xA   0xD133             BNE      ??aci_att_clt_read_by_type_resp_event_0
+    738              case DISCOVERING_CHARATTERISTIC:
+    739                for(int i = 0; i < Data_Length; i += Handle_Value_Pair_Length){
+   \        0xC   0x2400             MOVS     R4,#+0
+   \                     ??aci_att_clt_read_by_type_resp_event_1: (+1)
+   \        0xE   0x4668             MOV      R0,SP
+   \       0x10   0x8900             LDRH     R0,[R0, #+8]
+   \       0x12   0x4284             CMP      R4,R0
+   \       0x14   0xDA2E             BGE      ??aci_att_clt_read_by_type_resp_event_2
+    740                  if(Handle_Value_Pair_Length == 21){ // 128-bit UUID
+   \       0x16   0x4668             MOV      R0,SP
+   \       0x18   0x7900             LDRB     R0,[R0, #+4]
+   \       0x1A   0x2815             CMP      R0,#+21
+   \       0x1C   0xD126             BNE      ??aci_att_clt_read_by_type_resp_event_3
+    741              
+    742                    handle = LE_TO_HOST_16(&Handle_Value_Pair_Data[i]);
+   \       0x1E   0x5D30             LDRB     R0,[R6, R4]
+   \       0x20   0x1931             ADDS     R1,R6,R4
+   \       0x22   0x7849             LDRB     R1,[R1, #+1]
+   \       0x24   0x0209             LSLS     R1,R1,#+8
+   \       0x26   0x4301             ORRS     R1,R1,R0
+   \       0x28   0x000F             MOVS     R7,R1
+    743                    
+    744                    print_uuid(&Handle_Value_Pair_Data[i+5]);
+   \       0x2A   0x1930             ADDS     R0,R6,R4
+   \       0x2C   0x1D40             ADDS     R0,R0,#+5
+   \       0x2E   0x.... 0x....      BL       print_uuid
+    745                    
+    746                    if(memcmp(&Handle_Value_Pair_Data[i+5], Char_TX_uuid, 16) == 0){
+   \       0x32   0x2210             MOVS     R2,#+16
+   \       0x34   0x....             LDR      R1,??DataTable15_2
+   \       0x36   0x1930             ADDS     R0,R6,R4
+   \       0x38   0x1D40             ADDS     R0,R0,#+5
+   \       0x3A   0x.... 0x....      BL       memcmp
+   \       0x3E   0x2800             CMP      R0,#+0
+   \       0x40   0xD106             BNE      ??aci_att_clt_read_by_type_resp_event_4
+    747                      slaves.tx_handle = handle;
+   \       0x42   0x826F             STRH     R7,[R5, #+18]
+    748                      PRINTF("TX Char handle for slave 0x%04X\r\n", handle);
+   \       0x44   0x0039             MOVS     R1,R7
+   \       0x46   0xB289             UXTH     R1,R1
+   \       0x48   0x....             LDR      R0,??DataTable15_3
+   \       0x4A   0x.... 0x....      BL       printf
+   \       0x4E   0xE00D             B        ??aci_att_clt_read_by_type_resp_event_3
+    749                    }
+    750                    else if(memcmp(&Handle_Value_Pair_Data[i+5], Char_RX_uuid, 16) == 0){
+   \                     ??aci_att_clt_read_by_type_resp_event_4: (+1)
+   \       0x50   0x2210             MOVS     R2,#+16
+   \       0x52   0x....             LDR      R1,??DataTable15_4
+   \       0x54   0x1930             ADDS     R0,R6,R4
+   \       0x56   0x1D40             ADDS     R0,R0,#+5
+   \       0x58   0x.... 0x....      BL       memcmp
+   \       0x5C   0x2800             CMP      R0,#+0
+   \       0x5E   0xD105             BNE      ??aci_att_clt_read_by_type_resp_event_3
+    751                      slaves.rx_handle = handle;
+   \       0x60   0x82AF             STRH     R7,[R5, #+20]
+    752                       PRINTF("RX Char Handle for slave 0x%04X\r\n", handle);
+   \       0x62   0x0039             MOVS     R1,R7
+   \       0x64   0xB289             UXTH     R1,R1
+   \       0x66   0x....             LDR      R0,??DataTable16
+   \       0x68   0x.... 0x....      BL       printf
+    753                    }
+    754                    
+    755                  }
+    756                }
+   \                     ??aci_att_clt_read_by_type_resp_event_3: (+1)
+   \       0x6C   0x4668             MOV      R0,SP
+   \       0x6E   0x7900             LDRB     R0,[R0, #+4]
+   \       0x70   0x1824             ADDS     R4,R4,R0
+   \       0x72   0xE7CC             B        ??aci_att_clt_read_by_type_resp_event_1
+    757                break;    
+    758            }
+    759            
+    760                PRINTF("[EVENT]        aci_att_clt_read_by_type_resp_event\r\n");
+   \                     ??aci_att_clt_read_by_type_resp_event_2: (+1)
+   \                     ??aci_att_clt_read_by_type_resp_event_0: (+1)
+   \       0x74   0x....             LDR      R0,??DataTable17
+   \       0x76   0x.... 0x....      BL       printf
+    761          
+    762          }
+   \       0x7A   0xBDF7             POP      {R0-R2,R4-R7,PC}
+    763          
+    764          
+    765          
+    766          /*******************************************************************************
+    767           * Function Name  : aci_gatt_clt_proc_complete_event.
+    768           * Description    : This event occurs when a GATT procedure complete is received.
+    769           * Input          : See file bluenrg1_events.h
+    770           * Output         : See file bluenrg1_events.h
+    771           * Return         : See file bluenrg1_events.h
+    772           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    773          void aci_gatt_clt_proc_complete_event(uint16_t Connection_Handle,
+    774                                                uint8_t Error_Code)
+    775          { 
+   \                     aci_gatt_clt_proc_complete_event: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0006             MOVS     R6,R0
+   \        0x4   0x000D             MOVS     R5,R1
+    776            
+    777            PRINTF("[EVENT]        aci_gatt_clt_proc_complete_event\r\n");
+   \        0x6   0x....             LDR      R0,??DataTable17_1
+   \        0x8   0x.... 0x....      BL       printf
+    778          
+    779          
+    780            if(Error_Code != BLE_STATUS_SUCCESS){
+   \        0xC   0x0028             MOVS     R0,R5
+   \        0xE   0xB2C0             UXTB     R0,R0
+   \       0x10   0x2800             CMP      R0,#+0
+   \       0x12   0xD009             BEQ      ??aci_gatt_clt_proc_complete_event_0
+    781              PRINTF("ERROR (aci_gatt_clt_proc_complete_event) 0x%02X (0x%04X).\r\n", Error_Code, slaves.conn_handle);
+   \       0x14   0x....             LDR      R4,??DataTable14_1
+   \       0x16   0x8922             LDRH     R2,[R4, #+8]
+   \       0x18   0x0029             MOVS     R1,R5
+   \       0x1A   0xB2C9             UXTB     R1,R1
+   \       0x1C   0x....             LDR      R0,??DataTable17_2
+   \       0x1E   0x.... 0x....      BL       printf
+    782              slaves.state = DISCONNECT;
+   \       0x22   0x200D             MOVS     R0,#+13
+   \       0x24   0x72A0             STRB     R0,[R4, #+10]
+    783              return;
+   \       0x26   0xE032             B        ??aci_gatt_clt_proc_complete_event_1
+    784            }
+    785            
+    786            switch(slaves.state){    
+   \                     ??aci_gatt_clt_proc_complete_event_0: (+1)
+   \       0x28   0x....             LDR      R4,??DataTable14_1
+   \       0x2A   0x7AA0             LDRB     R0,[R4, #+10]
+   \       0x2C   0x2804             CMP      R0,#+4
+   \       0x2E   0xD006             BEQ      ??aci_gatt_clt_proc_complete_event_2
+   \       0x30   0x2806             CMP      R0,#+6
+   \       0x32   0xD00B             BEQ      ??aci_gatt_clt_proc_complete_event_3
+   \       0x34   0x2808             CMP      R0,#+8
+   \       0x36   0xD016             BEQ      ??aci_gatt_clt_proc_complete_event_4
+   \       0x38   0x280A             CMP      R0,#+10
+   \       0x3A   0xD021             BEQ      ??aci_gatt_clt_proc_complete_event_5
+   \       0x3C   0xE027             B        ??aci_gatt_clt_proc_complete_event_6
+    787            case EXCHANGING_CONFIG:
+    788              PRINTF("Configuration exchanged (aci_gatt_clt_proc_complete_event) (0x%04X).\r\n", slaves.conn_handle);    
+   \                     ??aci_gatt_clt_proc_complete_event_2: (+1)
+   \       0x3E   0x8921             LDRH     R1,[R4, #+8]
+   \       0x40   0x....             LDR      R0,??DataTable17_3
+   \       0x42   0x.... 0x....      BL       printf
+    789              slaves.state = START_SERVICE_DISCOVERY;
+   \       0x46   0x2005             MOVS     R0,#+5
+   \       0x48   0x72A0             STRB     R0,[R4, #+10]
+    790              break;    
+   \       0x4A   0xE020             B        ??aci_gatt_clt_proc_complete_event_7
+    791            case DISCOVERING_SERVICES:
+    792              PRINTF("Discovering services ended (aci_gatt_clt_proc_complete_event) (0x%04X).\r\n", slaves.conn_handle);
+   \                     ??aci_gatt_clt_proc_complete_event_3: (+1)
+   \       0x4C   0x8921             LDRH     R1,[R4, #+8]
+   \       0x4E   0x....             LDR      R0,??DataTable17_4
+   \       0x50   0x.... 0x....      BL       printf
+    793              if(slaves.service_start_handle != 0)
+   \       0x54   0x89E0             LDRH     R0,[R4, #+14]
+   \       0x56   0x2800             CMP      R0,#+0
+   \       0x58   0xD002             BEQ      ??aci_gatt_clt_proc_complete_event_8
+    794                slaves.state = START_CHAR_DISCOVERY;
+   \       0x5A   0x2007             MOVS     R0,#+7
+   \       0x5C   0x72A0             STRB     R0,[R4, #+10]
+   \       0x5E   0xE001             B        ??aci_gatt_clt_proc_complete_event_9
+    795              else
+    796                slaves.state = DISCONNECT;
+   \                     ??aci_gatt_clt_proc_complete_event_8: (+1)
+   \       0x60   0x200D             MOVS     R0,#+13
+   \       0x62   0x72A0             STRB     R0,[R4, #+10]
+    797              break;    
+   \                     ??aci_gatt_clt_proc_complete_event_9: (+1)
+   \       0x64   0xE013             B        ??aci_gatt_clt_proc_complete_event_7
+    798            case DISCOVERING_CHARATTERISTIC:
+    799              PRINTF("Discovering SerialPort Service characteristics ended (aci_gatt_clt_proc_complete_event) (0x%04X).\r\n", slaves.conn_handle);
+   \                     ??aci_gatt_clt_proc_complete_event_4: (+1)
+   \       0x66   0x8921             LDRH     R1,[R4, #+8]
+   \       0x68   0x....             LDR      R0,??DataTable17_5
+   \       0x6A   0x.... 0x....      BL       printf
+    800              if(slaves.tx_handle != 0)
+   \       0x6E   0x8A60             LDRH     R0,[R4, #+18]
+   \       0x70   0x2800             CMP      R0,#+0
+   \       0x72   0xD002             BEQ      ??aci_gatt_clt_proc_complete_event_10
+    801                slaves.state = ENABLE_TX_CHAR_NOTIFICATIONS;       //abilita notifiche se necessarie
+   \       0x74   0x2009             MOVS     R0,#+9
+   \       0x76   0x72A0             STRB     R0,[R4, #+10]
+   \       0x78   0xE001             B        ??aci_gatt_clt_proc_complete_event_11
+    802                //slaves.state = DONE_CONNESSO;
+    803              else 
+    804                slaves.state = DISCONNECT;
+   \                     ??aci_gatt_clt_proc_complete_event_10: (+1)
+   \       0x7A   0x200D             MOVS     R0,#+13
+   \       0x7C   0x72A0             STRB     R0,[R4, #+10]
+    805              break;
+   \                     ??aci_gatt_clt_proc_complete_event_11: (+1)
+   \       0x7E   0xE006             B        ??aci_gatt_clt_proc_complete_event_7
+    806            case ENABLING_TX_CHAR_NOTIFICATIONS:
+    807              PRINTF("Notifications for TX Charac enabled (aci_gatt_clt_proc_complete_event) (0x%04X).\r\n", slaves.conn_handle);
+   \                     ??aci_gatt_clt_proc_complete_event_5: (+1)
+   \       0x80   0x8921             LDRH     R1,[R4, #+8]
+   \       0x82   0x....             LDR      R0,??DataTable17_6
+   \       0x84   0x.... 0x....      BL       printf
+    808                slaves.state = DONE_CONNESSO;
+   \       0x88   0x200E             MOVS     R0,#+14
+   \       0x8A   0x72A0             STRB     R0,[R4, #+10]
+    809              break;
+   \       0x8C   0xE7FF             B        ??aci_gatt_clt_proc_complete_event_7
+    810             default:
+    811              break;
+    812            }
+    813          
+    814          }
+   \                     ??aci_gatt_clt_proc_complete_event_6: (+1)
+   \                     ??aci_gatt_clt_proc_complete_event_7: (+1)
+   \                     ??aci_gatt_clt_proc_complete_event_1: (+1)
+   \       0x8E   0xBD70             POP      {R4-R6,PC}
+    815          
+    816          
+    817                                                                                                  
+
+   \                                 In section .text, align 2, keep-with-next
+    818          void aci_att_clt_read_by_group_type_resp_event(uint16_t Connection_Handle,
+    819                                                     uint8_t Attribute_Data_Length,
+    820                                                     uint16_t Data_Length,
+    821                                                     uint8_t Attribute_Data_List[])
+    822          {
+   \                     aci_att_clt_read_by_group_type_resp_event: (+1)
+   \        0x0   0xB5FF             PUSH     {R0-R7,LR}
+   \        0x2   0xB083             SUB      SP,SP,#+12
+    823            
+    824            switch(slaves.state){
+   \        0x4   0x....             LDR      R5,??DataTable14_1
+   \        0x6   0x7AA8             LDRB     R0,[R5, #+10]
+   \        0x8   0x2806             CMP      R0,#+6
+   \        0xA   0xD132             BNE      ??aci_att_clt_read_by_group_type_resp_event_0
+    825          
+    826              case DISCOVERING_SERVICES:
+    827                if(Attribute_Data_Length == 20){ // Only 128bit UUIDs
+   \        0xC   0x4668             MOV      R0,SP
+   \        0xE   0x7C00             LDRB     R0,[R0, #+16]
+   \       0x10   0x2814             CMP      R0,#+20
+   \       0x12   0xD12D             BNE      ??aci_att_clt_read_by_group_type_resp_event_1
+    828                  for(int i = 0; i < Data_Length; i += Attribute_Data_Length){
+   \       0x14   0x2400             MOVS     R4,#+0
+   \                     ??aci_att_clt_read_by_group_type_resp_event_2: (+1)
+   \       0x16   0x4668             MOV      R0,SP
+   \       0x18   0x8A80             LDRH     R0,[R0, #+20]
+   \       0x1A   0x4284             CMP      R4,R0
+   \       0x1C   0xDA28             BGE      ??aci_att_clt_read_by_group_type_resp_event_1
+    829                    
+    830                    // Check UUID Service 
+    831                    
+    832                    if(memcmp(&Attribute_Data_List[i+4],Service_uuid,16) == 0){
+   \       0x1E   0x2210             MOVS     R2,#+16
+   \       0x20   0x....             LDR      R1,??DataTable17_7
+   \       0x22   0x9806             LDR      R0,[SP, #+24]
+   \       0x24   0x1900             ADDS     R0,R0,R4
+   \       0x26   0x1D00             ADDS     R0,R0,#+4
+   \       0x28   0x.... 0x....      BL       memcmp
+   \       0x2C   0x2800             CMP      R0,#+0
+   \       0x2E   0xD11B             BNE      ??aci_att_clt_read_by_group_type_resp_event_3
+    833                    
+    834                      memcpy(&slaves.service_start_handle, &Attribute_Data_List[i], 2);
+   \       0x30   0x2602             MOVS     R6,#+2
+   \       0x32   0x9602             STR      R6,[SP, #+8]
+   \       0x34   0x9806             LDR      R0,[SP, #+24]
+   \       0x36   0x1900             ADDS     R0,R0,R4
+   \       0x38   0x9001             STR      R0,[SP, #+4]
+   \       0x3A   0x002F             MOVS     R7,R5
+   \       0x3C   0x370E             ADDS     R7,R7,#+14
+   \       0x3E   0x9A02             LDR      R2,[SP, #+8]
+   \       0x40   0x9901             LDR      R1,[SP, #+4]
+   \       0x42   0x0038             MOVS     R0,R7
+   \       0x44   0x.... 0x....      BL       __aeabi_memcpy
+    835                      memcpy(&slaves.service_end_handle, &Attribute_Data_List[i+2], 2);
+   \       0x48   0x9600             STR      R6,[SP, #+0]
+   \       0x4A   0x9806             LDR      R0,[SP, #+24]
+   \       0x4C   0x1900             ADDS     R0,R0,R4
+   \       0x4E   0x1C86             ADDS     R6,R0,#+2
+   \       0x50   0x002F             MOVS     R7,R5
+   \       0x52   0x3710             ADDS     R7,R7,#+16
+   \       0x54   0x9A00             LDR      R2,[SP, #+0]
+   \       0x56   0x0031             MOVS     R1,R6
+   \       0x58   0x0038             MOVS     R0,R7
+   \       0x5A   0x.... 0x....      BL       __aeabi_memcpy
+    836                      
+    837                      PRINTF("Service handles: 0x%04X 0x%04X\r\n", slaves.service_start_handle, slaves.service_end_handle);
+   \       0x5E   0x8A2A             LDRH     R2,[R5, #+16]
+   \       0x60   0x89E9             LDRH     R1,[R5, #+14]
+   \       0x62   0x....             LDR      R0,??DataTable17_8
+   \       0x64   0x.... 0x....      BL       printf
+    838                    }
+    839                    
+    840                  }
+   \                     ??aci_att_clt_read_by_group_type_resp_event_3: (+1)
+   \       0x68   0x4668             MOV      R0,SP
+   \       0x6A   0x7C00             LDRB     R0,[R0, #+16]
+   \       0x6C   0x1824             ADDS     R4,R4,R0
+   \       0x6E   0xE7D2             B        ??aci_att_clt_read_by_group_type_resp_event_2
+    841                }
+    842              break;
+   \                     ??aci_att_clt_read_by_group_type_resp_event_1: (+1)
+   \       0x70   0xE7FF             B        ??aci_att_clt_read_by_group_type_resp_event_4
+    843              default:
+    844              break;
+    845             }
+    846            
+    847            PRINTF("[EVENT]        aci_att_clt_read_by_group_type_resp_event\r\n");
+   \                     ??aci_att_clt_read_by_group_type_resp_event_0: (+1)
+   \                     ??aci_att_clt_read_by_group_type_resp_event_4: (+1)
+   \       0x72   0x....             LDR      R0,??DataTable17_9
+   \       0x74   0x.... 0x....      BL       printf
+    848          }
+   \       0x78   0xB007             ADD      SP,SP,#+28
+   \       0x7A   0xBDF0             POP      {R4-R7,PC}
+    849          
+    850          
+    851          
+    852          
+    853          
+    854          /* ***************** CONNESSIONE Callbacks *****************************/
+    855          /* ***************** CONNESSIONE Callbacks *****************************/
+    856          /* ***************** CONNESSIONE Callbacks *****************************/
+    857          /* ***************** CONNESSIONE Callbacks *****************************/
+    858          /* ***************** CONNESSIONE Callbacks *****************************/
+    859          /* ***************** CONNESSIONE Callbacks *****************************/
+    860          /* ***************** CONNESSIONE Callbacks *****************************/
+    861          /* ***************** CONNESSIONE Callbacks *****************************/
+    862          /* ***************** CONNESSIONE Callbacks *****************************/
+    863          /* ***************** CONNESSIONE Callbacks *****************************/
+    864          /* ***************** CONNESSIONE Callbacks *****************************/
+    865          
+    866          
+    867          
+    868          /*******************************************************************************
+    869           * Function Name  : hci_le_connection_complete_event.
+    870           * Description    : This event indicates that a new connection has been created.
+    871           * Input          : See file bluenrg1_events.h
+    872           * Output         : See file bluenrg1_events.h
+    873           * Return         : See file bluenrg1_events.h
+    874           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    875          void hci_le_connection_complete_event(uint8_t Status,
+    876                                                uint16_t Connection_Handle,
+    877                                                uint8_t Role,
+    878                                                uint8_t Peer_Address_Type,
+    879                                                uint8_t Peer_Address[6],
+    880                                                uint16_t Conn_Interval,
+    881                                                uint16_t Conn_Latency,
+    882                                                uint16_t Supervision_Timeout,
+    883                                                uint8_t Master_Clock_Accuracy)
+    884          {
+   \                     hci_le_connection_complete_event: (+1)
+   \        0x0   0xB5FF             PUSH     {R0-R7,LR}
+   \        0x2   0xB083             SUB      SP,SP,#+12
+   \        0x4   0x9C0C             LDR      R4,[SP, #+48]
+    885            
+    886            if(Status != BLE_STATUS_SUCCESS){
+   \        0x6   0x4668             MOV      R0,SP
+   \        0x8   0x7B00             LDRB     R0,[R0, #+12]
+   \        0xA   0x2800             CMP      R0,#+0
+   \        0xC   0xD003             BEQ      ??hci_le_connection_complete_event_0
+    887              slaves.state = DISCONNECT;
+   \        0xE   0x200D             MOVS     R0,#+13
+   \       0x10   0x....             LDR      R1,??DataTable14_1
+   \       0x12   0x7288             STRB     R0,[R1, #+10]
+    888              return;
+   \       0x14   0xE023             B        ??hci_le_connection_complete_event_1
+    889            }
+    890            
+    891            if(Role == 0x00) { // Master role 
+   \                     ??hci_le_connection_complete_event_0: (+1)
+   \       0x16   0x4668             MOV      R0,SP
+   \       0x18   0x7D00             LDRB     R0,[R0, #+20]
+   \       0x1A   0x2800             CMP      R0,#+0
+   \       0x1C   0xD110             BNE      ??hci_le_connection_complete_event_2
+    892          
+    893              slaves.address_type = Peer_Address_Type;
+   \       0x1E   0x....             LDR      R5,??DataTable14_1
+   \       0x20   0x4668             MOV      R0,SP
+   \       0x22   0x7E00             LDRB     R0,[R0, #+24]
+   \       0x24   0x7028             STRB     R0,[R5, #+0]
+    894              memcpy(slaves.address, Peer_Address, 6);         
+   \       0x26   0x2606             MOVS     R6,#+6
+   \       0x28   0x9400             STR      R4,[SP, #+0]
+   \       0x2A   0x1C6F             ADDS     R7,R5,#+1
+   \       0x2C   0x0032             MOVS     R2,R6
+   \       0x2E   0x9900             LDR      R1,[SP, #+0]
+   \       0x30   0x0038             MOVS     R0,R7
+   \       0x32   0x.... 0x....      BL       __aeabi_memcpy
+    895              slaves.conn_handle = Connection_Handle;
+   \       0x36   0x4668             MOV      R0,SP
+   \       0x38   0x8A00             LDRH     R0,[R0, #+16]
+   \       0x3A   0x8128             STRH     R0,[R5, #+8]
+    896          
+    897              slaves.state = EXCHANGE_CONFIG;               //Start procedura di discovery
+   \       0x3C   0x2003             MOVS     R0,#+3
+   \       0x3E   0x72A8             STRB     R0,[R5, #+10]
+    898          
+    899            }  
+    900            
+    901            PRINTF("CONNESSIONE CLIENT ..OK\n");
+   \                     ??hci_le_connection_complete_event_2: (+1)
+   \       0x40   0x....             LDR      R0,??DataTable17_10
+   \       0x42   0x.... 0x....      BL       printf
+    902            PRINTF("Address: %2x,%2x,%2x,%2x,%2x,%2x  \n",Peer_Address[0],Peer_Address[1],Peer_Address[2],Peer_Address[3],Peer_Address[4],Peer_Address[5]);
+   \       0x46   0x7960             LDRB     R0,[R4, #+5]
+   \       0x48   0x9002             STR      R0,[SP, #+8]
+   \       0x4A   0x7920             LDRB     R0,[R4, #+4]
+   \       0x4C   0x9001             STR      R0,[SP, #+4]
+   \       0x4E   0x78E0             LDRB     R0,[R4, #+3]
+   \       0x50   0x9000             STR      R0,[SP, #+0]
+   \       0x52   0x78A3             LDRB     R3,[R4, #+2]
+   \       0x54   0x7862             LDRB     R2,[R4, #+1]
+   \       0x56   0x7821             LDRB     R1,[R4, #+0]
+   \       0x58   0x....             LDR      R0,??DataTable17_11
+   \       0x5A   0x.... 0x....      BL       printf
+    903          
+    904            
+    905          }/* end hci_le_connection_complete_event() */
+   \                     ??hci_le_connection_complete_event_1: (+1)
+   \       0x5E   0xB007             ADD      SP,SP,#+28
+   \       0x60   0xBDF0             POP      {R4-R7,PC}
+    906          
+    907          /*******************************************************************************
+    908           * Function Name  : hci_le_enhanced_connection_complete_event.
+    909           * Description    : This event indicates that a new connection has been created
+    910           * Input          : See file bluenrg_lp_events.h
+    911           * Output         : See file bluenrg_lp_events.h
+    912           * Return         : See file bluenrg_lp_events.h
+    913           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    914          void hci_le_enhanced_connection_complete_event(uint8_t Status,
+    915                                                         uint16_t Connection_Handle,
+    916                                                         uint8_t Role,
+    917                                                         uint8_t Peer_Address_Type,
+    918                                                         uint8_t Peer_Address[6],
+    919                                                         uint8_t Local_Resolvable_Private_Address[6],
+    920                                                         uint8_t Peer_Resolvable_Private_Address[6],
+    921                                                         uint16_t Conn_Interval,
+    922                                                         uint16_t Conn_Latency,
+    923                                                         uint16_t Supervision_Timeout,
+    924                                                         uint8_t Master_Clock_Accuracy)
+    925          {
+   \                     hci_le_enhanced_connection_complete_event: (+1)
+   \        0x0   0xB5F3             PUSH     {R0,R1,R4-R7,LR}
+   \        0x2   0xB085             SUB      SP,SP,#+20
+   \        0x4   0x0017             MOVS     R7,R2
+   \        0x6   0x001E             MOVS     R6,R3
+   \        0x8   0x9D0D             LDR      R5,[SP, #+52]
+   \        0xA   0x9C0E             LDR      R4,[SP, #+56]
+    926            
+    927            hci_le_connection_complete_event(Status,
+    928                                             Connection_Handle,
+    929                                             Role,
+    930                                             Peer_Address_Type,
+    931                                             Peer_Address,
+    932                                             Conn_Interval,
+    933                                             Conn_Latency,
+    934                                             Supervision_Timeout,
+    935                                             Master_Clock_Accuracy);
+   \        0xC   0xA812             ADD      R0,SP,#+72
+   \        0xE   0x7800             LDRB     R0,[R0, #+0]
+   \       0x10   0x9004             STR      R0,[SP, #+16]
+   \       0x12   0xA811             ADD      R0,SP,#+68
+   \       0x14   0x8800             LDRH     R0,[R0, #+0]
+   \       0x16   0x9003             STR      R0,[SP, #+12]
+   \       0x18   0xA810             ADD      R0,SP,#+64
+   \       0x1A   0x8800             LDRH     R0,[R0, #+0]
+   \       0x1C   0x9002             STR      R0,[SP, #+8]
+   \       0x1E   0x4668             MOV      R0,SP
+   \       0x20   0x8F80             LDRH     R0,[R0, #+60]
+   \       0x22   0x9001             STR      R0,[SP, #+4]
+   \       0x24   0x980C             LDR      R0,[SP, #+48]
+   \       0x26   0x9000             STR      R0,[SP, #+0]
+   \       0x28   0x0033             MOVS     R3,R6
+   \       0x2A   0xB2DB             UXTB     R3,R3
+   \       0x2C   0x003A             MOVS     R2,R7
+   \       0x2E   0xB2D2             UXTB     R2,R2
+   \       0x30   0x4668             MOV      R0,SP
+   \       0x32   0x8B01             LDRH     R1,[R0, #+24]
+   \       0x34   0x4668             MOV      R0,SP
+   \       0x36   0x7D00             LDRB     R0,[R0, #+20]
+   \       0x38   0x.... 0x....      BL       hci_le_connection_complete_event
+    936          
+    937            PRINTF("CONNESSIONE AL SERVER ..COMPLETATO\n");
+   \       0x3C   0x....             LDR      R0,??DataTable17_12
+   \       0x3E   0x.... 0x....      BL       printf
+    938            PRINTF("Local_Resolvable_Private_Address : %2x,%2x,%2x,%2x,%2x,%2x  \n",Local_Resolvable_Private_Address[0],Local_Resolvable_Private_Address[1],Local_Resolvable_Private_Address[2],Local_Resolvable_Private_Address[3],Local_Resolvable_Private_Address[4],Local_Resolvable_Private_Address[5]);
+   \       0x42   0x7968             LDRB     R0,[R5, #+5]
+   \       0x44   0x9002             STR      R0,[SP, #+8]
+   \       0x46   0x7928             LDRB     R0,[R5, #+4]
+   \       0x48   0x9001             STR      R0,[SP, #+4]
+   \       0x4A   0x78E8             LDRB     R0,[R5, #+3]
+   \       0x4C   0x9000             STR      R0,[SP, #+0]
+   \       0x4E   0x78AB             LDRB     R3,[R5, #+2]
+   \       0x50   0x786A             LDRB     R2,[R5, #+1]
+   \       0x52   0x7829             LDRB     R1,[R5, #+0]
+   \       0x54   0x....             LDR      R0,??DataTable17_13
+   \       0x56   0x.... 0x....      BL       printf
+    939            PRINTF("Peer_Resolvable_Private_Address : %2x,%2x,%2x,%2x,%2x,%2x  \n",Peer_Resolvable_Private_Address[0],Peer_Resolvable_Private_Address[1],Peer_Resolvable_Private_Address[2],Peer_Resolvable_Private_Address[3],Peer_Resolvable_Private_Address[4],Peer_Resolvable_Private_Address[5]);
+   \       0x5A   0x7960             LDRB     R0,[R4, #+5]
+   \       0x5C   0x9002             STR      R0,[SP, #+8]
+   \       0x5E   0x7920             LDRB     R0,[R4, #+4]
+   \       0x60   0x9001             STR      R0,[SP, #+4]
+   \       0x62   0x78E0             LDRB     R0,[R4, #+3]
+   \       0x64   0x9000             STR      R0,[SP, #+0]
+   \       0x66   0x78A3             LDRB     R3,[R4, #+2]
+   \       0x68   0x7862             LDRB     R2,[R4, #+1]
+   \       0x6A   0x7821             LDRB     R1,[R4, #+0]
+   \       0x6C   0x....             LDR      R0,??DataTable17_14
+   \       0x6E   0x.... 0x....      BL       printf
+    940          
+    941          }
+   \       0x72   0xB007             ADD      SP,SP,#+28
+   \       0x74   0xBDF0             POP      {R4-R7,PC}
+    942          
+    943          /*******************************************************************************
+    944           * Function Name  : hci_disconnection_complete_event.
+    945           * Description    : This event occurs when a connection is terminated.
+    946           * Input          : See file bluenrg1_events.h
+    947           * Output         : See file bluenrg1_events.h
+    948           * Return         : See file bluenrg1_events.h
+    949           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    950          void hci_disconnection_complete_event(uint8_t Status,
+    951                                                uint16_t Connection_Handle,
+    952                                                uint8_t Reason)
+    953          {
+   \                     hci_disconnection_complete_event: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+    954          
+    955            if(Status != 0){
+   \        0x8   0x0020             MOVS     R0,R4
+   \        0xA   0xB2C0             UXTB     R0,R0
+   \        0xC   0x2800             CMP      R0,#+0
+   \        0xE   0xD107             BNE      ??hci_disconnection_complete_event_0
+    956              return;
+    957            }
+    958          
+    959            slaves.conn_handle = 0;
+   \                     ??hci_disconnection_complete_event_1: (+1)
+   \       0x10   0x....             LDR      R0,??DataTable17_15
+   \       0x12   0x2100             MOVS     R1,#+0
+   \       0x14   0x000A             MOVS     R2,R1
+   \       0x16   0x8102             STRH     R2,[R0, #+8]
+    960            slaves.state = IDLE;
+   \       0x18   0x7281             STRB     R1,[R0, #+10]
+    961          
+    962            
+    963            
+    964            PRINTF("CONNESSIONE TERMINATA");
+   \       0x1A   0x....             LDR      R0,??DataTable17_16
+   \       0x1C   0x.... 0x....      BL       printf
+    965            
+    966          }/* end hci_disconnection_complete_event() */
+   \                     ??hci_disconnection_complete_event_0: (+1)
+   \       0x20   0xBD70             POP      {R4-R6,PC}
+    967          
+    968          
+
+   \                                 In section .text, align 2, keep-with-next
+    969          void aci_gap_pairing_complete_event(uint16_t Connection_Handle,
+    970                                              uint8_t Status,
+    971                                              uint8_t Reason)
+    972          {
+   \                     aci_gap_pairing_complete_event: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0006             MOVS     R6,R0
+   \        0x4   0x000C             MOVS     R4,R1
+   \        0x6   0x0015             MOVS     R5,R2
+    973           
+    974              
+    975              // Pairing as a slave
+    976              PRINTF("Paired with master (0x%04X, 0x%02X, 0x%02X).\n", Connection_Handle, Status, Reason);    
+   \        0x8   0x002B             MOVS     R3,R5
+   \        0xA   0xB2DB             UXTB     R3,R3
+   \        0xC   0x0022             MOVS     R2,R4
+   \        0xE   0xB2D2             UXTB     R2,R2
+   \       0x10   0x0031             MOVS     R1,R6
+   \       0x12   0xB289             UXTH     R1,R1
+   \       0x14   0x....             LDR      R0,??DataTable17_17
+   \       0x16   0x.... 0x....      BL       printf
+    977             // aci_gap_configure_white_and_resolving_list(0x01);
+    978              
+    979            
+    980            
+    981            if(Status != 0){
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0xB2C0             UXTB     R0,R0
+   \       0x1E   0x2800             CMP      R0,#+0
+   \       0x20   0xD007             BEQ      ??aci_gap_pairing_complete_event_0
+    982              PRINTF("Pairing failed. Status %02X, Reason: %02X\r\n", Status, Reason);
+   \       0x22   0x002A             MOVS     R2,R5
+   \       0x24   0xB2D2             UXTB     R2,R2
+   \       0x26   0x0021             MOVS     R1,R4
+   \       0x28   0xB2C9             UXTB     R1,R1
+   \       0x2A   0x....             LDR      R0,??DataTable17_18
+   \       0x2C   0x.... 0x....      BL       printf
+    983              
+    984              //aci_gap_remove_bonded_device(slaves[slave_index].address_type, slaves[slave_index].address);
+    985              
+    986              //aci_gap_terminate(slaves[slave_index].conn_handle, BLE_ERROR_TERMINATED_REMOTE_USER);
+    987              
+    988              return;
+   \       0x30   0xE008             B        ??aci_gap_pairing_complete_event_1
+    989            }
+    990            
+    991            
+    992            PRINTF("Pairing complete (slave).\n");
+   \                     ??aci_gap_pairing_complete_event_0: (+1)
+   \       0x32   0x....             LDR      R0,??DataTable17_19
+   \       0x34   0x.... 0x....      BL       printf
+    993            PRINTF("Update White List\n");
+   \       0x38   0x....             LDR      R0,??DataTable17_20
+   \       0x3A   0x.... 0x....      BL       printf
+    994            aci_gap_configure_white_and_resolving_list(0x01);
+   \       0x3E   0x2001             MOVS     R0,#+1
+   \       0x40   0x.... 0x....      BL       aci_gap_configure_white_and_resolving_list
+    995          
+    996          }
+   \                     ??aci_gap_pairing_complete_event_1: (+1)
+   \       0x44   0xBD70             POP      {R4-R6,PC}
+    997          
+    998          
+    999          #define INSUFFICIENT_ENCRYPTION 0x0F
+   1000          
+
+   \                                 In section .text, align 2, keep-with-next
+   1001          void aci_gatt_clt_error_resp_event(uint16_t Connection_Handle,
+   1002                                         uint8_t Req_Opcode,
+   1003                                         uint16_t Attribute_Handle,
+   1004                                         uint8_t Error_Code)
+   1005          {
+   \                     aci_gatt_clt_error_resp_event: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x0007             MOVS     R7,R0
+   \        0x4   0x000E             MOVS     R6,R1
+   \        0x6   0x0015             MOVS     R5,R2
+   \        0x8   0x001C             MOVS     R4,R3
+   1006            
+   1007            
+   1008            //PRINTF_DBG2("aci_gatt_clt_error_resp_event.\r\n");
+   1009            
+   1010            PRINTF("[EVENT]   *error*    aci_gatt_clt_error_resp_event\r\n");
+   \        0xA   0x....             LDR      R0,??DataTable17_21
+   \        0xC   0x.... 0x....      BL       printf
+   1011            PRINTF("aci_gatt_clt_error_resp_event %04X %02X %04X %02X\n", Connection_Handle, Req_Opcode, Attribute_Handle, Error_Code);
+   \       0x10   0x0020             MOVS     R0,R4
+   \       0x12   0xB2C0             UXTB     R0,R0
+   \       0x14   0x9000             STR      R0,[SP, #+0]
+   \       0x16   0x002B             MOVS     R3,R5
+   \       0x18   0xB29B             UXTH     R3,R3
+   \       0x1A   0x0032             MOVS     R2,R6
+   \       0x1C   0xB2D2             UXTB     R2,R2
+   \       0x1E   0x0039             MOVS     R1,R7
+   \       0x20   0xB289             UXTH     R1,R1
+   \       0x22   0x....             LDR      R0,??DataTable17_22
+   \       0x24   0x.... 0x....      BL       printf
+   1012          
+   1013              
+   1014            if(Error_Code == INSUFFICIENT_ENCRYPTION){
+   \       0x28   0x0020             MOVS     R0,R4
+   \       0x2A   0xB2C0             UXTB     R0,R0
+   \       0x2C   0x280F             CMP      R0,#+15
+   \       0x2E   0xD103             BNE      ??aci_gatt_clt_error_resp_event_0
+   1015            PRINTF("INSUFFICIENT_ENCRYPTION   \r\n");
+   \       0x30   0x....             LDR      R0,??DataTable17_23
+   \       0x32   0x.... 0x....      BL       printf
+   1016          
+   1017              // Start pairing
+   1018              //StartPairing(i, Connection_Handle, (MasterState)(slaves[i].state - 1)); // After pairing go one state back
+   1019              return;
+   \       0x36   0xE7FF             B        ??aci_gatt_clt_error_resp_event_1
+   1020            }  
+   1021          }
+   \                     ??aci_gatt_clt_error_resp_event_0: (+1)
+   \                     ??aci_gatt_clt_error_resp_event_1: (+1)
+   \       0x38   0xBDF1             POP      {R0,R4-R7,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \        0x0   0x....'....        DC32     ?_0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \        0x0   0x....'....        DC32     ?_1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \        0x0   0x....'....        DC32     ?_2
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3:
+   \        0x0   0x....'....        DC32     ?_3
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_1:
+   \        0x0   0x....'....        DC32     ?_4
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_2:
+   \        0x0   0x....'....        DC32     ?_5
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_3:
+   \        0x0   0x....'....        DC32     ?_6
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_4:
+   \        0x0   0x....'....        DC32     ?_7
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_5:
+   \        0x0   0x....'....        DC32     ?_8
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4:
+   \        0x0   0x....'....        DC32     ?_9
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_1:
+   \        0x0   0x....'....        DC32     ?_10
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5:
+   \        0x0   0x....'....        DC32     ?_11
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_1:
+   \        0x0   0x....'....        DC32     ?_12
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6:
+   \        0x0   0x....'....        DC32     slaves
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8:
+   \        0x0   0x....'....        DC32     ?_13
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9:
+   \        0x0   0x....'....        DC32     `APP_Tick{2}{3}{13}::client_char_conf_data`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10:
+   \        0x0   0x....'....        DC32     temp_TIME1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_1:
+   \        0x0   0x0000'03E9        DC32     0x3e9
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_2:
+   \        0x0   0x....'....        DC32     ?_14
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_3:
+   \        0x0   0x....'....        DC32     `APP_Tick{2}{3}{17}{18}::client_char_conf_data`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_4:
+   \        0x0   0x....'....        DC32     ?_15
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_5:
+   \        0x0   0x....'....        DC32     ?_18
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_6:
+   \        0x0   0x25 0x58          DC8      "%X "          
+
+   \              0x20 0x00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11:
+   \        0x0   0x....'....        DC32     ?_16
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_1:
+   \        0x0   0x....'....        DC32     ?_17
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_2:
+   \        0x0   0x0D 0x0A          DC8      0x0D, 0x0A, 0x00, 0x00
+
+   \              0x00 0x00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_3:
+   \        0x0   0x....'....        DC32     Service_uuid
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_4:
+   \        0x0   0x....'....        DC32     ?_21
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12:
+   \        0x0   0x....'....        DC32     ?_22
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable13:
+   \        0x0   0x....'....        DC32     ?_23
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable13_1:
+   \        0x0   0x....'....        DC32     ?_24
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable13_2:
+   \        0x0   0x....'....        DC32     ?_26
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable13_3:
+   \        0x0   0x....'....        DC32     ?_27
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable13_4:
+   \        0x0   0x25 0x32          DC8      "%2X"          
+
+   \              0x58 0x00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable14:
+   \        0x0   0x....'....        DC32     ?_25
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable14_1:
+   \        0x0   0x....'....        DC32     slaves
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15:
+   \        0x0   0x....'....        DC32     ?_29
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_1:
+   \        0x0   0x....'....        DC32     ?_30
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_2:
+   \        0x0   0x....'....        DC32     Char_TX_uuid
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_3:
+   \        0x0   0x....'....        DC32     ?_31
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_4:
+   \        0x0   0x....'....        DC32     Char_RX_uuid
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable16:
+   \        0x0   0x....'....        DC32     ?_32
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17:
+   \        0x0   0x....'....        DC32     ?_33
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_1:
+   \        0x0   0x....'....        DC32     ?_34
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_2:
+   \        0x0   0x....'....        DC32     ?_35
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_3:
+   \        0x0   0x....'....        DC32     ?_36
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_4:
+   \        0x0   0x....'....        DC32     ?_37
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_5:
+   \        0x0   0x....'....        DC32     ?_38
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_6:
+   \        0x0   0x....'....        DC32     ?_39
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_7:
+   \        0x0   0x....'....        DC32     Service_uuid
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_8:
+   \        0x0   0x....'....        DC32     ?_40
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_9:
+   \        0x0   0x....'....        DC32     ?_41
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_10:
+   \        0x0   0x....'....        DC32     ?_42
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_11:
+   \        0x0   0x....'....        DC32     ?_43
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_12:
+   \        0x0   0x....'....        DC32     ?_44
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_13:
+   \        0x0   0x....'....        DC32     ?_45
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_14:
+   \        0x0   0x....'....        DC32     ?_46
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_15:
+   \        0x0   0x....'....        DC32     slaves
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_16:
+   \        0x0   0x....'....        DC32     ?_47
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_17:
+   \        0x0   0x....'....        DC32     ?_48
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_18:
+   \        0x0   0x....'....        DC32     ?_49
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_19:
+   \        0x0   0x....'....        DC32     ?_50
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_20:
+   \        0x0   0x....'....        DC32     ?_51
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_21:
+   \        0x0   0x....'....        DC32     ?_52
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_22:
+   \        0x0   0x....'....        DC32     ?_53
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_23:
+   \        0x0   0x....'....        DC32     ?_54
+
+   \                                 In section .rodata, align 4
+   \                     ?_0:
+   \        0x0   0xE0 0x00          DC8 224, 0, 0, 225, 128, 2
+
+   \              0x00 0xE1    
+
+   \              0x80 0x02
+   \        0x6                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_1:
+   \        0x0   0x42 0x4C          DC8 66, 76, 69, 32, 84, 101, 115, 116
+
+   \              0x45 0x20    
+
+   \              0x54 0x65    
+
+   \              0x73 0x74
+
+   \                                 In section .rodata, align 4
+   \                     ?_2:
+   \        0x0   0x61 0x63          DC8 "aci_hal_write_config_data() failed: 0x%02x\015\012"
+
+   \              0x69 0x5F    
+
+   \              0x68 0x61    
+
+   \              0x6C 0x5F    
+
+   \              0x77 0x72    
+
+   \              0x69 0x74    
+
+   \              0x65 0x5F    
+
+   \              0x63 0x6F    
+
+   \              0x6E 0x66    
+
+   \              0x69 0x67    
+
+   \              0x5F 0x64    
+
+   \              0x61 0x74    
+
+   \              0x61 0x28    
+
+   \              0x29 0x20    
+
+   \              0x66 0x61    
+
+   \              0x69 0x6C    
+
+   \              0x65 0x64    
+
+   \              0x3A 0x20    
+
+   \              0x30 0x78    
+
+   \              0x25 0x30    
+
+   \              0x32 0x78    
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \       0x2D                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_3:
+   \        0x0   0x61 0x63          DC8 "aci_gatt_srv_init() failed: 0x%02x\015\012"
+
+   \              0x69 0x5F    
+
+   \              0x67 0x61    
+
+   \              0x74 0x74    
+
+   \              0x5F 0x73    
+
+   \              0x72 0x76    
+
+   \              0x5F 0x69    
+
+   \              0x6E 0x69    
+
+   \              0x74 0x28    
+
+   \              0x29 0x20    
+
+   \              0x66 0x61    
+
+   \              0x69 0x6C    
+
+   \              0x65 0x64    
+
+   \              0x3A 0x20    
+
+   \              0x30 0x78    
+
+   \              0x25 0x30    
+
+   \              0x32 0x78    
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \       0x25                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_4:
+   \        0x0   0x61 0x63          DC8 "aci_gap_init() failed: 0x%02x\015\012"
+
+   \              0x69 0x5F    
+
+   \              0x67 0x61    
+
+   \              0x70 0x5F    
+
+   \              0x69 0x6E    
+
+   \              0x69 0x74    
+
+   \              0x28 0x29    
+
+   \              0x20 0x66    
+
+   \              0x61 0x69    
+
+   \              0x6C 0x65    
+
+   \              0x64 0x3A    
+
+   \              0x20 0x30    
+
+   \              0x78 0x25    
+
+   \              0x30 0x32    
+
+   \              0x78 0x0D    
+
+   \              0x0A 0x00
+
+   \                                 In section .rodata, align 4
+   \                     ?_5:
+   \        0x0   0x61 0x63          DC8 "aci_gap_set_io_capability() failed: 0x%02x\015\012"
+
+   \              0x69 0x5F    
+
+   \              0x67 0x61    
+
+   \              0x70 0x5F    
+
+   \              0x73 0x65    
+
+   \              0x74 0x5F    
+
+   \              0x69 0x6F    
+
+   \              0x5F 0x63    
+
+   \              0x61 0x70    
+
+   \              0x61 0x62    
+
+   \              0x69 0x6C    
+
+   \              0x69 0x74    
+
+   \              0x79 0x28    
+
+   \              0x29 0x20    
+
+   \              0x66 0x61    
+
+   \              0x69 0x6C    
+
+   \              0x65 0x64    
+
+   \              0x3A 0x20    
+
+   \              0x30 0x78    
+
+   \              0x25 0x30    
+
+   \              0x32 0x78    
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \       0x2D                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_6:
+   \        0x0   0x53 0x63          DC8 "Scan configuration for LE_1M_PHY: 0x%02X\012"
+
+   \              0x61 0x6E    
+
+   \              0x20 0x63    
+
+   \              0x6F 0x6E    
+
+   \              0x66 0x69    
+
+   \              0x67 0x75    
+
+   \              0x72 0x61    
+
+   \              0x74 0x69    
+
+   \              0x6F 0x6E    
+
+   \              0x20 0x66    
+
+   \              0x6F 0x72    
+
+   \              0x20 0x4C    
+
+   \              0x45 0x5F    
+
+   \              0x31 0x4D    
+
+   \              0x5F 0x50    
+
+   \              0x48 0x59    
+
+   \              0x3A 0x20    
+
+   \              0x30 0x78    
+
+   \              0x25 0x30    
+
+   \              0x32 0x58    
+
+   \              0x0A 0x00
+   \       0x2A                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_7:
+   \        0x0   0x53 0x63          DC8 "Scan configuration for LE_CODED_PHY: 0x%02X\012"
+
+   \              0x61 0x6E    
+
+   \              0x20 0x63    
+
+   \              0x6F 0x6E    
+
+   \              0x66 0x69    
+
+   \              0x67 0x75    
+
+   \              0x72 0x61    
+
+   \              0x74 0x69    
+
+   \              0x6F 0x6E    
+
+   \              0x20 0x66    
+
+   \              0x6F 0x72    
+
+   \              0x20 0x4C    
+
+   \              0x45 0x5F    
+
+   \              0x43 0x4F    
+
+   \              0x44 0x45    
+
+   \              0x44 0x5F    
+
+   \              0x50 0x48    
+
+   \              0x59 0x3A    
+
+   \              0x20 0x30    
+
+   \              0x78 0x25    
+
+   \              0x30 0x32    
+
+   \              0x58 0x0A    
+
+   \              0x00
+   \       0x2D                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_8:
+   \        0x0   0x43 0x6F          DC8 "Connection configuration for LE_1M_PHY:  0x%02X\012"
+
+   \              0x6E 0x6E    
+
+   \              0x65 0x63    
+
+   \              0x74 0x69    
+
+   \              0x6F 0x6E    
+
+   \              0x20 0x63    
+
+   \              0x6F 0x6E    
+
+   \              0x66 0x69    
+
+   \              0x67 0x75    
+
+   \              0x72 0x61    
+
+   \              0x74 0x69    
+
+   \              0x6F 0x6E    
+
+   \              0x20 0x66    
+
+   \              0x6F 0x72    
+
+   \              0x20 0x4C    
+
+   \              0x45 0x5F    
+
+   \              0x31 0x4D    
+
+   \              0x5F 0x50    
+
+   \              0x48 0x59    
+
+   \              0x3A 0x20    
+
+   \              0x20 0x30    
+
+   \              0x78 0x25    
+
+   \              0x30 0x32    
+
+   \              0x58 0x0A    
+
+   \              0x00
+   \       0x31                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_9:
+   \        0x0   0x43 0x6F          DC8 0x43, 0x6F, 0x6E, 0x6E, 0x65, 0x63, 0x74, 0x69
+
+   \              0x6E 0x6E    
+
+   \              0x65 0x63    
+
+   \              0x74 0x69
+   \        0x8   0x6F 0x6E          DC8 0x6F, 0x6E, 0x20, 0x63, 0x6F, 0x6E, 0x66, 0x69
+
+   \              0x20 0x63    
+
+   \              0x6F 0x6E    
+
+   \              0x66 0x69
+   \       0x10   0x67 0x75          DC8 0x67, 0x75, 0x72, 0x61, 0x74, 0x69, 0x6F, 0x6E
+
+   \              0x72 0x61    
+
+   \              0x74 0x69    
+
+   \              0x6F 0x6E
+   \       0x18   0x20 0x66          DC8 0x20, 0x66, 0x6F, 0x72, 0x20, 0x4C, 0x45, 0x5F
+
+   \              0x6F 0x72    
+
+   \              0x20 0x4C    
+
+   \              0x45 0x5F
+   \       0x20   0x43 0x4F          DC8 0x43, 0x4F, 0x44, 0x45, 0x44, 0x5F, 0x50, 0x48
+
+   \              0x44 0x45    
+
+   \              0x44 0x5F    
+
+   \              0x50 0x48
+   \       0x28   0x59 0x3A          DC8 0x59, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x32
+
+   \              0x20 0x30    
+
+   \              0x78 0x25    
+
+   \              0x30 0x32
+   \       0x30   0x58 0x0A          DC8 0x58, 0x0A, 0
+
+   \              0x00
+   \       0x33                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_10:
+   \        0x0   0x42 0x4C          DC8 "BLE Stack Initialized with SUCCESS\012"
+
+   \              0x45 0x20    
+
+   \              0x53 0x74    
+
+   \              0x61 0x63    
+
+   \              0x6B 0x20    
+
+   \              0x49 0x6E    
+
+   \              0x69 0x74    
+
+   \              0x69 0x61    
+
+   \              0x6C 0x69    
+
+   \              0x7A 0x65    
+
+   \              0x64 0x20    
+
+   \              0x77 0x69    
+
+   \              0x74 0x68    
+
+   \              0x20 0x53    
+
+   \              0x55 0x43    
+
+   \              0x43 0x45    
+
+   \              0x53 0x53    
+
+   \              0x0A 0x00
+
+   \                                 In section .rodata, align 4
+   \                     ?_11:
+   \        0x0   0xF5 0x97          DC8 245, 151, 179, 161, 223, 124
+
+   \              0xB3 0xA1    
+
+   \              0xDF 0x7C
+   \        0x6                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_12:
+   \        0x0   0x45 0x72          DC8 "Error while starting connection: 0x%02x\015\012"
+
+   \              0x72 0x6F    
+
+   \              0x72 0x20    
+
+   \              0x77 0x68    
+
+   \              0x69 0x6C    
+
+   \              0x65 0x20    
+
+   \              0x73 0x74    
+
+   \              0x61 0x72    
+
+   \              0x74 0x69    
+
+   \              0x6E 0x67    
+
+   \              0x20 0x63    
+
+   \              0x6F 0x6E    
+
+   \              0x6E 0x65    
+
+   \              0x63 0x74    
+
+   \              0x69 0x6F    
+
+   \              0x6E 0x3A    
+
+   \              0x20 0x30    
+
+   \              0x78 0x25    
+
+   \              0x30 0x32    
+
+   \              0x78 0x0D    
+
+   \              0x0A 0x00
+   \       0x2A                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_13:
+   \        0x0   0x43 0x6F          DC8 "Connecting \015\012"
+
+   \              0x6E 0x6E    
+
+   \              0x65 0x63    
+
+   \              0x74 0x69    
+
+   \              0x6E 0x67    
+
+   \              0x20 0x0D    
+
+   \              0x0A 0x00
+   \        0xE                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_14:
+   \        0x0   0x43 0x4F          DC8 "CONNESSO DONE.... !!"
+
+   \              0x4E 0x4E    
+
+   \              0x45 0x53    
+
+   \              0x53 0x4F    
+
+   \              0x20 0x44    
+
+   \              0x4F 0x4E    
+
+   \              0x45 0x2E    
+
+   \              0x2E 0x2E    
+
+   \              0x2E 0x20    
+
+   \              0x21 0x21    
+
+   \              0x00
+   \       0x15                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_15:
+   \        0x0   0x77 0x72          DC8 "write Ok!!"
+
+   \              0x69 0x74    
+
+   \              0x65 0x20    
+
+   \              0x4F 0x6B    
+
+   \              0x21 0x21    
+
+   \              0x00
+   \        0xB                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_16:
+   \        0x0   0x77 0x72          DC8 "write error!!"
+
+   \              0x69 0x74    
+
+   \              0x65 0x20    
+
+   \              0x65 0x72    
+
+   \              0x72 0x6F    
+
+   \              0x72 0x21    
+
+   \              0x21 0x00
+   \        0xE                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_17:
+   \        0x0   0x5B 0x45          DC8 "[Event]       aci_gap_proc_complete_event\015\012"
+
+   \              0x76 0x65    
+
+   \              0x6E 0x74    
+
+   \              0x5D 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x20    
+
+   \              0x61 0x63    
+
+   \              0x69 0x5F    
+
+   \              0x67 0x61    
+
+   \              0x70 0x5F    
+
+   \              0x70 0x72    
+
+   \              0x6F 0x63    
+
+   \              0x5F 0x63    
+
+   \              0x6F 0x6D    
+
+   \              0x70 0x6C    
+
+   \              0x65 0x74    
+
+   \              0x65 0x5F    
+
+   \              0x65 0x76    
+
+   \              0x65 0x6E    
+
+   \              0x74 0x0D    
+
+   \              0x0A 0x00
+
+   \                                 In section .rodata, align 4
+   \                     ?_18:
+   \        0x0   0x41 0x64          DC8 "Address: "
+
+   \              0x64 0x72    
+
+   \              0x65 0x73    
+
+   \              0x73 0x3A    
+
+   \              0x20 0x00
+   \        0xA                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \        0x0   0x25 0x58          DC8 "%X "
+
+   \              0x20 0x00
+
+   \                                 In section .rodata, align 4
+   \        0x0   0x0D 0x0A          DC8 "\015\012"
+
+   \              0x00
+   \        0x3                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_21:
+   \        0x0   0x61 0x63          DC8 "aci_gap_create_connection %02X\015\012"
+
+   \              0x69 0x5F    
+
+   \              0x67 0x61    
+
+   \              0x70 0x5F    
+
+   \              0x63 0x72    
+
+   \              0x65 0x61    
+
+   \              0x74 0x65    
+
+   \              0x5F 0x63    
+
+   \              0x6F 0x6E    
+
+   \              0x6E 0x65    
+
+   \              0x63 0x74    
+
+   \              0x69 0x6F    
+
+   \              0x6E 0x20    
+
+   \              0x25 0x30    
+
+   \              0x32 0x58    
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \       0x21                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_22:
+   \        0x0   0x42 0x4C          DC8 "BLE *******SEARCH******* \015\012"
+
+   \              0x45 0x20    
+
+   \              0x2A 0x2A    
+
+   \              0x2A 0x2A    
+
+   \              0x2A 0x2A    
+
+   \              0x2A 0x53    
+
+   \              0x45 0x41    
+
+   \              0x52 0x43    
+
+   \              0x48 0x2A    
+
+   \              0x2A 0x2A    
+
+   \              0x2A 0x2A    
+
+   \              0x2A 0x2A    
+
+   \              0x20 0x0D    
+
+   \              0x0A 0x00
+
+   \                                 In section .rodata, align 4
+   \                     ?_23:
+   \        0x0   0x61 0x63          DC8 "aci_gap_bond_lost_event\015\012"
+
+   \              0x69 0x5F    
+
+   \              0x67 0x61    
+
+   \              0x70 0x5F    
+
+   \              0x62 0x6F    
+
+   \              0x6E 0x64    
+
+   \              0x5F 0x6C    
+
+   \              0x6F 0x73    
+
+   \              0x74 0x5F    
+
+   \              0x65 0x76    
+
+   \              0x65 0x6E    
+
+   \              0x74 0x0D    
+
+   \              0x0A 0x00
+   \       0x1A                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_24:
+   \        0x0   0x4E 0x6F          DC8 "Notification from server : %d (%d bytes)\012"
+
+   \              0x74 0x69    
+
+   \              0x66 0x69    
+
+   \              0x63 0x61    
+
+   \              0x74 0x69    
+
+   \              0x6F 0x6E    
+
+   \              0x20 0x66    
+
+   \              0x72 0x6F    
+
+   \              0x6D 0x20    
+
+   \              0x73 0x65    
+
+   \              0x72 0x76    
+
+   \              0x65 0x72    
+
+   \              0x20 0x3A    
+
+   \              0x20 0x25    
+
+   \              0x64 0x20    
+
+   \              0x28 0x25    
+
+   \              0x64 0x20    
+
+   \              0x62 0x79    
+
+   \              0x74 0x65    
+
+   \              0x73 0x29    
+
+   \              0x0A 0x00
+   \       0x2A                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_25:
+   \        0x0   0x5B 0x45          DC8 "[EVENT]        aci_gatt_clt_notification_event\015\012"
+
+   \              0x56 0x45    
+
+   \              0x4E 0x54    
+
+   \              0x5D 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x61    
+
+   \              0x63 0x69    
+
+   \              0x5F 0x67    
+
+   \              0x61 0x74    
+
+   \              0x74 0x5F    
+
+   \              0x63 0x6C    
+
+   \              0x74 0x5F    
+
+   \              0x6E 0x6F    
+
+   \              0x74 0x69    
+
+   \              0x66 0x69    
+
+   \              0x63 0x61    
+
+   \              0x74 0x69    
+
+   \              0x6F 0x6E    
+
+   \              0x5F 0x65    
+
+   \              0x76 0x65    
+
+   \              0x6E 0x74    
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \       0x31                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_26:
+   \        0x0   0x5B 0x45          DC8 "[EVENT]        aci_att_clt_read_resp_event\015\012"
+
+   \              0x56 0x45    
+
+   \              0x4E 0x54    
+
+   \              0x5D 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x61    
+
+   \              0x63 0x69    
+
+   \              0x5F 0x61    
+
+   \              0x74 0x74    
+
+   \              0x5F 0x63    
+
+   \              0x6C 0x74    
+
+   \              0x5F 0x72    
+
+   \              0x65 0x61    
+
+   \              0x64 0x5F    
+
+   \              0x72 0x65    
+
+   \              0x73 0x70    
+
+   \              0x5F 0x65    
+
+   \              0x76 0x65    
+
+   \              0x6E 0x74    
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \       0x2D                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_27:
+   \        0x0   0x72 0x65          DC8 "read: "
+
+   \              0x61 0x64    
+
+   \              0x3A 0x20    
+
+   \              0x00
+   \        0x7                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \        0x0   0x25 0x32          DC8 "%2X"
+
+   \              0x58 0x00
+
+   \                                 In section .rodata, align 4
+   \                     ?_29:
+   \        0x0   0x5B 0x45          DC8 0x5B, 0x45, 0x56, 0x45, 0x4E, 0x54, 0x5D, 0x20
+
+   \              0x56 0x45    
+
+   \              0x4E 0x54    
+
+   \              0x5D 0x20
+   \        0x8   0x20 0x20          DC8 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x61
+
+   \              0x20 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x61
+   \       0x10   0x63 0x69          DC8 0x63, 0x69, 0x5F, 0x67, 0x61, 0x74, 0x74, 0x5F
+
+   \              0x5F 0x67    
+
+   \              0x61 0x74    
+
+   \              0x74 0x5F
+   \       0x18   0x63 0x6C          DC8 0x63, 0x6C, 0x74, 0x5F, 0x64, 0x69, 0x73, 0x63
+
+   \              0x74 0x5F    
+
+   \              0x64 0x69    
+
+   \              0x73 0x63
+   \       0x20   0x5F 0x72          DC8 0x5F, 0x72, 0x65, 0x61, 0x64, 0x5F, 0x63, 0x68
+
+   \              0x65 0x61    
+
+   \              0x64 0x5F    
+
+   \              0x63 0x68
+   \       0x28   0x61 0x72          DC8 0x61, 0x72, 0x5F, 0x62, 0x79, 0x5F, 0x75, 0x75
+
+   \              0x5F 0x62    
+
+   \              0x79 0x5F    
+
+   \              0x75 0x75
+   \       0x30   0x69 0x64          DC8 0x69, 0x64, 0x5F, 0x72, 0x65, 0x73, 0x70, 0x5F
+
+   \              0x5F 0x72    
+
+   \              0x65 0x73    
+
+   \              0x70 0x5F
+   \       0x38   0x65 0x76          DC8 0x65, 0x76, 0x65, 0x6E, 0x74, 0x0D, 0x0A, 0
+
+   \              0x65 0x6E    
+
+   \              0x74 0x0D    
+
+   \              0x0A 0x00
+
+   \                                 In section .rodata, align 4
+   \                     ?_30:
+   \        0x0   0x25 0x30          DC8 "%02X"
+
+   \              0x32 0x58    
+
+   \              0x00
+   \        0x5                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_31:
+   \        0x0   0x54 0x58          DC8 "TX Char handle for slave 0x%04X\015\012"
+
+   \              0x20 0x43    
+
+   \              0x68 0x61    
+
+   \              0x72 0x20    
+
+   \              0x68 0x61    
+
+   \              0x6E 0x64    
+
+   \              0x6C 0x65    
+
+   \              0x20 0x66    
+
+   \              0x6F 0x72    
+
+   \              0x20 0x73    
+
+   \              0x6C 0x61    
+
+   \              0x76 0x65    
+
+   \              0x20 0x30    
+
+   \              0x78 0x25    
+
+   \              0x30 0x34    
+
+   \              0x58 0x0D    
+
+   \              0x0A 0x00
+   \       0x22                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_32:
+   \        0x0   0x52 0x58          DC8 "RX Char Handle for slave 0x%04X\015\012"
+
+   \              0x20 0x43    
+
+   \              0x68 0x61    
+
+   \              0x72 0x20    
+
+   \              0x48 0x61    
+
+   \              0x6E 0x64    
+
+   \              0x6C 0x65    
+
+   \              0x20 0x66    
+
+   \              0x6F 0x72    
+
+   \              0x20 0x73    
+
+   \              0x6C 0x61    
+
+   \              0x76 0x65    
+
+   \              0x20 0x30    
+
+   \              0x78 0x25    
+
+   \              0x30 0x34    
+
+   \              0x58 0x0D    
+
+   \              0x0A 0x00
+   \       0x22                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_33:
+   \        0x0   0x5B 0x45          DC8 0x5B, 0x45, 0x56, 0x45, 0x4E, 0x54, 0x5D, 0x20
+
+   \              0x56 0x45    
+
+   \              0x4E 0x54    
+
+   \              0x5D 0x20
+   \        0x8   0x20 0x20          DC8 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x61
+
+   \              0x20 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x61
+   \       0x10   0x63 0x69          DC8 0x63, 0x69, 0x5F, 0x61, 0x74, 0x74, 0x5F, 0x63
+
+   \              0x5F 0x61    
+
+   \              0x74 0x74    
+
+   \              0x5F 0x63
+   \       0x18   0x6C 0x74          DC8 0x6C, 0x74, 0x5F, 0x72, 0x65, 0x61, 0x64, 0x5F
+
+   \              0x5F 0x72    
+
+   \              0x65 0x61    
+
+   \              0x64 0x5F
+   \       0x20   0x62 0x79          DC8 0x62, 0x79, 0x5F, 0x74, 0x79, 0x70, 0x65, 0x5F
+
+   \              0x5F 0x74    
+
+   \              0x79 0x70    
+
+   \              0x65 0x5F
+   \       0x28   0x72 0x65          DC8 0x72, 0x65, 0x73, 0x70, 0x5F, 0x65, 0x76, 0x65
+
+   \              0x73 0x70    
+
+   \              0x5F 0x65    
+
+   \              0x76 0x65
+   \       0x30   0x6E 0x74          DC8 0x6E, 0x74, 0x0D, 0x0A, 0
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \       0x35                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_34:
+   \        0x0   0x5B 0x45          DC8 "[EVENT]        aci_gatt_clt_proc_complete_event\015\012"
+
+   \              0x56 0x45    
+
+   \              0x4E 0x54    
+
+   \              0x5D 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x61    
+
+   \              0x63 0x69    
+
+   \              0x5F 0x67    
+
+   \              0x61 0x74    
+
+   \              0x74 0x5F    
+
+   \              0x63 0x6C    
+
+   \              0x74 0x5F    
+
+   \              0x70 0x72    
+
+   \              0x6F 0x63    
+
+   \              0x5F 0x63    
+
+   \              0x6F 0x6D    
+
+   \              0x70 0x6C    
+
+   \              0x65 0x74    
+
+   \              0x65 0x5F    
+
+   \              0x65 0x76    
+
+   \              0x65 0x6E    
+
+   \              0x74 0x0D    
+
+   \              0x0A 0x00
+   \       0x32                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_35:
+   \        0x0   0x45 0x52          DC8 0x45, 0x52, 0x52, 0x4F, 0x52, 0x20, 0x28, 0x61
+
+   \              0x52 0x4F    
+
+   \              0x52 0x20    
+
+   \              0x28 0x61
+   \        0x8   0x63 0x69          DC8 0x63, 0x69, 0x5F, 0x67, 0x61, 0x74, 0x74, 0x5F
+
+   \              0x5F 0x67    
+
+   \              0x61 0x74    
+
+   \              0x74 0x5F
+   \       0x10   0x63 0x6C          DC8 0x63, 0x6C, 0x74, 0x5F, 0x70, 0x72, 0x6F, 0x63
+
+   \              0x74 0x5F    
+
+   \              0x70 0x72    
+
+   \              0x6F 0x63
+   \       0x18   0x5F 0x63          DC8 0x5F, 0x63, 0x6F, 0x6D, 0x70, 0x6C, 0x65, 0x74
+
+   \              0x6F 0x6D    
+
+   \              0x70 0x6C    
+
+   \              0x65 0x74
+   \       0x20   0x65 0x5F          DC8 0x65, 0x5F, 0x65, 0x76, 0x65, 0x6E, 0x74, 0x29
+
+   \              0x65 0x76    
+
+   \              0x65 0x6E    
+
+   \              0x74 0x29
+   \       0x28   0x20 0x30          DC8 0x20, 0x30, 0x78, 0x25, 0x30, 0x32, 0x58, 0x20
+
+   \              0x78 0x25    
+
+   \              0x30 0x32    
+
+   \              0x58 0x20
+   \       0x30   0x28 0x30          DC8 0x28, 0x30, 0x78, 0x25, 0x30, 0x34, 0x58, 0x29
+
+   \              0x78 0x25    
+
+   \              0x30 0x34    
+
+   \              0x58 0x29
+   \       0x38   0x2E 0x0D          DC8 0x2E, 0x0D, 0x0A, 0
+
+   \              0x0A 0x00
+
+   \                                 In section .rodata, align 4
+   \                     ?_36:
+   \        0x0   0x43 0x6F          DC8 0x43, 0x6F, 0x6E, 0x66, 0x69, 0x67, 0x75, 0x72
+
+   \              0x6E 0x66    
+
+   \              0x69 0x67    
+
+   \              0x75 0x72
+   \        0x8   0x61 0x74          DC8 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x65, 0x78
+
+   \              0x69 0x6F    
+
+   \              0x6E 0x20    
+
+   \              0x65 0x78
+   \       0x10   0x63 0x68          DC8 0x63, 0x68, 0x61, 0x6E, 0x67, 0x65, 0x64, 0x20
+
+   \              0x61 0x6E    
+
+   \              0x67 0x65    
+
+   \              0x64 0x20
+   \       0x18   0x28 0x61          DC8 0x28, 0x61, 0x63, 0x69, 0x5F, 0x67, 0x61, 0x74
+
+   \              0x63 0x69    
+
+   \              0x5F 0x67    
+
+   \              0x61 0x74
+   \       0x20   0x74 0x5F          DC8 0x74, 0x5F, 0x63, 0x6C, 0x74, 0x5F, 0x70, 0x72
+
+   \              0x63 0x6C    
+
+   \              0x74 0x5F    
+
+   \              0x70 0x72
+   \       0x28   0x6F 0x63          DC8 0x6F, 0x63, 0x5F, 0x63, 0x6F, 0x6D, 0x70, 0x6C
+
+   \              0x5F 0x63    
+
+   \              0x6F 0x6D    
+
+   \              0x70 0x6C
+   \       0x30   0x65 0x74          DC8 0x65, 0x74, 0x65, 0x5F, 0x65, 0x76, 0x65, 0x6E
+
+   \              0x65 0x5F    
+
+   \              0x65 0x76    
+
+   \              0x65 0x6E
+   \       0x38   0x74 0x29          DC8 0x74, 0x29, 0x20, 0x28, 0x30, 0x78, 0x25, 0x30
+
+   \              0x20 0x28    
+
+   \              0x30 0x78    
+
+   \              0x25 0x30
+   \       0x40   0x34 0x58          DC8 0x34, 0x58, 0x29, 0x2E, 0x0D, 0x0A, 0
+
+   \              0x29 0x2E    
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \       0x47                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_37:
+   \        0x0   0x44 0x69          DC8 0x44, 0x69, 0x73, 0x63, 0x6F, 0x76, 0x65, 0x72
+
+   \              0x73 0x63    
+
+   \              0x6F 0x76    
+
+   \              0x65 0x72
+   \        0x8   0x69 0x6E          DC8 0x69, 0x6E, 0x67, 0x20, 0x73, 0x65, 0x72, 0x76
+
+   \              0x67 0x20    
+
+   \              0x73 0x65    
+
+   \              0x72 0x76
+   \       0x10   0x69 0x63          DC8 0x69, 0x63, 0x65, 0x73, 0x20, 0x65, 0x6E, 0x64
+
+   \              0x65 0x73    
+
+   \              0x20 0x65    
+
+   \              0x6E 0x64
+   \       0x18   0x65 0x64          DC8 0x65, 0x64, 0x20, 0x28, 0x61, 0x63, 0x69, 0x5F
+
+   \              0x20 0x28    
+
+   \              0x61 0x63    
+
+   \              0x69 0x5F
+   \       0x20   0x67 0x61          DC8 0x67, 0x61, 0x74, 0x74, 0x5F, 0x63, 0x6C, 0x74
+
+   \              0x74 0x74    
+
+   \              0x5F 0x63    
+
+   \              0x6C 0x74
+   \       0x28   0x5F 0x70          DC8 0x5F, 0x70, 0x72, 0x6F, 0x63, 0x5F, 0x63, 0x6F
+
+   \              0x72 0x6F    
+
+   \              0x63 0x5F    
+
+   \              0x63 0x6F
+   \       0x30   0x6D 0x70          DC8 0x6D, 0x70, 0x6C, 0x65, 0x74, 0x65, 0x5F, 0x65
+
+   \              0x6C 0x65    
+
+   \              0x74 0x65    
+
+   \              0x5F 0x65
+   \       0x38   0x76 0x65          DC8 0x76, 0x65, 0x6E, 0x74, 0x29, 0x20, 0x28, 0x30
+
+   \              0x6E 0x74    
+
+   \              0x29 0x20    
+
+   \              0x28 0x30
+   \       0x40   0x78 0x25          DC8 0x78, 0x25, 0x30, 0x34, 0x58, 0x29, 0x2E, 0x0D
+
+   \              0x30 0x34    
+
+   \              0x58 0x29    
+
+   \              0x2E 0x0D
+   \       0x48   0x0A 0x00          DC8 0x0A, 0
+   \       0x4A                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_38:
+   \        0x0   0x44 0x69          DC8 0x44, 0x69, 0x73, 0x63, 0x6F, 0x76, 0x65, 0x72
+
+   \              0x73 0x63    
+
+   \              0x6F 0x76    
+
+   \              0x65 0x72
+   \        0x8   0x69 0x6E          DC8 0x69, 0x6E, 0x67, 0x20, 0x53, 0x65, 0x72, 0x69
+
+   \              0x67 0x20    
+
+   \              0x53 0x65    
+
+   \              0x72 0x69
+   \       0x10   0x61 0x6C          DC8 0x61, 0x6C, 0x50, 0x6F, 0x72, 0x74, 0x20, 0x53
+
+   \              0x50 0x6F    
+
+   \              0x72 0x74    
+
+   \              0x20 0x53
+   \       0x18   0x65 0x72          DC8 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x20, 0x63
+
+   \              0x76 0x69    
+
+   \              0x63 0x65    
+
+   \              0x20 0x63
+   \       0x20   0x68 0x61          DC8 0x68, 0x61, 0x72, 0x61, 0x63, 0x74, 0x65, 0x72
+
+   \              0x72 0x61    
+
+   \              0x63 0x74    
+
+   \              0x65 0x72
+   \       0x28   0x69 0x73          DC8 0x69, 0x73, 0x74, 0x69, 0x63, 0x73, 0x20, 0x65
+
+   \              0x74 0x69    
+
+   \              0x63 0x73    
+
+   \              0x20 0x65
+   \       0x30   0x6E 0x64          DC8 0x6E, 0x64, 0x65, 0x64, 0x20, 0x28, 0x61, 0x63
+
+   \              0x65 0x64    
+
+   \              0x20 0x28    
+
+   \              0x61 0x63
+   \       0x38   0x69 0x5F          DC8 0x69, 0x5F, 0x67, 0x61, 0x74, 0x74, 0x5F, 0x63
+
+   \              0x67 0x61    
+
+   \              0x74 0x74    
+
+   \              0x5F 0x63
+   \       0x40   0x6C 0x74          DC8 0x6C, 0x74, 0x5F, 0x70, 0x72, 0x6F, 0x63, 0x5F
+
+   \              0x5F 0x70    
+
+   \              0x72 0x6F    
+
+   \              0x63 0x5F
+   \       0x48   0x63 0x6F          DC8 0x63, 0x6F, 0x6D, 0x70, 0x6C, 0x65, 0x74, 0x65
+
+   \              0x6D 0x70    
+
+   \              0x6C 0x65    
+
+   \              0x74 0x65
+   \       0x50   0x5F 0x65          DC8 0x5F, 0x65, 0x76, 0x65, 0x6E, 0x74, 0x29, 0x20
+
+   \              0x76 0x65    
+
+   \              0x6E 0x74    
+
+   \              0x29 0x20
+   \       0x58   0x28 0x30          DC8 0x28, 0x30, 0x78, 0x25, 0x30, 0x34, 0x58, 0x29
+
+   \              0x78 0x25    
+
+   \              0x30 0x34    
+
+   \              0x58 0x29
+   \       0x60   0x2E 0x0D          DC8 0x2E, 0x0D, 0x0A, 0
+
+   \              0x0A 0x00
+
+   \                                 In section .rodata, align 4
+   \                     ?_39:
+   \        0x0   0x4E 0x6F          DC8 0x4E, 0x6F, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61
+
+   \              0x74 0x69    
+
+   \              0x66 0x69    
+
+   \              0x63 0x61
+   \        0x8   0x74 0x69          DC8 0x74, 0x69, 0x6F, 0x6E, 0x73, 0x20, 0x66, 0x6F
+
+   \              0x6F 0x6E    
+
+   \              0x73 0x20    
+
+   \              0x66 0x6F
+   \       0x10   0x72 0x20          DC8 0x72, 0x20, 0x54, 0x58, 0x20, 0x43, 0x68, 0x61
+
+   \              0x54 0x58    
+
+   \              0x20 0x43    
+
+   \              0x68 0x61
+   \       0x18   0x72 0x61          DC8 0x72, 0x61, 0x63, 0x20, 0x65, 0x6E, 0x61, 0x62
+
+   \              0x63 0x20    
+
+   \              0x65 0x6E    
+
+   \              0x61 0x62
+   \       0x20   0x6C 0x65          DC8 0x6C, 0x65, 0x64, 0x20, 0x28, 0x61, 0x63, 0x69
+
+   \              0x64 0x20    
+
+   \              0x28 0x61    
+
+   \              0x63 0x69
+   \       0x28   0x5F 0x67          DC8 0x5F, 0x67, 0x61, 0x74, 0x74, 0x5F, 0x63, 0x6C
+
+   \              0x61 0x74    
+
+   \              0x74 0x5F    
+
+   \              0x63 0x6C
+   \       0x30   0x74 0x5F          DC8 0x74, 0x5F, 0x70, 0x72, 0x6F, 0x63, 0x5F, 0x63
+
+   \              0x70 0x72    
+
+   \              0x6F 0x63    
+
+   \              0x5F 0x63
+   \       0x38   0x6F 0x6D          DC8 0x6F, 0x6D, 0x70, 0x6C, 0x65, 0x74, 0x65, 0x5F
+
+   \              0x70 0x6C    
+
+   \              0x65 0x74    
+
+   \              0x65 0x5F
+   \       0x40   0x65 0x76          DC8 0x65, 0x76, 0x65, 0x6E, 0x74, 0x29, 0x20, 0x28
+
+   \              0x65 0x6E    
+
+   \              0x74 0x29    
+
+   \              0x20 0x28
+   \       0x48   0x30 0x78          DC8 0x30, 0x78, 0x25, 0x30, 0x34, 0x58, 0x29, 0x2E
+
+   \              0x25 0x30    
+
+   \              0x34 0x58    
+
+   \              0x29 0x2E
+   \       0x50   0x0D 0x0A          DC8 0x0D, 0x0A, 0
+
+   \              0x00
+   \       0x53                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_40:
+   \        0x0   0x53 0x65          DC8 "Service handles: 0x%04X 0x%04X\015\012"
+
+   \              0x72 0x76    
+
+   \              0x69 0x63    
+
+   \              0x65 0x20    
+
+   \              0x68 0x61    
+
+   \              0x6E 0x64    
+
+   \              0x6C 0x65    
+
+   \              0x73 0x3A    
+
+   \              0x20 0x30    
+
+   \              0x78 0x25    
+
+   \              0x30 0x34    
+
+   \              0x58 0x20    
+
+   \              0x30 0x78    
+
+   \              0x25 0x30    
+
+   \              0x34 0x58    
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \       0x21                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_41:
+   \        0x0   0x5B 0x45          DC8 0x5B, 0x45, 0x56, 0x45, 0x4E, 0x54, 0x5D, 0x20
+
+   \              0x56 0x45    
+
+   \              0x4E 0x54    
+
+   \              0x5D 0x20
+   \        0x8   0x20 0x20          DC8 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x61
+
+   \              0x20 0x20    
+
+   \              0x20 0x20    
+
+   \              0x20 0x61
+   \       0x10   0x63 0x69          DC8 0x63, 0x69, 0x5F, 0x61, 0x74, 0x74, 0x5F, 0x63
+
+   \              0x5F 0x61    
+
+   \              0x74 0x74    
+
+   \              0x5F 0x63
+   \       0x18   0x6C 0x74          DC8 0x6C, 0x74, 0x5F, 0x72, 0x65, 0x61, 0x64, 0x5F
+
+   \              0x5F 0x72    
+
+   \              0x65 0x61    
+
+   \              0x64 0x5F
+   \       0x20   0x62 0x79          DC8 0x62, 0x79, 0x5F, 0x67, 0x72, 0x6F, 0x75, 0x70
+
+   \              0x5F 0x67    
+
+   \              0x72 0x6F    
+
+   \              0x75 0x70
+   \       0x28   0x5F 0x74          DC8 0x5F, 0x74, 0x79, 0x70, 0x65, 0x5F, 0x72, 0x65
+
+   \              0x79 0x70    
+
+   \              0x65 0x5F    
+
+   \              0x72 0x65
+   \       0x30   0x73 0x70          DC8 0x73, 0x70, 0x5F, 0x65, 0x76, 0x65, 0x6E, 0x74
+
+   \              0x5F 0x65    
+
+   \              0x76 0x65    
+
+   \              0x6E 0x74
+   \       0x38   0x0D 0x0A          DC8 0x0D, 0x0A, 0
+
+   \              0x00
+   \       0x3B                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_42:
+   \        0x0   0x43 0x4F          DC8 "CONNESSIONE CLIENT ..OK\012"
+
+   \              0x4E 0x4E    
+
+   \              0x45 0x53    
+
+   \              0x53 0x49    
+
+   \              0x4F 0x4E    
+
+   \              0x45 0x20    
+
+   \              0x43 0x4C    
+
+   \              0x49 0x45    
+
+   \              0x4E 0x54    
+
+   \              0x20 0x2E    
+
+   \              0x2E 0x4F    
+
+   \              0x4B 0x0A    
+
+   \              0x00
+   \       0x19                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_43:
+   \        0x0   0x41 0x64          DC8 "Address: %2x,%2x,%2x,%2x,%2x,%2x  \012"
+
+   \              0x64 0x72    
+
+   \              0x65 0x73    
+
+   \              0x73 0x3A    
+
+   \              0x20 0x25    
+
+   \              0x32 0x78    
+
+   \              0x2C 0x25    
+
+   \              0x32 0x78    
+
+   \              0x2C 0x25    
+
+   \              0x32 0x78    
+
+   \              0x2C 0x25    
+
+   \              0x32 0x78    
+
+   \              0x2C 0x25    
+
+   \              0x32 0x78    
+
+   \              0x2C 0x25    
+
+   \              0x32 0x78    
+
+   \              0x20 0x20    
+
+   \              0x0A 0x00
+
+   \                                 In section .rodata, align 4
+   \                     ?_44:
+   \        0x0   0x43 0x4F          DC8 "CONNESSIONE AL SERVER ..COMPLETATO\012"
+
+   \              0x4E 0x4E    
+
+   \              0x45 0x53    
+
+   \              0x53 0x49    
+
+   \              0x4F 0x4E    
+
+   \              0x45 0x20    
+
+   \              0x41 0x4C    
+
+   \              0x20 0x53    
+
+   \              0x45 0x52    
+
+   \              0x56 0x45    
+
+   \              0x52 0x20    
+
+   \              0x2E 0x2E    
+
+   \              0x43 0x4F    
+
+   \              0x4D 0x50    
+
+   \              0x4C 0x45    
+
+   \              0x54 0x41    
+
+   \              0x54 0x4F    
+
+   \              0x0A 0x00
+
+   \                                 In section .rodata, align 4
+   \                     ?_45:
+   \        0x0   0x4C 0x6F          DC8 0x4C, 0x6F, 0x63, 0x61, 0x6C, 0x5F, 0x52, 0x65
+
+   \              0x63 0x61    
+
+   \              0x6C 0x5F    
+
+   \              0x52 0x65
+   \        0x8   0x73 0x6F          DC8 0x73, 0x6F, 0x6C, 0x76, 0x61, 0x62, 0x6C, 0x65
+
+   \              0x6C 0x76    
+
+   \              0x61 0x62    
+
+   \              0x6C 0x65
+   \       0x10   0x5F 0x50          DC8 0x5F, 0x50, 0x72, 0x69, 0x76, 0x61, 0x74, 0x65
+
+   \              0x72 0x69    
+
+   \              0x76 0x61    
+
+   \              0x74 0x65
+   \       0x18   0x5F 0x41          DC8 0x5F, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73
+
+   \              0x64 0x64    
+
+   \              0x72 0x65    
+
+   \              0x73 0x73
+   \       0x20   0x20 0x3A          DC8 0x20, 0x3A, 0x20, 0x25, 0x32, 0x78, 0x2C, 0x25
+
+   \              0x20 0x25    
+
+   \              0x32 0x78    
+
+   \              0x2C 0x25
+   \       0x28   0x32 0x78          DC8 0x32, 0x78, 0x2C, 0x25, 0x32, 0x78, 0x2C, 0x25
+
+   \              0x2C 0x25    
+
+   \              0x32 0x78    
+
+   \              0x2C 0x25
+   \       0x30   0x32 0x78          DC8 0x32, 0x78, 0x2C, 0x25, 0x32, 0x78, 0x2C, 0x25
+
+   \              0x2C 0x25    
+
+   \              0x32 0x78    
+
+   \              0x2C 0x25
+   \       0x38   0x32 0x78          DC8 0x32, 0x78, 0x20, 0x20, 0x0A, 0
+
+   \              0x20 0x20    
+
+   \              0x0A 0x00
+   \       0x3E                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_46:
+   \        0x0   0x50 0x65          DC8 0x50, 0x65, 0x65, 0x72, 0x5F, 0x52, 0x65, 0x73
+
+   \              0x65 0x72    
+
+   \              0x5F 0x52    
+
+   \              0x65 0x73
+   \        0x8   0x6F 0x6C          DC8 0x6F, 0x6C, 0x76, 0x61, 0x62, 0x6C, 0x65, 0x5F
+
+   \              0x76 0x61    
+
+   \              0x62 0x6C    
+
+   \              0x65 0x5F
+   \       0x10   0x50 0x72          DC8 0x50, 0x72, 0x69, 0x76, 0x61, 0x74, 0x65, 0x5F
+
+   \              0x69 0x76    
+
+   \              0x61 0x74    
+
+   \              0x65 0x5F
+   \       0x18   0x41 0x64          DC8 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x20
+
+   \              0x64 0x72    
+
+   \              0x65 0x73    
+
+   \              0x73 0x20
+   \       0x20   0x3A 0x20          DC8 0x3A, 0x20, 0x25, 0x32, 0x78, 0x2C, 0x25, 0x32
+
+   \              0x25 0x32    
+
+   \              0x78 0x2C    
+
+   \              0x25 0x32
+   \       0x28   0x78 0x2C          DC8 0x78, 0x2C, 0x25, 0x32, 0x78, 0x2C, 0x25, 0x32
+
+   \              0x25 0x32    
+
+   \              0x78 0x2C    
+
+   \              0x25 0x32
+   \       0x30   0x78 0x2C          DC8 0x78, 0x2C, 0x25, 0x32, 0x78, 0x2C, 0x25, 0x32
+
+   \              0x25 0x32    
+
+   \              0x78 0x2C    
+
+   \              0x25 0x32
+   \       0x38   0x78 0x20          DC8 0x78, 0x20, 0x20, 0x0A, 0
+
+   \              0x20 0x0A    
+
+   \              0x00
+   \       0x3D                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_47:
+   \        0x0   0x43 0x4F          DC8 "CONNESSIONE TERMINATA"
+
+   \              0x4E 0x4E    
+
+   \              0x45 0x53    
+
+   \              0x53 0x49    
+
+   \              0x4F 0x4E    
+
+   \              0x45 0x20    
+
+   \              0x54 0x45    
+
+   \              0x52 0x4D    
+
+   \              0x49 0x4E    
+
+   \              0x41 0x54    
+
+   \              0x41 0x00
+   \       0x16                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_48:
+   \        0x0   0x50 0x61          DC8 "Paired with master (0x%04X, 0x%02X, 0x%02X).\012"
+
+   \              0x69 0x72    
+
+   \              0x65 0x64    
+
+   \              0x20 0x77    
+
+   \              0x69 0x74    
+
+   \              0x68 0x20    
+
+   \              0x6D 0x61    
+
+   \              0x73 0x74    
+
+   \              0x65 0x72    
+
+   \              0x20 0x28    
+
+   \              0x30 0x78    
+
+   \              0x25 0x30    
+
+   \              0x34 0x58    
+
+   \              0x2C 0x20    
+
+   \              0x30 0x78    
+
+   \              0x25 0x30    
+
+   \              0x32 0x58    
+
+   \              0x2C 0x20    
+
+   \              0x30 0x78    
+
+   \              0x25 0x30    
+
+   \              0x32 0x58    
+
+   \              0x29 0x2E    
+
+   \              0x0A 0x00
+   \       0x2E                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_49:
+   \        0x0   0x50 0x61          DC8 "Pairing failed. Status %02X, Reason: %02X\015\012"
+
+   \              0x69 0x72    
+
+   \              0x69 0x6E    
+
+   \              0x67 0x20    
+
+   \              0x66 0x61    
+
+   \              0x69 0x6C    
+
+   \              0x65 0x64    
+
+   \              0x2E 0x20    
+
+   \              0x53 0x74    
+
+   \              0x61 0x74    
+
+   \              0x75 0x73    
+
+   \              0x20 0x25    
+
+   \              0x30 0x32    
+
+   \              0x58 0x2C    
+
+   \              0x20 0x52    
+
+   \              0x65 0x61    
+
+   \              0x73 0x6F    
+
+   \              0x6E 0x3A    
+
+   \              0x20 0x25    
+
+   \              0x30 0x32    
+
+   \              0x58 0x0D    
+
+   \              0x0A 0x00
+
+   \                                 In section .rodata, align 4
+   \                     ?_50:
+   \        0x0   0x50 0x61          DC8 "Pairing complete (slave).\012"
+
+   \              0x69 0x72    
+
+   \              0x69 0x6E    
+
+   \              0x67 0x20    
+
+   \              0x63 0x6F    
+
+   \              0x6D 0x70    
+
+   \              0x6C 0x65    
+
+   \              0x74 0x65    
+
+   \              0x20 0x28    
+
+   \              0x73 0x6C    
+
+   \              0x61 0x76    
+
+   \              0x65 0x29    
+
+   \              0x2E 0x0A    
+
+   \              0x00
+   \       0x1B                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_51:
+   \        0x0   0x55 0x70          DC8 "Update White List\012"
+
+   \              0x64 0x61    
+
+   \              0x74 0x65    
+
+   \              0x20 0x57    
+
+   \              0x68 0x69    
+
+   \              0x74 0x65    
+
+   \              0x20 0x4C    
+
+   \              0x69 0x73    
+
+   \              0x74 0x0A    
+
+   \              0x00
+   \       0x13                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_52:
+   \        0x0   0x5B 0x45          DC8 0x5B, 0x45, 0x56, 0x45, 0x4E, 0x54, 0x5D, 0x20
+
+   \              0x56 0x45    
+
+   \              0x4E 0x54    
+
+   \              0x5D 0x20
+   \        0x8   0x20 0x20          DC8 0x20, 0x20, 0x2A, 0x65, 0x72, 0x72, 0x6F, 0x72
+
+   \              0x2A 0x65    
+
+   \              0x72 0x72    
+
+   \              0x6F 0x72
+   \       0x10   0x2A 0x20          DC8 0x2A, 0x20, 0x20, 0x20, 0x20, 0x61, 0x63, 0x69
+
+   \              0x20 0x20    
+
+   \              0x20 0x61    
+
+   \              0x63 0x69
+   \       0x18   0x5F 0x67          DC8 0x5F, 0x67, 0x61, 0x74, 0x74, 0x5F, 0x63, 0x6C
+
+   \              0x61 0x74    
+
+   \              0x74 0x5F    
+
+   \              0x63 0x6C
+   \       0x20   0x74 0x5F          DC8 0x74, 0x5F, 0x65, 0x72, 0x72, 0x6F, 0x72, 0x5F
+
+   \              0x65 0x72    
+
+   \              0x72 0x6F    
+
+   \              0x72 0x5F
+   \       0x28   0x72 0x65          DC8 0x72, 0x65, 0x73, 0x70, 0x5F, 0x65, 0x76, 0x65
+
+   \              0x73 0x70    
+
+   \              0x5F 0x65    
+
+   \              0x76 0x65
+   \       0x30   0x6E 0x74          DC8 0x6E, 0x74, 0x0D, 0x0A, 0
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \       0x35                      DS8 3
+
+   \                                 In section .rodata, align 4
+   \                     ?_53:
+   \        0x0   0x61 0x63          DC8 0x61, 0x63, 0x69, 0x5F, 0x67, 0x61, 0x74, 0x74
+
+   \              0x69 0x5F    
+
+   \              0x67 0x61    
+
+   \              0x74 0x74
+   \        0x8   0x5F 0x63          DC8 0x5F, 0x63, 0x6C, 0x74, 0x5F, 0x65, 0x72, 0x72
+
+   \              0x6C 0x74    
+
+   \              0x5F 0x65    
+
+   \              0x72 0x72
+   \       0x10   0x6F 0x72          DC8 0x6F, 0x72, 0x5F, 0x72, 0x65, 0x73, 0x70, 0x5F
+
+   \              0x5F 0x72    
+
+   \              0x65 0x73    
+
+   \              0x70 0x5F
+   \       0x18   0x65 0x76          DC8 0x65, 0x76, 0x65, 0x6E, 0x74, 0x20, 0x25, 0x30
+
+   \              0x65 0x6E    
+
+   \              0x74 0x20    
+
+   \              0x25 0x30
+   \       0x20   0x34 0x58          DC8 0x34, 0x58, 0x20, 0x25, 0x30, 0x32, 0x58, 0x20
+
+   \              0x20 0x25    
+
+   \              0x30 0x32    
+
+   \              0x58 0x20
+   \       0x28   0x25 0x30          DC8 0x25, 0x30, 0x34, 0x58, 0x20, 0x25, 0x30, 0x32
+
+   \              0x34 0x58    
+
+   \              0x20 0x25    
+
+   \              0x30 0x32
+   \       0x30   0x58 0x0A          DC8 0x58, 0x0A, 0
+
+   \              0x00
+   \       0x33                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_54:
+   \        0x0   0x49 0x4E          DC8 "INSUFFICIENT_ENCRYPTION   \015\012"
+
+   \              0x53 0x55    
+
+   \              0x46 0x46    
+
+   \              0x49 0x43    
+
+   \              0x49 0x45    
+
+   \              0x4E 0x54    
+
+   \              0x5F 0x45    
+
+   \              0x4E 0x43    
+
+   \              0x52 0x59    
+
+   \              0x50 0x54    
+
+   \              0x49 0x4F    
+
+   \              0x4E 0x20    
+
+   \              0x20 0x20    
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \       0x1D                      DS8 3
+   1022          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   APP_Tick
+        16   -> CancelConnect
+        16   -> Clock_Time
+        16   -> Connect
+        16   -> aci_gap_start_procedure
+        16   -> aci_gatt_clt_disc_all_char_of_service
+        16   -> aci_gatt_clt_disc_all_primary_services
+        16   -> aci_gatt_clt_exchange_config
+        16   -> aci_gatt_clt_write
+        16   -> printf
+      56   BLE_GATT_Client_DeviceInit
+        56   -> Gap_profile_set_dev_name
+        56   -> aci_gap_init
+        56   -> aci_gap_set_connection_configuration
+        56   -> aci_gap_set_io_capability
+        56   -> aci_gap_set_scan_configuration
+        56   -> aci_gatt_srv_init
+        56   -> aci_hal_set_tx_power_level
+        56   -> aci_hal_write_config_data
+        56   -> printf
+       8   CancelConnect
+         8   -> aci_gap_terminate_proc
+      16   Connect
+        16   -> aci_gap_create_connection
+        16   -> printf
+      48   aci_att_clt_read_by_group_type_resp_event
+        48   -> __aeabi_memcpy
+        48   -> memcmp
+        48   -> printf
+      32   aci_att_clt_read_by_type_resp_event
+        32   -> memcmp
+        32   -> print_uuid
+        32   -> printf
+      24   aci_att_clt_read_resp_event
+        24   -> printf
+       8   aci_gap_bond_lost_event
+         8   -> printf
+      16   aci_gap_pairing_complete_event
+        16   -> aci_gap_configure_white_and_resolving_list
+        16   -> printf
+      24   aci_gap_proc_complete_event
+        24   -> printf
+      24   aci_gatt_clt_disc_read_char_by_uuid_resp_event
+        24   -> printf
+      24   aci_gatt_clt_error_resp_event
+        24   -> printf
+      24   aci_gatt_clt_notification_event
+        24   -> printf
+      16   aci_gatt_clt_proc_complete_event
+        16   -> printf
+      16   hci_disconnection_complete_event
+        16   -> printf
+      32   hci_le_advertising_report_event
+        32   -> aci_gap_create_connection
+        32   -> aci_gap_terminate_proc
+        32   -> memcmp
+        32   -> printf
+      48   hci_le_connection_complete_event
+        48   -> __aeabi_memcpy
+        48   -> printf
+      48   hci_le_enhanced_connection_complete_event
+        48   -> hci_le_connection_complete_event
+        48   -> printf
+      48   hci_le_extended_advertising_report_event
+        48   -> __aeabi_memcpy
+        48   -> hci_le_advertising_report_event
+      16   print_uuid
+        16   -> printf
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable10
+       4  ??DataTable10_1
+       4  ??DataTable10_2
+       4  ??DataTable10_3
+       4  ??DataTable10_4
+       4  ??DataTable10_5
+       4  ??DataTable10_6
+       4  ??DataTable11
+       4  ??DataTable11_1
+       4  ??DataTable11_2
+       4  ??DataTable11_3
+       4  ??DataTable11_4
+       4  ??DataTable12
+       4  ??DataTable13
+       4  ??DataTable13_1
+       4  ??DataTable13_2
+       4  ??DataTable13_3
+       4  ??DataTable13_4
+       4  ??DataTable14
+       4  ??DataTable14_1
+       4  ??DataTable15
+       4  ??DataTable15_1
+       4  ??DataTable15_2
+       4  ??DataTable15_3
+       4  ??DataTable15_4
+       4  ??DataTable16
+       4  ??DataTable17
+       4  ??DataTable17_1
+       4  ??DataTable17_10
+       4  ??DataTable17_11
+       4  ??DataTable17_12
+       4  ??DataTable17_13
+       4  ??DataTable17_14
+       4  ??DataTable17_15
+       4  ??DataTable17_16
+       4  ??DataTable17_17
+       4  ??DataTable17_18
+       4  ??DataTable17_19
+       4  ??DataTable17_2
+       4  ??DataTable17_20
+       4  ??DataTable17_21
+       4  ??DataTable17_22
+       4  ??DataTable17_23
+       4  ??DataTable17_3
+       4  ??DataTable17_4
+       4  ??DataTable17_5
+       4  ??DataTable17_6
+       4  ??DataTable17_7
+       4  ??DataTable17_8
+       4  ??DataTable17_9
+       4  ??DataTable1_1
+       4  ??DataTable1_2
+       4  ??DataTable3
+       4  ??DataTable3_1
+       4  ??DataTable3_2
+       4  ??DataTable3_3
+       4  ??DataTable3_4
+       4  ??DataTable3_5
+       4  ??DataTable4
+       4  ??DataTable4_1
+       4  ??DataTable5
+       4  ??DataTable5_1
+       4  ??DataTable6
+       4  ??DataTable8
+       4  ??DataTable9
+       8  ?_0
+       8  ?_1
+      36  ?_10
+       8  ?_11
+      44  ?_12
+      16  ?_13
+      24  ?_14
+      12  ?_15
+      16  ?_16
+      44  ?_17
+      12  ?_18
+       4  ?_19
+      48  ?_2
+       4  ?_20
+      36  ?_21
+      28  ?_22
+      28  ?_23
+      44  ?_24
+      52  ?_25
+      48  ?_26
+       8  ?_27
+       4  ?_28
+      64  ?_29
+      40  ?_3
+       8  ?_30
+      36  ?_31
+      36  ?_32
+      56  ?_33
+      52  ?_34
+      60  ?_35
+      72  ?_36
+      76  ?_37
+     100  ?_38
+      84  ?_39
+      32  ?_4
+      36  ?_40
+      60  ?_41
+      28  ?_42
+      36  ?_43
+      36  ?_44
+      64  ?_45
+      64  ?_46
+      24  ?_47
+      48  ?_48
+      44  ?_49
+      48  ?_5
+      28  ?_50
+      20  ?_51
+      56  ?_52
+      52  ?_53
+      32  ?_54
+      44  ?_6
+      48  ?_7
+      52  ?_8
+      52  ?_9
+     292  APP_Tick
+     384  BLE_GATT_Client_DeviceInit
+      10  CancelConnect
+      16  Char_RX_uuid
+      16  Char_TX_uuid
+      54  Connect
+      16  Service_uuid
+     124  aci_att_clt_read_by_group_type_resp_event
+     124  aci_att_clt_read_by_type_resp_event
+      50  aci_att_clt_read_resp_event
+      10  aci_gap_bond_lost_event
+      70  aci_gap_pairing_complete_event
+      18  aci_gap_proc_complete_event
+      18  aci_gatt_clt_disc_read_char_by_uuid_resp_event
+      58  aci_gatt_clt_error_resp_event
+      70  aci_gatt_clt_notification_event
+     144  aci_gatt_clt_proc_complete_event
+       2  client_char_conf_data
+       2  client_char_conf_data
+      34  hci_disconnection_complete_event
+     196  hci_le_advertising_report_event
+      98  hci_le_connection_complete_event
+     118  hci_le_enhanced_connection_complete_event
+      56  hci_le_extended_advertising_report_event
+      24  print_uuid
+      24  slaves
+       4  temp_TIME1
+
+ 
+    28 bytes in section .bss
+    52 bytes in section .data
+ 2'120 bytes in section .rodata
+ 2'216 bytes in section .text
+ 
+ 2'216 bytes of CODE  memory
+ 2'120 bytes of CONST memory
+    80 bytes of DATA  memory
+
+Errors: none
+Warnings: 4

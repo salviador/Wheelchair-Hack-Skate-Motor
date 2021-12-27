@@ -1,0 +1,15 @@
+C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Debug\BrowseInfo\Middlewares\BLE_Stack\stack_user_cfg.pbi: \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\Bluetooth_LE\src\stack_user_cfg.c \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\Bluetooth_LE\Inc\stack_user_cfg.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\Bluetooth_LE\Inc\bluenrg_lp_api.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\Bluetooth_LE\Inc\bluenrg_lp_gatt.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\Bluetooth_LE\Inc\ble_status.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdint.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\hal\Inc\system_util.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\hal\Inc\compiler.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\custom_ble_stack_conf.h

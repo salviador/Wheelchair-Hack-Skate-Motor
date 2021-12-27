@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "bleservice.h": "c",
+        "ledrgb.h": "c",
+        "string.h": "c",
+        "type_traits": "c"
+    }
+}

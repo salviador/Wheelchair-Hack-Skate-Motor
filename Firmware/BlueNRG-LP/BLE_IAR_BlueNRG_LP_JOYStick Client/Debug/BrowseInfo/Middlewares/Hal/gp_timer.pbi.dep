@@ -1,0 +1,21 @@
+C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Debug\BrowseInfo\Middlewares\Hal\gp_timer.pbi: \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\hal\Src\gp_timer.c \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\hal\Inc\clock.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Drivers\CMSIS\Device\ST\BlueNRG_LP\Include\BlueNRG_LPx.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Drivers\CMSIS\Device\ST\BlueNRG_LP\Include\bluenrg_lp.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Drivers\CMSIS\Include\core_cm0plus.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdint.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Drivers\CMSIS\Include\cmsis_version.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Drivers\CMSIS\Include\cmsis_compiler.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Drivers\CMSIS\Include\cmsis_iccarm.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32\iccarm_builtin.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Drivers\CMSIS\Include\mpu_armv7.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\hal\Inc\system_util.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\hal\Inc\compiler.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\hal\Inc\gp_timer.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\hal\Inc\clock.h

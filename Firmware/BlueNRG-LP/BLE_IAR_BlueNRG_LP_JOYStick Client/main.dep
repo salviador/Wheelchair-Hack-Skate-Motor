@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>866542930</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\adcjoy.c</file>
+            <file>$PROJ_DIR$\BLE_GATT_Client.h</file>
+            <file>$PROJ_DIR$\Button.c</file>
+            <file>$PROJ_DIR$\bluenrg_lp_hal_msp.c</file>
+            <file>$PROJ_DIR$\Button.h</file>
+            <file>$PROJ_DIR$\adcjoy.h</file>
+            <file>$PROJ_DIR$\bluenrg_lp_hal_conf.h</file>
+            <file>$PROJ_DIR$\bluenrg_lp_it.c</file>
+            <file>$PROJ_DIR$\BLE_GATT_Service_config.h</file>
+            <file>$PROJ_DIR$\custom_ble_stack_conf.h</file>
+            <file>$PROJ_DIR$\bluenrg_lp_it.h</file>
+            <file>$PROJ_DIR$\disable_all.c</file>
+            <file>$PROJ_DIR$\led.c</file>
+            <file>$PROJ_DIR$\led.h</file>
+            <file>$PROJ_DIR$\disable_all.h</file>
+            <file>$PROJ_DIR$\BLE_GATT_Client.c</file>
+            <file>$PROJ_DIR$\main.h</file>
+            <file>$PROJ_DIR$\main.c</file>
+        </outputs>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

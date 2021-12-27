@@ -1,0 +1,1495 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         06/Dec/2021  17:46:06
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                 =  thumb
+#    Endian                   =  little
+#    Source file              =
+#        D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\sensor.c
+#    Command line             =
+#        -f "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Debug\Obj\sensor.o.rsp" ("D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick Server\sensor.c" -D
+#        USE_FULL_LL_DRIVER -D STEVAL_IDB011V1 -D CONFIG_DEVICE_BLUENRG_LP -D
+#        CONFIG_HW_SMPS_10uH -D CONFIG_HW_HSE_TUNE=32 -D USER_BUTTON=BSP_PUSH1
+#        -D CONFIG_HW_LS_XTAL -D BLE_STACK_BASIC_CONF -lC "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick Server\Debug\List\\"
+#        --diag_suppress Pe1665 -o "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick Server\Debug\Obj\\" --no_cse
+#        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
+#        --no_scheduling --debug --endian=little --cpu=Cortex-M0+ -e --fpu=None
+#        --dlib_config "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick Server\\" -I "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Drivers\Peripherals_Drivers\Inc\\" -I "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Drivers\CMSIS\Device\ST\BlueNRG_LP\Include\\" -I
+#        "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\hal\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\PKAMGR\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\RNGMGR\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\AESMGR\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\BLECNTR\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick Server\Drivers\CMSIS\Include\\"
+#        -I "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Drivers/BSP/STEVAL-IDB011V1/Inc\\" -I "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Drivers\BSP\Common\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Drivers\BSP\Components\lps22hh_STdC\driver\\" -I
+#        "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Drivers\BSP\Components\lsm6dsox_STdC\driver\\" -I
+#        "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\BLE_Application\layers_inc\\" -I
+#        "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\Bluetooth_LE\Inc\\" -I "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\BLE_Application\OTA\inc\\" -I "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\NVMDB\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\BLE_Application\Profiles\Inc\\" -I
+#        "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\cryptolib\inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\cryptolib\inc\Common\\" -I "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\cryptolib\inc\AES\\" -On) --dependencies=n
+#        "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Debug\Obj\sensor.o.d"
+#    Locale                   =  C
+#    List file                =
+#        D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Debug\List\\sensor.lst
+#    Object file              =
+#        D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Debug\Obj\\sensor.o
+#    Runtime model:              
+#      __CPP_Runtime          =  1
+#      __SystemLibrary        =  DLib
+#      __dlib_file_descriptor =  0
+#      __dlib_version         =  6
+#      __iar_require _Printf  =  flags,widths
+#
+###############################################################################
+
+D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick Server\sensor.c
+      1          /******************** (C) COPYRIGHT 2019 STMicroelectronics ********************
+      2           * File Name          : sensor.c
+      3           * Author             : AMS - RF Application team
+      4           * Version            : V2.0.0
+      5           * Date               : 26-February-2019
+      6           * Description        : Sensor init and sensor state machines
+      7           ********************************************************************************
+      8           * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+      9           * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
+     10           * AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT,
+     11           * INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE
+     12           * CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING
+     13           * INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+     14           *******************************************************************************/
+     15          /* Includes ------------------------------------------------------------------*/
+     16          #include <stdio.h>
+     17          #include <string.h>
+     18          #include "ble_const.h" 
+     19          #include "bluenrg_lp_stack.h"
+     20          #include "OTA_btl.h" 
+     21          
+     22          #include "gatt_db.h"
+     23          #include "rf_driver_hal_vtimer.h"
+     24          #include "gap_profile.h"
+     25          #include "clock.h"
+     26          
+     27          /* Private typedef -----------------------------------------------------------*/
+     28          /* Private define ------------------------------------------------------------*/
+     29          #ifndef DEBUG
+     30          #define DEBUG 0
+     31          #endif
+     32          
+     33          #if DEBUG
+     34          #include <stdio.h>
+     35          #define PRINTF(...) printf(__VA_ARGS__)
+     36          #else
+     37          #define PRINTF(...)
+     38          #endif
+     39          
+     40          #define UPDATE_CONN_PARAM 1 //0
+     41          #define ADV_INTERVAL_MIN_MS  200
+     42          #define ADV_INTERVAL_MAX_MS  200
+     43          
+     44          /* Private macro -------------------------------------------------------------*/
+     45          /* Private variables ---------------------------------------------------------*/
+
+   \                                 In section .data, align 1
+     46          volatile uint8_t set_connectable = 1;
+   \                     set_connectable:
+   \        0x0   0x01               DC8 1
+
+   \                                 In section .bss, align 2
+     47          uint16_t connection_handle = 0;
+   \                     connection_handle:
+   \        0x0                      DS8 2
+
+   \                                 In section .bss, align 4
+     48          uint8_t connInfo[20];
+   \                     connInfo:
+   \        0x0                      DS8 20
+
+   \                                 In section .bss, align 4
+     49          int connected = FALSE;
+   \                     connected:
+   \        0x0                      DS8 4
+     50          
+
+   \                                 In section .bss, align 8
+     51          static VTIMER_HandleType sensorTimerHandle;
+   \                     sensorTimerHandle:
+   \        0x0                      DS8 24
+     52          
+
+   \                                 In section .bss, align 1
+     53          volatile uint8_t request_free_fall_notify = FALSE; 
+   \                     request_free_fall_notify:
+   \        0x0                      DS8 1
+     54          
+
+   \                                 In section .bss, align 1
+     55          BOOL sensor_board = FALSE; // It is True if sensor board has been detected
+   \                     sensor_board:
+   \        0x0                      DS8 1
+     56          
+     57          #if UPDATE_CONN_PARAM
+     58          #define UPDATE_TIMER 2 //TBR
+
+   \                                 In section .bss, align 8
+     59          static VTIMER_HandleType l2cap_TimerHandle;
+   \                     l2cap_TimerHandle:
+   \        0x0                      DS8 24
+
+   \                                 In section .bss, align 4
+     60          int l2cap_request_sent = FALSE;
+   \                     l2cap_request_sent:
+   \        0x0                      DS8 4
+
+   \                                 In section .bss, align 1
+     61          static uint8_t l2cap_req_timer_expired = FALSE; 
+   \                     l2cap_req_timer_expired:
+   \        0x0                      DS8 1
+     62          #endif
+     63          
+     64          #define SENSOR_TIMER 1
+     65          #define ACC_UPDATE_INTERVAL_MS 200
+
+   \                                 In section .bss, align 1
+     66          static uint8_t sensorTimer_expired = FALSE;
+   \                     sensorTimer_expired:
+   \        0x0                      DS8 1
+     67          
+     68          #ifndef SENSOR_ACCELEROMETER_EMULATION
+     69          
+     70          /* We use the real accelerometer on BlueNRG-LP Kit */
+
+   \                                 In section .bss, align 4
+     71          lsm6dsox_ctx_t inertialHandle;
+   \                     inertialHandle:
+   \        0x0                      DS8 12
+     72          
+     73          #endif 
+     74          
+     75          #ifndef SENSOR_PRESSURE_TEMPERATURE_EMULATION
+     76          
+     77          /* We use the real pressure-temperature sensor on BlueNRG-LP Kit */
+     78          
+     79          /* LPS22HH initialization */
+
+   \                                 In section .bss, align 4
+     80          lps22hh_ctx_t pressureHandle;
+   \                     pressureHandle:
+   \        0x0                      DS8 12
+     81          
+     82          #endif 
+     83            
+     84          /* Private function prototypes -----------------------------------------------*/
+     85          void SensorUpdateTimeoutCB(void *);
+     86          
+
+   \                                 In section .bss, align 4
+     87          static Advertising_Set_Parameters_t Advertising_Set_Parameters[1];
+   \                     Advertising_Set_Parameters:
+   \        0x0                      DS8 8
+     88          
+     89          /* Private functions ---------------------------------------------------------*/
+     90          
+     91          #ifndef SENSOR_ACCELEROMETER_EMULATION
+     92          /*******************************************************************************
+     93           * Function Name  : Init_Accelerometer.
+     94           * Description    : Init LIS331DLH accelerometer.
+     95           * Input          : None.
+     96           * Output         : None.
+     97           * Return         : None.
+     98           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+     99          void Init_Accelerometer(void)
+    100          {
+   \                     Init_Accelerometer: (+1)
+   \        0x0   0xB51F             PUSH     {R0-R4,LR}
+    101            uint8_t rst;
+    102            
+    103            lsm6dsox_pin_int1_route_t int_1_reg;
+    104            /*
+    105             * Uncomment if interrupt generation on Free Fall INT2 pin.
+    106             */
+    107            //lsm6dsox_int2_route_t int_2_reg;
+    108            
+    109            
+    110            /* Initialize the handle of the LSM6DSO driver */
+    111            inertialHandle.write_reg = BSP_SPI_Write;
+   \        0x2   0x....             LDR      R4,??DataTable5
+   \        0x4   0x....             LDR      R0,??DataTable5_1
+   \        0x6   0x6020             STR      R0,[R4, #+0]
+    112            inertialHandle.read_reg = BSP_SPI_Read;
+   \        0x8   0x....             LDR      R0,??DataTable7
+   \        0xA   0x6060             STR      R0,[R4, #+4]
+    113            
+    114            /* Inizialize the SPI */
+    115            BSP_SPI_Init();
+   \        0xC   0x.... 0x....      BL       BSP_SPI_Init
+    116            
+    117            /* Restore default configuration */
+    118            lsm6dsox_reset_set(&inertialHandle, PROPERTY_ENABLE);
+   \       0x10   0x2101             MOVS     R1,#+1
+   \       0x12   0x0020             MOVS     R0,R4
+   \       0x14   0x.... 0x....      BL       lsm6dsox_reset_set
+    119            do {
+    120              lsm6dsox_reset_get(&inertialHandle, &rst);
+   \                     ??Init_Accelerometer_0: (+1)
+   \       0x18   0x4669             MOV      R1,SP
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0x.... 0x....      BL       lsm6dsox_reset_get
+    121            } while (rst);
+   \       0x20   0x4668             MOV      R0,SP
+   \       0x22   0x7800             LDRB     R0,[R0, #+0]
+   \       0x24   0x2800             CMP      R0,#+0
+   \       0x26   0xD1F7             BNE      ??Init_Accelerometer_0
+    122            
+    123            /* Disable I3C interface. */
+    124            lsm6dsox_i3c_disable_set(&inertialHandle, LSM6DSOX_I3C_DISABLE);
+   \       0x28   0x2180             MOVS     R1,#+128
+   \       0x2A   0x0020             MOVS     R0,R4
+   \       0x2C   0x.... 0x....      BL       lsm6dsox_i3c_disable_set
+    125            
+    126            /* Enable Block Data Update */
+    127            lsm6dsox_block_data_update_set(&inertialHandle, PROPERTY_ENABLE);
+   \       0x30   0x2101             MOVS     R1,#+1
+   \       0x32   0x0020             MOVS     R0,R4
+   \       0x34   0x.... 0x....      BL       lsm6dsox_block_data_update_set
+    128            
+    129            /* Set full scale */  
+    130            lsm6dsox_xl_full_scale_set(&inertialHandle, LSM6DSOX_2g);
+   \       0x38   0x2100             MOVS     R1,#+0
+   \       0x3A   0x0020             MOVS     R0,R4
+   \       0x3C   0x.... 0x....      BL       lsm6dsox_xl_full_scale_set
+    131            lsm6dsox_gy_full_scale_set(&inertialHandle, LSM6DSOX_2000dps);
+   \       0x40   0x2106             MOVS     R1,#+6
+   \       0x42   0x0020             MOVS     R0,R4
+   \       0x44   0x.... 0x....      BL       lsm6dsox_gy_full_scale_set
+    132            
+    133            /* Set Output Data Rate for Acc and Gyro */
+    134            lsm6dsox_xl_data_rate_set(&inertialHandle, LSM6DSOX_XL_ODR_12Hz5);
+   \       0x48   0x2101             MOVS     R1,#+1
+   \       0x4A   0x0020             MOVS     R0,R4
+   \       0x4C   0x.... 0x....      BL       lsm6dsox_xl_data_rate_set
+    135            lsm6dsox_gy_data_rate_set(&inertialHandle, LSM6DSOX_GY_ODR_12Hz5);
+   \       0x50   0x2101             MOVS     R1,#+1
+   \       0x52   0x0020             MOVS     R0,R4
+   \       0x54   0x.... 0x....      BL       lsm6dsox_gy_data_rate_set
+    136            
+    137            /* Enable interrupt generation on Free Fall INT1 pin. */
+    138            lsm6dsox_int_notification_set(&inertialHandle, LSM6DSOX_ALL_INT_LATCHED);
+   \       0x58   0x2103             MOVS     R1,#+3
+   \       0x5A   0x0020             MOVS     R0,R4
+   \       0x5C   0x.... 0x....      BL       lsm6dsox_int_notification_set
+    139            
+    140            /* Set Free Fall duration to 3 and 6 samples event duration. */
+    141            lsm6dsox_ff_dur_set(&inertialHandle, 0);
+   \       0x60   0x2100             MOVS     R1,#+0
+   \       0x62   0x0020             MOVS     R0,R4
+   \       0x64   0x.... 0x....      BL       lsm6dsox_ff_dur_set
+    142            lsm6dsox_ff_threshold_set(&inertialHandle, LSM6DSOX_FF_TSH_156mg);
+   \       0x68   0x2100             MOVS     R1,#+0
+   \       0x6A   0x0020             MOVS     R0,R4
+   \       0x6C   0x.... 0x....      BL       lsm6dsox_ff_threshold_set
+    143          
+    144            
+    145            lsm6dsox_pin_int1_route_get(&inertialHandle, &int_1_reg);
+   \       0x70   0xA901             ADD      R1,SP,#+4
+   \       0x72   0x0020             MOVS     R0,R4
+   \       0x74   0x.... 0x....      BL       lsm6dsox_pin_int1_route_get
+    146            int_1_reg.md1_cfg.int1_ff = PROPERTY_ENABLE;
+   \       0x78   0xA801             ADD      R0,SP,#+4
+   \       0x7A   0x7841             LDRB     R1,[R0, #+1]
+   \       0x7C   0x2210             MOVS     R2,#+16
+   \       0x7E   0x430A             ORRS     R2,R2,R1
+   \       0x80   0x7042             STRB     R2,[R0, #+1]
+    147            lsm6dsox_pin_int1_route_set(&inertialHandle, &int_1_reg);
+   \       0x82   0xA901             ADD      R1,SP,#+4
+   \       0x84   0x0020             MOVS     R0,R4
+   \       0x86   0x.... 0x....      BL       lsm6dsox_pin_int1_route_set
+    148            
+    149            /* IRQ pin setting */
+    150            BSP_SPI_GpioInt_Init();
+   \       0x8A   0x.... 0x....      BL       BSP_SPI_GpioInt_Init
+    151            
+    152          }
+   \       0x8E   0xBD1F             POP      {R0-R4,PC}
+    153          #endif 
+    154          
+    155          #ifndef SENSOR_PRESSURE_TEMPERATURE_EMULATION
+    156          
+    157          /*******************************************************************************
+    158           * Function Name  : Init_Pressure_Temperature_Sensor.
+    159           * Description    : Init LPS22HH pressure and temperature sensor.
+    160           * Input          : None.
+    161           * Output         : None.
+    162           * Return         : None.
+    163           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    164          void Init_Pressure_Temperature_Sensor(void)
+    165          {  
+   \                     Init_Pressure_Temperature_Sensor: (+1)
+   \        0x0   0xB51C             PUSH     {R2-R4,LR}
+    166            /* LPS22HH initialization */
+    167            uint8_t rst;
+    168            
+    169             /* Initialize the handle of the LPS22HH driver */
+    170            pressureHandle.write_reg = BSP_I2C_Write;
+   \        0x2   0x....             LDR      R4,??DataTable7_1
+   \        0x4   0x....             LDR      R0,??DataTable7_2
+   \        0x6   0x6020             STR      R0,[R4, #+0]
+    171            pressureHandle.read_reg = BSP_I2C_Read;
+   \        0x8   0x....             LDR      R0,??DataTable8
+   \        0xA   0x6060             STR      R0,[R4, #+4]
+    172            
+    173            /* Inizialize the SPI */
+    174            BSP_I2C_Init();
+   \        0xC   0x.... 0x....      BL       BSP_I2C_Init
+    175            
+    176            /* Restore default configuration */
+    177            lps22hh_reset_set(&pressureHandle, PROPERTY_ENABLE);
+   \       0x10   0x2101             MOVS     R1,#+1
+   \       0x12   0x0020             MOVS     R0,R4
+   \       0x14   0x.... 0x....      BL       lps22hh_reset_set
+    178            do {
+    179              lps22hh_reset_get(&pressureHandle, &rst);
+   \                     ??Init_Pressure_Temperature_Sensor_0: (+1)
+   \       0x18   0x4669             MOV      R1,SP
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0x.... 0x....      BL       lps22hh_reset_get
+    180            } while (rst);
+   \       0x20   0x4668             MOV      R0,SP
+   \       0x22   0x7800             LDRB     R0,[R0, #+0]
+   \       0x24   0x2800             CMP      R0,#+0
+   \       0x26   0xD1F7             BNE      ??Init_Pressure_Temperature_Sensor_0
+    181            
+    182            /*  Enable Block Data Update */
+    183            lps22hh_block_data_update_set(&pressureHandle, PROPERTY_ENABLE);
+   \       0x28   0x2101             MOVS     R1,#+1
+   \       0x2A   0x0020             MOVS     R0,R4
+   \       0x2C   0x.... 0x....      BL       lps22hh_block_data_update_set
+    184            
+    185            /* Set Output Data Rate */
+    186            lps22hh_data_rate_set(&pressureHandle, LPS22HH_1_Hz_LOW_NOISE);
+   \       0x30   0x2111             MOVS     R1,#+17
+   \       0x32   0x0020             MOVS     R0,R4
+   \       0x34   0x.... 0x....      BL       lps22hh_data_rate_set
+    187          
+    188          }
+   \       0x38   0xBD13             POP      {R0,R1,R4,PC}
+    189          
+    190          #endif
+    191          
+    192          /*******************************************************************************
+    193           * Function Name  : Sensor_DeviceInit.
+    194           * Description    : Init the device sensors.
+    195           * Input          : None.
+    196           * Return         : Status.
+    197           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    198          uint8_t  Sensor_DeviceInit()
+    199          {
+   \                     Sensor_DeviceInit: (+1)
+   \        0x0   0xB5F0             PUSH     {R4-R7,LR}
+   \        0x2   0xB08F             SUB      SP,SP,#+60
+    200            uint8_t ret;
+    201            uint16_t service_handle, dev_name_char_handle, appearance_char_handle;
+    202            uint8_t device_name[] = {'B', 'L', 'E', ' ', 'T', 'e', 's', 't'};
+   \        0x4   0xA80D             ADD      R0,SP,#+52
+   \        0x6   0x....             LDR      R1,??DataTable7_3
+   \        0x8   0xC90C             LDM      R1!,{R2,R3}
+   \        0xA   0xC00C             STM      R0!,{R2,R3}
+   \        0xC   0x3908             SUBS     R1,R1,#+8
+   \        0xE   0x3808             SUBS     R0,R0,#+8
+    203            static uint8_t adv_data[] = {0x02,AD_TYPE_FLAGS, FLAG_BIT_LE_GENERAL_DISCOVERABLE_MODE|FLAG_BIT_BR_EDR_NOT_SUPPORTED,
+    204                                        9, AD_TYPE_COMPLETE_LOCAL_NAME,'B', 'L', 'E', ' ', 'T', 'e', 's', 't'};
+    205          
+    206            /* Set the TX power 0 dBm */
+    207            aci_hal_set_tx_power_level(0, 10);
+   \       0x10   0x210A             MOVS     R1,#+10
+   \       0x12   0x2000             MOVS     R0,#+0
+   \       0x14   0x.... 0x....      BL       aci_hal_set_tx_power_level
+    208            
+    209            /* GATT Init */
+    210            ret = aci_gatt_srv_init();
+   \       0x18   0x.... 0x....      BL       aci_gatt_srv_init
+   \       0x1C   0x0004             MOVS     R4,R0
+    211            if (ret != BLE_STATUS_SUCCESS) {
+   \       0x1E   0x0020             MOVS     R0,R4
+   \       0x20   0xB2C0             UXTB     R0,R0
+   \       0x22   0x2800             CMP      R0,#+0
+   \       0x24   0xD002             BEQ      ??Sensor_DeviceInit_0
+    212              PRINTF("aci_gatt_srv_init() failed: 0x%02x\r\n", ret);
+    213              return ret;
+   \       0x26   0x0020             MOVS     R0,R4
+   \       0x28   0xB2C0             UXTB     R0,R0
+   \       0x2A   0xE087             B        ??Sensor_DeviceInit_1
+    214            }
+    215            
+    216            /* GAP Init */
+    217            ret = aci_gap_init(GAP_PERIPHERAL_ROLE, 0, 0x07, STATIC_RANDOM_ADDR, &service_handle, &dev_name_char_handle, &appearance_char_handle);
+   \                     ??Sensor_DeviceInit_0: (+1)
+   \       0x2C   0xA80B             ADD      R0,SP,#+44
+   \       0x2E   0x9002             STR      R0,[SP, #+8]
+   \       0x30   0xA80B             ADD      R0,SP,#+44
+   \       0x32   0x1C80             ADDS     R0,R0,#+2
+   \       0x34   0x9001             STR      R0,[SP, #+4]
+   \       0x36   0xA80C             ADD      R0,SP,#+48
+   \       0x38   0x9000             STR      R0,[SP, #+0]
+   \       0x3A   0x2301             MOVS     R3,#+1
+   \       0x3C   0x2207             MOVS     R2,#+7
+   \       0x3E   0x2100             MOVS     R1,#+0
+   \       0x40   0x2001             MOVS     R0,#+1
+   \       0x42   0x.... 0x....      BL       aci_gap_init
+   \       0x46   0x0005             MOVS     R5,R0
+    218            if (ret != BLE_STATUS_SUCCESS) {
+   \       0x48   0x0028             MOVS     R0,R5
+   \       0x4A   0xB2C0             UXTB     R0,R0
+   \       0x4C   0x2800             CMP      R0,#+0
+   \       0x4E   0xD002             BEQ      ??Sensor_DeviceInit_2
+    219              PRINTF("aci_gap_init() failed: 0x%02x\r\n", ret);
+    220              return ret;
+   \       0x50   0x0028             MOVS     R0,R5
+   \       0x52   0xB2C0             UXTB     R0,R0
+   \       0x54   0xE072             B        ??Sensor_DeviceInit_1
+    221            }
+    222           
+    223            /* Update device name */
+    224            Gap_profile_set_dev_name(0, sizeof(device_name), device_name);
+   \                     ??Sensor_DeviceInit_2: (+1)
+   \       0x56   0xAA0D             ADD      R2,SP,#+52
+   \       0x58   0x2108             MOVS     R1,#+8
+   \       0x5A   0x2000             MOVS     R0,#+0
+   \       0x5C   0x.... 0x....      BL       Gap_profile_set_dev_name
+    225            
+    226            ret = aci_gap_set_authentication_requirement(BONDING,
+    227                                                         MITM_PROTECTION_REQUIRED,
+    228                                                         SC_IS_NOT_SUPPORTED,
+    229                                                         KEYPRESS_IS_NOT_SUPPORTED,
+    230                                                         7, 
+    231                                                         16,
+    232                                                         USE_FIXED_PIN_FOR_PAIRING,
+    233                                                         123456);
+   \       0x60   0x....             LDR      R0,??DataTable8_1
+   \       0x62   0x9003             STR      R0,[SP, #+12]
+   \       0x64   0x2000             MOVS     R0,#+0
+   \       0x66   0x9002             STR      R0,[SP, #+8]
+   \       0x68   0x2010             MOVS     R0,#+16
+   \       0x6A   0x9001             STR      R0,[SP, #+4]
+   \       0x6C   0x2007             MOVS     R0,#+7
+   \       0x6E   0x9000             STR      R0,[SP, #+0]
+   \       0x70   0x2300             MOVS     R3,#+0
+   \       0x72   0x2200             MOVS     R2,#+0
+   \       0x74   0x2101             MOVS     R1,#+1
+   \       0x76   0x2001             MOVS     R0,#+1
+   \       0x78   0x.... 0x....      BL       aci_gap_set_authentication_requirement
+   \       0x7C   0x0004             MOVS     R4,R0
+    234            if(ret != BLE_STATUS_SUCCESS) {
+   \       0x7E   0x0020             MOVS     R0,R4
+   \       0x80   0xB2C0             UXTB     R0,R0
+   \       0x82   0x2800             CMP      R0,#+0
+   \       0x84   0xD002             BEQ      ??Sensor_DeviceInit_3
+    235              PRINTF("aci_gap_set_authentication_requirement()failed: 0x%02x\r\n", ret);
+    236              return ret;
+   \       0x86   0x0020             MOVS     R0,R4
+   \       0x88   0xB2C0             UXTB     R0,R0
+   \       0x8A   0xE057             B        ??Sensor_DeviceInit_1
+    237            }
+    238            
+    239            ret = aci_gap_set_advertising_configuration( 0, GAP_MODE_GENERAL_DISCOVERABLE,
+    240                                                        ADV_PROP_CONNECTABLE|ADV_PROP_SCANNABLE|ADV_PROP_LEGACY,
+    241                                                        (ADV_INTERVAL_MIN_MS*1000)/625, (ADV_INTERVAL_MAX_MS*1000)/625, 
+    242                                                        ADV_CH_ALL,
+    243                                                        0,NULL,
+    244                                                        ADV_NO_WHITE_LIST_USE,
+    245                                                        0, /* 0 dBm */
+    246                                                        LE_1M_PHY, /* Primary advertising PHY */
+    247                                                        0, /* 0 skips */
+    248                                                        LE_1M_PHY, /* Secondary advertising PHY. Not used with legacy advertising. */
+    249                                                        0, /* SID */
+    250                                                        0 /* No scan request notifications */);
+   \                     ??Sensor_DeviceInit_3: (+1)
+   \       0x8C   0x23A0             MOVS     R3,#+160
+   \       0x8E   0x005B             LSLS     R3,R3,#+1
+   \       0x90   0x2000             MOVS     R0,#+0
+   \       0x92   0x900A             STR      R0,[SP, #+40]
+   \       0x94   0x2000             MOVS     R0,#+0
+   \       0x96   0x9009             STR      R0,[SP, #+36]
+   \       0x98   0x2001             MOVS     R0,#+1
+   \       0x9A   0x9008             STR      R0,[SP, #+32]
+   \       0x9C   0x2000             MOVS     R0,#+0
+   \       0x9E   0x9007             STR      R0,[SP, #+28]
+   \       0xA0   0x2001             MOVS     R0,#+1
+   \       0xA2   0x9006             STR      R0,[SP, #+24]
+   \       0xA4   0x2000             MOVS     R0,#+0
+   \       0xA6   0x9005             STR      R0,[SP, #+20]
+   \       0xA8   0x2000             MOVS     R0,#+0
+   \       0xAA   0x9004             STR      R0,[SP, #+16]
+   \       0xAC   0x2000             MOVS     R0,#+0
+   \       0xAE   0x9003             STR      R0,[SP, #+12]
+   \       0xB0   0x2000             MOVS     R0,#+0
+   \       0xB2   0x9002             STR      R0,[SP, #+8]
+   \       0xB4   0x2007             MOVS     R0,#+7
+   \       0xB6   0x9001             STR      R0,[SP, #+4]
+   \       0xB8   0x9300             STR      R3,[SP, #+0]
+   \       0xBA   0x2213             MOVS     R2,#+19
+   \       0xBC   0x2102             MOVS     R1,#+2
+   \       0xBE   0x2000             MOVS     R0,#+0
+   \       0xC0   0x.... 0x....      BL       aci_gap_set_advertising_configuration
+   \       0xC4   0x0007             MOVS     R7,R0
+    251            printf("Advertising configuration 0x%02X\n", ret);
+   \       0xC6   0x0039             MOVS     R1,R7
+   \       0xC8   0xB2C9             UXTB     R1,R1
+   \       0xCA   0x....             LDR      R0,??DataTable8_2
+   \       0xCC   0x.... 0x....      BL       printf
+    252            
+    253            ret = aci_gap_set_advertising_data( 0, ADV_COMPLETE_DATA, sizeof(adv_data), adv_data);
+   \       0xD0   0x....             LDR      R3,??DataTable8_3
+   \       0xD2   0x220D             MOVS     R2,#+13
+   \       0xD4   0x2103             MOVS     R1,#+3
+   \       0xD6   0x2000             MOVS     R0,#+0
+   \       0xD8   0x.... 0x....      BL       aci_gap_set_advertising_data
+   \       0xDC   0x0005             MOVS     R5,R0
+    254            
+    255            printf("Set advertising data 0x%02X\n", ret);  
+   \       0xDE   0x0029             MOVS     R1,R5
+   \       0xE0   0xB2C9             UXTB     R1,R1
+   \       0xE2   0x....             LDR      R0,??DataTable8_4
+   \       0xE4   0x.... 0x....      BL       printf
+    256            
+    257            PRINTF("BLE Stack Initialized with SUCCESS\n");
+    258          
+    259          #ifndef SENSOR_ACCELEROMETER_EMULATION /* User Real accelerometer sensors HARDWARE */
+    260            Init_Accelerometer();
+   \       0xE8   0x.... 0x....      BL       Init_Accelerometer
+    261          #endif
+    262            
+    263          #ifndef SENSOR_PRESSURE_TEMPERATURE_EMULATION
+    264            Init_Pressure_Temperature_Sensor(); /* User Real temperature/pressure sensor HARDWARE */
+   \       0xEC   0x.... 0x....      BL       Init_Pressure_Temperature_Sensor
+    265          #endif   
+    266          
+    267          
+    268            /* Add ACC service and Characteristics */
+    269            ret = Add_Acc_Service();
+   \       0xF0   0x.... 0x....      BL       Add_Acc_Service
+   \       0xF4   0x0006             MOVS     R6,R0
+    270            if(ret == BLE_STATUS_SUCCESS) {
+   \       0xF6   0x0030             MOVS     R0,R6
+   \       0xF8   0xB2C0             UXTB     R0,R0
+   \       0xFA   0x2800             CMP      R0,#+0
+   \       0xFC   0xD002             BEQ      ??Sensor_DeviceInit_4
+    271              PRINTF("Acceleration service added successfully.\n");
+    272            } else {
+    273              PRINTF("Error while adding Acceleration service: 0x%02x\r\n", ret);
+    274              return ret;
+   \       0xFE   0x0030             MOVS     R0,R6
+   \      0x100   0xB2C0             UXTB     R0,R0
+   \      0x102   0xE01B             B        ??Sensor_DeviceInit_1
+    275            }
+    276          
+    277            /* Add Environmental Sensor Service */
+    278            ret = Add_Environmental_Sensor_Service();
+   \                     ??Sensor_DeviceInit_4: (+1)
+   \      0x104   0x.... 0x....      BL       Add_Environmental_Sensor_Service
+   \      0x108   0x0004             MOVS     R4,R0
+    279            if(ret == BLE_STATUS_SUCCESS) {
+   \      0x10A   0x0020             MOVS     R0,R4
+   \      0x10C   0xB2C0             UXTB     R0,R0
+   \      0x10E   0x2800             CMP      R0,#+0
+   \      0x110   0xD002             BEQ      ??Sensor_DeviceInit_5
+    280              PRINTF("Environmental service added successfully.\n");
+    281            } else {
+    282              PRINTF("Error while adding Environmental service: 0x%04x\r\n", ret);
+    283              return ret;
+   \      0x112   0x0020             MOVS     R0,R4
+   \      0x114   0xB2C0             UXTB     R0,R0
+   \      0x116   0xE011             B        ??Sensor_DeviceInit_1
+    284            }
+    285          
+    286            /* Start the Sensor Timer */
+    287            sensorTimerHandle.callback = SensorUpdateTimeoutCB;  
+   \                     ??Sensor_DeviceInit_5: (+1)
+   \      0x118   0x....             LDR      R0,??DataTable8_5
+   \      0x11A   0x....             LDR      R1,??DataTable8_6
+   \      0x11C   0x6081             STR      R1,[R0, #+8]
+    288            ret = HAL_VTIMER_StartTimerMs(&sensorTimerHandle, ACC_UPDATE_INTERVAL_MS);
+   \      0x11E   0x21C8             MOVS     R1,#+200
+   \      0x120   0x.... 0x....      BL       HAL_VTIMER_StartTimerMs
+   \      0x124   0x0001             MOVS     R1,R0
+    289            if (ret != BLE_STATUS_SUCCESS) {
+   \      0x126   0x0008             MOVS     R0,R1
+   \      0x128   0xB2C0             UXTB     R0,R0
+   \      0x12A   0x2800             CMP      R0,#+0
+   \      0x12C   0xD002             BEQ      ??Sensor_DeviceInit_6
+    290              PRINTF("HAL_VTIMER_StartTimerMs() failed; 0x%02x\r\n", ret);
+    291              return ret;
+   \      0x12E   0x0008             MOVS     R0,R1
+   \      0x130   0xB2C0             UXTB     R0,R0
+   \      0x132   0xE003             B        ??Sensor_DeviceInit_1
+    292            } else {
+    293              sensorTimer_expired = FALSE;
+   \                     ??Sensor_DeviceInit_6: (+1)
+   \      0x134   0x2000             MOVS     R0,#+0
+   \      0x136   0x....             LDR      R2,??DataTable8_7
+   \      0x138   0x7010             STRB     R0,[R2, #+0]
+    294            }
+    295          
+    296            return BLE_STATUS_SUCCESS;
+   \      0x13A   0x2000             MOVS     R0,#+0
+   \                     ??Sensor_DeviceInit_1: (+1)
+   \      0x13C   0xB00F             ADD      SP,SP,#+60
+   \      0x13E   0xBDF0             POP      {R4-R7,PC}
+    297          }
+
+   \                                 In section .data, align 4
+   \                     `Sensor_DeviceInit::adv_data`:
+   \        0x0   0x02 0x01          DC8 2, 1, 6, 9, 9, 66, 76, 69, 32, 84, 101, 115, 116
+
+   \              0x06 0x09    
+
+   \              0x09 0x42    
+
+   \              0x4C 0x45    
+
+   \              0x20 0x54    
+
+   \              0x65 0x73    
+
+   \              0x74
+   \        0xD                      DS8 3
+    298          
+
+   \                                 In section .text, align 2, keep-with-next
+    299          void SensorUpdateTimeoutCB(void *param)
+    300          {
+    301            sensorTimer_expired = TRUE;
+   \                     SensorUpdateTimeoutCB: (+1)
+   \        0x0   0x2101             MOVS     R1,#+1
+   \        0x2   0x....             LDR      R2,??DataTable8_7
+   \        0x4   0x7011             STRB     R1,[R2, #+0]
+    302          }
+   \        0x6   0x4770             BX       LR
+    303          
+    304          #if UPDATE_CONN_PARAM
+
+   \                                 In section .text, align 2, keep-with-next
+    305          void l2cap_UpdateTimeoutCB(void *param)
+    306          {
+    307            l2cap_req_timer_expired = TRUE;
+   \                     l2cap_UpdateTimeoutCB: (+1)
+   \        0x0   0x2101             MOVS     R1,#+1
+   \        0x2   0x....             LDR      R2,??DataTable8_8
+   \        0x4   0x7011             STRB     R1,[R2, #+0]
+    308          }
+   \        0x6   0x4770             BX       LR
+    309          #endif
+    310          
+    311          /*******************************************************************************
+    312           * Function Name  : Set_DeviceConnectable.
+    313           * Description    : Puts the device in connectable mode.
+    314           * Input          : None.
+    315           * Output         : None.
+    316           * Return         : None.
+    317           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    318          void Set_DeviceConnectable(void)
+    319          {  
+   \                     Set_DeviceConnectable: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    320            uint8_t ret;
+    321          
+    322          #if ST_OTA_FIRMWARE_UPGRADE_SUPPORT
+    323            ret = aci_gap_set_scan_response_data(0,18,BTLServiceUUID4Scan);
+    324            if(ret != BLE_STATUS_SUCCESS)
+    325            {
+    326              PRINTF("aci_gap_set_scan_response_data() failed: 0x%02x\r\n",ret);
+    327              BSP_LED_On(BSP_LED3);  
+    328            }
+    329          #endif /* ST_OTA_FIRMWARE_UPGRADE_SUPPORT */ 
+    330            PRINTF("Set General Discoverable Mode.\n");
+    331            
+    332            Advertising_Set_Parameters[0].Advertising_Handle = 0;
+   \        0x2   0x2000             MOVS     R0,#+0
+   \        0x4   0x....             LDR      R2,??DataTable8_9
+   \        0x6   0x0001             MOVS     R1,R0
+   \        0x8   0x7011             STRB     R1,[R2, #+0]
+    333            Advertising_Set_Parameters[0].Duration = 0;
+   \        0xA   0x0001             MOVS     R1,R0
+   \        0xC   0x8051             STRH     R1,[R2, #+2]
+    334            Advertising_Set_Parameters[0].Max_Extended_Advertising_Events = 0;
+   \        0xE   0x7110             STRB     R0,[R2, #+4]
+    335            
+    336            ret = aci_gap_set_advertising_enable(ENABLE, 1, Advertising_Set_Parameters); 
+   \       0x10   0x2101             MOVS     R1,#+1
+   \       0x12   0x2001             MOVS     R0,#+1
+   \       0x14   0x.... 0x....      BL       aci_gap_set_advertising_enable
+   \       0x18   0x0004             MOVS     R4,R0
+    337            
+    338            if(ret != BLE_STATUS_SUCCESS)
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0xB2C0             UXTB     R0,R0
+   \       0x1E   0x2800             CMP      R0,#+0
+   \       0x20   0xD002             BEQ      ??Set_DeviceConnectable_0
+    339            {
+    340              PRINTF("aci_gap_set_advertising_enable() failed: 0x%02x\r\n",ret);
+    341              BSP_LED_On(BSP_LED3);  
+   \       0x22   0x2002             MOVS     R0,#+2
+   \       0x24   0x.... 0x....      BL       BSP_LED_On
+    342            }
+    343            else
+    344              PRINTF("aci_gap_set_advertising_enable() --> SUCCESS\r\n");
+    345          }
+   \                     ??Set_DeviceConnectable_0: (+1)
+   \       0x28   0xBD10             POP      {R4,PC}
+    346          
+    347          /*******************************************************************************
+    348           * Function Name  : APP_Tick.
+    349           * Description    : Sensor Demo state machine.
+    350           * Input          : None.
+    351           * Output         : None.
+    352           * Return         : None.
+    353           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    354          void APP_Tick(void)
+    355          {
+   \                     APP_Tick: (+1)
+   \        0x0   0xB5FE             PUSH     {R1-R7,LR}
+    356          #if UPDATE_CONN_PARAM    
+    357            uint8_t ret = 0; 
+   \        0x2   0x2400             MOVS     R4,#+0
+   \        0x4   0x0027             MOVS     R7,R4
+    358          #endif 
+    359            /* Make the device discoverable */
+    360            if(set_connectable) {
+   \        0x6   0x....             LDR      R5,??DataTable8_10
+   \        0x8   0x7828             LDRB     R0,[R5, #+0]
+   \        0xA   0x2800             CMP      R0,#+0
+   \        0xC   0xD003             BEQ      ??APP_Tick_0
+    361              Set_DeviceConnectable();
+   \        0xE   0x.... 0x....      BL       Set_DeviceConnectable
+    362              set_connectable = FALSE;
+   \       0x12   0x0020             MOVS     R0,R4
+   \       0x14   0x7028             STRB     R0,[R5, #+0]
+    363            }
+    364          
+    365          #if UPDATE_CONN_PARAM      
+    366            /* Connection parameter update request */
+    367            if(connected && !l2cap_request_sent && l2cap_req_timer_expired){
+   \                     ??APP_Tick_0: (+1)
+   \       0x16   0x....             LDR      R6,??DataTable8_11
+   \       0x18   0x6830             LDR      R0,[R6, #+0]
+   \       0x1A   0x2800             CMP      R0,#+0
+   \       0x1C   0xD014             BEQ      ??APP_Tick_1
+   \       0x1E   0x....             LDR      R5,??DataTable8_12
+   \       0x20   0x6828             LDR      R0,[R5, #+0]
+   \       0x22   0x2800             CMP      R0,#+0
+   \       0x24   0xD110             BNE      ??APP_Tick_1
+   \       0x26   0x....             LDR      R0,??DataTable8_8
+   \       0x28   0x7800             LDRB     R0,[R0, #+0]
+   \       0x2A   0x2800             CMP      R0,#+0
+   \       0x2C   0xD00C             BEQ      ??APP_Tick_1
+    368              ret = aci_l2cap_connection_parameter_update_req(connection_handle, 9, 20, 0, 600); //24, 24
+   \       0x2E   0x2096             MOVS     R0,#+150
+   \       0x30   0x0080             LSLS     R0,R0,#+2
+   \       0x32   0x9000             STR      R0,[SP, #+0]
+   \       0x34   0x2300             MOVS     R3,#+0
+   \       0x36   0x2214             MOVS     R2,#+20
+   \       0x38   0x2109             MOVS     R1,#+9
+   \       0x3A   0x....             LDR      R0,??DataTable8_13
+   \       0x3C   0x8800             LDRH     R0,[R0, #+0]
+   \       0x3E   0x.... 0x....      BL       aci_l2cap_connection_parameter_update_req
+   \       0x42   0x0007             MOVS     R7,R0
+    369              PRINTF("aci_l2cap_connection_parameter_update_req(): 0x%02x\r\n", ret); (void)ret;
+    370              l2cap_request_sent = TRUE;
+   \       0x44   0x2001             MOVS     R0,#+1
+   \       0x46   0x6028             STR      R0,[R5, #+0]
+    371            }
+    372          #endif
+    373              
+    374            /*  Update sensor value */
+    375            if (sensorTimer_expired) {
+   \                     ??APP_Tick_1: (+1)
+   \       0x48   0x....             LDR      R5,??DataTable8_7
+   \       0x4A   0x7828             LDRB     R0,[R5, #+0]
+   \       0x4C   0x2800             CMP      R0,#+0
+   \       0x4E   0xD019             BEQ      ??APP_Tick_2
+    376              sensorTimer_expired = FALSE;
+   \       0x50   0x0020             MOVS     R0,R4
+   \       0x52   0x7028             STRB     R0,[R5, #+0]
+    377              if(HAL_VTIMER_StartTimerMs(&sensorTimerHandle, ACC_UPDATE_INTERVAL_MS) != BLE_STATUS_SUCCESS)
+   \       0x54   0x21C8             MOVS     R1,#+200
+   \       0x56   0x....             LDR      R0,??DataTable8_5
+   \       0x58   0x.... 0x....      BL       HAL_VTIMER_StartTimerMs
+   \       0x5C   0x2800             CMP      R0,#+0
+   \       0x5E   0xD001             BEQ      ??APP_Tick_3
+    378                sensorTimer_expired = TRUE;
+   \       0x60   0x2001             MOVS     R0,#+1
+   \       0x62   0x7028             STRB     R0,[R5, #+0]
+    379              if(connected) {
+   \                     ??APP_Tick_3: (+1)
+   \       0x64   0x6830             LDR      R0,[R6, #+0]
+   \       0x66   0x2800             CMP      R0,#+0
+   \       0x68   0xD00C             BEQ      ??APP_Tick_2
+    380                AxesRaw_t acc_data;
+    381                
+    382                /* Activity Led */
+    383                BSP_LED_Toggle(BSP_LED1);  
+   \       0x6A   0x2000             MOVS     R0,#+0
+   \       0x6C   0x.... 0x....      BL       BSP_LED_Toggle
+    384          
+    385                /* Get Acceleration data */
+    386                if (GetAccAxesRaw(&acc_data) == 1) {
+   \       0x70   0x4668             MOV      R0,SP
+   \       0x72   0x.... 0x....      BL       GetAccAxesRaw
+   \       0x76   0x2801             CMP      R0,#+1
+   \       0x78   0xD102             BNE      ??APP_Tick_4
+    387                  Acc_Update(&acc_data);
+   \       0x7A   0x4668             MOV      R0,SP
+   \       0x7C   0x.... 0x....      BL       Acc_Update
+    388                }
+    389                  
+    390                /* Get free fall status */
+    391                GetFreeFallStatus(); 
+   \                     ??APP_Tick_4: (+1)
+   \       0x80   0x.... 0x....      BL       GetFreeFallStatus
+    392              }
+    393            }
+    394          
+    395            /* Free fall notification */
+    396            if(request_free_fall_notify == TRUE) {
+   \                     ??APP_Tick_2: (+1)
+   \       0x84   0x....             LDR      R0,??DataTable8_14
+   \       0x86   0x7801             LDRB     R1,[R0, #+0]
+   \       0x88   0x2901             CMP      R1,#+1
+   \       0x8A   0xD102             BNE      ??APP_Tick_5
+    397              request_free_fall_notify = FALSE;
+   \       0x8C   0x7004             STRB     R4,[R0, #+0]
+    398              Free_Fall_Notify();
+   \       0x8E   0x.... 0x....      BL       Free_Fall_Notify
+    399            }
+    400          }
+   \                     ??APP_Tick_5: (+1)
+   \       0x92   0xBDF7             POP      {R0-R2,R4-R7,PC}
+    401          
+    402          /* ***************** BlueNRG-LP Stack Callbacks ********************************/
+    403          
+    404          /*******************************************************************************
+    405           * Function Name  : hci_le_connection_complete_event.
+    406           * Description    : This event indicates that a new connection has been created.
+    407           * Input          : See file bluenrg1_events.h
+    408           * Output         : See file bluenrg1_events.h
+    409           * Return         : See file bluenrg1_events.h
+    410           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    411          void hci_le_connection_complete_event(uint8_t Status,
+    412                                                uint16_t Connection_Handle,
+    413                                                uint8_t Role,
+    414                                                uint8_t Peer_Address_Type,
+    415                                                uint8_t Peer_Address[6],
+    416                                                uint16_t Conn_Interval,
+    417                                                uint16_t Conn_Latency,
+    418                                                uint16_t Supervision_Timeout,
+    419                                                uint8_t Master_Clock_Accuracy)
+    420          {
+   \                     hci_le_connection_complete_event: (+1)
+   \        0x0   0xB5F4             PUSH     {R2,R4-R7,LR}
+   \        0x2   0x0006             MOVS     R6,R0
+   \        0x4   0x000C             MOVS     R4,R1
+   \        0x6   0x001F             MOVS     R7,R3
+    421          #if UPDATE_CONN_PARAM  
+    422            uint8_t ret; 
+    423          #endif
+    424            
+    425            if(Status != BLE_STATUS_SUCCESS)
+   \        0x8   0x0030             MOVS     R0,R6
+   \        0xA   0xB2C0             UXTB     R0,R0
+   \        0xC   0x2800             CMP      R0,#+0
+   \        0xE   0xD116             BNE      ??hci_le_connection_complete_event_0
+    426              return;
+    427            
+    428            connected = TRUE;
+   \                     ??hci_le_connection_complete_event_1: (+1)
+   \       0x10   0x2001             MOVS     R0,#+1
+   \       0x12   0x....             LDR      R1,??DataTable8_11
+   \       0x14   0x6008             STR      R0,[R1, #+0]
+    429            connection_handle = Connection_Handle;
+   \       0x16   0x....             LDR      R0,??DataTable8_13
+   \       0x18   0x8004             STRH     R4,[R0, #+0]
+    430            
+    431          #if UPDATE_CONN_PARAM    
+    432            l2cap_request_sent = FALSE;
+   \       0x1A   0x2500             MOVS     R5,#+0
+   \       0x1C   0x....             LDR      R0,??DataTable8_12
+   \       0x1E   0x6005             STR      R5,[R0, #+0]
+    433            
+    434             /* Start the l2cap Timer */
+    435            l2cap_TimerHandle.callback = l2cap_UpdateTimeoutCB;  
+   \       0x20   0x....             LDR      R0,??DataTable8_15
+   \       0x22   0x....             LDR      R1,??DataTable8_16
+   \       0x24   0x6081             STR      R1,[R0, #+8]
+    436            ret = HAL_VTIMER_StartTimerMs(&l2cap_TimerHandle, CLOCK_SECOND*2);
+   \       0x26   0x....             LDR      R1,??DataTable8_17
+   \       0x28   0x6809             LDR      R1,[R1, #+0]
+   \       0x2A   0x2202             MOVS     R2,#+2
+   \       0x2C   0x4351             MULS     R1,R2,R1
+   \       0x2E   0x.... 0x....      BL       HAL_VTIMER_StartTimerMs
+    437            if (ret != BLE_STATUS_SUCCESS) {
+   \       0x32   0x0001             MOVS     R1,R0
+   \       0x34   0xB2C9             UXTB     R1,R1
+   \       0x36   0x2900             CMP      R1,#+0
+   \       0x38   0xD101             BNE      ??hci_le_connection_complete_event_2
+    438              PRINTF("HAL_VTIMER_StartTimerMs(l2cap) failed; 0x%02x\r\n", ret);
+    439            } else {
+    440              l2cap_req_timer_expired = FALSE;
+   \       0x3A   0x....             LDR      R1,??DataTable8_8
+   \       0x3C   0x700D             STRB     R5,[R1, #+0]
+    441            }
+    442          #endif
+    443              
+    444          }/* end hci_le_connection_complete_event() */
+   \                     ??hci_le_connection_complete_event_2: (+1)
+   \                     ??hci_le_connection_complete_event_0: (+1)
+   \       0x3E   0xBDF1             POP      {R0,R4-R7,PC}
+    445          
+    446          /*******************************************************************************
+    447           * Function Name  : hci_le_enhanced_connection_complete_event.
+    448           * Description    : This event indicates that a new connection has been created
+    449           * Input          : See file bluenrg_lp_events.h
+    450           * Output         : See file bluenrg_lp_events.h
+    451           * Return         : See file bluenrg_lp_events.h
+    452           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    453          void hci_le_enhanced_connection_complete_event(uint8_t Status,
+    454                                                         uint16_t Connection_Handle,
+    455                                                         uint8_t Role,
+    456                                                         uint8_t Peer_Address_Type,
+    457                                                         uint8_t Peer_Address[6],
+    458                                                         uint8_t Local_Resolvable_Private_Address[6],
+    459                                                         uint8_t Peer_Resolvable_Private_Address[6],
+    460                                                         uint16_t Conn_Interval,
+    461                                                         uint16_t Conn_Latency,
+    462                                                         uint16_t Supervision_Timeout,
+    463                                                         uint8_t Master_Clock_Accuracy)
+    464          {
+   \                     hci_le_enhanced_connection_complete_event: (+1)
+   \        0x0   0xB5F0             PUSH     {R4-R7,LR}
+   \        0x2   0xB085             SUB      SP,SP,#+20
+   \        0x4   0x0007             MOVS     R7,R0
+   \        0x6   0x000E             MOVS     R6,R1
+   \        0x8   0x0015             MOVS     R5,R2
+   \        0xA   0x001C             MOVS     R4,R3
+    465            
+    466            hci_le_connection_complete_event(Status,
+    467                                             Connection_Handle,
+    468                                             Role,
+    469                                             Peer_Address_Type,
+    470                                             Peer_Address,
+    471                                             Conn_Interval,
+    472                                             Conn_Latency,
+    473                                             Supervision_Timeout,
+    474                                             Master_Clock_Accuracy);
+   \        0xC   0xA810             ADD      R0,SP,#+64
+   \        0xE   0x7800             LDRB     R0,[R0, #+0]
+   \       0x10   0x9004             STR      R0,[SP, #+16]
+   \       0x12   0x4668             MOV      R0,SP
+   \       0x14   0x8F80             LDRH     R0,[R0, #+60]
+   \       0x16   0x9003             STR      R0,[SP, #+12]
+   \       0x18   0x4668             MOV      R0,SP
+   \       0x1A   0x8F00             LDRH     R0,[R0, #+56]
+   \       0x1C   0x9002             STR      R0,[SP, #+8]
+   \       0x1E   0x4668             MOV      R0,SP
+   \       0x20   0x8E80             LDRH     R0,[R0, #+52]
+   \       0x22   0x9001             STR      R0,[SP, #+4]
+   \       0x24   0x980A             LDR      R0,[SP, #+40]
+   \       0x26   0x9000             STR      R0,[SP, #+0]
+   \       0x28   0x0023             MOVS     R3,R4
+   \       0x2A   0xB2DB             UXTB     R3,R3
+   \       0x2C   0x002A             MOVS     R2,R5
+   \       0x2E   0xB2D2             UXTB     R2,R2
+   \       0x30   0x0031             MOVS     R1,R6
+   \       0x32   0xB289             UXTH     R1,R1
+   \       0x34   0x0038             MOVS     R0,R7
+   \       0x36   0xB2C0             UXTB     R0,R0
+   \       0x38   0x.... 0x....      BL       hci_le_connection_complete_event
+    475          }
+   \       0x3C   0xB005             ADD      SP,SP,#+20
+   \       0x3E   0xBDF0             POP      {R4-R7,PC}
+    476          
+    477          /*******************************************************************************
+    478           * Function Name  : hci_disconnection_complete_event.
+    479           * Description    : This event occurs when a connection is terminated.
+    480           * Input          : See file bluenrg1_events.h
+    481           * Output         : See file bluenrg1_events.h
+    482           * Return         : See file bluenrg1_events.h
+    483           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    484          void hci_disconnection_complete_event(uint8_t Status,
+    485                                                uint16_t Connection_Handle,
+    486                                                uint8_t Reason)
+    487          {
+   \                     hci_disconnection_complete_event: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+    488            connected = FALSE;
+   \        0x8   0x2000             MOVS     R0,#+0
+   \        0xA   0x....             LDR      R1,??DataTable8_11
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+    489            /* Make the device connectable again. */
+    490            set_connectable = TRUE;
+   \        0xE   0x2101             MOVS     R1,#+1
+   \       0x10   0x....             LDR      R2,??DataTable8_10
+   \       0x12   0x7011             STRB     R1,[R2, #+0]
+    491            connection_handle =0;
+   \       0x14   0x....             LDR      R1,??DataTable8_13
+   \       0x16   0x8008             STRH     R0,[R1, #+0]
+    492            
+    493            BSP_LED_On(BSP_LED1);//activity led   
+   \       0x18   0x2000             MOVS     R0,#+0
+   \       0x1A   0x.... 0x....      BL       BSP_LED_On
+    494          #if ST_OTA_FIRMWARE_UPGRADE_SUPPORT
+    495            OTA_terminate_connection();
+    496          #endif 
+    497          }/* end hci_disconnection_complete_event() */
+   \       0x1E   0xBD70             POP      {R4-R6,PC}
+    498          
+    499          
+    500          /*******************************************************************************
+    501           * Function Name  : aci_gatt_srv_attribute_modified_event.
+    502           * Description    : This event occurs when an attribute is modified.
+    503           * Input          : See file bluenrg1_events.h
+    504           * Output         : See file bluenrg1_events.h
+    505           * Return         : See file bluenrg1_events.h
+    506           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    507          void aci_gatt_srv_attribute_modified_event(uint16_t Connection_Handle,
+    508                                                     uint16_t Attr_Handle,
+    509                                                     uint16_t Attr_Data_Length,
+    510                                                     uint8_t Attr_Data[])
+    511          {
+    512          #if ST_OTA_FIRMWARE_UPGRADE_SUPPORT
+    513            OTA_Write_Request_CB(Connection_Handle, Attr_Handle, Attr_Data_Length, Attr_Data); 
+    514          #endif /* ST_OTA_FIRMWARE_UPGRADE_SUPPORT */ 
+    515          }
+   \                     aci_gatt_srv_attribute_modified_event: (+1)
+   \        0x0   0x4770             BX       LR
+    516          
+    517          
+
+   \                                 In section .text, align 2, keep-with-next
+    518          void aci_hal_end_of_radio_activity_event(uint8_t Last_State,
+    519                                                   uint8_t Next_State,
+    520                                                   uint32_t Next_State_SysTime)
+    521          {
+    522          #if ST_OTA_FIRMWARE_UPGRADE_SUPPORT
+    523            if (Next_State == 0x02) /* 0x02: Connection event slave */
+    524            {
+    525              OTA_Radio_Activity(Next_State_SysTime);  
+    526            }
+    527          #endif 
+    528          }
+   \                     aci_hal_end_of_radio_activity_event: (+1)
+   \        0x0   0x4770             BX       LR
+    529          
+    530          #if UPDATE_CONN_PARAM
+    531          
+
+   \                                 In section .text, align 2, keep-with-next
+    532          void aci_l2cap_connection_update_resp_event(uint16_t Connection_Handle,
+    533                                                      uint16_t Result)
+    534          {
+    535             PRINTF("aci_l2cap_connection_update_resp_event; 0x%02x\r\n", Result);
+    536          }
+   \                     aci_l2cap_connection_update_resp_event: (+1)
+   \        0x0   0x4770             BX       LR
+    537          
+
+   \                                 In section .text, align 2, keep-with-next
+    538          void aci_l2cap_command_reject_event(uint16_t Connection_Handle,
+    539                                              uint8_t Identifier,
+    540                                              uint16_t Reason,
+    541                                              uint8_t Data_Length,
+    542                                              uint8_t Data[])
+    543          {
+    544            PRINTF("aci_l2cap_command_reject_event; 0x%02x\r\n", Reason);
+    545          }
+   \                     aci_l2cap_command_reject_event: (+1)
+   \        0x0   0x4770             BX       LR
+    546          #endif 
+    547          
+
+   \                                 In section .text, align 2, keep-with-next
+    548          void hci_le_connection_update_complete_event(uint8_t Status,
+    549                                                       uint16_t Connection_Handle,
+    550                                                       uint16_t Conn_Interval,
+    551                                                       uint16_t Conn_Latency,
+    552                                                       uint16_t Supervision_Timeout)
+    553          {
+    554            PRINTF("hci_le_connection_update_complete_event; %d\r\n", Conn_Interval);
+    555          }
+   \                     hci_le_connection_update_complete_event: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5:
+   \        0x0   0x....'....        DC32     inertialHandle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_1:
+   \        0x0   0x....'....        DC32     BSP_SPI_Write
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7:
+   \        0x0   0x....'....        DC32     BSP_SPI_Read
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_1:
+   \        0x0   0x....'....        DC32     pressureHandle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_2:
+   \        0x0   0x....'....        DC32     BSP_I2C_Write
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_3:
+   \        0x0   0x....'....        DC32     ?_0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8:
+   \        0x0   0x....'....        DC32     BSP_I2C_Read
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_1:
+   \        0x0   0x0001'E240        DC32     0x1e240
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_2:
+   \        0x0   0x....'....        DC32     ?_1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_3:
+   \        0x0   0x....'....        DC32     `Sensor_DeviceInit::adv_data`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_4:
+   \        0x0   0x....'....        DC32     ?_2
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_5:
+   \        0x0   0x....'....        DC32     sensorTimerHandle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_6:
+   \        0x0   0x....'....        DC32     SensorUpdateTimeoutCB
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_7:
+   \        0x0   0x....'....        DC32     sensorTimer_expired
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_8:
+   \        0x0   0x....'....        DC32     l2cap_req_timer_expired
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_9:
+   \        0x0   0x....'....        DC32     Advertising_Set_Parameters
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_10:
+   \        0x0   0x....'....        DC32     set_connectable
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_11:
+   \        0x0   0x....'....        DC32     connected
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_12:
+   \        0x0   0x....'....        DC32     l2cap_request_sent
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_13:
+   \        0x0   0x....'....        DC32     connection_handle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_14:
+   \        0x0   0x....'....        DC32     request_free_fall_notify
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_15:
+   \        0x0   0x....'....        DC32     l2cap_TimerHandle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_16:
+   \        0x0   0x....'....        DC32     l2cap_UpdateTimeoutCB
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_17:
+   \        0x0   0x....'....        DC32     CLOCK_SECOND
+
+   \                                 In section .rodata, align 4
+   \                     ?_0:
+   \        0x0   0x42 0x4C          DC8 66, 76, 69, 32, 84, 101, 115, 116
+
+   \              0x45 0x20    
+
+   \              0x54 0x65    
+
+   \              0x73 0x74
+
+   \                                 In section .rodata, align 4
+   \                     ?_1:
+   \        0x0   0x41 0x64          DC8 "Advertising configuration 0x%02X\012"
+
+   \              0x76 0x65    
+
+   \              0x72 0x74    
+
+   \              0x69 0x73    
+
+   \              0x69 0x6E    
+
+   \              0x67 0x20    
+
+   \              0x63 0x6F    
+
+   \              0x6E 0x66    
+
+   \              0x69 0x67    
+
+   \              0x75 0x72    
+
+   \              0x61 0x74    
+
+   \              0x69 0x6F    
+
+   \              0x6E 0x20    
+
+   \              0x30 0x78    
+
+   \              0x25 0x30    
+
+   \              0x32 0x58    
+
+   \              0x0A 0x00
+   \       0x22                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_2:
+   \        0x0   0x53 0x65          DC8 "Set advertising data 0x%02X\012"
+
+   \              0x74 0x20    
+
+   \              0x61 0x64    
+
+   \              0x76 0x65    
+
+   \              0x72 0x74    
+
+   \              0x69 0x73    
+
+   \              0x69 0x6E    
+
+   \              0x67 0x20    
+
+   \              0x64 0x61    
+
+   \              0x74 0x61    
+
+   \              0x20 0x30    
+
+   \              0x78 0x25    
+
+   \              0x30 0x32    
+
+   \              0x58 0x0A    
+
+   \              0x00
+   \       0x1D                      DS8 3
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      32   APP_Tick
+        32   -> Acc_Update
+        32   -> BSP_LED_Toggle
+        32   -> Free_Fall_Notify
+        32   -> GetAccAxesRaw
+        32   -> GetFreeFallStatus
+        32   -> HAL_VTIMER_StartTimerMs
+        32   -> Set_DeviceConnectable
+        32   -> aci_l2cap_connection_parameter_update_req
+      24   Init_Accelerometer
+        24   -> BSP_SPI_GpioInt_Init
+        24   -> BSP_SPI_Init
+        24   -> lsm6dsox_block_data_update_set
+        24   -> lsm6dsox_ff_dur_set
+        24   -> lsm6dsox_ff_threshold_set
+        24   -> lsm6dsox_gy_data_rate_set
+        24   -> lsm6dsox_gy_full_scale_set
+        24   -> lsm6dsox_i3c_disable_set
+        24   -> lsm6dsox_int_notification_set
+        24   -> lsm6dsox_pin_int1_route_get
+        24   -> lsm6dsox_pin_int1_route_set
+        24   -> lsm6dsox_reset_get
+        24   -> lsm6dsox_reset_set
+        24   -> lsm6dsox_xl_data_rate_set
+        24   -> lsm6dsox_xl_full_scale_set
+      16   Init_Pressure_Temperature_Sensor
+        16   -> BSP_I2C_Init
+        16   -> lps22hh_block_data_update_set
+        16   -> lps22hh_data_rate_set
+        16   -> lps22hh_reset_get
+        16   -> lps22hh_reset_set
+       0   SensorUpdateTimeoutCB
+      80   Sensor_DeviceInit
+        80   -> Add_Acc_Service
+        80   -> Add_Environmental_Sensor_Service
+        80   -> Gap_profile_set_dev_name
+        80   -> HAL_VTIMER_StartTimerMs
+        80   -> Init_Accelerometer
+        80   -> Init_Pressure_Temperature_Sensor
+        80   -> aci_gap_init
+        80   -> aci_gap_set_advertising_configuration
+        80   -> aci_gap_set_advertising_data
+        80   -> aci_gap_set_authentication_requirement
+        80   -> aci_gatt_srv_init
+        80   -> aci_hal_set_tx_power_level
+        80   -> printf
+       8   Set_DeviceConnectable
+         8   -> BSP_LED_On
+         8   -> aci_gap_set_advertising_enable
+       0   aci_gatt_srv_attribute_modified_event
+       0   aci_hal_end_of_radio_activity_event
+       0   aci_l2cap_command_reject_event
+       0   aci_l2cap_connection_update_resp_event
+      16   hci_disconnection_complete_event
+        16   -> BSP_LED_On
+      24   hci_le_connection_complete_event
+        24   -> HAL_VTIMER_StartTimerMs
+       0   hci_le_connection_update_complete_event
+      40   hci_le_enhanced_connection_complete_event
+        40   -> hci_le_connection_complete_event
+       0   l2cap_UpdateTimeoutCB
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+       4  ??DataTable5_1
+       4  ??DataTable7
+       4  ??DataTable7_1
+       4  ??DataTable7_2
+       4  ??DataTable7_3
+       4  ??DataTable8
+       4  ??DataTable8_1
+       4  ??DataTable8_10
+       4  ??DataTable8_11
+       4  ??DataTable8_12
+       4  ??DataTable8_13
+       4  ??DataTable8_14
+       4  ??DataTable8_15
+       4  ??DataTable8_16
+       4  ??DataTable8_17
+       4  ??DataTable8_2
+       4  ??DataTable8_3
+       4  ??DataTable8_4
+       4  ??DataTable8_5
+       4  ??DataTable8_6
+       4  ??DataTable8_7
+       4  ??DataTable8_8
+       4  ??DataTable8_9
+       8  ?_0
+      36  ?_1
+      32  ?_2
+     148  APP_Tick
+       8  Advertising_Set_Parameters
+     144  Init_Accelerometer
+      58  Init_Pressure_Temperature_Sensor
+       8  SensorUpdateTimeoutCB
+     320  Sensor_DeviceInit
+      42  Set_DeviceConnectable
+       2  aci_gatt_srv_attribute_modified_event
+       2  aci_hal_end_of_radio_activity_event
+       2  aci_l2cap_command_reject_event
+       2  aci_l2cap_connection_update_resp_event
+      16  adv_data
+      20  connInfo
+       4  connected
+       2  connection_handle
+      32  hci_disconnection_complete_event
+      64  hci_le_connection_complete_event
+       2  hci_le_connection_update_complete_event
+      64  hci_le_enhanced_connection_complete_event
+      12  inertialHandle
+      24  l2cap_TimerHandle
+       8  l2cap_UpdateTimeoutCB
+       1  l2cap_req_timer_expired
+       4  l2cap_request_sent
+      12  pressureHandle
+       1  request_free_fall_notify
+      24  sensorTimerHandle
+       1  sensorTimer_expired
+       1  sensor_board
+       1  set_connectable
+
+ 
+ 114 bytes in section .bss
+  17 bytes in section .data
+  76 bytes in section .rodata
+ 994 bytes in section .text
+ 
+ 994 bytes of CODE  memory
+  76 bytes of CONST memory
+ 131 bytes of DATA  memory
+
+Errors: none
+Warnings: none
