@@ -130,7 +130,7 @@ void ModulesTick(void)
 
 
 
-
+////CONFIG_HW_SMPS_10uH
 
 
 int main(void)  
@@ -168,7 +168,7 @@ int main(void)
 
   /* Wakeup Source on accelerometer free fall detection */
   wakeupIO.IO_Mask_High_polarity = 0;
-  wakeupIO.IO_Mask_Low_polarity = WAKEUP_PB4;
+  wakeupIO.IO_Mask_Low_polarity = WAKEUP_PA10;
   wakeupIO.RTC_enable = 0;
   wakeupIO.LPU_enable = 0;
   
@@ -177,7 +177,7 @@ int main(void)
     
   ADC_JOY_Init();
   LED_JOY_Init();  
-  GPIO_DEBUG_Init();
+  //GPIO_DEBUG_Init();
   
   __asm("NOP");
   ble_data_send.buttons = 0x00;
@@ -211,7 +211,7 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
         ble_data_send.buttons = ble_data_send.buttons & 0xFE;
       }
     }    
-/*
+
     //----BTN TURBO -------
     if(PB4__BTN5.changeState){
       PB4__BTN5.changeState = false;
@@ -223,9 +223,73 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
         ble_data_send.buttons = ble_data_send.buttons & 0xFD;
       }
     }        
-*/  
+  
     
+    //----SUD-------
+    if(PB13__BTN7.changeState){
+      PB13__BTN7.changeState = false;
+      if(PB13__BTN7.State == false){     //Pulsante premuto a massa
+        //Mappare --> ble_data_send.buttons = ble_data_send.buttons | 0bxxxxxx;
+        ble_data_send.buttons = ble_data_send.buttons | 0x04;
+      }else{                            //Pulsante a Vcc
+        //Mappare --> ble_data_send.buttons = ble_data_send.buttons & 0bxxxxxx;
+        ble_data_send.buttons = ble_data_send.buttons & 0xFB;
+      }
+    }        
+
+    //----EST-------
+    if(PB15__BTN2.changeState){
+      PB15__BTN2.changeState = false;
+      if(PB15__BTN2.State == false){     //Pulsante premuto a massa
+        //Mappare --> ble_data_send.buttons = ble_data_send.buttons | 0bxxxxxx;
+        ble_data_send.buttons = ble_data_send.buttons | 0x08;
+      }else{                            //Pulsante a Vcc
+        //Mappare --> ble_data_send.buttons = ble_data_send.buttons & 0bxxxxxx;
+        ble_data_send.buttons = ble_data_send.buttons & 0xF7;
+      }
+    }        
+
+    //----OVEST-------
+    if(PB6__BTN1.changeState){
+      PB6__BTN1.changeState = false;
+      if(PB6__BTN1.State == false){     //Pulsante premuto a massa
+        //Mappare --> ble_data_send.buttons = ble_data_send.buttons | 0bxxxxxx;
+        ble_data_send.buttons = ble_data_send.buttons | 0x10;
+      }else{                            //Pulsante a Vcc
+        //Mappare --> ble_data_send.buttons = ble_data_send.buttons & 0bxxxxxx;
+        ble_data_send.buttons = ble_data_send.buttons & 0xEF;
+      }
+    }        
+
+    //----ALTO LEFT-------
+    if(PA1__BTN4.changeState){
+      PA1__BTN4.changeState = false;
+      if(PA1__BTN4.State == false){     //Pulsante premuto a massa
+        //Mappare --> ble_data_send.buttons = ble_data_send.buttons | 0bxxxxxx;
+        ble_data_send.buttons = ble_data_send.buttons | 0x20;
+      }else{                            //Pulsante a Vcc
+        //Mappare --> ble_data_send.buttons = ble_data_send.buttons & 0bxxxxxx;
+        ble_data_send.buttons = ble_data_send.buttons & 0xDF;
+      }
+    }        
+
+    //----ALTO RIGHT -------
+    if(PB5__BTN6.changeState){
+      PB5__BTN6.changeState = false;
+      if(PB5__BTN6.State == false){     //Pulsante premuto a massa
+        //Mappare --> ble_data_send.buttons = ble_data_send.buttons | 0bxxxxxx;
+        ble_data_send.buttons = ble_data_send.buttons | 0x40;
+      }else{                            //Pulsante a Vcc
+        //Mappare --> ble_data_send.buttons = ble_data_send.buttons & 0bxxxxxx;
+        ble_data_send.buttons = ble_data_send.buttons & 0xBF;
+      }
+    }        
+
     
+
+
+
+
     
     
     ADC_JOY_task();
@@ -247,7 +311,6 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
       slaves.state = IDLE;
     }
               
-  
 
   
     // time out
@@ -285,19 +348,19 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
     switch(STANBY_STATE){
       
       case 0:
-          if(PB4__BTN5.State == true){     //Pulsante a Vcc
+          if(PA10__BTNBOOT.State == true){     //Pulsante a Vcc
               STANBY_STATE = 1;
           }
               
       break;
       
       case 1:
-          if(PB4__BTN5.changeState){
-            PB4__BTN5.changeState = false;
-            //if(PB4__BTN5.State == false){     //Pulsante premuto a massa
+          if(PA10__BTNBOOT.changeState){
+            PA10__BTNBOOT.changeState = false;
+            //if(PA10__BTNBOOT.State == false){     //Pulsante premuto a massa
           }
               
-              if((PB4__BTN5.State == false)&&((HAL_GetTick()-PB4__BTN5.time_OFFstate)>=3000))  {     //Pulsante premuto a massa
+              if((PA10__BTNBOOT.State == false)&&((HAL_GetTick()-PA10__BTNBOOT.time_OFFstate)>=3000))  {     //Pulsante premuto a massa
               
                 //Check joy in free run
                 if((ble_data_send.uJoy_x < 10)&&(ble_data_send.uJoy_x > -10)&&
@@ -313,10 +376,10 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
       break;
 
       case 2:
-          if(PB4__BTN5.changeState){
-            PB4__BTN5.changeState = false;
+          if(PA10__BTNBOOT.changeState){
+            PA10__BTNBOOT.changeState = false;
 
-            if(PB4__BTN5.State == true)  {     //Pulsante relase a vcc
+            if(PA10__BTNBOOT.State == true)  {     //Pulsante relase a vcc
                 TIMER_STANDBY = HAL_GetTick();           
                 STANBY_STATE = 3;
             }
@@ -371,7 +434,7 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
     if (stopLevel >= POWER_SAVE_LEVEL_STOP_WITH_TIMER) {
         uint32_t wakeupSources = HAL_PWR_MNGR_WakeupSource();
         PrintWakeupSource(wakeupSources);
-        if(wakeupSources  == WAKEUP_PB4){
+        if(wakeupSources  == WAKEUP_PA10){
           NVIC_SystemReset();
         }
 

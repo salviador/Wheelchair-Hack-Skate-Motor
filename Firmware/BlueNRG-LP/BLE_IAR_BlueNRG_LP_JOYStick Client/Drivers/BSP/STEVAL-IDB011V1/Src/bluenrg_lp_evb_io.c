@@ -81,9 +81,9 @@ void BSP_IO_Init(void)
   LL_PWR_EnablePDB(LL_PWR_PUPD_IO2);
   LL_PWR_EnablePDB(LL_PWR_PUPD_IO3);
   
-  //LL_PWR_EnablePDB(LL_PWR_PUPD_IO4);
+  LL_PWR_EnablePDB(LL_PWR_PUPD_IO4);
   
-  LL_PWR_EnablePUB(LL_PWR_PUPD_IO4);
+  //LL_PWR_EnablePUB(LL_PWR_PUPD_IO4);
   
   
   LL_PWR_EnablePDB(LL_PWR_PUPD_IO5);
@@ -94,7 +94,9 @@ void BSP_IO_Init(void)
   LL_PWR_EnablePDB(LL_PWR_PUPD_IO10);
   LL_PWR_EnablePDB(LL_PWR_PUPD_IO11);
   LL_PWR_EnablePDB(LL_PWR_PUPD_IO14);
-  LL_PWR_EnablePDB(LL_PWR_PUPD_IO15);
+  //LL_PWR_EnablePDB(LL_PWR_PUPD_IO15);
+  
+  LL_PWR_EnablePUB(LL_PWR_PUPD_IO15);
 
 }
 

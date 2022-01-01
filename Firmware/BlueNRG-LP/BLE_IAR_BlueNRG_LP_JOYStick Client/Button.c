@@ -129,14 +129,14 @@ void BTN_deinit(void){
   gpioBTNx.Speed = GPIO_SPEED_FREQ_LOW;
   gpioBTNx.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &gpioBTNx);
-/*
+
   //---PA1--- BTN4
   gpioBTNx.Mode = GPIO_MODE_INPUT;
   gpioBTNx.Pin = GPIO_PIN_1;
   gpioBTNx.Speed = GPIO_SPEED_FREQ_LOW;
   gpioBTNx.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &gpioBTNx);
-*/  
+  
   //---PB4--- BTN5
   gpioBTNx.Mode = GPIO_MODE_INPUT;
   gpioBTNx.Pin = GPIO_PIN_4;
@@ -157,14 +157,14 @@ void BTN_deinit(void){
   gpioBTNx.Speed = GPIO_SPEED_FREQ_LOW;
   gpioBTNx.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &gpioBTNx);
-  
+  /*
   //---PA10---BTN/BOOT
   gpioBTNx.Mode = GPIO_MODE_INPUT;
   gpioBTNx.Pin = GPIO_PIN_10;
   gpioBTNx.Speed = GPIO_SPEED_FREQ_LOW;
   gpioBTNx.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &gpioBTNx);
-  
+  */
     
   //---ADC
   gpioBTNx.Mode = GPIO_MODE_INPUT;
@@ -194,8 +194,8 @@ void BTN_deinit(void){
   HAL_GPIO_Init(GPIOA, &gpioBTNx);
   
   
-  //__HAL_RCC_GPIOB_CLK_DISABLE();
-  __HAL_RCC_GPIOA_CLK_DISABLE();
+  __HAL_RCC_GPIOB_CLK_DISABLE();
+  //__HAL_RCC_GPIOA_CLK_DISABLE();
   
 }
 

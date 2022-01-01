@@ -221,7 +221,7 @@
                     <state>USE_FULL_LL_DRIVER</state>
                     <state>STEVAL_IDB011V1</state>
                     <state>CONFIG_DEVICE_BLUENRG_LP</state>
-                    <state>CONFIG_HW_SMPS_10uH</state>
+                    <state>CONFIG_HW_SMPS_NONE</state>
                     <state>CONFIG_HW_HSE_TUNE=32</state>
                     <state>USER_BUTTON=BSP_PUSH1</state>
                     <state>CONFIG_HW_LS_RO</state>
@@ -684,7 +684,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>0</hasPrio>
+                <hasPrio>16</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>

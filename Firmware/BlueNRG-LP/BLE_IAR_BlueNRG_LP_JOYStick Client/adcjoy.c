@@ -50,6 +50,11 @@ uint8_t ADCJOY_STATE = 0;
 
 uint32_t ADCJOY_TIMER;
 
+int16_t taratura_Y_MAX;
+int16_t taratura_Y_MIN;
+uint16_t campioni_saltare=0;
+
+
 
 void ADC_JOY_Init(void){
   /* Configure ADC and DMA */
@@ -59,6 +64,8 @@ void ADC_JOY_Init(void){
   ADC_flag = 0;
   ADCJOY_STATE = 0;
  
+  taratura_Y_MAX = 0;
+  taratura_Y_MIN = 0;
 }
 
 
@@ -184,7 +191,8 @@ void ADC_JOY_task(void){
         Joy_x /= ADC_DMA_BUF_LEN/3;
         Joy_y /= ADC_DMA_BUF_LEN/3;
         vbattery /= ADC_DMA_BUF_LEN/3;
-       //PRINTF("%d.%03d mV\t%d.%03d mV\t%d.%03d mV\r\n", PRINT_INT(Joy_x),PRINT_FLOAT(Joy_x), PRINT_INT(Joy_y),PRINT_FLOAT(Joy_y),PRINT_INT(vbattery),PRINT_FLOAT(vbattery), 248);
+       
+        //PRINTF("%d.%03d mV\t%d.%03d mV\t%d.%03d mV\r\n", PRINT_INT(Joy_x),PRINT_FLOAT(Joy_x), PRINT_INT(Joy_y),PRINT_FLOAT(Joy_y),PRINT_INT(vbattery),PRINT_FLOAT(vbattery), 248);
         
         
         joy_raw.uJoy_x = (int16_t) (Joy_x);
@@ -193,8 +201,25 @@ void ADC_JOY_task(void){
         
         Motor_Convert_Joy(&joy_raw, &ble_data_send);
          
-        //PRINTF("%d\t%d\t%d\r\n", ble_data_send.uJoy_x, ble_data_send.uJoy_y, ble_data_send.uvbattery);
-     
+        PRINTF("%d\t%d\t%d\r\n", ble_data_send.uJoy_x, ble_data_send.uJoy_y, ble_data_send.uvbattery);
+        
+        /*
+        if(campioni_saltare > 1){
+          campioni_saltare = 2;
+          
+          if(ble_data_send.uJoy_y > taratura_Y_MAX){
+            taratura_Y_MAX = ble_data_send.uJoy_y;
+          }
+          if(ble_data_send.uJoy_y < taratura_Y_MIN){
+            taratura_Y_MIN = ble_data_send.uJoy_y;
+          }
+        }
+        campioni_saltare++;
+        
+        PRINTF("%d\t%d\r\n", taratura_Y_MAX, taratura_Y_MIN);
+        */
+        
+        
         
         // Restart ADC DMA conversion
         if (HAL_ADC_Start_DMA(&adc_handle, (uint32_t *)&ADC_DMA_buffer[0], ADC_DMA_BUF_LEN) != HAL_OK) {
@@ -264,8 +289,9 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
     wheelJOY->uJoy_y = (int16_t)((       ((float)((float)bleJOY->uJoy_y / (float)bleJOY->uvbattery) * 2000)) - 1000);
 
     //ADJUST OFFSET
-    wheelJOY->uJoy_x = wheelJOY->uJoy_x + 51;
-    wheelJOY->uJoy_y = wheelJOY->uJoy_y + 11;
+   
+    wheelJOY->uJoy_x = wheelJOY->uJoy_x + 90;
+    wheelJOY->uJoy_y = wheelJOY->uJoy_y + 74;
 
      //LIMIT
     if(wheelJOY->uJoy_x > 1000)
@@ -278,6 +304,9 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
     if(wheelJOY->uJoy_y < -1000)
       wheelJOY->uJoy_y = -1000;
 
+    //Invert x
+    wheelJOY->uJoy_x = wheelJOY->uJoy_x * -1;
+    
 }
 
 
