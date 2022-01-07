@@ -201,7 +201,7 @@ void ADC_JOY_task(void){
         
         Motor_Convert_Joy(&joy_raw, &ble_data_send);
          
-        PRINTF("%d\t%d\t%d\r\n", ble_data_send.uJoy_x, ble_data_send.uJoy_y, ble_data_send.uvbattery);
+   //     PRINTF("%d\t%d\t%d\r\n", ble_data_send.uJoy_x, ble_data_send.uJoy_y, ble_data_send.uvbattery);
         
         /*
         if(campioni_saltare > 1){
@@ -290,8 +290,8 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
 
     //ADJUST OFFSET
    
-    wheelJOY->uJoy_x = wheelJOY->uJoy_x + 90;
-    wheelJOY->uJoy_y = wheelJOY->uJoy_y + 74;
+    wheelJOY->uJoy_x = wheelJOY->uJoy_x + 88;
+    wheelJOY->uJoy_y = wheelJOY->uJoy_y + 68;
 
      //LIMIT
     if(wheelJOY->uJoy_x > 1000)
@@ -306,7 +306,7 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
 
     //Invert x
     wheelJOY->uJoy_x = wheelJOY->uJoy_x * -1;
-    
+   
 }
 
 
