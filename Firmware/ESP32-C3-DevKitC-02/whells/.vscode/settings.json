@@ -4,5 +4,6 @@
         "ledrgb.h": "c",
         "string.h": "c",
         "type_traits": "c"
-    }
+    },
+    "idf.adapterTargetName": "esp32c3"
 }

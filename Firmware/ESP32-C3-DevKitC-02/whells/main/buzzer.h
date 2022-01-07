@@ -14,11 +14,25 @@
     #include "esp_spi_flash.h"
     #include <esp_types.h>
     #include "esp_intr.h"    
+    #include "freertos/queue.h"
+    #include "driver/gpio.h"
+
+
+    struct BUZZER_queue
+    {
+        uint8_t   state;
+
+        uint16_t  timeWaitON; //mS
+        uint16_t  timeWaitOFF; //mS
+    };
+
+    QueueHandle_t buzzer_Queue;
+
+
 
 
     void buzzer_setup(void);
-
-    void buzzer_beep(uint8_t n_beep, uint16_t  time);
+    void buzzer_Task(void *pvParameter);
 
 
 

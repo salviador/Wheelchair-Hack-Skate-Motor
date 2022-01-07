@@ -9,12 +9,13 @@
 #include "driver/gpio.h"
 
 
-#define GPIO_OUTPUT_DEBUG    3
-#define GPIO_OUTPUT_DEBUG_PIN_SEL  (1ULL<<GPIO_OUTPUT_DEBUG)
+//#define GPIO_OUTPUT_DEBUG    3
+//#define GPIO_OUTPUT_DEBUG_PIN_SEL  (1ULL<<GPIO_OUTPUT_DEBUG)
 
-uint8_t debugGPIOTGL;
+//uint8_t debugGPIOTGL;
 
 void debugGPIO3_setup (void){
+/*
     gpio_config_t io_conf = {};
     io_conf.intr_type = GPIO_INTR_DISABLE;
     io_conf.mode = GPIO_MODE_OUTPUT;
@@ -24,22 +25,23 @@ void debugGPIO3_setup (void){
     gpio_config(&io_conf);
     gpio_set_level(GPIO_OUTPUT_DEBUG, 0);
     debugGPIOTGL=0;
+*/    
 }
 
 void debugGPIO3_ON (void){
-    gpio_set_level(GPIO_OUTPUT_DEBUG, 1);
-    debugGPIOTGL=1;
+ //   gpio_set_level(GPIO_OUTPUT_DEBUG, 1);
+  //  debugGPIOTGL=1;
 }
 void debugGPIO3_OFF (void){
-    gpio_set_level(GPIO_OUTPUT_DEBUG, 0);
-    debugGPIOTGL=0;
+   // gpio_set_level(GPIO_OUTPUT_DEBUG, 0);
+    //debugGPIOTGL=0;
 }
 void debugGPIO3_TGL (void){
-    if(debugGPIOTGL){
+  /*  if(debugGPIOTGL){
         gpio_set_level(GPIO_OUTPUT_DEBUG, 0);
         debugGPIOTGL=0;
     }else{
         gpio_set_level(GPIO_OUTPUT_DEBUG, 1);
         debugGPIOTGL=1;
-    }
+    }*/
 }

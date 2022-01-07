@@ -29,10 +29,12 @@
 #include "ledRGB.h"
 #include "wheels.h"
 #include "wii.h"
-
+#include "buzzer.h"
 #include "debugGPIO.h"
 
 struct Led_queue msgLED;
+struct BUZZER_queue BuzMsg;
+
 const int BLECONNECTED_BIT = BIT_0;
 
 #define GATTS_TABLE_TAG "SEC_GATTS_DEMO"
@@ -613,18 +615,23 @@ static void gatts_profile_event_handler(esp_gatts_cb_event_t event,
             ESP_LOGI(GATTS_TABLE_TAG, "ESP_GATTS_CONNECT_EVT ID %d",param->connect.conn_id);
 
             ESP_LOGI(GATTS_TABLE_TAG, "CONNECT ADDDDDRESS= %x %x %x %x", param->connect.remote_bda[0], param->connect.remote_bda[1], param->connect.remote_bda[2], param->connect.remote_bda[3]);
-            /*if(param->connect.remote_bda[0] == 0x02 && 
+                if(param->connect.remote_bda[0] == 0x02 && 
                     param->connect.remote_bda[1] == 0x80 && 
                     param->connect.remote_bda[2] == 0xE1 && 
                     param->connect.remote_bda[3] == 0x00 && 
                     param->connect.remote_bda[4] == 0x00 && 
                     param->connect.remote_bda[5] == 0xE0){
 
-*/
+
                     //MAC UGUALE ******CONNETTI******
 
                     xEventGroupSetBits(BLE_event_group, BLECONNECTED_BIT);
-                    
+
+                    BuzMsg.state = 1;
+                    BuzMsg.timeWaitON = 150;
+                    BuzMsg.timeWaitOFF = 150;
+                    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+
                     //Joystick_profile_tab[JOYSTICK_PROFILE_APP_IDX].conn_id = param->connect.conn_id;
                     msgLED.state = 1;
                     msgLED.R = 0;
@@ -657,7 +664,7 @@ static void gatts_profile_event_handler(esp_gatts_cb_event_t event,
                     msgLED.timeWait = 10;
                     xQueueSend(led_Queue, (void *)&msgLED, portMAX_DELAY);
 
-          /*  }else{
+            }else{
 
                 ESP_LOGI(GATTS_TABLE_TAG, "**** RIFIUTO CONNESSIONEE ****");
                 ESP_LOGI(GATTS_TABLE_TAG, "**** RIFIUTO CONNESSIONEE ****");
@@ -666,7 +673,7 @@ static void gatts_profile_event_handler(esp_gatts_cb_event_t event,
                 //Rifiuta connessione
                 esp_ble_gatts_close(gatts_if, param->connect.conn_id);
             }
-*/
+
             
             /* start security connect with peer device when receive the connect event sent by the master */
          //   esp_ble_set_encryption(param->connect.remote_bda, ESP_BLE_SEC_ENCRYPT_MITM);
@@ -685,6 +692,10 @@ static void gatts_profile_event_handler(esp_gatts_cb_event_t event,
 
             xEventGroupClearBits(BLE_event_group, BLECONNECTED_BIT);
 
+            BuzMsg.state = 1;
+            BuzMsg.timeWaitON = 500;
+            BuzMsg.timeWaitOFF = 150;
+            xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
 
             msgLED.state = 1;
             msgLED.R = 255;

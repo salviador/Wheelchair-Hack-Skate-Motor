@@ -26,14 +26,14 @@ void wii_setup(void){
         .mode = I2C_MODE_MASTER,
         .sda_io_num = 5,
         .scl_io_num = 6,
-        .sda_pullup_en = GPIO_PULLUP_ENABLE,
-        .scl_pullup_en = GPIO_PULLUP_ENABLE,
+        .sda_pullup_en = GPIO_PULLUP_ENABLE, //GPIO_PULLUP_DISABLE, //GPIO_PULLUP_ENABLE,
+        .scl_pullup_en = GPIO_PULLUP_ENABLE, //GPIO_PULLUP_DISABLE, //GPIO_PULLUP_ENABLE,
         .master.clk_speed = 400000,
     };
 
     ESP_ERROR_CHECK(i2c_param_config(0, &conf));
     ESP_ERROR_CHECK(i2c_driver_install(0, I2C_MODE_MASTER, 0, 0, 0));
-    ESP_LOGI(TAGWII, "I2C unitialized successfully");
+    ESP_LOGI(TAGWII, "I2C itialized successfully");
 
    wii_init();
 }
@@ -55,6 +55,7 @@ void wii_init(void){
     i2c_cmd_link_delete(i2chandle);
     //ESP_LOGI(TAGWII, "%s", esp_err_to_name(erri));
     if(erri != ESP_OK){
+        ESP_LOGI(TAGWII, "Wii NoN Presente");
         //wii non presente
         wii_present = false;
         return;
@@ -71,6 +72,7 @@ void wii_init(void){
     i2c_cmd_link_delete(i2chandle);
     //ESP_LOGI(TAGWII, "%s", esp_err_to_name(erri));
     if(erri != ESP_OK){
+        ESP_LOGI(TAGWII, "Wii NoN Presente");
         //wii non presente
         wii_present = false;
         return;
@@ -85,6 +87,7 @@ void wii_init(void){
     ESP_ERROR_CHECK(i2c_master_stop(i2chandle));
     erri = i2c_master_cmd_begin(0, i2chandle, 10 / portTICK_RATE_MS);
     if(erri != ESP_OK){
+        ESP_LOGI(TAGWII, "Wii NoN Presente");
         //wii non presente
         wii_present = false;
         return;
@@ -92,6 +95,7 @@ void wii_init(void){
     i2c_cmd_link_delete(i2chandle);
     erri = i2c_master_read_from_device(0, 0x52, &nunchuk_data[0], 6, 10 / portTICK_RATE_MS);
     if(erri != ESP_OK){
+        ESP_LOGI(TAGWII, "Wii NoN Presente");
         //wii non presente
         wii_present = false;
         return;

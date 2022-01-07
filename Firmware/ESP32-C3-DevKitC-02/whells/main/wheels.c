@@ -25,7 +25,7 @@
 
 SemaphoreHandle_t xSemaphoreWHEELS;
 
-
+struct BUZZER_queue BuzMsg;
 
 
 struct CHART_data_TX Joystick_rec;
@@ -79,8 +79,21 @@ void wheels_task(void *arg){
                 wheel_var.joyX = Joystick_rec.uJoy_x;  //-Joystick_rec.uJoy_x;
                 wheel_var.joyY = Joystick_rec.uJoy_y;
 
-                //ESP_LOGI(TAGWHEELS, "1--= %d,%d, %x",  wheel_var.joyX , wheel_var.joyY, Joystick_rec.buttons );
+                //ESP_LOGI(TAGWHEELS, "%d", Joystick_rec.uvbattery);
 
+              //ESP_LOGI(TAGWHEELS, "1--= %d,%d, %x",  wheel_var.joyX , wheel_var.joyY, Joystick_rec.buttons );
+/*
+                ESP_LOGI(TAGWHEELS, "%d,%d,%d,%d, %d,%d,%d,%d",  
+                                                                (Joystick_rec.buttons & 0x80),
+                                                                (Joystick_rec.buttons & 0x40),
+                                                                (Joystick_rec.buttons & 0x20),
+                                                                (Joystick_rec.buttons & 0x10),
+                                                                
+                                                                (Joystick_rec.buttons & 0x08),
+                                                                (Joystick_rec.buttons & 0x04),
+                                                                (Joystick_rec.buttons & 0x02),
+                                                                (Joystick_rec.buttons & 0x01) );
+*/
 
                 DifferentialSteering_computeMotors(wheel_var.joyX, wheel_var.joyY);
                 // The output range will be [-1000, 1000]
@@ -130,7 +143,13 @@ void wheels_task(void *arg){
 
                         switch(MOTOR_STATE){
                             case M_IDLE:
-                                buzzer_beep(2, 150);
+                                //buzzer_beep(2, 150);
+                                /*
+                                BuzMsg.state = 1;
+                                BuzMsg.timeWaitON = 250;
+                                BuzMsg.timeWaitOFF = 150;
+                                xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                */
                                 wheel_var.joy_security = 1;
                                 wheel_var.time_Start = xTaskGetTickCount();
                                 Motor_Free();
@@ -146,9 +165,57 @@ void wheels_task(void *arg){
                                 //Leggi JOY x cambiare modalità
                                 if(wheel_var.joyX < -150) {
                                     tempMOTORSTATE = M_CURRENT_MODE;
-                                }
-                                if(wheel_var.joyX > 150) {
+                                        BuzMsg.state = 1;
+                                        BuzMsg.timeWaitON = 150;
+                                        BuzMsg.timeWaitOFF = 150;
+                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                        BuzMsg.state = 1;
+                                        BuzMsg.timeWaitON = 150;
+                                        BuzMsg.timeWaitOFF = 150;
+                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                        BuzMsg.state = 1;
+                                        BuzMsg.timeWaitON = 450;
+                                        BuzMsg.timeWaitOFF = 150;
+                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                        BuzMsg.state = 1;
+                                        BuzMsg.timeWaitON = 450;
+                                        BuzMsg.timeWaitOFF = 150;
+                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                        BuzMsg.state = 1;
+                                        BuzMsg.timeWaitON = 150;
+                                        BuzMsg.timeWaitOFF = 150;
+                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                }else if(wheel_var.joyX > 150) {
                                     tempMOTORSTATE = M_RPM_MODE;
+                                        BuzMsg.state = 1;
+                                        BuzMsg.timeWaitON = 350;
+                                        BuzMsg.timeWaitOFF = 150;
+                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                        BuzMsg.state = 1;
+                                        BuzMsg.timeWaitON = 150;
+                                        BuzMsg.timeWaitOFF = 150;
+                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                        BuzMsg.state = 1;
+                                        BuzMsg.timeWaitON = 150;
+                                        BuzMsg.timeWaitOFF = 150;
+                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                        BuzMsg.state = 1;
+                                        BuzMsg.timeWaitON = 350;
+                                        BuzMsg.timeWaitOFF = 150;
+                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                }else{
+                                        BuzMsg.state = 1;
+                                        BuzMsg.timeWaitON = 150;
+                                        BuzMsg.timeWaitOFF = 150;
+                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                        BuzMsg.state = 1;
+                                        BuzMsg.timeWaitON = 150;
+                                        BuzMsg.timeWaitOFF = 150;
+                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                        BuzMsg.state = 1;
+                                        BuzMsg.timeWaitON = 150;
+                                        BuzMsg.timeWaitOFF = 150;
+                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
                                 }
 
                                 MOTOR_STATE = M_JOY_SECURITY;
@@ -161,7 +228,8 @@ void wheels_task(void *arg){
 
                                 if( (wheel_var.joyX > 100) | (wheel_var.joyX < -100) | (wheel_var.joyY > 100) | (wheel_var.joyY < -100) ){
                                     wheel_var.time_Start = xTaskGetTickCount();
-                                    ESP_LOGI(TAGWHEELS, ".....JOY non IN SICUREZZA......");
+                                    ESP_LOGI(TAGWHEELS, ".....JOY non IN SICUREZZA...%d,%d...",wheel_var.joyX , wheel_var.joyY);
+
 
                                 }else if((pdTICKS_TO_MS(xTaskGetTickCount() - wheel_var.time_Start)) > 1000){
                                     MOTOR_STATE = tempMOTORSTATE; //M_DUTYCYCLE_MODE;
@@ -170,7 +238,15 @@ void wheels_task(void *arg){
 
                                     wheel_var.FREE_RUN_REPEAT = 3;
 
-                                    buzzer_beep(4, 150);
+/*                                    BuzMsg.state = 1;
+                                    BuzMsg.timeWaitON = 150;
+                                    BuzMsg.timeWaitOFF = 150;
+                                    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                    BuzMsg.state = 1;
+                                    BuzMsg.timeWaitON = 150;
+                                    BuzMsg.timeWaitOFF = 150;
+                                    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+*/                                    
                                 }
                             break;
 
@@ -242,7 +318,7 @@ void wheels_task(void *arg){
                                         linear_acceleration_var_reset(&linear_acce);
                                     }
                                 }else{
-                                    ESP_LOGI(TAGWHEELS, "[MODE]...CURRENT %f , %f ",  wheel_var.vescValueLeft,wheel_var.vescValueright);
+                                    //ESP_LOGI(TAGWHEELS, "[MODE]...CURRENT %f , %f ",  wheel_var.vescValueLeft,wheel_var.vescValueright);
 
                                     VESC_SET_Current(EXID_LEFT, linear_acce.vsec_acc_left, EXID_RIGHT, linear_acce.vsec_acc_right);
                                     wheel_var.FREE_RUN_REPEAT = 3;
