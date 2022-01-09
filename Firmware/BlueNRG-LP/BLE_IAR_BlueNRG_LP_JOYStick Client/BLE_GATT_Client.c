@@ -134,7 +134,8 @@ uint8_t BLE_GATT_Client_DeviceInit()
 
   
   /* Set the TX power 0 dBm */
-  aci_hal_set_tx_power_level(0, 10);
+  aci_hal_set_tx_power_level(0, 25);
+  //aci_hal_set_tx_power_level(0, 10);
   
   /* GATT Init */
   ret = aci_gatt_srv_init();
