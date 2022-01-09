@@ -81,8 +81,8 @@ void wheels_task(void *arg){
 
                 //ESP_LOGI(TAGWHEELS, "%d", Joystick_rec.uvbattery);
 
-              //ESP_LOGI(TAGWHEELS, "1--= %d,%d, %x",  wheel_var.joyX , wheel_var.joyY, Joystick_rec.buttons );
-/*
+                //ESP_LOGI(TAGWHEELS, "1--= %d,%d, %x",  wheel_var.joyX , wheel_var.joyY, Joystick_rec.buttons );
+                /*
                 ESP_LOGI(TAGWHEELS, "%d,%d,%d,%d, %d,%d,%d,%d",  
                                                                 (Joystick_rec.buttons & 0x80),
                                                                 (Joystick_rec.buttons & 0x40),
@@ -93,7 +93,7 @@ void wheels_task(void *arg){
                                                                 (Joystick_rec.buttons & 0x04),
                                                                 (Joystick_rec.buttons & 0x02),
                                                                 (Joystick_rec.buttons & 0x01) );
-*/
+                */
 
                 DifferentialSteering_computeMotors(wheel_var.joyX, wheel_var.joyY);
                 // The output range will be [-1000, 1000]
@@ -165,57 +165,12 @@ void wheels_task(void *arg){
                                 //Leggi JOY x cambiare modalità
                                 if(wheel_var.joyX < -150) {
                                     tempMOTORSTATE = M_CURRENT_MODE;
-                                        BuzMsg.state = 1;
-                                        BuzMsg.timeWaitON = 150;
-                                        BuzMsg.timeWaitOFF = 150;
-                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
-                                        BuzMsg.state = 1;
-                                        BuzMsg.timeWaitON = 150;
-                                        BuzMsg.timeWaitOFF = 150;
-                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
-                                        BuzMsg.state = 1;
-                                        BuzMsg.timeWaitON = 450;
-                                        BuzMsg.timeWaitOFF = 150;
-                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
-                                        BuzMsg.state = 1;
-                                        BuzMsg.timeWaitON = 450;
-                                        BuzMsg.timeWaitOFF = 150;
-                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
-                                        BuzMsg.state = 1;
-                                        BuzMsg.timeWaitON = 150;
-                                        BuzMsg.timeWaitOFF = 150;
-                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                    Buzzer_CurrentMode();
                                 }else if(wheel_var.joyX > 150) {
                                     tempMOTORSTATE = M_RPM_MODE;
-                                        BuzMsg.state = 1;
-                                        BuzMsg.timeWaitON = 350;
-                                        BuzMsg.timeWaitOFF = 150;
-                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
-                                        BuzMsg.state = 1;
-                                        BuzMsg.timeWaitON = 150;
-                                        BuzMsg.timeWaitOFF = 150;
-                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
-                                        BuzMsg.state = 1;
-                                        BuzMsg.timeWaitON = 150;
-                                        BuzMsg.timeWaitOFF = 150;
-                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
-                                        BuzMsg.state = 1;
-                                        BuzMsg.timeWaitON = 350;
-                                        BuzMsg.timeWaitOFF = 150;
-                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                    Buzzer_RPMMode();
                                 }else{
-                                        BuzMsg.state = 1;
-                                        BuzMsg.timeWaitON = 150;
-                                        BuzMsg.timeWaitOFF = 150;
-                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
-                                        BuzMsg.state = 1;
-                                        BuzMsg.timeWaitON = 150;
-                                        BuzMsg.timeWaitOFF = 150;
-                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
-                                        BuzMsg.state = 1;
-                                        BuzMsg.timeWaitON = 150;
-                                        BuzMsg.timeWaitOFF = 150;
-                                        xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+                                    Buzzer_DutyMode();
                                 }
 
                                 MOTOR_STATE = M_JOY_SECURITY;
@@ -225,6 +180,7 @@ void wheels_task(void *arg){
                                 //Aspetta il JOY in Stato di sicurezza
                                 //Reset Var ACCELERATION
                                 linear_acceleration_var_reset(&linear_acce);
+                                linear_acceleration_var_resetINT(&linear_acce);
 
                                 if( (wheel_var.joyX > 100) | (wheel_var.joyX < -100) | (wheel_var.joyY > 100) | (wheel_var.joyY < -100) ){
                                     wheel_var.time_Start = xTaskGetTickCount();
@@ -257,12 +213,29 @@ void wheels_task(void *arg){
 
                             case M_DUTYCYCLE_MODE:
                                 //ESP_LOGI(TAGWHEELS, "[MODE]...DutyCycle");
+                                if(Joystick_rec.buttons & BUTTON_CURRENT_MODE){
+                                    MOTOR_STATE = M_JOY_SECURITY;                                    
+                                    tempMOTORSTATE = M_CURRENT_MODE;
+                                    Buzzer_CurrentMode();
+                                    //reset acceleration
+                                    linear_acceleration_var_reset(&linear_acce);
+                                }else if(Joystick_rec.buttons & BUTTON_RPM_MODE){
+                                    MOTOR_STATE = M_JOY_SECURITY;
+                                    tempMOTORSTATE = M_RPM_MODE;
+                                    Buzzer_RPMMode();
+                                    linear_acceleration_var_resetINT(&linear_acce);
+                                }
 
-                                //SELCET HARD MODE or SOFT MODE ?????????????
 
-                                //SOFT MODE
-                                wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -0.15, 0.15);
-                                wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -0.15, 0.15);
+                                if(Joystick_rec.buttons & BUTTON_TURBO){
+                                    //HARD MODE
+                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -0.95, 0.95);
+                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -0.95, 0.95);
+                                }else{
+                                    //SOFT MODE
+                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -0.50, 0.50);
+                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -0.50, 0.50);
+                                }
                         
                                 //Acceleration
                                 //https://github.com/adafruit/AccelStepper/blob/master/AccelStepper.cpp
@@ -292,13 +265,29 @@ void wheels_task(void *arg){
 
                             case M_CURRENT_MODE:
                                 //ESP_LOGI(TAGWHEELS, "[MODE]...Current Mode");
+                                if(Joystick_rec.buttons & BUTTON_DUDY_MODE){
+                                    MOTOR_STATE = M_JOY_SECURITY;                                    
+                                    tempMOTORSTATE = M_DUTYCYCLE_MODE;
+                                    Buzzer_DutyMode();
+                                    //reset acceleration
+                                    linear_acceleration_var_reset(&linear_acce);
+                                }else if(Joystick_rec.buttons & BUTTON_RPM_MODE){
+                                    MOTOR_STATE = M_JOY_SECURITY;
+                                    tempMOTORSTATE = M_RPM_MODE;
+                                    Buzzer_RPMMode();
+                                    linear_acceleration_var_resetINT(&linear_acce);
+                                }
 
-                                //SELCET HARD MODE or SOFT MODE ?????????????
+                                if(Joystick_rec.buttons & BUTTON_TURBO){
+                                    //HARD MODE
+                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -15.00, 15.0);
+                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -15.00, 15.00);
+                                }else{
+                                    //SOFT MODE
+                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -5.00, 5.00);
+                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -5.00, 5.00);
+                                }
 
-                                //SOFT MODE
-                                wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -3.50, 3.50);
-                                wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -3.50, 3.50);
-                        
                                 //Acceleration
                                 //https://github.com/adafruit/AccelStepper/blob/master/AccelStepper.cpp
                                 //float AccelStepper::desiredSpeed()
@@ -327,13 +316,30 @@ void wheels_task(void *arg){
 
                             case M_RPM_MODE:
                                 //ESP_LOGI(TAGWHEELS, "[MODE]...Current Mode");
-
+                                if(Joystick_rec.buttons & BUTTON_DUDY_MODE){
+                                    MOTOR_STATE = M_JOY_SECURITY;                                    
+                                    tempMOTORSTATE = M_DUTYCYCLE_MODE;
+                                    Buzzer_DutyMode();
+                                    //reset acceleration
+                                    linear_acceleration_var_reset(&linear_acce);
+                                }else if(Joystick_rec.buttons & BUTTON_CURRENT_MODE){
+                                    MOTOR_STATE = M_JOY_SECURITY;
+                                    tempMOTORSTATE = M_CURRENT_MODE;
+                                    Buzzer_CurrentMode();
+                                    linear_acceleration_var_reset(&linear_acce);
+                                }
                                 //SELCET HARD MODE or SOFT MODE ?????????????
 
-                                //SOFT MODE
-                                wheel_var.ivescValueLeft = map(leftMotor, -1000, 1000, -1200, 1200);
-                                wheel_var.ivescValueright = map(rightMotor, -1000, 1000, -1200, 1200);
-                        
+                                if(Joystick_rec.buttons & BUTTON_TURBO){
+                                    //HARD MODE
+                                    wheel_var.ivescValueLeft = map(leftMotor, -1000, 1000, -3500, 3500);
+                                    wheel_var.ivescValueright = map(rightMotor, -1000, 1000, -3500, 3500);
+                                }else{
+                                    //SOFT MODE
+                                    wheel_var.ivescValueLeft = map(leftMotor, -1000, 1000, -2000, 2000);
+                                    wheel_var.ivescValueright = map(rightMotor, -1000, 1000, -2000, 2000);
+                                }
+
 
 
                                 //Acceleration
@@ -505,4 +511,66 @@ void linear_acceleration_var_resetINT(struct LINEAR_ACC_VAR *var){
     var->ivsec_acc_left = 0;
     var->ivescValueLeft = 0;
     var->ivescValueright = 0;
+}
+
+
+
+
+
+void Buzzer_CurrentMode(void){
+    BuzMsg.state = 1;
+    BuzMsg.timeWaitON = 150;
+    BuzMsg.timeWaitOFF = 150;
+    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+    BuzMsg.state = 1;
+    BuzMsg.timeWaitON = 150;
+    BuzMsg.timeWaitOFF = 150;
+    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+    BuzMsg.state = 1;
+    BuzMsg.timeWaitON = 450;
+    BuzMsg.timeWaitOFF = 150;
+    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+    BuzMsg.state = 1;
+    BuzMsg.timeWaitON = 450;
+    BuzMsg.timeWaitOFF = 150;
+    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+    BuzMsg.state = 1;
+    BuzMsg.timeWaitON = 150;
+    BuzMsg.timeWaitOFF = 150;
+    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+}
+
+void Buzzer_RPMMode(void){
+    BuzMsg.state = 1;
+    BuzMsg.timeWaitON = 350;
+    BuzMsg.timeWaitOFF = 150;
+    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+    BuzMsg.state = 1;
+    BuzMsg.timeWaitON = 150;
+    BuzMsg.timeWaitOFF = 150;
+    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+    BuzMsg.state = 1;
+    BuzMsg.timeWaitON = 150;
+    BuzMsg.timeWaitOFF = 150;
+    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+    BuzMsg.state = 1;
+    BuzMsg.timeWaitON = 350;
+    BuzMsg.timeWaitOFF = 150;
+    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+}
+
+
+void Buzzer_DutyMode(void){
+    BuzMsg.state = 1;
+    BuzMsg.timeWaitON = 150;
+    BuzMsg.timeWaitOFF = 150;
+    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+    BuzMsg.state = 1;
+    BuzMsg.timeWaitON = 150;
+    BuzMsg.timeWaitOFF = 150;
+    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+    BuzMsg.state = 1;
+    BuzMsg.timeWaitON = 150;
+    BuzMsg.timeWaitOFF = 150;
+    xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);  
 }

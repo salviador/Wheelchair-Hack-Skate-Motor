@@ -99,6 +99,9 @@
     void linear_accelerationINT(struct LINEAR_ACC_VAR *var, struct WHEEL_VAR *wheelvar, int16_t linear_constant );
     void linear_acceleration_var_resetINT(struct LINEAR_ACC_VAR *var);
 
-
+    void Buzzer_DutyMode(void);
+    void Buzzer_RPMMode(void);
+    void Buzzer_CurrentMode(void);
+    
 #endif
 

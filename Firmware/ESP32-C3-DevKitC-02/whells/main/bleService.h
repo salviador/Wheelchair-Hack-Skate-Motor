@@ -64,6 +64,11 @@ EventGroupHandle_t BLE_event_group;
     //MAPPA JOYSTICK PULSANTI
 
     #define BUTTON_FRENO    0x01  
+    #define BUTTON_TURBO    0x02  
 
+
+    #define BUTTON_CURRENT_MODE    0x08  
+    #define BUTTON_DUDY_MODE       0x04  
+    #define BUTTON_RPM_MODE        0x10 
 
 #endif
