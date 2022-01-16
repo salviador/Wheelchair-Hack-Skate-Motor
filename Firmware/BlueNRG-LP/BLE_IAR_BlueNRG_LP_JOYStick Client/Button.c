@@ -193,6 +193,14 @@ void BTN_deinit(void){
   gpioBTNx.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &gpioBTNx);
   
+  //---PB12  VIBRATION
+  gpioBTNx.Mode = GPIO_MODE_INPUT;
+  gpioBTNx.Pin = GPIO_PIN_12;
+  gpioBTNx.Speed = GPIO_SPEED_FREQ_LOW;
+  gpioBTNx.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &gpioBTNx);
+  
+
   
   __HAL_RCC_GPIOB_CLK_DISABLE();
   //__HAL_RCC_GPIOA_CLK_DISABLE();

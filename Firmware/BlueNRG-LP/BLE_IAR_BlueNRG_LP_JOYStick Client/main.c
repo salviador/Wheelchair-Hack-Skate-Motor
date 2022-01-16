@@ -1,3 +1,9 @@
+/*
+
+----------------------BlueNRG-LP V 1.1.0----------------------
+
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include "bluenrg_lp_it.h"
@@ -24,8 +30,10 @@
 #include "adcjoy.h"
 #include "disable_all.h"
 #include "led.h"
+#include "vibration.h"
 
 #include "main.h"
+
 
 #ifndef DEBUG
 #define DEBUG   1 // 0
@@ -162,7 +170,7 @@ int main(void)
 
   //ret = Sensor_DeviceInit();
   if (ret != BLE_STATUS_SUCCESS) {
-    BSP_LED_On(BSP_LED3);
+    //BSP_LED_On(BSP_LED3);
     while(1);
   }
 
@@ -177,6 +185,7 @@ int main(void)
     
   ADC_JOY_Init();
   LED_JOY_Init();  
+  vibration_init();
   //GPIO_DEBUG_Init();
   
   __asm("NOP");
@@ -196,7 +205,8 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
     APP_Tick();
     
     LED_JOY_Task();
-
+    VIBRATION_JOY_Task();
+    
     /* Button Task */
     pulsanti_alldebounce_task(&pulsanti[0], NUM_PULSANTI);
 
@@ -308,6 +318,7 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
       TIMER_STANDBY = HAL_GetTick();
       STANBY_STATE = 3;
       LED_START_TOGGLE(30,100,100);
+      VIBRATION_START_TOGGLE(1,3000,100);
       slaves.state = IDLE;
     }
               
@@ -330,6 +341,8 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
           STANBY_STATE = 3;
           
           LED_START_TOGGLE(5,200,100);
+          VIBRATION_START_TOGGLE(1,3000,100);
+
       }
     }
     
@@ -370,6 +383,8 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
                       STANBY_STATE = 2;
                     
                       LED_START_TOGGLE(30,100,100);
+                      VIBRATION_START_TOGGLE(1,3000,100);
+                      
                    }                   
                }
                   

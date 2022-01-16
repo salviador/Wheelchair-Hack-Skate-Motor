@@ -81,7 +81,7 @@ void wheels_task(void *arg){
 
                 //ESP_LOGI(TAGWHEELS, "%d", Joystick_rec.uvbattery);
 
-                //ESP_LOGI(TAGWHEELS, "1--= %d,%d, %x",  wheel_var.joyX , wheel_var.joyY, Joystick_rec.buttons );
+                ESP_LOGI(TAGWHEELS, "1--= %d,%d, %x",  wheel_var.joyX , wheel_var.joyY, Joystick_rec.buttons );
                 /*
                 ESP_LOGI(TAGWHEELS, "%d,%d,%d,%d, %d,%d,%d,%d",  
                                                                 (Joystick_rec.buttons & 0x80),
@@ -233,8 +233,18 @@ void wheels_task(void *arg){
                                     wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -0.95, 0.95);
                                 }else{
                                     //SOFT MODE
-                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -0.50, 0.50);
-                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -0.50, 0.50);
+                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -0.20, 0.20);
+                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -0.20, 0.20);
+                                    //wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -0.15, 0.15);
+                                    //wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -0.15, 0.15);
+                                    /*
+                                    if((leftMotor < 0)&(rightMotor < 0)){
+                                        float tempstr;
+                                        tempstr = wheel_var.vescValueLeft;
+                                        wheel_var.vescValueLeft = wheel_var.vescValueright;
+                                        wheel_var.vescValueright = tempstr;
+                                    }
+                                    */
                                 }
                         
                                 //Acceleration
@@ -242,7 +252,7 @@ void wheels_task(void *arg){
                                 //float AccelStepper::desiredSpeed()
 
                                 //Calc Linear ACCELERATION
-                                linear_acceleration(&linear_acce, &wheel_var, 0.02 );
+                                linear_acceleration(&linear_acce, &wheel_var, 0.05 );
 
 
                                 //Motor
@@ -284,9 +294,17 @@ void wheels_task(void *arg){
                                     wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -15.00, 15.00);
                                 }else{
                                     //SOFT MODE
-                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -5.00, 5.00);
-                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -5.00, 5.00);
+                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -2.00, 2.00);
+                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -2.00, 2.00);
                                 }
+                                /*
+                                if((leftMotor < 0)&(rightMotor < 0)){
+                                    float tempstr;
+                                    tempstr = wheel_var.vescValueLeft;
+                                    wheel_var.vescValueLeft = wheel_var.vescValueright;
+                                    wheel_var.vescValueright = tempstr;
+                                }
+                                */
 
                                 //Acceleration
                                 //https://github.com/adafruit/AccelStepper/blob/master/AccelStepper.cpp
@@ -339,7 +357,14 @@ void wheels_task(void *arg){
                                     wheel_var.ivescValueLeft = map(leftMotor, -1000, 1000, -2000, 2000);
                                     wheel_var.ivescValueright = map(rightMotor, -1000, 1000, -2000, 2000);
                                 }
-
+                                /*
+                                if((leftMotor < 0)&(rightMotor < 0)){
+                                    int16_t tempstrint;
+                                    tempstrint = wheel_var.ivescValueLeft;
+                                    wheel_var.ivescValueLeft = wheel_var.ivescValueright;
+                                    wheel_var.ivescValueright = tempstrint;
+                                }
+                                */
 
 
                                 //Acceleration

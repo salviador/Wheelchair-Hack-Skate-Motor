@@ -21,7 +21,7 @@
 #include "gap_profile.h"
 #include "gatt_profile.h"
 #include "led.h"
-
+#include "vibration.h"
 
 struct CHART_data_TX ble_data_send;
 
@@ -828,6 +828,7 @@ void aci_gatt_clt_proc_complete_event(uint16_t Connection_Handle,
       slaves.state = DONE_CONNESSO;
       
       LED_STOP_TOGGLE();
+      VIBRATION_START_TOGGLE(3, 500, 1000);
       
     break;
    default:

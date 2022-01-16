@@ -3127,4 +3127,10 @@
     <file>
         <name>$PROJ_DIR$\main.h</name>
     </file>
+    <file>
+        <name>$PROJ_DIR$\vibration.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\vibration.h</name>
+    </file>
 </project>

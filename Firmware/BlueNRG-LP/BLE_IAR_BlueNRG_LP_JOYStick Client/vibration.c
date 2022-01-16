@@ -1,0 +1,117 @@
+#include "vibration.h"
+
+
+
+uint8_t VIBRATION_TASK_STATE=0;
+uint32_t VIBRATION_TIME_1=0;
+
+uint16_t VIBRATION_TIME_ON_mS = 0; 
+uint16_t VIBRATION_TIME_OFF_mS = 0; 
+uint8_t VIBRATION_COUNT_LAMP = 0;
+
+
+void vibration_init(void){
+
+  
+  GPIO_InitTypeDef gpioLed;
+
+  __HAL_RCC_GPIOB_CLK_ENABLE();
+
+  //---PB12
+  gpioLed.Mode = GPIO_MODE_OUTPUT_PP;
+  gpioLed.Pin = GPIO_PIN_12;
+  gpioLed.Speed = GPIO_SPEED_FREQ_LOW;
+  gpioLed.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &gpioLed);
+
+  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12,GPIO_PIN_RESET);
+  
+  VIBRATION_TASK_STATE= 0;
+}
+
+
+
+
+void VIBRATION_JOY_Task(void){
+
+  switch (VIBRATION_TASK_STATE){
+
+  case VIBRATION_IDLE:
+    
+   
+  break;
+   
+  case VIBRATION_TASK_STARTTOGGLE:
+      VIBRATION_TASK_STATE = VIBRATION_TASK_ON;
+
+  break;
+  
+  case VIBRATION_TASK_ON:
+    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12,GPIO_PIN_SET);
+    
+    VIBRATION_TIME_1 = HAL_GetTick();
+    VIBRATION_TASK_STATE = VIBRATION_TASK_ON_DELAY;
+  break;
+  
+  
+  case VIBRATION_TASK_ON_DELAY:
+    if((HAL_GetTick() - VIBRATION_TIME_1) >  VIBRATION_TIME_ON_mS ){
+    
+      HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12,GPIO_PIN_RESET);
+      
+      VIBRATION_TIME_1 = HAL_GetTick();
+      VIBRATION_TASK_STATE = VIBRATION_TASK_OFF_DELAY;
+    }
+  break;
+  
+  case VIBRATION_TASK_OFF_DELAY:
+    if((HAL_GetTick() - VIBRATION_TIME_1) >  VIBRATION_TIME_OFF_mS ){
+      VIBRATION_TIME_1 = HAL_GetTick();
+      VIBRATION_TASK_STATE = VIBRATION_TASK_OFF_DELAY;
+      
+      if(VIBRATION_COUNT_LAMP>0){
+        VIBRATION_COUNT_LAMP--;
+        VIBRATION_TASK_STATE = VIBRATION_TASK_ON;
+      }else{
+        //VIBRATION_COUNT_LAMP == 0
+        //fine
+        VIBRATION_TASK_STATE = VIBRATION_IDLE;
+      }
+     
+    }
+  break;
+  
+  
+  
+  
+  
+  
+  
+  }
+
+
+}
+
+
+
+void VIBRATION_START_TOGGLE(uint8_t count, uint16_t TIME_on, uint16_t TIME_off){
+  VIBRATION_TIME_ON_mS = TIME_on; 
+  VIBRATION_TIME_OFF_mS = TIME_off; 
+  VIBRATION_COUNT_LAMP = count;
+
+  VIBRATION_TASK_STATE = VIBRATION_TASK_STARTTOGGLE;
+}
+
+
+
+
+
+void VIBRATION_STOP_TOGGLE(void){
+  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_11,GPIO_PIN_RESET);
+
+  VIBRATION_TASK_STATE = VIBRATION_IDLE;
+}
+
+
+
+

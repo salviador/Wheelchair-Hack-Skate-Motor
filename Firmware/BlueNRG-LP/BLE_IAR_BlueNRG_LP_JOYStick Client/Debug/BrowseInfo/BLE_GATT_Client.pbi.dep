@@ -100,4 +100,5 @@ C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Debug\BrowseInfo\BL
   C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Drivers\BSP\Components\lps22hh_STdC\driver\lps22hh_reg.h \
   C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\Middlewares\ST\BLE_Application\Profiles\Inc\gatt_profile.h \
   C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\led.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdbool.h
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdbool.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ Client\vibration.h
