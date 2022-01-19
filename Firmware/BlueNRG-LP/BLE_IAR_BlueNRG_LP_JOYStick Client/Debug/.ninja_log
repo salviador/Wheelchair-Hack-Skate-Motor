@@ -1,65 +1,65 @@
 # ninja log v5
-171	2407	6605113981003593	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/NVM/nvm_db.o	62827cc7fa3c208f
 1411	2146	6605113978704293	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_io.o	90130d0f09f662af
-63	1051	6605113967761835	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_radio_2g4.o	5c83d02fcf57d381
-738	1158	6605113968672044	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/Hal/miscutil.o	7ce3a6c768642a7e
+171	2407	6605113981003593	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/NVM/nvm_db.o	62827cc7fa3c208f
 1211	2300	6605113980223419	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/main.o	c1069903320260e1
+738	1158	6605113968672044	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/Hal/miscutil.o	7ce3a6c768642a7e
+63	1051	6605113967761835	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_radio_2g4.o	5c83d02fcf57d381
 668	2072	6605113978034138	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/Hal/hal_miscutil.o	723036e4571238f9
 80	991	6605113967901866	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rng.o	6eb9aac18f5ea3af
 420	730	6605121307762264	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Exe/main.out	25103dd4e51f5573
 1442	2263	6605113979474468	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_com.o	df9de57cb77ca50
 1079	2228	6605113978924341	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/gatt_db.o	5e316391441acd70
-761	793	6605121308872506	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Exe/main.hex	b51623e5520e385f
-1455	2219	6631715846086967	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+2055	3162	6640324574978192	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
 127	1416	6605113972062797	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/BLE_Stack/stack_user_cfg.o	4680be7d7c88eb90
-48	1765	6631715840705762	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_cortex.o	1a3cc6fd8659e9c3
-1273	2019	6605113978274188	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_i2c.o	8fcec89177dfc42d
-55	777	6605113965041230	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/BSP/lps22hh_reg.o	8245c43fdff18550
+761	793	6605121308872506	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Exe/main.hex	b51623e5520e385f
 50	460	6605113962710707	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_adc.o	7953b05009c3050f
+55	777	6605113965041230	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/BSP/lps22hh_reg.o	8245c43fdff18550
+227	1376	6640324556499687	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_cortex.o	1a3cc6fd8659e9c3
+1273	2019	6605113978274188	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_i2c.o	8fcec89177dfc42d
 1366	2202	6605113979234406	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_spi.o	6b464bef22ebb581
-232	1252	6631715834664404	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_tim.o	6729fb9ba822d4f5
-1323	2109	6605113978384216	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_led.o	180b4cc1d76ba35d
 3	407	6605121304881525	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/sensor.o	2a7e3da06ccaa94c
+608	1830	6640324560975359	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_tim.o	6729fb9ba822d4f5
+1323	2109	6605113978384216	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_led.o	180b4cc1d76ba35d
 302	1767	6605055546147331	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_radio_2g4.o	6d4213458eff0927
-48	642	6605113964491108	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/CMSIS/system_BlueNRG_LP.o	1105b13bf6b048c7
-86	1096	6605113968131920	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_i2c.o	20a348c862c1b997
 7	467	6611074668769049	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLE_GATT_Client.o	b2b0aa59a01edb99
 141	1885	6605113976843867	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/AES/aes_manager_bluenrg_lp.o	f9e7abe783437080
-1220	1573	6605055545287136	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_comp.o	27d2e17a856f35e9
+86	1096	6605113968131920	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_i2c.o	20a348c862c1b997
+48	642	6605113964491108	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/CMSIS/system_BlueNRG_LP.o	1105b13bf6b048c7
 1241	1918	6605113977153940	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_button.o	28cf3e8270599a57
+1220	1573	6605055545287136	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_comp.o	27d2e17a856f35e9
 53	940	6605113967411761	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_power_manager.o	34351e6497a96beb
 89	1128	6605113968101911	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_exti.o	d755ba8928ec4512
-8	228	6631715824962240	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal_memcpy.o	bdf66bae24c26180
-11	2355	6605113979944569	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/BSP/lsm6dsox_reg.o	4888dd15f6ac9a56
-12	1045	6631715834184293	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal.o	4d53a81b8658662e
+466	3044	6640324573581757	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal.o	4d53a81b8658662e
 96	1562	6605113972552911	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_flash.o	c14bb8d2733cc603
 806	1019	6605113968091911	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/Profiles/gap_profile.o	d41a5f730be379af
+22	585	6640324547320347	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal_memcpy.o	bdf66bae24c26180
+11	2355	6605113979944569	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/BSP/lsm6dsox_reg.o	4888dd15f6ac9a56
 99	1728	6605113973443107	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_dma.o	e29031313d8b8233
 76	1187	6605113968161932	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pka_v7b.o	f8888dd681c59a51
 72	828	6605113966001444	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_lpuart.o	95c040f5ca494fe6
 83	1214	6605113968452000	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pwr.o	a628df42e997d964
-250	1533	6631715836224754	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/AES/aes_manager_bluenrg_lp.o	cbdadd8dc28c6fc3
-92	1246	6605113969122141	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_crc.o	43b142683e379589
 121	1785	6605113974443331	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_timer.o	8a48ed6ecd8d86f1
+590	2817	6640324572073291	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/AES/aes_manager_bluenrg_lp.o	cbdadd8dc28c6fc3
+92	1246	6605113969122141	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_crc.o	43b142683e379589
 110	1703	6605113973023017	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_spi.o	cd488c05099544eb
 1016	1512	6605113972522913	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/PKA/pka_manager.o	4f92e4c8b027a737
 103	1389	6605113971752742	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_gpio.o	95101174486bb442
-558	1459	6631715836754867	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_usart.o	2624ecae929c35c
+1246	1600	6640324560608873	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_usart.o	2624ecae929c35c
 117	1805	6605113975833641	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_tim.o	ae0657c13a27e069
 59	885	6605113966811626	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_vtimer.o	18b34f9b380fca0
 8	166	6605113958452076	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/Hal/blue_unit_conversion.o	fb450a62815e5e20
-1109	1849	6631715842896242	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gatt_profile.o	6174b3c38260ccaa
+1989	2414	6640324568082008	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gatt_profile.o	6174b3c38260ccaa
 130	1627	6605113973033020	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/Cryptolib/aes_hw.o	a7cdfa1a55359b06
 162	1866	6605113976113715	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/Hal/osal.o	fa00a63ed8e76d07
 3	157	6605113958512095	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/Hal/context_switch.o	13b6e7452f9dbf1f
-7	147	6605113958442079	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/Hal/osal_memcpy.o	55fc73aa1ad74718
 913	1342	6605113971292629	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/Profiles/gatt_profile.o	37ba0465ead5bb4d
-67	743	6605113964971216	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rcc.o	371df3fb4cfda582
-10	236	6631715824872225	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/blue_unit_conversion.o	bd9b6e39db207c22
-964	1489	6605113972752955	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/NVM/nvm_db_conf.o	3ed688b5c1a04c3b
+7	147	6605113958442079	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/Hal/osal_memcpy.o	55fc73aa1ad74718
 153	1975	6605113977854095	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/Hal/clock.o	46255efb43a2947c
+224	593	6640324547320347	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/blue_unit_conversion.o	bd9b6e39db207c22
+964	1489	6605113972752955	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/NVM/nvm_db_conf.o	3ed688b5c1a04c3b
+67	743	6605113964971216	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rcc.o	371df3fb4cfda582
 113	1746	6605113973893206	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rtc.o	7a24324f336fc832
-222	1013	6631715834314324	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rng.o	39892becb639dc4d
+580	1178	6640324556413337	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rng.o	39892becb639dc4d
 486	712	6605113965031228	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/Hal/gp_timer.o	74ae7c87a838c7b6
 1047	1460	6605113972422886	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/RNG/rng_manager.o	9221adb50fc24567
 124	1676	6605113973433113	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_usart.o	c8059932df6f5f4c
@@ -67,414 +67,204 @@
 1154	1650	6605113973303084	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/RNG/rng_manager_bluenrg_lp.o	ce7fc099ee44667
 855	1296	6605113970782523	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/PKA/pka_manager_bluenrg_lp.o	7c4e3e9e0b3c612c
 106	1590	6605113972752955	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_utils.o	835507e1f9b3beeb
+1953	3134	6640324574691570	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/hal_miscutil.o	a18526fc001aa48e
 138	2327	6605113980263431	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/BLECNTR/ble_controller_bluenrg_lp.o	bd5e53615d8d1c82
-829	1959	6631715843846463	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/hal_miscutil.o	a18526fc001aa48e
+2544	3694	6640324580138587	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_com.o	3128d692b9200417
 772	1537	6605113972242833	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/Middlewares/NVM/nvm_db_upper_layer.o	9df33de7dff9a310
-1561	2631	6631715850437936	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_com.o	3128d692b9200417
 1184	2045	6605113978224182	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_Template/Debug/Obj/bluenrg_lp_it.o	3c3adaf8760f7587
 610	2063	6605157946564099	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_JOYStick Server/Debug/Obj/gatt_db.o	83c8a8a187d26363
 1255	2470	6605123667432789	D:/Progetti/Sedia Rotelle SkateMotor/BLE_IAR_BlueNRG_LP_JOYStick Server/Debug/Obj/sensor.o	a3f24f1e41795e66
-739	1087	6631715834594389	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Cryptolib/aes_hw.o	3cc69d1a7a2e252d
-218	931	6631715831403687	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rtc.o	9150fd1a87a08dd
-215	531	6631715828983134	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pwr.o	4035337c9bbed83b
-1009	1738	6631715841645966	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/gp_timer.o	209ba5d49afeb871
-185	743	6631715829393223	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_i2c.o	5dbf58a8f47839aa
-1139	1889	6631715843256343	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gap_profile.o	e55af45eb748590e
-4	243	6631715824872225	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/context_switch.o	c734d17c40821a83
-923	1363	6631715838175196	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal.o	a5749657919d913d
-160	471	6631715828653061	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_crc.o	a8cabbd8cdc5caad
-197	894	6631715831143625	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_gpio.o	fb556a91bf5f3e86
-201	499	6631715829053148	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rcc.o	1c33abf208c962f4
-193	774	6631715830293427	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_exti.o	2c20e825f33481da
-182	711	6631715829233188	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_flash.o	59028f736fc2ff45
-211	862	6631715830533479	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pka_v7b.o	56f14d6419a5cc5b
-171	591	6631715829233188	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_dma.o	d23284b8482aa004
-189	805	6631715830373441	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_lpuart.o	1d6c307b6aea9665
-707	1113	6631715834734420	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLE_Stack/stack_user_cfg.o	642fcecb9b4c1e5c
-494	1395	6631715836204755	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_spi.o	c7381d90d44dea5a
-523	2105	6631715844656644	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_timer.o	2948d393c4a18a89
-204	1630	6631715837845129	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_radio_2g4.o	92af902cbb7d1dde
-239	1427	6631715836754867	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_utils.o	ce4cb23968fc87f0
-890	2022	6631715844156533	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/miscutil.o	4e075b1ce2074772
-679	2245	6631715846056962	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLECNTR/ble_controller_bluenrg_lp.o	a384816aacb33a2e
-647	1597	6631715837124964	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLECNTR/ble_controller.o	b3967e5bd4575646
-617	1813	6631715842606178	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/clock.o	b7fed248cb46b672
-1041	1710	6631715840805790	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager.o	4320ec4141d7741a
-1658	2376	6631715848007388	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_io.o	74b5ef28bda9b03f
-1281	1929	6631715843526382	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager.o	c61b27eac8b2ca84
-1072	2073	6631715844616635	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_conf.o	f534acced4d57d8f
-1594	2486	6631715849377697	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_button.o	be3bf8e10d5ab72d
-1248	2276	6631715846637094	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Button.o	11e19f82fca143fc
-76	1491	6631715836484808	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lps22hh_reg.o	62f9827498a1f89b
-800	2314	6631715847547291	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db.o	64b269ec219e882e
-769	2048	6631715843936477	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager_bluenrg_lp.o	ccfa1c9362b7cfa5
-179	652	6631715830363440	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_adc.o	b4a7f22459c8ccd4
-1312	2158	6631715845416816	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager_bluenrg_lp.o	a6f90d4006cf03e0
-1519	2519	6631715849467714	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_i2c.o	968578280c7385ff
-1690	2543	6631715849457713	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_led.o	1ac3b40b7f303d8c
-166	1566	6631715836544822	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_vtimer.o	1457ee92c7c5f855
-81	1986	6631715843846463	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/CMSIS/system_BlueNRG_LP.o	ac244a83a3870d46
-957	2136	6631715845426822	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_upper_layer.o	c137134b0018d5f2
-152	1188	6631715835424587	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_power_manager.o	72a69fee76a26e9d
-1626	2586	6631715849947823	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_spi.o	5f406d9a49f3fd1c
-1391	2611	6631715850007842	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_it.o	f7ce5ef242ad930f
-1488	2680	6631715850677987	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/main.o	b031f20fa63484ea
-1159	2227	6607458700351942	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Service.o	e66eabeb0ac4eca4
-18	2338	6631715847147203	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lsm6dsox_reg.o	d73d1fad2a8bbe6a
-2695	3010	6631715854228775	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	e5828484ff72fc92
-3080	3128	6631715855949166	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-1423	2666	6631715850838026	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Client.o	ed405bf4def34f28
-157	979	6631715833844225	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr_ex.o	d0af01479d7f5e15
-105	1158	6631715834864445	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr.o	23a21c21d824d351
-139	682	6631715830143391	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash_ex.o	4381a07fcec9b6b4
-132	621	6631715830153395	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash.o	16f10a46bcaceec9
-143	1284	6631715834644398	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_dma.o	e58c829577ec7aa4
-22	1661	6631715837765105	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_adc.o	aa9559bb013f4784
-175	1315	6631715834724415	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_rcc.o	7bfd71e2dd6a0564
-147	1219	6631715834694411	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_gpio.o	dee853f90446b884
-1216	2423	6631715848087413	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_hal_msp.o	bf86a6bf89d252f
-8	226	6612621239964914	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/DifferentialSteering.o	7047ca5bba417839
-1343	2403	6631715848267452	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/disable_all.o	e69f3b4c50c61904
-1184	2195	6631715846437050	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/led.o	c9f73d6d3ea204cc
-4	378	6631742938878618	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
-391	744	6631742942069340	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	e5828484ff72fc92
-783	837	6631742943629774	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-3	288	6631743823962093	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
-300	648	6631743827062777	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	e5828484ff72fc92
-683	728	6631743828483098	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-4	285	6631744321294011	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
-301	641	6631744324374689	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	e5828484ff72fc92
-676	720	6631744325755008	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-195	625	6633661204847728	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/blue_unit_conversion.o	bd9b6e39db207c22
-3	633	6633661204857710	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal_memcpy.o	bdf66bae24c26180
-193	640	6633661204847728	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/context_switch.o	c734d17c40821a83
-492	1431	6633661216720365	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr.o	23a21c21d824d351
-606	1484	6633661217050437	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rng.o	39892becb639dc4d
-644	1514	6633661217170467	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/AES/aes_manager_bluenrg_lp.o	cbdadd8dc28c6fc3
-600	1545	6633661217140454	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_i2c.o	5dbf58a8f47839aa
-572	1574	6633661217260485	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_dma.o	d23284b8482aa004
-637	1627	6633661218280719	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_tim.o	6729fb9ba822d4f5
-630	1660	6633661218150693	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_spi.o	c7381d90d44dea5a
-532	1689	6633661217760596	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_rcc.o	7bfd71e2dd6a0564
-447	1720	6633661218650796	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/CMSIS/system_BlueNRG_LP.o	ac244a83a3870d46
-456	1772	6633661219691033	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_power_manager.o	72a69fee76a26e9d
-472	1883	6633661221091341	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash.o	16f10a46bcaceec9
-603	1933	6633661221161354	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_flash.o	59028f736fc2ff45
-591	1964	6633661221731490	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_exti.o	2c20e825f33481da
-1570	1997	6633661221671471	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLE_Stack/stack_user_cfg.o	642fcecb9b4c1e5c
-545	2055	6633661222401630	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_adc.o	b4a7f22459c8ccd4
-484	2089	6633661222221594	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_dma.o	e58c829577ec7aa4
-611	2121	6633661222511657	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rcc.o	1c33abf208c962f4
-1462	2157	6633661222461646	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_usart.o	2624ecae929c35c
-617	2187	6633661222871738	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rtc.o	9150fd1a87a08dd
-1686	2237	6633661223061781	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLECNTR/ble_controller.o	b3967e5bd4575646
-443	2270	6633661224482106	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_adc.o	aa9559bb013f4784
-1510	2325	6633661225412313	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_utils.o	ce4cb23968fc87f0
-1602	2358	6633661224982211	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Cryptolib/aes_hw.o	3cc69d1a7a2e252d
-436	2410	6633661225712371	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_cortex.o	1a3cc6fd8659e9c3
-1993	2441	6633661226502548	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/gp_timer.o	209ba5d49afeb871
-2026	2472	6633661225812399	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal.o	a5749657919d913d
-1655	2537	6633661227642804	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/clock.o	b7fed248cb46b672
-204	2567	6633661226522553	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal.o	4d53a81b8658662e
-519	2597	6633661227372760	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash_ex.o	4381a07fcec9b6b4
-445	2625	6633661227342739	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lps22hh_reg.o	62f9827498a1f89b
-560	2653	6633661226592570	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_crc.o	a8cabbd8cdc5caad
-584	2683	6633661227142704	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_vtimer.o	1457ee92c7c5f855
-1744	2714	6633661227242729	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager_bluenrg_lp.o	ccfa1c9362b7cfa5
-1541	2737	6633661226792613	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_timer.o	2948d393c4a18a89
-614	2769	6633661226732600	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pka_v7b.o	56f14d6419a5cc5b
-2183	2818	6633661227922867	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gatt_profile.o	6174b3c38260ccaa
-2086	2847	6633661228773053	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager.o	4320ec4141d7741a
-2215	2874	6633661228523011	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gap_profile.o	e55af45eb748590e
-620	2901	6633661230583462	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pwr.o	4035337c9bbed83b
-608	2927	6633661229543226	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_radio_2g4.o	92af902cbb7d1dde
-1715	2966	6633661229233159	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLECNTR/ble_controller_bluenrg_lp.o	a384816aacb33a2e
-594	2996	6633661230623471	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_lpuart.o	1d6c307b6aea9665
-597	3024	6633661231253619	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_gpio.o	fb556a91bf5f3e86
-1798	3064	6633661231463664	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db.o	64b269ec219e882e
-1913	3111	6633661233514114	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_conf.o	f534acced4d57d8f
-2469	3155	6633661233944219	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager.o	c61b27eac8b2ca84
-1959	3200	6633661234314300	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/miscutil.o	4e075b1ce2074772
-588	3227	6633661234114250	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr_ex.o	d0af01479d7f5e15
-2118	3272	6633661234964442	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/hal_miscutil.o	a18526fc001aa48e
-2438	3299	6633661235024456	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Button.o	11e19f82fca143fc
-508	3325	6633661234884431	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_gpio.o	dee853f90446b884
-2149	3366	6633661235704603	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_upper_layer.o	c137134b0018d5f2
-434	3393	6633661234624375	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lsm6dsox_reg.o	d73d1fad2a8bbe6a
-2266	3428	6633661236124696	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_hal_msp.o	bf86a6bf89d252f
-2354	3452	6633661236664822	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager_bluenrg_lp.o	a6f90d4006cf03e0
-2297	3497	6633661237394994	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/disable_all.o	e69f3b4c50c61904
-2593	3543	6633661237865099	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/led.o	c9f73d6d3ea204cc
-2500	3603	6633661238465220	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
-2679	3660	6633661239025359	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_io.o	74b5ef28bda9b03f
-2711	3700	6633661239415450	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_led.o	1ac3b40b7f303d8c
-2734	3745	6633661239575487	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_button.o	be3bf8e10d5ab72d
-2797	3774	6633661239695512	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_i2c.o	968578280c7385ff
-2649	3797	6633661239575487	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_com.o	3128d692b9200417
-2766	3833	6633661239945561	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_spi.o	5f406d9a49f3fd1c
-2386	3862	6633661240535694	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Client.o	ed405bf4def34f28
-2564	3883	6633661240085596	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_it.o	f7ce5ef242ad930f
-2621	3916	6633661240855767	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/main.o	b031f20fa63484ea
-3939	4581	6633661247817426	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	e5828484ff72fc92
-4638	4792	6633661250468021	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-186	400	6636124752594834	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/blue_unit_conversion.o	bd9b6e39db207c22
-3	409	6636124752600001	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal_memcpy.o	bdf66bae24c26180
-182	418	6636124752594834	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/context_switch.o	c734d17c40821a83
-326	778	6636124758096113	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr.o	23a21c21d824d351
-306	814	6636124758086063	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_cortex.o	1a3cc6fd8659e9c3
-324	901	6636124759199659	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_adc.o	aa9559bb013f4784
-189	957	6636124759473966	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lps22hh_reg.o	62f9827498a1f89b
-320	993	6636124759886761	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal.o	4d53a81b8658662e
-809	1155	6636124761881950	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/AES/aes_manager_bluenrg_lp.o	cbdadd8dc28c6fc3
-337	1192	6636124761881950	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash_ex.o	4381a07fcec9b6b4
-318	1226	6636124761741494	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/CMSIS/system_BlueNRG_LP.o	ac244a83a3870d46
-847	1279	6636124762057388	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_spi.o	c7381d90d44dea5a
-346	1313	6636124762168979	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_dma.o	d23284b8482aa004
-934	1350	6636124762237156	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_usart.o	2624ecae929c35c
-349	1385	6636124762158972	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_adc.o	b4a7f22459c8ccd4
-343	1422	6636124762633802	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash.o	16f10a46bcaceec9
-330	1457	6636124762237156	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_dma.o	e58c829577ec7aa4
-334	1492	6636124762227134	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_gpio.o	dee853f90446b884
-1025	1559	6636124765954235	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Cryptolib/aes_hw.o	3cc69d1a7a2e252d
-340	1593	6636124765213483	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_power_manager.o	72a69fee76a26e9d
-367	1648	6636124766771286	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_exti.o	2c20e825f33481da
-364	1681	6636124766821948	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_flash.o	59028f736fc2ff45
-358	1713	6636124766771286	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_crc.o	a8cabbd8cdc5caad
-355	1747	6636124766415289	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr_ex.o	d0af01479d7f5e15
-370	1791	6636124766912143	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_i2c.o	5dbf58a8f47839aa
-1256	1825	6636124767929696	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLE_Stack/stack_user_cfg.o	642fcecb9b4c1e5c
-1590	1869	6636124768419907	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal.o	a5749657919d913d
-352	1902	6636124767749168	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_vtimer.o	1457ee92c7c5f855
-392	1936	6636124768601151	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pwr.o	4035337c9bbed83b
-1381	1982	6636124769023062	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager.o	4320ec4141d7741a
-1453	2016	6636124769063064	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/gp_timer.o	209ba5d49afeb871
-1188	2048	6636124768432696	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLECNTR/ble_controller.o	b3967e5bd4575646
-989	2080	6636124768813014	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLECNTR/ble_controller_bluenrg_lp.o	a384816aacb33a2e
-382	2111	6636124769063064	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rng.o	39892becb639dc4d
-376	2143	6636124769279433	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_lpuart.o	1d6c307b6aea9665
-373	2174	6636124769644994	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_gpio.o	fb556a91bf5f3e86
-389	2206	6636124769179061	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rcc.o	1c33abf208c962f4
-395	2238	6636124769209073	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pka_v7b.o	56f14d6419a5cc5b
-1222	2284	6636124770200336	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/clock.o	b7fed248cb46b672
-385	2319	6636124769890432	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rtc.o	9150fd1a87a08dd
-361	2349	6636124770149244	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_rcc.o	7bfd71e2dd6a0564
-1678	2387	6636124773376406	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gatt_profile.o	6174b3c38260ccaa
-1710	2417	6636124773732316	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gap_profile.o	e55af45eb748590e
-310	2444	6636124773093195	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lsm6dsox_reg.o	d73d1fad2a8bbe6a
-424	2489	6636124774561976	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_tim.o	6729fb9ba822d4f5
-1488	2530	6636124775623719	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_conf.o	f534acced4d57d8f
-1899	2571	6636124775840489	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager.o	c61b27eac8b2ca84
-1525	2615	6636124776240477	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/hal_miscutil.o	a18526fc001aa48e
-1310	2661	6636124776813033	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager_bluenrg_lp.o	ccfa1c9362b7cfa5
-1418	2691	6636124776613346	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_upper_layer.o	c137134b0018d5f2
-415	2720	6636124776628453	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_utils.o	ce4cb23968fc87f0
-1821	2763	6636124777121239	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager_bluenrg_lp.o	a6f90d4006cf03e0
-1624	2792	6636124777101200	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/miscutil.o	4e075b1ce2074772
-1775	2820	6636124777571748	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
-379	2844	6636124777293132	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_radio_2g4.o	92af902cbb7d1dde
-406	2871	6636124777680735	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_timer.o	2948d393c4a18a89
-1932	2910	6636124778431935	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/led.o	c9f73d6d3ea204cc
-2045	2937	6636124779467254	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Button.o	11e19f82fca143fc
-1344	2963	6636124779110935	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db.o	64b269ec219e882e
-2108	3001	6636124779764126	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/vibration.o	7a49c378c39660ea
-1854	3099	6636124781322978	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/disable_all.o	e69f3b4c50c61904
-2012	3141	6636124781488344	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_hal_msp.o	bf86a6bf89d252f
-2234	3170	6636124781602974	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_io.o	74b5ef28bda9b03f
-1743	3199	6636124781558565	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_it.o	f7ce5ef242ad930f
-2316	3245	6636124781869377	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_led.o	1ac3b40b7f303d8c
-2266	3276	6636124781955978	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_button.o	be3bf8e10d5ab72d
-2140	3304	6636124782332216	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_spi.o	5f406d9a49f3fd1c
-2171	3332	6636124782045012	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_i2c.o	968578280c7385ff
-2202	3360	6636124782367293	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_com.o	3128d692b9200417
-2077	3405	6636124783078117	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/main.o	b031f20fa63484ea
-1966	3433	6636124782889266	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Client.o	ed405bf4def34f28
-3461	4096	6636124790838822	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-4164	4260	6636124793057677	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-3	240	6636125228686534	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Button.o	11e19f82fca143fc
-263	582	6636125231647672	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-647	691	6636125233297796	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-4	246	6636126560962923	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Button.o	11e19f82fca143fc
-270	586	6636126563910161	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-657	698	6636126565572517	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-7	274	6636128440972794	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/vibration.o	7a49c378c39660ea
-4	492	6636128443103267	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/main.o	b031f20fa63484ea
-506	826	6636128446016368	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-896	939	6636128447723268	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-7	202	6636130091991073	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/vibration.o	7a49c378c39660ea
-4	414	6636130094058258	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/main.o	b031f20fa63484ea
-438	757	6636130097061846	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-826	867	6636130098728722	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-8	112	6636130282450635	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/context_switch.o	c734d17c40821a83
-10	123	6636130282258231	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/blue_unit_conversion.o	bd9b6e39db207c22
-3	132	6636130282238204	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal_memcpy.o	bdf66bae24c26180
-55	314	6636130285105026	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_crc.o	a8cabbd8cdc5caad
-75	368	6636130285305490	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_flash.o	59028f736fc2ff45
-26	398	6636130285395947	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lps22hh_reg.o	62f9827498a1f89b
-95	425	6636130285577512	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rcc.o	1c33abf208c962f4
-52	455	6636130285401142	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_adc.o	b4a7f22459c8ccd4
-85	483	6636130285577512	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_gpio.o	fb556a91bf5f3e86
-105	512	6636130285411176	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pwr.o	4035337c9bbed83b
-72	540	6636130285401142	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_i2c.o	5dbf58a8f47839aa
-59	568	6636130285547261	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_dma.o	d23284b8482aa004
-89	597	6636130285240372	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rng.o	39892becb639dc4d
-46	626	6636130285401142	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr.o	23a21c21d824d351
-48	655	6636130285421181	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr_ex.o	d0af01479d7f5e15
-33	684	6636130285557265	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash_ex.o	4381a07fcec9b6b4
-99	718	6636130285557265	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pka_v7b.o	56f14d6419a5cc5b
-19	770	6636130285486948	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal.o	4d53a81b8658662e
-82	805	6636130285390802	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_exti.o	2c20e825f33481da
-79	845	6636130285652614	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_lpuart.o	1d6c307b6aea9665
-43	873	6636130285632612	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash.o	16f10a46bcaceec9
-24	901	6636130285662615	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_cortex.o	1a3cc6fd8659e9c3
-118	939	6636130285859136	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_spi.o	c7381d90d44dea5a
-21	971	6636130286888958	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_adc.o	aa9559bb013f4784
-36	999	6636130286033833	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_gpio.o	dee853f90446b884
-30	1031	6636130285948646	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_dma.o	e58c829577ec7aa4
-128	1060	6636130286553364	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_tim.o	6729fb9ba822d4f5
-92	1091	6636130286202093	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rtc.o	9150fd1a87a08dd
-40	1123	6636130287569890	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_power_manager.o	72a69fee76a26e9d
-15	1155	6636130286678534	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/CMSIS/system_BlueNRG_LP.o	ac244a83a3870d46
-64	1207	6636130291490200	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_rcc.o	7bfd71e2dd6a0564
-67	1241	6636130292316603	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_vtimer.o	1457ee92c7c5f855
-137	1274	6636130292974198	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_timer.o	2948d393c4a18a89
-102	1302	6636130293074410	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_radio_2g4.o	92af902cbb7d1dde
-828	1340	6636130294140018	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal.o	a5749657919d913d
-565	1384	6636130295561584	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Cryptolib/aes_hw.o	3cc69d1a7a2e252d
-897	1414	6636130295606793	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gatt_profile.o	6174b3c38260ccaa
-451	1444	6636130295506448	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLE_Stack/stack_user_cfg.o	642fcecb9b4c1e5c
-926	1485	6636130296283540	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gap_profile.o	e55af45eb748590e
-868	1511	6636130296102998	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/gp_timer.o	209ba5d49afeb871
-996	1536	6636130296830882	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager.o	c61b27eac8b2ca84
-795	1561	6636130296213521	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager.o	4320ec4141d7741a
-537	1596	6636130296338694	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLECNTR/ble_controller.o	b3967e5bd4575646
-422	1623	6636130297342845	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_usart.o	2624ecae929c35c
-652	1735	6636130299286934	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_conf.o	f534acced4d57d8f
-344	1761	6636130299296935	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_utils.o	ce4cb23968fc87f0
-1299	1807	6636130299799954	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/vibration.o	7a49c378c39660ea
-1027	1832	6636130299623788	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/led.o	c9f73d6d3ea204cc
-1119	1856	6636130299741121	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager_bluenrg_lp.o	a6f90d4006cf03e0
-480	1881	6636130299603729	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/clock.o	b7fed248cb46b672
-743	1907	6636130299684181	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager_bluenrg_lp.o	ccfa1c9362b7cfa5
-682	1933	6636130299684181	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/hal_miscutil.o	a18526fc001aa48e
-394	1955	6636130299385190	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/AES/aes_manager_bluenrg_lp.o	cbdadd8dc28c6fc3
-594	1980	6636130299603729	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/miscutil.o	4e075b1ce2074772
-712	2004	6636130299875069	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_upper_layer.o	c137134b0018d5f2
-12	2027	6636130299716053	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lsm6dsox_reg.o	d73d1fad2a8bbe6a
-1184	2063	6636130300073666	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Button.o	11e19f82fca143fc
-1057	2096	6636130300299280	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
-509	2117	6636130301607377	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLECNTR/ble_controller_bluenrg_lp.o	a384816aacb33a2e
-1088	2143	6636130300143740	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_hal_msp.o	bf86a6bf89d252f
-623	2168	6636130302322591	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db.o	64b269ec219e882e
-1152	2206	6636130303527491	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_it.o	f7ce5ef242ad930f
-1237	2232	6636130303497491	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/disable_all.o	e69f3b4c50c61904
-1329	2309	6636130305032607	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_button.o	be3bf8e10d5ab72d
-1508	2349	6636130305393662	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_io.o	74b5ef28bda9b03f
-1470	2390	6636130305775149	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_i2c.o	968578280c7385ff
-1365	2415	6636130305619201	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_led.o	1ac3b40b7f303d8c
-1441	2457	6636130306004157	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_com.o	3128d692b9200417
-1409	2483	6636130306114493	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_spi.o	5f406d9a49f3fd1c
-967	2510	6636130306169619	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Client.o	ed405bf4def34f28
-1270	2536	6636130306104446	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/main.o	b031f20fa63484ea
-2562	2878	6636130310287602	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-2950	2992	6636130311976688	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-4	199	6636131090846773	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/vibration.o	7a49c378c39660ea
-217	534	6636131093743933	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-575	616	6636131095131011	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-4	471	6636131507300409	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/main.o	b031f20fa63484ea
-493	804	6636131510226237	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-875	918	6636131511931107	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-4	208	6636132305244881	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/vibration.o	7a49c378c39660ea
-231	543	6636132308120537	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-611	651	6636132309763815	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-7	206	6636132628249308	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/vibration.o	7a49c378c39660ea
-4	412	6636132630274806	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/main.o	b031f20fa63484ea
-436	755	6636132633284786	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-825	866	6636132634949680	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-4	395	6636133620818019	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/main.o	b031f20fa63484ea
-409	720	6636133623654978	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-762	804	6636133625042361	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-3	488	6636134692064795	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Client.o	ed405bf4def34f28
-513	828	6636134695046937	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-900	943	6636134696759491	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-3	417	6636134931419867	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Client.o	ed405bf4def34f28
-438	755	6636134934383939	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-824	868	6636134936074134	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-4	393	6636136902840389	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/main.o	b031f20fa63484ea
-416	730	6636136905798306	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-801	843	6636136907480716	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-4	506	6636138848094196	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Client.o	ed405bf4def34f28
-530	846	6636138851297209	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
-919	962	6636138853007432	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
-22	585	6640324547320347	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal_memcpy.o	bdf66bae24c26180
-224	593	6640324547320347	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/blue_unit_conversion.o	bd9b6e39db207c22
-214	603	6640324547320347	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/context_switch.o	c734d17c40821a83
-580	1178	6640324556413337	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rng.o	39892becb639dc4d
-542	1216	6640324556458482	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pka_v7b.o	56f14d6419a5cc5b
-569	1269	6640324557157890	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rtc.o	9150fd1a87a08dd
-526	1303	6640324557334223	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_i2c.o	5dbf58a8f47839aa
-552	1339	6640324557324222	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_radio_2g4.o	92af902cbb7d1dde
-227	1376	6640324556499687	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_cortex.o	1a3cc6fd8659e9c3
-482	1491	6640324559339564	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr.o	23a21c21d824d351
-549	1550	6640324560113324	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pwr.o	4035337c9bbed83b
-1246	1600	6640324560608873	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_usart.o	2624ecae929c35c
-507	1635	6640324560222978	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_dma.o	d23284b8482aa004
 1335	1685	6640324561498047	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Cryptolib/aes_hw.o	3cc69d1a7a2e252d
-486	1723	6640324560682286	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_dma.o	e58c829577ec7aa4
-1408	1758	6640324561085680	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLECNTR/ble_controller.o	b3967e5bd4575646
-520	1797	6640324561455519	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_exti.o	2c20e825f33481da
-608	1830	6640324560975359	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_tim.o	6729fb9ba822d4f5
-600	1865	6640324560805521	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_spi.o	c7381d90d44dea5a
-1299	1927	6640324562077156	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_utils.o	ce4cb23968fc87f0
-1209	1960	6640324563205801	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_timer.o	2948d393c4a18a89
-477	1993	6640324562618341	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_gpio.o	dee853f90446b884
-489	2026	6640324562314537	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash_ex.o	4381a07fcec9b6b4
-448	2058	6640324563576596	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_adc.o	aa9559bb013f4784
-1370	2111	6640324564449792	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/clock.o	b7fed248cb46b672
-545	2144	6640324564709626	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rcc.o	1c33abf208c962f4
-1666	2188	6640324565883264	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal.o	a5749657919d913d
-1580	2221	6640324565803093	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLE_Stack/stack_user_cfg.o	642fcecb9b4c1e5c
-530	2273	6640324566706952	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_lpuart.o	1d6c307b6aea9665
-443	2323	6640324567705895	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lps22hh_reg.o	62f9827498a1f89b
-2022	2391	6640324568383043	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gap_profile.o	e55af45eb748590e
-1989	2414	6640324568082008	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gatt_profile.o	6174b3c38260ccaa
-1788	2446	6640324568277514	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager.o	4320ec4141d7741a
-495	2479	6640324568102014	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_crc.o	a8cabbd8cdc5caad
-532	2515	6640324568277514	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_flash.o	59028f736fc2ff45
-516	2551	6640324568477416	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_adc.o	b4a7f22459c8ccd4
-2140	2595	6640324568592492	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager.o	c61b27eac8b2ca84
-523	2626	6640324569225141	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_gpio.o	fb556a91bf5f3e86
+569	1269	6640324557157890	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rtc.o	9150fd1a87a08dd
+549	1550	6640324560113324	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pwr.o	4035337c9bbed83b
 1895	2672	6640324568657634	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/gp_timer.o	209ba5d49afeb871
-511	2706	6640324569726590	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_rcc.o	7bfd71e2dd6a0564
-474	2737	6640324570240332	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_power_manager.o	72a69fee76a26e9d
-445	2767	6640324569696561	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/CMSIS/system_BlueNRG_LP.o	ac244a83a3870d46
-590	2817	6640324572073291	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/AES/aes_manager_bluenrg_lp.o	cbdadd8dc28c6fc3
+526	1303	6640324557334223	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_i2c.o	5dbf58a8f47839aa
+2022	2391	6640324568383043	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gap_profile.o	e55af45eb748590e
+214	603	6640324547320347	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/context_switch.o	c734d17c40821a83
+1666	2188	6640324565883264	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal.o	a5749657919d913d
+495	2479	6640324568102014	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_crc.o	a8cabbd8cdc5caad
+523	2626	6640324569225141	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_gpio.o	fb556a91bf5f3e86
+545	2144	6640324564709626	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rcc.o	1c33abf208c962f4
+520	1797	6640324561455519	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_exti.o	2c20e825f33481da
+532	2515	6640324568277514	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_flash.o	59028f736fc2ff45
+542	1216	6640324556458482	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pka_v7b.o	56f14d6419a5cc5b
+507	1635	6640324560222978	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_dma.o	d23284b8482aa004
+530	2273	6640324566706952	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_lpuart.o	1d6c307b6aea9665
+1580	2221	6640324565803093	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLE_Stack/stack_user_cfg.o	642fcecb9b4c1e5c
+600	1865	6640324560805521	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_spi.o	c7381d90d44dea5a
+1209	1960	6640324563205801	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_timer.o	2948d393c4a18a89
+552	1339	6640324557324222	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_radio_2g4.o	92af902cbb7d1dde
+1299	1927	6640324562077156	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_utils.o	ce4cb23968fc87f0
 1521	2845	6640324571812710	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLECNTR/ble_controller_bluenrg_lp.o	a384816aacb33a2e
-441	2872	6640324571489956	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lsm6dsox_reg.o	d73d1fad2a8bbe6a
-492	2924	6640324573256575	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr_ex.o	d0af01479d7f5e15
-1862	2957	6640324573526631	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager_bluenrg_lp.o	ccfa1c9362b7cfa5
-2087	2986	6640324573859626	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/led.o	c9f73d6d3ea204cc
-479	3015	6640324573626139	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash.o	16f10a46bcaceec9
-466	3044	6640324573581757	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal.o	4d53a81b8658662e
-1753	3093	6640324574195502	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_conf.o	f534acced4d57d8f
-1827	3116	6640324574130360	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_upper_layer.o	c137134b0018d5f2
-1953	3134	6640324574691570	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/hal_miscutil.o	a18526fc001aa48e
-2055	3162	6640324574978192	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
 1715	3190	6640324574585480	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/miscutil.o	4e075b1ce2074772
-1631	3219	6640324574306181	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db.o	64b269ec219e882e
-514	3268	6640324575852724	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_vtimer.o	1457ee92c7c5f855
-2409	3387	6640324578510922	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager_bluenrg_lp.o	a6f90d4006cf03e0
-2475	3426	6640324578566046	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/vibration.o	7a49c378c39660ea
-2250	3462	6640324578645072	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_hal_msp.o	bf86a6bf89d252f
-2352	3491	6640324578698341	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Button.o	11e19f82fca143fc
-2301	3520	6640324578822813	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/disable_all.o	e69f3b4c50c61904
-2174	3559	6640324579018233	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_it.o	f7ce5ef242ad930f
-2581	3599	6640324579454079	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_led.o	1ac3b40b7f303d8c
-2508	3632	6640324579434027	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_button.o	be3bf8e10d5ab72d
+1408	1758	6640324561085680	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLECNTR/ble_controller.o	b3967e5bd4575646
+1370	2111	6640324564449792	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/clock.o	b7fed248cb46b672
+1788	2446	6640324568277514	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager.o	4320ec4141d7741a
 2698	3664	6640324580308796	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_io.o	74b5ef28bda9b03f
-2544	3694	6640324580138587	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_com.o	3128d692b9200417
-2217	3724	6640324579981904	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Client.o	ed405bf4def34f28
+2140	2595	6640324568592492	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager.o	c61b27eac8b2ca84
+1753	3093	6640324574195502	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_conf.o	f534acced4d57d8f
+2508	3632	6640324579434027	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_button.o	be3bf8e10d5ab72d
+1631	3219	6640324574306181	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db.o	64b269ec219e882e
+443	2323	6640324567705895	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lps22hh_reg.o	62f9827498a1f89b
+2352	3491	6640324578698341	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Button.o	11e19f82fca143fc
+1862	2957	6640324573526631	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager_bluenrg_lp.o	ccfa1c9362b7cfa5
+516	2551	6640324568477416	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_adc.o	b4a7f22459c8ccd4
+2409	3387	6640324578510922	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager_bluenrg_lp.o	a6f90d4006cf03e0
 2623	3753	6640324579631721	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_i2c.o	968578280c7385ff
+2581	3599	6640324579454079	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_led.o	1ac3b40b7f303d8c
+514	3268	6640324575852724	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_vtimer.o	1457ee92c7c5f855
+445	2767	6640324569696561	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/CMSIS/system_BlueNRG_LP.o	ac244a83a3870d46
+1827	3116	6640324574130360	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_upper_layer.o	c137134b0018d5f2
+474	2737	6640324570240332	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_power_manager.o	72a69fee76a26e9d
 2656	3796	6640324580818709	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_spi.o	5f406d9a49f3fd1c
+2174	3559	6640324579018233	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_it.o	f7ce5ef242ad930f
 2442	3928	6640324583891264	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/main.o	b031f20fa63484ea
+1159	2227	6607458700351942	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Service.o	e66eabeb0ac4eca4
+441	2872	6640324571489956	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lsm6dsox_reg.o	d73d1fad2a8bbe6a
 3954	4632	6640324590503043	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
 4715	4819	6640324592950511	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+2217	3724	6640324579981904	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Client.o	ed405bf4def34f28
+492	2924	6640324573256575	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr_ex.o	d0af01479d7f5e15
+482	1491	6640324559339564	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr.o	23a21c21d824d351
+489	2026	6640324562314537	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash_ex.o	4381a07fcec9b6b4
+479	3015	6640324573626139	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash.o	16f10a46bcaceec9
+486	1723	6640324560682286	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_dma.o	e58c829577ec7aa4
+448	2058	6640324563576596	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_adc.o	aa9559bb013f4784
+511	2706	6640324569726590	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_rcc.o	7bfd71e2dd6a0564
+477	1993	6640324562618341	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_gpio.o	dee853f90446b884
+2250	3462	6640324578645072	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_hal_msp.o	bf86a6bf89d252f
+8	226	6612621239964914	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/DifferentialSteering.o	7047ca5bba417839
+2301	3520	6640324578822813	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/disable_all.o	e69f3b4c50c61904
+2087	2986	6640324573859626	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/led.o	c9f73d6d3ea204cc
+2475	3426	6640324578566046	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/vibration.o	7a49c378c39660ea
+183	386	6642897329495244	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/context_switch.o	c734d17c40821a83
+186	397	6642897329495244	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/blue_unit_conversion.o	bd9b6e39db207c22
+4	406	6642897329495244	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal_memcpy.o	bdf66bae24c26180
+347	840	6642897335406574	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_adc.o	b4a7f22459c8ccd4
+317	880	6642897335716637	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash_ex.o	4381a07fcec9b6b4
+349	925	6642897336226766	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_flash.o	59028f736fc2ff45
+341	955	6642897336546840	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr_ex.o	d0af01479d7f5e15
+344	1004	6642897336636854	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_rcc.o	7bfd71e2dd6a0564
+325	1147	6642897338717314	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_flash.o	16f10a46bcaceec9
+908	1193	6642897339017379	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_usart.o	2624ecae929c35c
+866	1240	6642897339367471	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/AES/aes_manager_bluenrg_lp.o	cbdadd8dc28c6fc3
+319	1272	6642897339317443	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_gpio.o	dee853f90446b884
+335	1308	6642897339247434	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_crc.o	a8cabbd8cdc5caad
+308	1341	6642897339367471	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal.o	4d53a81b8658662e
+952	1389	6642897340187637	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_utils.o	ce4cb23968fc87f0
+330	1420	6642897340267654	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_dma.o	e58c829577ec7aa4
+985	1451	6642897340807790	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/clock.o	b7fed248cb46b672
+187	1481	6642897340507726	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lps22hh_reg.o	62f9827498a1f89b
+302	1511	6642897340917813	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/CMSIS/system_BlueNRG_LP.o	ac244a83a3870d46
+314	1564	6642897341627960	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_adc.o	aa9559bb013f4784
+333	1595	6642897341537946	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_vtimer.o	1457ee92c7c5f855
+355	1651	6642897343748433	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_lpuart.o	1d6c307b6aea9665
+338	1682	6642897343388358	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_dma.o	d23284b8482aa004
+1268	1726	6642897343988495	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLE_Stack/stack_user_cfg.o	642fcecb9b4c1e5c
+358	1756	6642897344468600	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_exti.o	2c20e825f33481da
+1590	1794	6642897344588639	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/osal.o	a5749657919d913d
+1175	1825	6642897344708659	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Cryptolib/aes_hw.o	3cc69d1a7a2e252d
+368	1856	6642897344778678	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pka_v7b.o	56f14d6419a5cc5b
+1416	1895	6642897345268776	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/gp_timer.o	209ba5d49afeb871
+352	1924	6642897345078739	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_gpio.o	fb556a91bf5f3e86
+1368	1954	6642897345278777	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager.o	4320ec4141d7741a
+1222	1982	6642897345138752	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLECNTR/ble_controller.o	b3967e5bd4575646
+366	2010	6642897345338795	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_pwr.o	4035337c9bbed83b
+1031	2049	6642897345928928	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/BLECNTR/ble_controller_bluenrg_lp.o	a384816aacb33a2e
+377	2080	6642897346098965	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rcc.o	1c33abf208c962f4
+363	2111	6642897345388809	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_i2c.o	5dbf58a8f47839aa
+380	2140	6642897345948936	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rng.o	39892becb639dc4d
+374	2168	6642897346108970	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_rtc.o	9150fd1a87a08dd
+1622	2209	6642897347999393	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gatt_profile.o	6174b3c38260ccaa
+1678	2237	6642897348269448	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Profiles/gap_profile.o	e55af45eb748590e
+392	2283	6642897350039847	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_spi.o	c7381d90d44dea5a
+322	2310	6642897349789791	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_pwr.o	23a21c21d824d351
+1303	2351	6642897350569968	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_upper_layer.o	c137134b0018d5f2
+1507	2378	6642897350639980	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/hal_miscutil.o	a18526fc001aa48e
+305	2405	6642897349999838	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/lsm6dsox_reg.o	d73d1fad2a8bbe6a
+311	2433	6642897350169877	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_cortex.o	1a3cc6fd8659e9c3
+1883	2471	6642897351170103	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager.o	c61b27eac8b2ca84
+1336	2497	6642897351210112	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/PKA/pka_manager_bluenrg_lp.o	ccfa1c9362b7cfa5
+1447	2523	6642897351370144	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/Hal/miscutil.o	4e075b1ce2074772
+411	2548	6642897351430161	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_tim.o	6729fb9ba822d4f5
+372	2575	6642897351640206	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_radio_2g4.o	92af902cbb7d1dde
+1538	2614	6642897352310359	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db_conf.o	f534acced4d57d8f
+1709	2641	6642897352580416	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/RNG/rng_manager_bluenrg_lp.o	a6f90d4006cf03e0
+327	2667	6642897352580416	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_hal_power_manager.o	72a69fee76a26e9d
+1477	2708	6642897353540633	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Middlewares/NVM/nvm_db.o	64b269ec219e882e
+1850	2735	6642897354330804	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Button.o	11e19f82fca143fc
+403	2760	6642897353550632	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/Peripherals_Drivers/rf_driver_ll_timer.o	2948d393c4a18a89
+1951	2811	6642897355351030	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+1781	2848	6642897355711119	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/led.o	c9f73d6d3ea204cc
+2035	2884	6642897355821133	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/vibration.o	7a49c378c39660ea
+1752	2922	6642897356301252	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/disable_all.o	e69f3b4c50c61904
+1979	2967	6642897356891381	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_hal_msp.o	bf86a6bf89d252f
+2137	2993	6642897356891381	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_io.o	74b5ef28bda9b03f
+2165	3033	6642897357151447	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_led.o	1ac3b40b7f303d8c
+2108	3059	6642897357191447	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_button.o	be3bf8e10d5ab72d
+2234	3096	6642897357611534	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_i2c.o	968578280c7385ff
+2075	3122	6642897357601531	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_spi.o	5f406d9a49f3fd1c
+1820	3155	6642897358141660	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/bluenrg_lp_it.o	f7ce5ef242ad930f
+2194	3181	6642897358071647	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/Drivers/BSP/bluenrg_lp_evb_com.o	3128d692b9200417
+1920	3223	6642897359071871	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Client.o	ed405bf4def34f28
+2007	3299	6642897360092096	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/main.o	b031f20fa63484ea
+3326	3971	6642897366493529	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+4043	4140	6642897368754034	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+4	499	6642929557439570	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Client.o	ed405bf4def34f28
+523	842	6642929560498012	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+911	955	6642929562178692	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+3	413	6642929926775610	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Client.o	ed405bf4def34f28
+435	750	6642929929736345	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+824	867	6642929931456109	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+3	409	6642930222621014	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/BLE_GATT_Client.o	ed405bf4def34f28
+432	745	6642930225552437	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+815	857	6642930227223350	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+4	332	6642930943101078	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+355	673	6642930946081352	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+746	788	6642930947771813	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+4	346	6642932625476361	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+368	684	6642932628427319	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+750	791	6642932630049377	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+4	263	6642933690027185	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+286	603	6642933692958604	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+672	714	6642933694639288	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+3	332	6642934536881589	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+345	660	6642934539725058	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+694	735	6642934541024659	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+4	263	6642935121211165	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+284	616	6642935124289163	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+680	721	6642935125891661	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+4	338	6642938959871816	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+361	676	6642938962813010	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+734	776	6642938964366661	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+3	260	6642940291162373	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+283	602	6642940294113335	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+672	714	6642940295794021	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+4	262	6642941343576948	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+287	600	6642941346498591	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+671	712	6642941348159731	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+3	268	6642941780527730	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+294	610	6642941783478693	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+678	721	6642941785139832	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+3	330	6642943572856769	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+353	665	6642943575758875	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+727	770	6642943577361388	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+4	260	6642944543266347	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+283	591	6642944546129368	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+656	696	6642944547731883	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+4	264	6642945741961686	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+288	614	6642945744990821	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+687	729	6642945746700816	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+3	272	6642946367730142	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+6	396	6642946368941795	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/main.o	b031f20fa63484ea
+419	732	6642946371882990	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+798	839	6642946373495271	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+3	354	6642947620411287	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+378	695	6642947623499047	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+765	806	6642947625150414	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+3	267	6642948917472142	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+290	607	6642948920423114	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+677	719	6642948922084251	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b
+4	268	6642949442549576	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Obj/adcjoy.o	68c6fd93e69934a4
+291	604	6642949445451684	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.out	6bc25d5b01b44f7b
+674	715	6642949447112827	C:/Users/michele/Desktop/BLE_IAR_BlueNRG_LP_JOYStick Client/Debug/Exe/main.hex	b14031aaa4be4e4b

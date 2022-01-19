@@ -31,7 +31,7 @@
 
 
 
-#define ADC_DMA_BUF_LEN  9 //6  //30
+#define ADC_DMA_BUF_LEN  21 //15 //9 
 
 ADC_HandleTypeDef adc_handle;
 ADC_ConfigChannelTypeDef xChannel;
@@ -201,7 +201,7 @@ void ADC_JOY_task(void){
         
         Motor_Convert_Joy(&joy_raw, &ble_data_send);
          
-   //     PRINTF("%d\t%d\t%d\r\n", ble_data_send.uJoy_x, ble_data_send.uJoy_y, ble_data_send.uvbattery);
+        PRINTF("%d\t%d\t%d\r\n", ble_data_send.uJoy_x, ble_data_send.uJoy_y, ble_data_send.uvbattery);
         
         /*
         if(campioni_saltare > 1){
@@ -290,9 +290,42 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
 
     //ADJUST OFFSET
    
-    wheelJOY->uJoy_x = wheelJOY->uJoy_x + 88;
-    wheelJOY->uJoy_y = wheelJOY->uJoy_y + 68;
+    wheelJOY->uJoy_x = wheelJOY->uJoy_x + 59;
+    wheelJOY->uJoy_y = wheelJOY->uJoy_y + 82;
 
+    //Ymax = 961
+    //Ymin = -795
+    //Xmax = 941
+    //Xmin = -926
+
+    //Invert x
+    wheelJOY->uJoy_x = wheelJOY->uJoy_x * -1;
+
+    /*
+    if((wheelJOY->uJoy_y > -4)&&(wheelJOY->uJoy_y < 4)){
+      wheelJOY->uJoy_y  = 0;
+    }
+    
+    wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,-795,961,-1000,1000);
+    wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,-926,941,-1000,1000);
+    */
+
+    if(wheelJOY->uJoy_y < 0){
+      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,-800,0,-1000,0);
+    }else if(wheelJOY->uJoy_y > 0){
+      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,0,970,0,1000);
+    }
+    if(wheelJOY->uJoy_x < 0){
+      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,-932,0,-1000,0);
+    }else if(wheelJOY->uJoy_x > 0){
+      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,0,945,0,1000);
+    }
+
+
+
+
+
+    
      //LIMIT
     if(wheelJOY->uJoy_x > 1000)
       wheelJOY->uJoy_x = 1000;
@@ -305,8 +338,8 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
       wheelJOY->uJoy_y = -1000;
 
     //Invert x
-    wheelJOY->uJoy_x = wheelJOY->uJoy_x * -1;
-   
+    //wheelJOY->uJoy_x = wheelJOY->uJoy_x * -1;
+  
 }
 
 

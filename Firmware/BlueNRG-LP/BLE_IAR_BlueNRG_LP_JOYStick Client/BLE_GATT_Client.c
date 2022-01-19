@@ -828,7 +828,7 @@ void aci_gatt_clt_proc_complete_event(uint16_t Connection_Handle,
       slaves.state = DONE_CONNESSO;
       
       LED_STOP_TOGGLE();
-      VIBRATION_START_TOGGLE(3, 500, 1000);
+      VIBRATION_START_TOGGLE(2, 100, 100);
       
     break;
    default:
