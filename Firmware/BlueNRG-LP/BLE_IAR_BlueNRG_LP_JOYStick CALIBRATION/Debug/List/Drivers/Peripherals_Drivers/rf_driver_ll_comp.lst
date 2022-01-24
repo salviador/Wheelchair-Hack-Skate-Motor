@@ -1,0 +1,368 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         06/Dec/2021  15:52:34
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode          =  thumb
+#    Endian            =  little
+#    Source file       =
+#        D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Drivers\Peripherals_Drivers\src\rf_driver_ll_comp.c
+#    Command line      =
+#        -f "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Debug\Obj\Drivers\Peripherals_Drivers\rf_driver_ll_comp.o.rsp"
+#        ("D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Drivers\Peripherals_Drivers\src\rf_driver_ll_comp.c"
+#        -D USE_FULL_LL_DRIVER -D STEVAL_IDB011V1 -D CONFIG_DEVICE_BLUENRG_LP
+#        -D CONFIG_HW_SMPS_10uH -D CONFIG_HW_HSE_TUNE=32 -D
+#        USER_BUTTON=BSP_PUSH1 -D CONFIG_HW_LS_XTAL -D BLE_STACK_BASIC_CONF -D
+#        __ARM_ARCH_6M__ -lC "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Debug\List\Drivers\Peripherals_Drivers"
+#        --diag_suppress Pe1665 -o "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Debug\Obj\Drivers\Peripherals_Drivers"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M0+ -e --fpu=None --dlib_config "C:\Program Files\IAR
+#        Systems\Embedded Workbench 9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_Template\\"
+#        -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Drivers\Peripherals_Drivers\Inc\\"
+#        -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Drivers\CMSIS\Device\ST\BlueNRG_LP\Include\\"
+#        -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Middlewares\ST\hal\Inc\\" -I
+#        "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Middlewares\ST\PKAMGR\Inc\\" -I
+#        "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Middlewares\ST\RNGMGR\Inc\\" -I
+#        "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Middlewares\ST\AESMGR\Inc\\" -I
+#        "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Middlewares\ST\BLECNTR\Inc\\"
+#        -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Drivers\CMSIS\Include\\" -I
+#        "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Drivers/BSP/STEVAL-IDB011V1/Inc\\"
+#        -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Drivers\BSP\Common\Inc\\" -I
+#        "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Drivers\BSP\Components\lps22hh_STdC\driver\\"
+#        -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Drivers\BSP\Components\lsm6dsox_STdC\driver\\"
+#        -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Middlewares\ST\BLE_Application\layers_inc\\"
+#        -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Middlewares\ST\Bluetooth_LE\Inc\\"
+#        -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Middlewares\ST\BLE_Application\OTA\inc\\"
+#        -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Middlewares\ST\NVMDB\Inc\\" -I
+#        "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Middlewares\ST\BLE_Application\Profiles\Inc\\"
+#        -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Middlewares\ST\cryptolib\inc\\"
+#        -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Middlewares\ST\cryptolib\inc\Common\\"
+#        -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Middlewares\ST\cryptolib\inc\AES\\"
+#        -On) --dependencies=n "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Debug\Obj\Drivers\Peripherals_Drivers\rf_driver_ll_comp.o.d"
+#    Locale            =  C
+#    List file         =
+#        D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Debug\List\Drivers\Peripherals_Drivers\rf_driver_ll_comp.lst
+#    Object file       =
+#        D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_Template\Debug\Obj\Drivers\Peripherals_Drivers\rf_driver_ll_comp.o
+#    Runtime model:       
+#      __CPP_Runtime   =  1
+#      __SystemLibrary =  DLib
+#
+###############################################################################
+
+D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_Template\Drivers\Peripherals_Drivers\src\rf_driver_ll_comp.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    rf_driver_ll_comp.c
+      4            * @author  RF Application Team
+      5            * @brief   COMP LL module driver
+      6            ******************************************************************************
+      7            * @attention
+      8            *
+      9            * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
+     10            * All rights reserved.</center></h2>
+     11            *
+     12            * This software component is licensed by ST under BSD 3-Clause license,
+     13            * the "License"; You may not use this file except in compliance with the
+     14            * License. You may obtain a copy of the License at:
+     15            *                        opensource.org/licenses/BSD-3-Clause
+     16            *
+     17            ******************************************************************************
+     18            */
+     19          #if defined(USE_FULL_LL_DRIVER)
+     20          
+     21          /* Includes ------------------------------------------------------------------*/
+     22          #include "rf_driver_ll_comp.h"
+     23          
+     24          #ifdef  USE_FULL_ASSERT
+     25          #include "spirit3_assert.h"
+     26          #else
+     27          #define assert_param(expr) ((void)0U)
+     28          #endif
+     29          
+     30          /** @addtogroup RF_DRIVER_LL_Driver
+     31            * @{
+     32            */
+     33          
+     34          #if defined (COMP1) || defined (COMP2)
+     35          
+     36          /** @addtogroup COMP_LL COMP
+     37            * @{
+     38            */
+     39          
+     40          /* Private types -------------------------------------------------------------*/
+     41          /* Private variables ---------------------------------------------------------*/
+     42          /* Private constants ---------------------------------------------------------*/
+     43          /* Private macros ------------------------------------------------------------*/
+     44          
+     45          /** @addtogroup COMP_LL_Private_Macros
+     46            * @{
+     47            */
+     48          
+     49          /* Check of parameters for configuration of COMP hierarchical scope:          */
+     50          /* COMP instance.                                                             */
+     51          
+     52          #define IS_LL_COMP_POWER_MODE(__POWER_MODE__)                                  \
+     53            (   ((__POWER_MODE__) == LL_COMP_POWERMODE_HIGHSPEED)                        \
+     54             || ((__POWER_MODE__) == LL_COMP_POWERMODE_MEDIUMSPEED)                      \
+     55             || ((__POWER_MODE__) == LL_COMP_POWERMODE_ULTRALOWPOWER)                    \
+     56            )
+     57          
+     58          /* Note: On this STM32 series, comparator input plus parameters are           */
+     59          /*       the same on all COMP instances.                                      */
+     60          /*       However, comparator instance kept as macro parameter for             */
+     61          /*       compatibility with other STM32 families.                             */
+     62          #if defined(LL_COMP_INPUT_PLUS_IO1)
+     63          #define IS_LL_COMP_INPUT_PLUS(__COMP_INSTANCE__, __INPUT_PLUS__)               \
+     64            (   ((__INPUT_PLUS__) == LL_COMP_INPUT_PLUS_IO1)                             \
+     65             || ((__INPUT_PLUS__) == LL_COMP_INPUT_PLUS_IO2)                             \
+     66             || ((__INPUT_PLUS__) == LL_COMP_INPUT_PLUS_IO3)                             \
+     67            )
+     68          #else
+     69          #define IS_LL_COMP_INPUT_PLUS(__COMP_INSTANCE__, __INPUT_PLUS__)               \
+     70            (   ((__INPUT_PLUS__) == LL_COMP_INPUT_PLUS_IO2)                             \
+     71             || ((__INPUT_PLUS__) == LL_COMP_INPUT_PLUS_IO3)                             \
+     72            )
+     73          #endif
+     74          
+     75          /* Note: On this STM32 series, comparator input minus parameters are          */
+     76          /*       the same on all COMP instances.                                      */
+     77          /*       However, comparator instance kept as macro parameter for             */
+     78          /*       compatibility with other STM32 families.                             */
+     79          #if defined(LL_COMP_INPUT_MINUS_IO2)
+     80          #define IS_LL_COMP_INPUT_MINUS(__COMP_INSTANCE__, __INPUT_MINUS__)             \
+     81            (   ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_1_4VREFINT)                    \
+     82             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_1_2VREFINT)                    \
+     83             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_3_4VREFINT)                    \
+     84             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_VREFINT)                       \
+     85             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DACOUT)                        \
+     86             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_IO1)                           \
+     87             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_IO2)                           \
+     88             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_IO3)                           \
+     89            )
+     90          #else
+     91          #define IS_LL_COMP_INPUT_MINUS(__COMP_INSTANCE__, __INPUT_MINUS__)             \
+     92            (   ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_1_4VREFINT)                    \
+     93             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_1_2VREFINT)                    \
+     94             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_3_4VREFINT)                    \
+     95             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_VREFINT)                       \
+     96             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DACOUT)                        \
+     97             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_IO1)                           \
+     98             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_IO2)                           \
+     99             || ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_IO3)                           \
+    100            )
+    101          #endif
+    102          
+    103          #define IS_LL_COMP_INPUT_HYSTERESIS(__INPUT_HYSTERESIS__)                      \
+    104            (   ((__INPUT_HYSTERESIS__) == LL_COMP_HYSTERESIS_NONE)                      \
+    105             || ((__INPUT_HYSTERESIS__) == LL_COMP_HYSTERESIS_LOW)                       \
+    106             || ((__INPUT_HYSTERESIS__) == LL_COMP_HYSTERESIS_MEDIUM)                    \
+    107             || ((__INPUT_HYSTERESIS__) == LL_COMP_HYSTERESIS_HIGH)                      \
+    108            )
+    109          
+    110          #define IS_LL_COMP_OUTPUT_POLARITY(__POLARITY__)                               \
+    111            (   ((__POLARITY__) == LL_COMP_OUTPUTPOL_NONINVERTED)                        \
+    112             || ((__POLARITY__) == LL_COMP_OUTPUTPOL_INVERTED)                           \
+    113            )
+    114          
+    115          #define IS_LL_COMP_OUTPUT_BLANKING_SOURCE(__OUTPUT_BLANKING_SOURCE__)          \
+    116            (   ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)               \
+    117             || ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5)           \
+    118             || ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM2_OC3)           \
+    119            )
+    120          
+    121          /**
+    122            * @}
+    123            */
+    124          
+    125          
+    126          /* Private function prototypes -----------------------------------------------*/
+    127          
+    128          /* Exported functions --------------------------------------------------------*/
+    129          /** @addtogroup COMP_LL_Exported_Functions
+    130            * @{
+    131            */
+    132          
+    133          /** @addtogroup COMP_LL_EF_Init
+    134            * @{
+    135            */
+    136          
+    137          /**
+    138            * @brief  De-initialize registers of the selected COMP instance
+    139            *         to their default reset values.
+    140            * @note   If comparator is locked, de-initialization by software is
+    141            *         not possible.
+    142            *         The only way to unlock the comparator is a device hardware reset.
+    143            * @param  COMPx COMP instance
+    144            * @retval An ErrorStatus enumeration value:
+    145            *          - SUCCESS: COMP registers are de-initialized
+    146            *          - ERROR: COMP registers are not de-initialized
+    147            */
+    148          ErrorStatus LL_COMP_DeInit(COMP_TypeDef *COMPx)
+    149          {
+    150            ErrorStatus status = SUCCESS;
+    151          
+    152            /* Check the parameters */
+    153            assert_param(IS_COMP_ALL_INSTANCE(COMPx));
+    154          
+    155            /* Note: Hardware constraint (refer to description of this function):       */
+    156            /*       COMP instance must not be locked.                                  */
+    157            if (LL_COMP_IsLocked(COMPx) == 0UL)
+    158            {
+    159              LL_COMP_WriteReg(COMPx, CSR, 0x00000000UL);
+    160          
+    161            }
+    162            else
+    163            {
+    164              /* Comparator instance is locked: de-initialization by software is         */
+    165              /* not possible.                                                           */
+    166              /* The only way to unlock the comparator is a device hardware reset.       */
+    167              status = ERROR;
+    168            }
+    169          
+    170            return status;
+    171          }
+    172          
+    173          /**
+    174            * @brief  Initialize some features of COMP instance.
+    175            * @note   This function configures features of the selected COMP instance.
+    176            *         Some features are also available at scope COMP common instance
+    177            *         (common to several COMP instances).
+    178            *         Refer to functions having argument "COMPxy_COMMON" as parameter.
+    179            * @param  COMPx COMP instance
+    180            * @param  COMP_InitStruct Pointer to a @ref LL_COMP_InitTypeDef structure
+    181            * @retval An ErrorStatus enumeration value:
+    182            *          - SUCCESS: COMP registers are initialized
+    183            *          - ERROR: COMP registers are not initialized
+    184            */
+    185          ErrorStatus LL_COMP_Init(COMP_TypeDef *COMPx, LL_COMP_InitTypeDef *COMP_InitStruct)
+    186          {
+    187            ErrorStatus status = SUCCESS;
+    188          
+    189            /* Check the parameters */
+    190            assert_param(IS_COMP_ALL_INSTANCE(COMPx));
+    191            assert_param(IS_LL_COMP_POWER_MODE(COMP_InitStruct->PowerMode));
+    192            assert_param(IS_LL_COMP_INPUT_PLUS(COMPx, COMP_InitStruct->InputPlus));
+    193            assert_param(IS_LL_COMP_INPUT_MINUS(COMPx, COMP_InitStruct->InputMinus));
+    194            assert_param(IS_LL_COMP_INPUT_HYSTERESIS(COMP_InitStruct->InputHysteresis));
+    195            assert_param(IS_LL_COMP_OUTPUT_POLARITY(COMP_InitStruct->OutputPolarity));
+    196            assert_param(IS_LL_COMP_OUTPUT_BLANKING_SOURCE(COMP_InitStruct->OutputBlankingSource));
+    197          
+    198            /* Note: Hardware constraint (refer to description of this function)        */
+    199            /*       COMP instance must not be locked.                                  */
+    200            if (LL_COMP_IsLocked(COMPx) == 0UL)
+    201            {
+    202              /* Configuration of comparator instance :                                 */
+    203              /*  - PowerMode                                                           */
+    204              /*  - InputPlus                                                           */
+    205              /*  - InputMinus                                                          */
+    206              /*  - InputHysteresis                                                     */
+    207              /*  - OutputPolarity                                                      */
+    208              /*  - OutputBlankingSource                                                */
+    209              MODIFY_REG(COMPx->CSR,
+    210                         COMP_CSR_PWRMODE
+    211                         | COMP_CSR_INPSEL
+    212                         | COMP_CSR_BRGEN
+    213                         | COMP_CSR_INMSEL
+    214                         | COMP_CSR_HYST
+    215                         | COMP_CSR_POLARITY
+    216                         | COMP_CSR_BLANKING
+    217                         ,
+    218                         COMP_InitStruct->PowerMode
+    219                         | COMP_InitStruct->InputPlus
+    220                         | COMP_InitStruct->InputMinus
+    221                         | COMP_InitStruct->InputHysteresis
+    222                         | COMP_InitStruct->OutputPolarity
+    223                         | COMP_InitStruct->OutputBlankingSource
+    224                        );
+    225          
+    226            }
+    227            else
+    228            {
+    229              /* Initialization error: COMP instance is locked.                         */
+    230              status = ERROR;
+    231            }
+    232          
+    233            return status;
+    234          }
+    235          
+    236          /**
+    237            * @brief Set each @ref LL_COMP_InitTypeDef field to default value.
+    238            * @param COMP_InitStruct Pointer to a @ref LL_COMP_InitTypeDef structure
+    239            *                        whose fields will be set to default values.
+    240            * @retval None
+    241            */
+    242          void LL_COMP_StructInit(LL_COMP_InitTypeDef *COMP_InitStruct)
+    243          {
+    244            /* Set COMP_InitStruct fields to default values */
+    245            COMP_InitStruct->PowerMode            = LL_COMP_POWERMODE_ULTRALOWPOWER;
+    246          #if defined(LL_COMP_INPUT_PLUS_IO1)
+    247            COMP_InitStruct->InputPlus            = LL_COMP_INPUT_PLUS_IO1;
+    248          #else
+    249            COMP_InitStruct->InputPlus            = LL_COMP_INPUT_PLUS_IO2;
+    250          #endif
+    251            COMP_InitStruct->InputMinus           = LL_COMP_INPUT_MINUS_VREFINT;
+    252            COMP_InitStruct->InputHysteresis      = LL_COMP_HYSTERESIS_NONE;
+    253            COMP_InitStruct->OutputPolarity       = LL_COMP_OUTPUTPOL_NONINVERTED;
+    254            COMP_InitStruct->OutputBlankingSource = LL_COMP_BLANKINGSRC_NONE;
+    255          }
+    256          
+    257          /**
+    258            * @}
+    259            */
+    260          
+    261          /**
+    262            * @}
+    263            */
+    264          
+    265          /**
+    266            * @}
+    267            */
+    268          
+    269          #endif /* COMP1 || COMP2 */
+    270          
+    271          /**
+    272            * @}
+    273            */
+    274          
+    275          #endif /* USE_FULL_LL_DRIVER */
+    276          
+    277          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

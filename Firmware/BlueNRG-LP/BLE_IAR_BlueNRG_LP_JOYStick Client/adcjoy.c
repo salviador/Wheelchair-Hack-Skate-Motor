@@ -29,9 +29,15 @@
 #define PRINT_FLOAT(x)  (x>0)? ((int) (((x) - PRINT_INT(x)) * 1000)) : (-1*(((int) (((x) - PRINT_INT(x)) * 1000))))
 
 
+#define ADC_DMA_BUF_LEN  21 //15 //9             //4.83mA
+//#define ADC_DMA_BUF_LEN  9              //4.81mA
 
 
-#define ADC_DMA_BUF_LEN  21 //15 //9 
+
+
+
+
+
 
 ADC_HandleTypeDef adc_handle;
 ADC_ConfigChannelTypeDef xChannel;
@@ -290,8 +296,13 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
 
     //ADJUST OFFSET
    
-    wheelJOY->uJoy_x = wheelJOY->uJoy_x + 59;
-    wheelJOY->uJoy_y = wheelJOY->uJoy_y + 82;
+    
+    wheelJOY->uJoy_x = wheelJOY->uJoy_x * -1;
+
+        
+        
+    wheelJOY->uJoy_x = wheelJOY->uJoy_x - 96;
+    wheelJOY->uJoy_y = wheelJOY->uJoy_y + 73;
 
     //Ymax = 961
     //Ymin = -795
@@ -299,32 +310,24 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
     //Xmin = -926
 
     //Invert x
-    wheelJOY->uJoy_x = wheelJOY->uJoy_x * -1;
 
-    /*
-    if((wheelJOY->uJoy_y > -4)&&(wheelJOY->uJoy_y < 4)){
-      wheelJOY->uJoy_y  = 0;
-    }
     
-    wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,-795,961,-1000,1000);
-    wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,-926,941,-1000,1000);
-    */
 
     if(wheelJOY->uJoy_y < 0){
-      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,-800,0,-1000,0);
+      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,-927,0,-1000,0);
     }else if(wheelJOY->uJoy_y > 0){
-      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,0,970,0,1000);
+      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,0,955,0,1000);
     }
     if(wheelJOY->uJoy_x < 0){
-      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,-932,0,-1000,0);
+      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,-988,0,-1000,0);
     }else if(wheelJOY->uJoy_x > 0){
-      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,0,945,0,1000);
+      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,0,904,0,1000);
     }
 
 
 
 
-
+/*
     
      //LIMIT
     if(wheelJOY->uJoy_x > 1000)
@@ -339,7 +342,7 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
 
     //Invert x
     //wheelJOY->uJoy_x = wheelJOY->uJoy_x * -1;
-  
+  */
 }
 
 

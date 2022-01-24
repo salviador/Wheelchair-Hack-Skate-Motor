@@ -1,0 +1,1562 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         06/Dec/2021  18:43:14
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\gatt_db.c
+#    Command line                 =
+#        -f "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Debug\Obj\gatt_db.o.rsp" ("D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick Server\gatt_db.c" -D
+#        USE_FULL_LL_DRIVER -D STEVAL_IDB011V1 -D CONFIG_DEVICE_BLUENRG_LP -D
+#        CONFIG_HW_SMPS_10uH -D CONFIG_HW_HSE_TUNE=32 -D USER_BUTTON=BSP_PUSH1
+#        -D CONFIG_HW_LS_XTAL -D BLE_STACK_BASIC_CONF -lC "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick Server\Debug\List\\"
+#        --diag_suppress Pe1665 -o "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick Server\Debug\Obj\\" --no_cse
+#        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
+#        --no_scheduling --debug --endian=little --cpu=Cortex-M0+ -e --fpu=None
+#        --dlib_config "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick Server\\" -I "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Drivers\Peripherals_Drivers\Inc\\" -I "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Drivers\CMSIS\Device\ST\BlueNRG_LP\Include\\" -I
+#        "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\hal\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\PKAMGR\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\RNGMGR\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\AESMGR\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\BLECNTR\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick Server\Drivers\CMSIS\Include\\"
+#        -I "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Drivers/BSP/STEVAL-IDB011V1/Inc\\" -I "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Drivers\BSP\Common\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Drivers\BSP\Components\lps22hh_STdC\driver\\" -I
+#        "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Drivers\BSP\Components\lsm6dsox_STdC\driver\\" -I
+#        "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\BLE_Application\layers_inc\\" -I
+#        "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\Bluetooth_LE\Inc\\" -I "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\BLE_Application\OTA\inc\\" -I "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\NVMDB\Inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\BLE_Application\Profiles\Inc\\" -I
+#        "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\cryptolib\inc\\" -I "D:\Progetti\Sedia Rotelle
+#        SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\cryptolib\inc\Common\\" -I "D:\Progetti\Sedia
+#        Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Middlewares\ST\cryptolib\inc\AES\\" -On) --dependencies=n
+#        "D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Debug\Obj\gatt_db.o.d"
+#    Locale                       =  C
+#    List file                    =
+#        D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Debug\List\\gatt_db.lst
+#    Object file                  =
+#        D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick
+#        Server\Debug\Obj\\gatt_db.o
+#    Runtime model:                  
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  0
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+D:\Progetti\Sedia Rotelle SkateMotor\BLE_IAR_BlueNRG_LP_JOYStick Server\gatt_db.c
+      1          /******************** (C) COPYRIGHT 2019 STMicroelectronics ********************
+      2          * File Name          : gatt_db.c
+      3          * Author             : BlueNRG-LP database file for Sensor demo
+      4          * Version            : V1.0.0
+      5          * Date               : 02-April-2019
+      6          * Description        : Functions to build GATT DB and handle GATT events.
+      7          ********************************************************************************
+      8          * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+      9          * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
+     10          * AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT,
+     11          * INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE
+     12          * CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING
+     13          * INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+     14          *******************************************************************************/
+     15          
+     16          
+     17          #include <stdio.h>
+     18          #include <string.h>
+     19          #include <stdlib.h>
+     20          #include "ble_const.h" 
+     21          #include "bluenrg_lp_stack.h"
+     22          #include "clock.h" 
+     23          #include "gp_timer.h" 
+     24          #include "gatt_db.h"
+     25          #include "osal.h"
+     26          #include "BLE_GATT_Service_config.h"
+     27          #include "gatt_profile.h"
+     28          #include "gap_profile.h"
+     29          #include "OTA_btl.h" 
+     30          
+     31          
+     32          #include "bluenrg_lp_evb_config.h" 
+     33          
+     34          #ifndef DEBUG
+     35          #define DEBUG 0
+     36          #endif
+     37          
+     38          #if DEBUG
+     39          #include <stdio.h>
+     40          #define PRINTF(...) printf(__VA_ARGS__)
+     41          #else
+     42          #define PRINTF(...)
+     43          #endif
+     44          
+     45          #define ACC_SERVICE_UUID        0x1b,0xc5,0xd5,0xa5,0x02,0x00,0xb4,0x9a,0xe1,0x11,0x3a,0xcf,0x80,0x6e,0x36,0x02
+     46          #define FREE_FALL_UUID          0x1b,0xc5,0xd5,0xa5,0x02,0x00,0xfc,0x8f,0xe1,0x11,0x4a,0xcf,0xa0,0x78,0x3e,0xe2
+     47          #define ACC_UUID                0x1b,0xc5,0xd5,0xa5,0x02,0x00,0x36,0xac,0xe1,0x11,0x4b,0xcf,0x80,0x1b,0x0a,0x34
+     48          #define ENV_SENS_SERVICE_UUID   0x1b,0xc5,0xd5,0xa5,0x02,0x00,0xd0,0x82,0xe2,0x11,0x77,0xe4,0x40,0x1a,0x82,0x42
+     49          #define TEMP_CHAR_UUID          0x1b,0xc5,0xd5,0xa5,0x02,0x00,0xe3,0xa9,0xe2,0x11,0x77,0xe4,0x20,0x55,0x2e,0xa3
+     50          #define PRESS_CHAR_UUID         0x1b,0xc5,0xd5,0xa5,0x02,0x00,0x0b,0x84,0xe2,0x11,0x8b,0xe4,0x80,0xc4,0x20,0xcd
+     51          
+
+   \                                 In section .bss, align 2
+     52          uint16_t accServHandle, freeFallCharHandle, accCharHandle;
+   \                     accServHandle:
+   \        0x0                      DS8 2
+
+   \                                 In section .bss, align 2
+   \                     freeFallCharHandle:
+   \        0x0                      DS8 2
+
+   \                                 In section .bss, align 2
+   \                     accCharHandle:
+   \        0x0                      DS8 2
+
+   \                                 In section .bss, align 2
+     53          uint16_t envSensServHandle, tempCharHandle, pressCharHandle;
+   \                     envSensServHandle:
+   \        0x0                      DS8 2
+
+   \                                 In section .bss, align 2
+   \                     tempCharHandle:
+   \        0x0                      DS8 2
+
+   \                                 In section .bss, align 2
+   \                     pressCharHandle:
+   \        0x0                      DS8 2
+     54          
+     55          extern uint16_t connection_handle;
+     56          extern BOOL sensor_board;
+     57          
+     58          #ifndef SENSOR_ACCELEROMETER_EMULATION
+     59          extern lsm6dsox_ctx_t inertialHandle;
+     60          #endif
+     61          
+     62          #ifndef SENSOR_PRESSURE_TEMPERATURE_EMULATION
+     63          extern lps22hh_ctx_t pressureHandle;
+     64          #endif
+     65          
+     66          /* Client Configuration Characteristics Descriptor Definition: free fall characteristic  */
+
+   \                                 In section .data, align 4
+     67          BLE_GATT_SRV_CCCD_DECLARE(free_fall,
+     68                               NUM_LINKS,
+     69                               BLE_GATT_SRV_CCCD_PERM_DEFAULT,
+     70                               BLE_GATT_SRV_OP_MODIFIED_EVT_ENABLE_FLAG);
+   \                     free_fall_cccd:
+   \        0x0   0x03 0x07          DC8 3, 7, 0
+
+   \              0x00
+   \        0x3                      DS8 1
+   \        0x4   0xFB 0x34          DC8 251, 52, 155, 95, 128, 0, 0, 128, 0, 16, 0, 0
+
+   \              0x9B 0x5F    
+
+   \              0x80 0x00    
+
+   \              0x00 0x80    
+
+   \              0x00 0x10    
+
+   \              0x00 0x00
+   \       0x10   0x2902 0x0000      DC16 10'498, 0
+   \       0x14   0x10               DC8 16
+   \       0x15                      DS8 3
+   \       0x18   0x....'....        DC32 free_fall_cccd_val_buffer
+
+   \                                 In section .bss, align 1
+   \   static __absolute uint8_t free_fall_cccd_buffer[1]
+   \                     free_fall_cccd_buffer:
+   \        0x0                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \   static __absolute ble_gatt_val_buffer_def_t const free_fall_cccd_val_buffer
+   \                     free_fall_cccd_val_buffer:
+   \        0x0   0x01               DC8 1
+   \        0x1                      DS8 1
+   \        0x2   0x0000 0x0001      DC16 0, 1
+   \        0x6                      DS8 2
+   \        0x8   0x....'....        DC32 free_fall_cccd_buffer
+     71          
+     72          /* Client Configuration Characteristics Descriptor Definition: acceleration characteristic*/
+
+   \                                 In section .data, align 4
+     73          BLE_GATT_SRV_CCCD_DECLARE(accell,
+     74                               NUM_LINKS,
+     75                               BLE_GATT_SRV_CCCD_PERM_DEFAULT,
+     76                               BLE_GATT_SRV_OP_MODIFIED_EVT_ENABLE_FLAG);
+   \                     accell_cccd:
+   \        0x0   0x03 0x07          DC8 3, 7, 0
+
+   \              0x00
+   \        0x3                      DS8 1
+   \        0x4   0xFB 0x34          DC8 251, 52, 155, 95, 128, 0, 0, 128, 0, 16, 0, 0
+
+   \              0x9B 0x5F    
+
+   \              0x80 0x00    
+
+   \              0x00 0x80    
+
+   \              0x00 0x10    
+
+   \              0x00 0x00
+   \       0x10   0x2902 0x0000      DC16 10'498, 0
+   \       0x14   0x10               DC8 16
+   \       0x15                      DS8 3
+   \       0x18   0x....'....        DC32 accell_cccd_val_buffer
+
+   \                                 In section .bss, align 1
+   \   static __absolute uint8_t accell_cccd_buffer[1]
+   \                     accell_cccd_buffer:
+   \        0x0                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \   static __absolute ble_gatt_val_buffer_def_t const accell_cccd_val_buffer
+   \                     accell_cccd_val_buffer:
+   \        0x0   0x01               DC8 1
+   \        0x1                      DS8 1
+   \        0x2   0x0000 0x0001      DC16 0, 1
+   \        0x6                      DS8 2
+   \        0x8   0x....'....        DC32 accell_cccd_buffer
+     77          
+     78          /* Acceleration Service Characteristics Definition */
+
+   \                                 In section .data, align 4
+     79          static ble_gatt_chr_def_t acc_chars[] = {
+   \                     acc_chars:
+   \        0x0   0x10 0x10          DC8 16, 16, 0
+
+   \              0x00
+   \        0x3                      DS8 1
+   \        0x4   0x1B 0xC5          DC8 27, 197, 213, 165, 2, 0, 252, 143, 225, 17, 74, 207, 160, 120, 62
+
+   \              0xD5 0xA5    
+
+   \              0x02 0x00    
+
+   \              0xFC 0x8F    
+
+   \              0xE1 0x11    
+
+   \              0x4A 0xCF    
+
+   \              0xA0 0x78    
+
+   \              0x3E
+   \       0x13   0xE2 0x80          DC8 226, 128
+   \       0x15                      DS8 3
+   \       0x18   0x01               DC8 1
+   \       0x19                      DS8 3
+   \       0x1C   0x....'....        DC32 free_fall_cccd
+   \       0x20                      DS8 4
+   \       0x24   0x12 0x10          DC8 18, 16, 0
+
+   \              0x00
+   \       0x27                      DS8 1
+   \       0x28   0x1B 0xC5          DC8 27, 197, 213, 165, 2, 0, 54, 172, 225, 17, 75, 207, 128, 27, 10, 52
+
+   \              0xD5 0xA5    
+
+   \              0x02 0x00    
+
+   \              0x36 0xAC    
+
+   \              0xE1 0x11    
+
+   \              0x4B 0xCF    
+
+   \              0x80 0x1B    
+
+   \              0x0A 0x34
+   \       0x38   0x80               DC8 128
+   \       0x39                      DS8 3
+   \       0x3C   0x01               DC8 1
+   \       0x3D                      DS8 3
+   \       0x40   0x....'....        DC32 accell_cccd
+   \       0x44                      DS8 4
+     80              /* Free Fall characteristic */
+     81              {
+     82                  .properties = BLE_GATT_SRV_CHAR_PROP_NOTIFY,
+     83                  .permissions = BLE_GATT_SRV_PERM_NONE,
+     84                  .min_key_size = BLE_GATT_SRV_MAX_ENCRY_KEY_SIZE,
+     85                  .uuid = BLE_UUID_INIT_128(FREE_FALL_UUID),
+     86                  .descrs = {
+     87                      .descrs_p = &BLE_GATT_SRV_CCCD_DEF_NAME(free_fall),
+     88                      .descr_count = 1U,
+     89                  },
+     90              },
+     91              /* Acceleration characteristic */
+     92              {
+     93                  .properties = BLE_GATT_SRV_CHAR_PROP_NOTIFY | BLE_GATT_SRV_CHAR_PROP_READ,
+     94                  .permissions = BLE_GATT_SRV_PERM_NONE,
+     95                  .min_key_size = BLE_GATT_SRV_MAX_ENCRY_KEY_SIZE,
+     96                  .uuid = BLE_UUID_INIT_128(ACC_UUID),
+     97                  .descrs = {
+     98                      .descrs_p = &BLE_GATT_SRV_CCCD_DEF_NAME(accell),
+     99                      .descr_count = 1U,
+    100                  },
+    101              }
+    102          };
+    103          
+    104          /* Acceleration service definition */
+
+   \                                 In section .data, align 4
+    105          static ble_gatt_srv_def_t acc_service = {
+   \                     acc_service:
+   \        0x0   0x1B 0xC5          DC8 27, 197, 213, 165, 2, 0, 180, 154, 225, 17, 58, 207, 128, 110, 54
+
+   \              0xD5 0xA5    
+
+   \              0x02 0x00    
+
+   \              0xB4 0x9A    
+
+   \              0xE1 0x11    
+
+   \              0x3A 0xCF    
+
+   \              0x80 0x6E    
+
+   \              0x36
+   \        0xF   0x02 0x80          DC8 2, 128
+   \       0x11                      DS8 3
+   \       0x14   0x01               DC8 1
+   \       0x15                      DS8 1
+   \       0x16   0x0000             DC16 0
+   \       0x18   0x00               DC8 0
+   \       0x19                      DS8 7
+   \       0x20   0x02               DC8 2
+   \       0x21                      DS8 3
+   \       0x24   0x....'....        DC32 acc_chars
+    106             .type = BLE_GATT_SRV_PRIMARY_SRV_TYPE,
+    107             .uuid = BLE_UUID_INIT_128(ACC_SERVICE_UUID),
+    108             .chrs = {
+    109                 .chrs_p = acc_chars,
+    110                 .chr_count = 2U,
+    111             },
+    112          };
+    113          
+    114          /* Temperature characteristic format descriptor definition */
+
+   \                                 In section .data, align 4
+    115          static charactFormat temp_char_format = {
+   \                     temp_char_format:
+   \        0x0   0x0E 0xFF          DC8 14, -1
+   \        0x2   0x272F             DC16 10'031
+   \        0x4   0x00               DC8 0
+   \        0x5   0x0000             DC16 0
+   \        0x7                      DS8 1
+    116              .format = FORMAT_SINT16,
+    117              .exp = -1,
+    118              .unit = UNIT_TEMP_CELSIUS,
+    119              .name_space = 0,
+    120              .desc = 0,
+    121          };
+    122          
+    123          /* Pressure characteristic format descriptor definition */
+
+   \                                 In section .data, align 4
+    124          static charactFormat press_char_format = {
+   \                     press_char_format:
+   \        0x0   0x0F 0xFB          DC8 15, -5
+   \        0x2   0x2780             DC16 10'112
+   \        0x4   0x00               DC8 0
+   \        0x5   0x0000             DC16 0
+   \        0x7                      DS8 1
+    125              .format = FORMAT_SINT24,
+    126              .exp = -5,
+    127              .unit = UNIT_PRESSURE_BAR,
+    128              .name_space = 0,
+    129              .desc = 0,
+    130          };
+    131          
+    132          /* Environmental temperature and pressure characteristic descriptor format definition */ 
+
+   \                                 In section .data, align 4
+    133          static ble_gatt_val_buffer_def_t env_descr_val_buffers[] =
+   \                     env_descr_val_buffers:
+   \        0x0   0x00               DC8 0
+   \        0x1                      DS8 1
+   \        0x2   0x0000 0x0007      DC16 0, 7
+   \        0x6                      DS8 2
+   \        0x8   0x....'....        DC32 temp_char_format
+   \        0xC   0x00               DC8 0
+   \        0xD                      DS8 1
+   \        0xE   0x0000 0x0007      DC16 0, 7
+   \       0x12                      DS8 2
+   \       0x14   0x....'....        DC32 press_char_format
+    134          {
+    135              {
+    136                  .buffer_len = 7,
+    137                  .buffer_p = (uint8_t *)&temp_char_format,
+    138              },
+    139              {
+    140                  .buffer_len = 7,
+    141                  .buffer_p = (uint8_t *)&press_char_format,
+    142              }
+    143          };
+    144          
+    145          /* Environmental temperature and pressure characteristic descriptor definition */ 
+
+   \                                 In section .data, align 4
+    146          static ble_gatt_descr_def_t env_descrs[] =
+   \                     env_descrs:
+   \        0x0   0x01 0x10          DC8 1, 16, 0
+
+   \              0x00
+   \        0x3                      DS8 1
+   \        0x4   0xFB 0x34          DC8 251, 52, 155, 95, 128, 0, 0, 128, 0, 16, 0, 0
+
+   \              0x9B 0x5F    
+
+   \              0x80 0x00    
+
+   \              0x00 0x80    
+
+   \              0x00 0x10    
+
+   \              0x00 0x00
+   \       0x10   0x2904 0x0000      DC16 10'500, 0
+   \       0x14   0x10               DC8 16
+   \       0x15                      DS8 3
+   \       0x18   0x....'....        DC32 env_descr_val_buffers
+   \       0x1C   0x01 0x10          DC8 1, 16, 0
+
+   \              0x00
+   \       0x1F                      DS8 1
+   \       0x20   0xFB 0x34          DC8 251, 52, 155, 95, 128, 0, 0, 128, 0, 16, 0, 0
+
+   \              0x9B 0x5F    
+
+   \              0x80 0x00    
+
+   \              0x00 0x80    
+
+   \              0x00 0x10    
+
+   \              0x00 0x00
+   \       0x2C   0x2904 0x0000      DC16 10'500, 0
+   \       0x30   0x10               DC8 16
+   \       0x31                      DS8 3
+   \       0x34   0x....'....        DC32 env_descr_val_buffers + 0xc
+    147          {
+    148              {
+    149                  .uuid = BLE_UUID_INIT_16(CHAR_FORMAT_DESC_UUID),
+    150                  .permissions = BLE_GATT_SRV_PERM_NONE,
+    151                  .properties = BLE_GATT_SRV_DESCR_PROP_READ,
+    152                  .min_key_size = BLE_GATT_SRV_MAX_ENCRY_KEY_SIZE,
+    153                  .val_buffer_p = &env_descr_val_buffers[0], /* temperature char format */
+    154              },
+    155              {
+    156                  .uuid = BLE_UUID_INIT_16(CHAR_FORMAT_DESC_UUID),
+    157                  .permissions = BLE_GATT_SRV_PERM_NONE,
+    158                  .properties = BLE_GATT_SRV_DESCR_PROP_READ,
+    159                  .min_key_size = BLE_GATT_SRV_MAX_ENCRY_KEY_SIZE,
+    160                  .val_buffer_p = &env_descr_val_buffers[1], /* pressure  char format */
+    161              },
+    162          };
+    163          
+    164          /* Environmental temperature and pressure characteristic  definition */ 
+
+   \                                 In section .data, align 4
+    165          static ble_gatt_chr_def_t env_chars[] = {
+   \                     env_chars:
+   \        0x0   0x02 0x10          DC8 2, 16, 0
+
+   \              0x00
+   \        0x3                      DS8 1
+   \        0x4   0x1B 0xC5          DC8 27, 197, 213, 165, 2, 0, 227, 169, 226, 17, 119, 228, 32, 85, 46
+
+   \              0xD5 0xA5    
+
+   \              0x02 0x00    
+
+   \              0xE3 0xA9    
+
+   \              0xE2 0x11    
+
+   \              0x77 0xE4    
+
+   \              0x20 0x55    
+
+   \              0x2E
+   \       0x13   0xA3 0x80          DC8 163, 128
+   \       0x15                      DS8 3
+   \       0x18   0x01               DC8 1
+   \       0x19                      DS8 3
+   \       0x1C   0x....'....        DC32 env_descrs
+   \       0x20                      DS8 4
+   \       0x24   0x02 0x10          DC8 2, 16, 0
+
+   \              0x00
+   \       0x27                      DS8 1
+   \       0x28   0x1B 0xC5          DC8 27, 197, 213, 165, 2, 0, 11, 132, 226, 17, 139, 228, 128, 196, 32
+
+   \              0xD5 0xA5    
+
+   \              0x02 0x00    
+
+   \              0x0B 0x84    
+
+   \              0xE2 0x11    
+
+   \              0x8B 0xE4    
+
+   \              0x80 0xC4    
+
+   \              0x20
+   \       0x37   0xCD 0x80          DC8 205, 128
+   \       0x39                      DS8 3
+   \       0x3C   0x01               DC8 1
+   \       0x3D                      DS8 3
+   \       0x40   0x....'....        DC32 env_descrs + 0x1c
+   \       0x44                      DS8 4
+    166              {/* Temperature Characteristic */
+    167                  .properties = BLE_GATT_SRV_CHAR_PROP_READ,
+    168                  .permissions = BLE_GATT_SRV_PERM_NONE,
+    169                  .min_key_size = BLE_GATT_SRV_MAX_ENCRY_KEY_SIZE,
+    170                  .uuid = BLE_UUID_INIT_128(TEMP_CHAR_UUID),
+    171                  .descrs = {
+    172                      .descrs_p = &env_descrs[0],
+    173                      .descr_count = 1,
+    174                  },
+    175              },
+    176              {/* Pressure Characteristic */
+    177                  .properties = BLE_GATT_SRV_CHAR_PROP_READ,
+    178                  .permissions = BLE_GATT_SRV_PERM_NONE,
+    179                  .min_key_size = BLE_GATT_SRV_MAX_ENCRY_KEY_SIZE,
+    180                  .uuid = BLE_UUID_INIT_128(PRESS_CHAR_UUID),
+    181                  .descrs = {
+    182                      .descrs_p = &env_descrs[1],
+    183                      .descr_count = 1,
+    184                  },
+    185              },
+    186          };
+    187          
+    188          /* Environmental service definition */ 
+
+   \                                 In section .data, align 4
+    189          static ble_gatt_srv_def_t env_service = {
+   \                     env_service:
+   \        0x0   0x1B 0xC5          DC8 27, 197, 213, 165, 2, 0, 208, 130, 226, 17, 119, 228, 64, 26, 130
+
+   \              0xD5 0xA5    
+
+   \              0x02 0x00    
+
+   \              0xD0 0x82    
+
+   \              0xE2 0x11    
+
+   \              0x77 0xE4    
+
+   \              0x40 0x1A    
+
+   \              0x82
+   \        0xF   0x42 0x80          DC8 66, 128
+   \       0x11                      DS8 3
+   \       0x14   0x01               DC8 1
+   \       0x15                      DS8 1
+   \       0x16   0x0000             DC16 0
+   \       0x18   0x00               DC8 0
+   \       0x19                      DS8 7
+   \       0x20   0x02               DC8 2
+   \       0x21                      DS8 3
+   \       0x24   0x....'....        DC32 env_chars
+    190             .type = BLE_GATT_SRV_PRIMARY_SRV_TYPE,
+    191             .uuid = BLE_UUID_INIT_128(ENV_SENS_SERVICE_UUID),
+    192             .chrs = {
+    193                 .chrs_p = env_chars,
+    194                 .chr_count = 2U,
+    195             },
+    196          };
+    197          
+
+   \                                 In section .text, align 2, keep-with-next
+    198          uint8_t GetAccAxesRaw(AxesRaw_t * acceleration_data)
+    199          {
+   \                     GetAccAxesRaw: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0xB084             SUB      SP,SP,#+16
+   \        0x4   0x0006             MOVS     R6,R0
+    200            
+    201          #ifdef SENSOR_ACCELEROMETER_EMULATION
+    202            uint8_t tmp = 1;
+    203            acceleration_data->AXIS_X = ((uint64_t)rand()) % X_OFFSET;
+    204            acceleration_data->AXIS_Y = ((uint64_t)rand()) % Y_OFFSET; 
+    205            acceleration_data->AXIS_Z = ((uint64_t)rand()) % Z_OFFSET;
+    206          #else
+    207            uint8_t tmp = 0;
+   \        0x6   0x2500             MOVS     R5,#+0
+   \        0x8   0x0028             MOVS     R0,R5
+   \        0xA   0x4669             MOV      R1,SP
+   \        0xC   0x7008             STRB     R0,[R1, #+0]
+    208            (void)tmp;
+    209            
+    210            axis3bit16_t data_raw_acceleration;
+    211              
+    212             /* Read output only if new value is available */
+    213            lsm6dsox_xl_flag_data_ready_get(&inertialHandle, &tmp);
+   \        0xE   0x....             LDR      R4,??DataTable9
+   \       0x10   0x4669             MOV      R1,SP
+   \       0x12   0x0020             MOVS     R0,R4
+   \       0x14   0x.... 0x....      BL       lsm6dsox_xl_flag_data_ready_get
+    214            if(tmp)
+   \       0x18   0x4668             MOV      R0,SP
+   \       0x1A   0x7800             LDRB     R0,[R0, #+0]
+   \       0x1C   0x2800             CMP      R0,#+0
+   \       0x1E   0xD021             BEQ      ??GetAccAxesRaw_0
+    215            {
+    216              memset(data_raw_acceleration.u8bit, 0x00, 3 * sizeof(int16_t));
+   \       0x20   0x2706             MOVS     R7,#+6
+   \       0x22   0x9501             STR      R5,[SP, #+4]
+   \       0x24   0xAD02             ADD      R5,SP,#+8
+   \       0x26   0x9A01             LDR      R2,[SP, #+4]
+   \       0x28   0x0039             MOVS     R1,R7
+   \       0x2A   0x0028             MOVS     R0,R5
+   \       0x2C   0x.... 0x....      BL       __aeabi_memset
+    217              /* Read acceleration field data */
+    218              lsm6dsox_acceleration_raw_get(&inertialHandle, data_raw_acceleration.u8bit);
+   \       0x30   0xA902             ADD      R1,SP,#+8
+   \       0x32   0x0020             MOVS     R0,R4
+   \       0x34   0x.... 0x....      BL       lsm6dsox_acceleration_raw_get
+    219              acceleration_data->AXIS_X = (int32_t)lsm6dsox_from_fs2_to_mg(data_raw_acceleration.i16bit[0]); 
+   \       0x38   0xAC02             ADD      R4,SP,#+8
+   \       0x3A   0x2000             MOVS     R0,#+0
+   \       0x3C   0x5E20             LDRSH    R0,[R4, R0]
+   \       0x3E   0x.... 0x....      BL       lsm6dsox_from_fs2_to_mg
+   \       0x42   0x.... 0x....      BL       __aeabi_f2iz
+   \       0x46   0x6030             STR      R0,[R6, #+0]
+    220              acceleration_data->AXIS_Y = (int32_t)lsm6dsox_from_fs2_to_mg(data_raw_acceleration.i16bit[1]);
+   \       0x48   0x2002             MOVS     R0,#+2
+   \       0x4A   0x5E20             LDRSH    R0,[R4, R0]
+   \       0x4C   0x.... 0x....      BL       lsm6dsox_from_fs2_to_mg
+   \       0x50   0x.... 0x....      BL       __aeabi_f2iz
+   \       0x54   0x6070             STR      R0,[R6, #+4]
+    221              acceleration_data->AXIS_Z = (int32_t)lsm6dsox_from_fs2_to_mg(data_raw_acceleration.i16bit[2]);
+   \       0x56   0x2004             MOVS     R0,#+4
+   \       0x58   0x5E20             LDRSH    R0,[R4, R0]
+   \       0x5A   0x.... 0x....      BL       lsm6dsox_from_fs2_to_mg
+   \       0x5E   0x.... 0x....      BL       __aeabi_f2iz
+   \       0x62   0x60B0             STR      R0,[R6, #+8]
+    222            }
+    223                
+    224          #endif 
+    225            return tmp;
+   \                     ??GetAccAxesRaw_0: (+1)
+   \       0x64   0x4668             MOV      R0,SP
+   \       0x66   0x7800             LDRB     R0,[R0, #+0]
+   \       0x68   0xB005             ADD      SP,SP,#+20
+   \       0x6A   0xBDF0             POP      {R4-R7,PC}
+    226          }
+    227          
+    228          
+
+   \                                 In section .text, align 2, keep-with-next
+    229          void GetFreeFallStatus(void) 
+    230          {
+   \                     GetFreeFallStatus: (+1)
+   \        0x0   0xB5E0             PUSH     {R5-R7,LR}
+    231          #ifndef SENSOR_ACCELEROMETER_EMULATION
+    232            
+    233            lsm6dsox_all_sources_t all_source;
+    234          
+    235            /* Check if Free Fall events
+    236            */
+    237            lsm6dsox_all_sources_get(&inertialHandle, &all_source);
+   \        0x2   0x4669             MOV      R1,SP
+   \        0x4   0x....             LDR      R0,??DataTable9
+   \        0x6   0x.... 0x....      BL       lsm6dsox_all_sources_get
+    238            if (all_source.wake_up_src.ff_ia)
+   \        0xA   0x2001             MOVS     R0,#+1
+   \        0xC   0x4669             MOV      R1,SP
+   \        0xE   0x7849             LDRB     R1,[R1, #+1]
+   \       0x10   0xB2C9             UXTB     R1,R1
+   \       0x12   0x0949             LSRS     R1,R1,#+5
+   \       0x14   0x0002             MOVS     R2,R0
+   \       0x16   0x400A             ANDS     R2,R2,R1
+   \       0x18   0xB2D2             UXTB     R2,R2
+   \       0x1A   0x2A00             CMP      R2,#+0
+   \       0x1C   0xD001             BEQ      ??GetFreeFallStatus_0
+    239            {
+    240              request_free_fall_notify = TRUE;
+   \       0x1E   0x....             LDR      R1,??DataTable10
+   \       0x20   0x7008             STRB     R0,[R1, #+0]
+    241            }
+    242          #endif
+    243          }
+   \                     ??GetFreeFallStatus_0: (+1)
+   \       0x22   0xBD07             POP      {R0-R2,PC}
+    244          
+    245          /*******************************************************************************
+    246          * Function Name  : Add_Chat_Service
+    247          * Description    : Add the 'Accelerometer' service.
+    248          * Input          : None
+    249          * Return         : Status.
+    250          *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    251          tBleStatus Add_Acc_Service(void)
+    252          {
+   \                     Add_Acc_Service: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+    253            tBleStatus ret;
+    254          
+    255            ret = aci_gatt_srv_add_service(&acc_service);
+   \        0x2   0x....             LDR      R5,??DataTable9_1
+   \        0x4   0x0028             MOVS     R0,R5
+   \        0x6   0x.... 0x....      BL       aci_gatt_srv_add_service
+   \        0xA   0x0004             MOVS     R4,R0
+    256            if (ret != BLE_STATUS_SUCCESS)
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0xB2C0             UXTB     R0,R0
+   \       0x10   0x2800             CMP      R0,#+0
+   \       0x12   0xD001             BEQ      ??Add_Acc_Service_0
+    257            {
+    258              goto fail;
+    259            }
+    260            
+    261            accServHandle = aci_gatt_srv_get_service_handle(&acc_service);
+    262            freeFallCharHandle = aci_gatt_srv_get_char_decl_handle(&acc_chars[0]);
+    263            accCharHandle = aci_gatt_srv_get_char_decl_handle(&acc_chars[1]);
+    264            PRINTF("Service ACC added. Handle 0x%04X, Free fall Charac handle: 0x%04X, Acc Charac handle: 0x%04X\n",
+    265                   accServHandle, freeFallCharHandle, accCharHandle);
+    266          
+    267            return BLE_STATUS_SUCCESS; 
+    268          
+    269           fail:
+    270            PRINTF("Error while adding ACC service.\n");
+    271            return BLE_STATUS_ERROR ;
+   \       0x14   0x2086             MOVS     R0,#+134
+   \       0x16   0xE011             B        ??Add_Acc_Service_1
+   \                     ??Add_Acc_Service_0: (+1)
+   \       0x18   0x0028             MOVS     R0,R5
+   \       0x1A   0x.... 0x....      BL       aci_gatt_srv_get_service_handle
+   \       0x1E   0x....             LDR      R1,??DataTable9_2
+   \       0x20   0x8008             STRH     R0,[R1, #+0]
+   \       0x22   0x....             LDR      R5,??DataTable9_3
+   \       0x24   0x0028             MOVS     R0,R5
+   \       0x26   0x.... 0x....      BL       aci_gatt_srv_get_char_decl_handle
+   \       0x2A   0x....             LDR      R1,??DataTable10_1
+   \       0x2C   0x8008             STRH     R0,[R1, #+0]
+   \       0x2E   0x0028             MOVS     R0,R5
+   \       0x30   0x3024             ADDS     R0,R0,#+36
+   \       0x32   0x.... 0x....      BL       aci_gatt_srv_get_char_decl_handle
+   \       0x36   0x....             LDR      R1,??DataTable10_2
+   \       0x38   0x8008             STRH     R0,[R1, #+0]
+   \       0x3A   0x2000             MOVS     R0,#+0
+   \                     ??Add_Acc_Service_1: (+1)
+   \       0x3C   0xBD32             POP      {R1,R4,R5,PC}
+    272          }
+    273          
+    274          /*******************************************************************************
+    275          * Function Name  : Free_Fall_Notify
+    276          * Description    : Send a notification for a Free Fall detection.
+    277          * Input          : None
+    278          * Return         : Status.
+    279          *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    280          tBleStatus Free_Fall_Notify(void)
+    281          {  
+   \                     Free_Fall_Notify: (+1)
+   \        0x0   0xB5E0             PUSH     {R5-R7,LR}
+    282            uint8_t val;
+    283            tBleStatus ret;
+    284          
+    285            val = 0x01;	
+   \        0x2   0x2001             MOVS     R0,#+1
+   \        0x4   0x4669             MOV      R1,SP
+   \        0x6   0x7108             STRB     R0,[R1, #+4]
+    286          
+    287            ret = aci_gatt_srv_notify(connection_handle, freeFallCharHandle + 1, 0, 1, &val);
+   \        0x8   0xA801             ADD      R0,SP,#+4
+   \        0xA   0x9000             STR      R0,[SP, #+0]
+   \        0xC   0x2301             MOVS     R3,#+1
+   \        0xE   0x2200             MOVS     R2,#+0
+   \       0x10   0x....             LDR      R0,??DataTable10_1
+   \       0x12   0x8801             LDRH     R1,[R0, #+0]
+   \       0x14   0x1C49             ADDS     R1,R1,#+1
+   \       0x16   0xB289             UXTH     R1,R1
+   \       0x18   0x....             LDR      R0,??DataTable10_3
+   \       0x1A   0x8800             LDRH     R0,[R0, #+0]
+   \       0x1C   0x.... 0x....      BL       aci_gatt_srv_notify
+   \       0x20   0x0001             MOVS     R1,R0
+    288            if (ret != BLE_STATUS_SUCCESS){
+   \       0x22   0x0008             MOVS     R0,R1
+   \       0x24   0xB2C0             UXTB     R0,R0
+   \       0x26   0x2800             CMP      R0,#+0
+   \       0x28   0xD001             BEQ      ??Free_Fall_Notify_0
+    289              PRINTF("Error while updating Free Fall characteristic: 0x%02X\n",ret) ;
+    290              return BLE_STATUS_ERROR ;
+   \       0x2A   0x2086             MOVS     R0,#+134
+   \       0x2C   0xE000             B        ??Free_Fall_Notify_1
+    291            }
+    292            return BLE_STATUS_SUCCESS;
+   \                     ??Free_Fall_Notify_0: (+1)
+   \       0x2E   0x2000             MOVS     R0,#+0
+   \                     ??Free_Fall_Notify_1: (+1)
+   \       0x30   0xBD0E             POP      {R1-R3,PC}
+    293          }
+    294          
+    295          /*******************************************************************************
+    296          * Function Name  : Acc_Update
+    297          * Description    : Update acceleration characteristic value
+    298          * Input          : AxesRaw_t structure containing acceleration value in mg.
+    299          * Return         : Status.
+    300          *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    301          tBleStatus Acc_Update(AxesRaw_t *data)
+    302          {  
+   \                     Acc_Update: (+1)
+   \        0x0   0xB51F             PUSH     {R0-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+    303            uint8_t buff[6];
+    304            tBleStatus ret;
+    305          
+    306            HOST_TO_LE_16(buff,-data->AXIS_Y);
+   \        0x4   0xA801             ADD      R0,SP,#+4
+   \        0x6   0x6861             LDR      R1,[R4, #+4]
+   \        0x8   0x424A             RSBS     R2,R1,#+0
+   \        0xA   0x7002             STRB     R2,[R0, #+0]
+   \        0xC   0x6861             LDR      R1,[R4, #+4]
+   \        0xE   0x424A             RSBS     R2,R1,#+0
+   \       0x10   0x1211             ASRS     R1,R2,#+8
+   \       0x12   0x7041             STRB     R1,[R0, #+1]
+    307            HOST_TO_LE_16(buff+2,data->AXIS_X);
+   \       0x14   0x6821             LDR      R1,[R4, #+0]
+   \       0x16   0x7081             STRB     R1,[R0, #+2]
+   \       0x18   0x6821             LDR      R1,[R4, #+0]
+   \       0x1A   0x1209             ASRS     R1,R1,#+8
+   \       0x1C   0x70C1             STRB     R1,[R0, #+3]
+    308            HOST_TO_LE_16(buff+4,-data->AXIS_Z);
+   \       0x1E   0x68A1             LDR      R1,[R4, #+8]
+   \       0x20   0x424A             RSBS     R2,R1,#+0
+   \       0x22   0x7102             STRB     R2,[R0, #+4]
+   \       0x24   0x68A1             LDR      R1,[R4, #+8]
+   \       0x26   0x424A             RSBS     R2,R1,#+0
+   \       0x28   0x1211             ASRS     R1,R2,#+8
+   \       0x2A   0x7141             STRB     R1,[R0, #+5]
+    309            ret = aci_gatt_srv_notify(connection_handle, accCharHandle + 1, 0, 6, buff);
+   \       0x2C   0xA801             ADD      R0,SP,#+4
+   \       0x2E   0x9000             STR      R0,[SP, #+0]
+   \       0x30   0x2306             MOVS     R3,#+6
+   \       0x32   0x2200             MOVS     R2,#+0
+   \       0x34   0x....             LDR      R0,??DataTable10_2
+   \       0x36   0x8801             LDRH     R1,[R0, #+0]
+   \       0x38   0x1C49             ADDS     R1,R1,#+1
+   \       0x3A   0xB289             UXTH     R1,R1
+   \       0x3C   0x....             LDR      R0,??DataTable10_3
+   \       0x3E   0x8800             LDRH     R0,[R0, #+0]
+   \       0x40   0x.... 0x....      BL       aci_gatt_srv_notify
+   \       0x44   0x0001             MOVS     R1,R0
+    310            if (ret != BLE_STATUS_SUCCESS){
+   \       0x46   0x0008             MOVS     R0,R1
+   \       0x48   0xB2C0             UXTB     R0,R0
+   \       0x4A   0x2800             CMP      R0,#+0
+   \       0x4C   0xD001             BEQ      ??Acc_Update_0
+    311              PRINTF("Error while updating Acceleration characteristic: 0x%02X\n",ret) ;
+    312              return BLE_STATUS_ERROR ;
+   \       0x4E   0x2086             MOVS     R0,#+134
+   \       0x50   0xE000             B        ??Acc_Update_1
+    313            }
+    314          
+    315            return BLE_STATUS_SUCCESS;
+   \                     ??Acc_Update_0: (+1)
+   \       0x52   0x2000             MOVS     R0,#+0
+   \                     ??Acc_Update_1: (+1)
+   \       0x54   0xB004             ADD      SP,SP,#+16
+   \       0x56   0xBD10             POP      {R4,PC}
+    316          }
+    317          
+    318          /*******************************************************************************
+    319          * Function Name  : Add_Environmental_Sensor_Service
+    320          * Description    : Add the Environmental Sensor service.
+    321          * Input          : None
+    322          * Return         : Status.
+    323          *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    324          tBleStatus Add_Environmental_Sensor_Service(void)
+    325          {
+   \                     Add_Environmental_Sensor_Service: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+    326            tBleStatus ret;
+    327            
+    328            ret = aci_gatt_srv_add_service(&env_service);
+   \        0x2   0x....             LDR      R5,??DataTable10_4
+   \        0x4   0x0028             MOVS     R0,R5
+   \        0x6   0x.... 0x....      BL       aci_gatt_srv_add_service
+   \        0xA   0x0004             MOVS     R4,R0
+    329            if (ret != BLE_STATUS_SUCCESS)
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0xB2C0             UXTB     R0,R0
+   \       0x10   0x2800             CMP      R0,#+0
+   \       0x12   0xD001             BEQ      ??Add_Environmental_Sensor_Service_0
+    330            {
+    331              goto fail;
+    332            }
+    333            
+    334            envSensServHandle = aci_gatt_srv_get_service_handle(&env_service);
+    335            tempCharHandle = aci_gatt_srv_get_char_decl_handle(&env_chars[0]);
+    336            pressCharHandle = aci_gatt_srv_get_char_decl_handle(&env_chars[1]);
+    337            
+    338            PRINTF("Service ENV_SENS added. Handle 0x%04X, TEMP Charac handle: 0x%04X, PRESS Charac handle: 0x%04X\n",envSensServHandle, tempCharHandle, pressCharHandle);	
+    339            return BLE_STATUS_SUCCESS; 
+    340            
+    341          fail:
+    342            PRINTF("Error while adding ENV_SENS service.\n");
+    343            return BLE_STATUS_ERROR;
+   \       0x14   0x2086             MOVS     R0,#+134
+   \       0x16   0xE011             B        ??Add_Environmental_Sensor_Service_1
+   \                     ??Add_Environmental_Sensor_Service_0: (+1)
+   \       0x18   0x0028             MOVS     R0,R5
+   \       0x1A   0x.... 0x....      BL       aci_gatt_srv_get_service_handle
+   \       0x1E   0x....             LDR      R1,??DataTable10_5
+   \       0x20   0x8008             STRH     R0,[R1, #+0]
+   \       0x22   0x....             LDR      R5,??DataTable10_6
+   \       0x24   0x0028             MOVS     R0,R5
+   \       0x26   0x.... 0x....      BL       aci_gatt_srv_get_char_decl_handle
+   \       0x2A   0x....             LDR      R1,??DataTable10_7
+   \       0x2C   0x8008             STRH     R0,[R1, #+0]
+   \       0x2E   0x0028             MOVS     R0,R5
+   \       0x30   0x3024             ADDS     R0,R0,#+36
+   \       0x32   0x.... 0x....      BL       aci_gatt_srv_get_char_decl_handle
+   \       0x36   0x....             LDR      R1,??DataTable10_8
+   \       0x38   0x8008             STRH     R0,[R1, #+0]
+   \       0x3A   0x2000             MOVS     R0,#+0
+   \                     ??Add_Environmental_Sensor_Service_1: (+1)
+   \       0x3C   0xBD32             POP      {R1,R4,R5,PC}
+    344          }
+    345          
+    346          /*******************************************************************************
+    347          * Function Name  : Temp_Update
+    348          * Description    : Update temperature characteristic value
+    349          * Input          : temperature in tenths of degree
+    350          * Return         : Status.
+    351          *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    352          tBleStatus Temp_Update(int16_t temp)
+    353          {  
+   \                     Temp_Update: (+1)
+   \        0x0   0xB501             PUSH     {R0,LR}
+   \        0x2   0xB082             SUB      SP,SP,#+8
+    354            tBleStatus ret;
+    355          
+    356            ret = aci_gatt_srv_notify(connection_handle, tempCharHandle + 1, 0, 2, (uint8_t *)&temp);
+   \        0x4   0xA802             ADD      R0,SP,#+8
+   \        0x6   0x9000             STR      R0,[SP, #+0]
+   \        0x8   0x2302             MOVS     R3,#+2
+   \        0xA   0x2200             MOVS     R2,#+0
+   \        0xC   0x....             LDR      R0,??DataTable10_7
+   \        0xE   0x8801             LDRH     R1,[R0, #+0]
+   \       0x10   0x1C49             ADDS     R1,R1,#+1
+   \       0x12   0xB289             UXTH     R1,R1
+   \       0x14   0x....             LDR      R0,??DataTable10_3
+   \       0x16   0x8800             LDRH     R0,[R0, #+0]
+   \       0x18   0x.... 0x....      BL       aci_gatt_srv_notify
+   \       0x1C   0x0001             MOVS     R1,R0
+    357            if (ret != BLE_STATUS_SUCCESS){
+   \       0x1E   0x0008             MOVS     R0,R1
+   \       0x20   0xB2C0             UXTB     R0,R0
+   \       0x22   0x2800             CMP      R0,#+0
+   \       0x24   0xD001             BEQ      ??Temp_Update_0
+    358              PRINTF("Error while updating TEMP characteristic: 0x%02X\n",ret);
+    359              return BLE_STATUS_ERROR ;
+   \       0x26   0x2086             MOVS     R0,#+134
+   \       0x28   0xE000             B        ??Temp_Update_1
+    360            }
+    361            
+    362            return BLE_STATUS_SUCCESS;
+   \                     ??Temp_Update_0: (+1)
+   \       0x2A   0x2000             MOVS     R0,#+0
+   \                     ??Temp_Update_1: (+1)
+   \       0x2C   0xBD0E             POP      {R1-R3,PC}
+    363          }
+    364          
+    365          /*******************************************************************************
+    366          * Function Name  : Press_Update
+    367          * Description    : Update pressure characteristic value
+    368          * Input          : Pressure in mbar
+    369          * Return         : Status.
+    370          *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    371          tBleStatus Press_Update(int32_t press)
+    372          {  
+   \                     Press_Update: (+1)
+   \        0x0   0xB501             PUSH     {R0,LR}
+   \        0x2   0xB082             SUB      SP,SP,#+8
+    373            tBleStatus ret;
+    374            
+    375            ret = aci_gatt_srv_notify(connection_handle, pressCharHandle + 1, 0, 3, (uint8_t *)&press);
+   \        0x4   0xA802             ADD      R0,SP,#+8
+   \        0x6   0x9000             STR      R0,[SP, #+0]
+   \        0x8   0x2303             MOVS     R3,#+3
+   \        0xA   0x2200             MOVS     R2,#+0
+   \        0xC   0x....             LDR      R0,??DataTable10_8
+   \        0xE   0x8801             LDRH     R1,[R0, #+0]
+   \       0x10   0x1C49             ADDS     R1,R1,#+1
+   \       0x12   0xB289             UXTH     R1,R1
+   \       0x14   0x....             LDR      R0,??DataTable10_3
+   \       0x16   0x8800             LDRH     R0,[R0, #+0]
+   \       0x18   0x.... 0x....      BL       aci_gatt_srv_notify
+   \       0x1C   0x0001             MOVS     R1,R0
+    376            if (ret != BLE_STATUS_SUCCESS){
+   \       0x1E   0x0008             MOVS     R0,R1
+   \       0x20   0xB2C0             UXTB     R0,R0
+   \       0x22   0x2800             CMP      R0,#+0
+   \       0x24   0xD001             BEQ      ??Press_Update_0
+    377              PRINTF("Error while updating Pressure characteristic: 0x%02X\n",ret);
+    378              return BLE_STATUS_ERROR;
+   \       0x26   0x2086             MOVS     R0,#+134
+   \       0x28   0xE000             B        ??Press_Update_1
+    379            }
+    380            
+    381            return BLE_STATUS_SUCCESS;
+   \                     ??Press_Update_0: (+1)
+   \       0x2A   0x2000             MOVS     R0,#+0
+   \                     ??Press_Update_1: (+1)
+   \       0x2C   0xBD0E             POP      {R1-R3,PC}
+    382          }
+    383          
+    384          #ifndef SENSOR_PRESSURE_TEMPERATURE_EMULATION
+    385          
+
+   \                                 In section .text, align 2, keep-with-next
+    386          uint8_t GetPressure(float * pressure_hPa)
+    387          {
+   \                     GetPressure: (+1)
+   \        0x0   0xB57C             PUSH     {R2-R6,LR}
+   \        0x2   0x0006             MOVS     R6,R0
+    388             axis1bit32_t data_raw_pressure;
+    389             lps22hh_reg_t reg;
+    390             
+    391             data_raw_pressure.i32bit = 0;
+   \        0x4   0x2000             MOVS     R0,#+0
+   \        0x6   0x9001             STR      R0,[SP, #+4]
+    392             
+    393             lps22hh_read_reg(&pressureHandle, LPS22HH_STATUS, (uint8_t *)&reg, 1);
+   \        0x8   0x....             LDR      R4,??DataTable10_9
+   \        0xA   0x2301             MOVS     R3,#+1
+   \        0xC   0x466A             MOV      R2,SP
+   \        0xE   0x2127             MOVS     R1,#+39
+   \       0x10   0x0020             MOVS     R0,R4
+   \       0x12   0x.... 0x....      BL       lps22hh_read_reg
+    394             if (reg.status.p_da) 
+   \       0x16   0x2501             MOVS     R5,#+1
+   \       0x18   0x4668             MOV      R0,SP
+   \       0x1A   0x7800             LDRB     R0,[R0, #+0]
+   \       0x1C   0x0029             MOVS     R1,R5
+   \       0x1E   0x4001             ANDS     R1,R1,R0
+   \       0x20   0xB2C9             UXTB     R1,R1
+   \       0x22   0x2900             CMP      R1,#+0
+   \       0x24   0xD007             BEQ      ??GetPressure_0
+    395             {
+    396                lps22hh_pressure_raw_get(&pressureHandle, data_raw_pressure.u8bit);
+   \       0x26   0xA901             ADD      R1,SP,#+4
+   \       0x28   0x0020             MOVS     R0,R4
+   \       0x2A   0x.... 0x....      BL       lps22hh_pressure_raw_get
+    397                *pressure_hPa = lps22hh_from_lsb_to_hpa(data_raw_pressure.i32bit);
+   \       0x2E   0x9801             LDR      R0,[SP, #+4]
+   \       0x30   0x.... 0x....      BL       lps22hh_from_lsb_to_hpa
+   \       0x34   0x6030             STR      R0,[R6, #+0]
+    398             }
+    399             return (reg.status.p_da);
+   \                     ??GetPressure_0: (+1)
+   \       0x36   0x4668             MOV      R0,SP
+   \       0x38   0x7800             LDRB     R0,[R0, #+0]
+   \       0x3A   0x4005             ANDS     R5,R5,R0
+   \       0x3C   0x0028             MOVS     R0,R5
+   \       0x3E   0xB2C0             UXTB     R0,R0
+   \       0x40   0xBD76             POP      {R1,R2,R4-R6,PC}
+    400          }
+    401          
+    402          /* Update temperature data in advertising packets */
+
+   \                                 In section .text, align 2, keep-with-next
+    403          uint8_t GetTemperature(float * temperature_degC)
+    404          {
+   \                     GetTemperature: (+1)
+   \        0x0   0xB57C             PUSH     {R2-R6,LR}
+   \        0x2   0x0006             MOVS     R6,R0
+    405              axis1bit16_t data_raw_temperature;
+    406              lps22hh_reg_t reg;
+    407          
+    408              /* Read output only if new value is available */
+    409              lps22hh_read_reg(&pressureHandle, LPS22HH_STATUS, (uint8_t *)&reg, 1);
+   \        0x4   0x....             LDR      R4,??DataTable10_9
+   \        0x6   0x2301             MOVS     R3,#+1
+   \        0x8   0x466A             MOV      R2,SP
+   \        0xA   0x2127             MOVS     R1,#+39
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       lps22hh_read_reg
+    410              if (reg.status.t_da) 
+   \       0x12   0x2501             MOVS     R5,#+1
+   \       0x14   0x4668             MOV      R0,SP
+   \       0x16   0x7800             LDRB     R0,[R0, #+0]
+   \       0x18   0xB2C0             UXTB     R0,R0
+   \       0x1A   0x0840             LSRS     R0,R0,#+1
+   \       0x1C   0x0029             MOVS     R1,R5
+   \       0x1E   0x4001             ANDS     R1,R1,R0
+   \       0x20   0xB2C9             UXTB     R1,R1
+   \       0x22   0x2900             CMP      R1,#+0
+   \       0x24   0xD009             BEQ      ??GetTemperature_0
+    411              {
+    412                lps22hh_temperature_raw_get(&pressureHandle, data_raw_temperature.u8bit);
+   \       0x26   0xA900             ADD      R1,SP,#+0
+   \       0x28   0x1C89             ADDS     R1,R1,#+2
+   \       0x2A   0x0020             MOVS     R0,R4
+   \       0x2C   0x.... 0x....      BL       lps22hh_temperature_raw_get
+    413                *temperature_degC = lps22hh_from_lsb_to_celsius(data_raw_temperature.i16bit);
+   \       0x30   0x9800             LDR      R0,[SP, #+0]
+   \       0x32   0x1400             ASRS     R0,R0,#+16
+   \       0x34   0x.... 0x....      BL       lps22hh_from_lsb_to_celsius
+   \       0x38   0x6030             STR      R0,[R6, #+0]
+    414              }
+    415              return (reg.status.t_da);
+   \                     ??GetTemperature_0: (+1)
+   \       0x3A   0x4668             MOV      R0,SP
+   \       0x3C   0x7800             LDRB     R0,[R0, #+0]
+   \       0x3E   0xB2C0             UXTB     R0,R0
+   \       0x40   0x0840             LSRS     R0,R0,#+1
+   \       0x42   0x4005             ANDS     R5,R5,R0
+   \       0x44   0x0028             MOVS     R0,R5
+   \       0x46   0xB2C0             UXTB     R0,R0
+   \       0x48   0xBD76             POP      {R1,R2,R4-R6,PC}
+    416          }
+    417          
+    418          #endif 
+    419          
+
+   \                                 In section .text, align 2, keep-with-next
+    420          void aci_gatt_srv_write_event(uint16_t Connection_Handle, uint8_t Resp_Needed, uint16_t Attribute_Handle, uint16_t Data_Length, uint8_t Data[])
+    421          {
+   \                     aci_gatt_srv_write_event: (+1)
+   \        0x0   0xB5F7             PUSH     {R0-R2,R4-R7,LR}
+   \        0x2   0x0006             MOVS     R6,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x001F             MOVS     R7,R3
+    422              uint8_t att_error = BLE_ATT_ERR_NONE;
+   \        0x8   0x2400             MOVS     R4,#+0
+    423          #if ST_OTA_FIRMWARE_UPGRADE_SUPPORT
+    424            OTA_Write_Request_CB(Connection_Handle, Attribute_Handle, Data_Length, Data); 
+    425          #endif /* ST_OTA_FIRMWARE_UPGRADE_SUPPORT */ 
+    426            
+    427              if (Resp_Needed == 1U)
+   \        0xA   0x0028             MOVS     R0,R5
+   \        0xC   0xB2C0             UXTB     R0,R0
+   \        0xE   0x2801             CMP      R0,#+1
+   \       0x10   0xD109             BNE      ??aci_gatt_srv_write_event_0
+    428              {
+    429                  aci_gatt_srv_resp(Connection_Handle, 0, att_error, 0, NULL);
+   \       0x12   0x2000             MOVS     R0,#+0
+   \       0x14   0x9000             STR      R0,[SP, #+0]
+   \       0x16   0x2300             MOVS     R3,#+0
+   \       0x18   0x0022             MOVS     R2,R4
+   \       0x1A   0xB2D2             UXTB     R2,R2
+   \       0x1C   0x2100             MOVS     R1,#+0
+   \       0x1E   0x0030             MOVS     R0,R6
+   \       0x20   0xB280             UXTH     R0,R0
+   \       0x22   0x.... 0x....      BL       aci_gatt_srv_resp
+    430              }
+    431          }
+   \                     ??aci_gatt_srv_write_event_0: (+1)
+   \       0x26   0xBDF7             POP      {R0-R2,R4-R7,PC}
+    432          
+
+   \                                 In section .text, align 2, keep-with-next
+    433          void aci_gatt_srv_read_event(uint16_t Connection_Handle, uint16_t Attribute_Handle, uint16_t Data_Offset)
+    434          {
+   \                     aci_gatt_srv_read_event: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0xB08A             SUB      SP,SP,#+40
+   \        0x4   0x0006             MOVS     R6,R0
+   \        0x6   0x000D             MOVS     R5,R1
+   \        0x8   0x0017             MOVS     R7,R2
+    435              uint8_t att_err;
+    436              uint8_t buff[6], *data_p;
+    437              uint16_t data_len;
+    438              int16_t temp_val;
+    439              int32_t press_val;
+    440              float fdata;
+    441          #ifdef SENSOR_PRESSURE_TEMPERATURE_EMULATION
+    442              uint16_t udata;
+    443          #endif
+    444          
+    445              att_err = BLE_ATT_ERR_NONE;
+   \        0xA   0x2400             MOVS     R4,#+0
+    446              if(Attribute_Handle == accCharHandle + 1)
+   \        0xC   0x0028             MOVS     R0,R5
+   \        0xE   0xB280             UXTH     R0,R0
+   \       0x10   0x....             LDR      R1,??DataTable10_2
+   \       0x12   0x8809             LDRH     R1,[R1, #+0]
+   \       0x14   0x1C49             ADDS     R1,R1,#+1
+   \       0x16   0x4288             CMP      R0,R1
+   \       0x18   0xD121             BNE      ??aci_gatt_srv_read_event_0
+    447              {
+    448                  AxesRaw_t acc_data;
+    449                  if (GetAccAxesRaw(&acc_data) == 1)
+   \       0x1A   0xA805             ADD      R0,SP,#+20
+   \       0x1C   0x.... 0x....      BL       GetAccAxesRaw
+   \       0x20   0x2801             CMP      R0,#+1
+   \       0x22   0xD119             BNE      ??aci_gatt_srv_read_event_1
+    450                  {
+    451                      HOST_TO_LE_16(buff,     -acc_data.AXIS_Y);
+   \       0x24   0xA808             ADD      R0,SP,#+32
+   \       0x26   0x9906             LDR      R1,[SP, #+24]
+   \       0x28   0x424A             RSBS     R2,R1,#+0
+   \       0x2A   0x7002             STRB     R2,[R0, #+0]
+   \       0x2C   0x9906             LDR      R1,[SP, #+24]
+   \       0x2E   0x424A             RSBS     R2,R1,#+0
+   \       0x30   0x1211             ASRS     R1,R2,#+8
+   \       0x32   0x7041             STRB     R1,[R0, #+1]
+    452                      HOST_TO_LE_16(buff + 2,  acc_data.AXIS_X);
+   \       0x34   0x9905             LDR      R1,[SP, #+20]
+   \       0x36   0x7081             STRB     R1,[R0, #+2]
+   \       0x38   0x9905             LDR      R1,[SP, #+20]
+   \       0x3A   0x1209             ASRS     R1,R1,#+8
+   \       0x3C   0x70C1             STRB     R1,[R0, #+3]
+    453                      HOST_TO_LE_16(buff + 4, -acc_data.AXIS_Z);
+   \       0x3E   0x9907             LDR      R1,[SP, #+28]
+   \       0x40   0x424A             RSBS     R2,R1,#+0
+   \       0x42   0x7102             STRB     R2,[R0, #+4]
+   \       0x44   0x9907             LDR      R1,[SP, #+28]
+   \       0x46   0x424A             RSBS     R2,R1,#+0
+   \       0x48   0x1211             ASRS     R1,R2,#+8
+   \       0x4A   0x7141             STRB     R1,[R0, #+5]
+    454                      data_len = 6;
+   \       0x4C   0x2006             MOVS     R0,#+6
+   \       0x4E   0x4669             MOV      R1,SP
+   \       0x50   0x8088             STRH     R0,[R1, #+4]
+    455                      data_p = buff;
+   \       0x52   0xA808             ADD      R0,SP,#+32
+   \       0x54   0x9003             STR      R0,[SP, #+12]
+   \       0x56   0xE039             B        ??aci_gatt_srv_read_event_2
+    456                  }
+    457                  else
+    458                  {
+    459                      att_err = BLE_ATT_ERR_APPL_MIN;
+   \                     ??aci_gatt_srv_read_event_1: (+1)
+   \       0x58   0x2080             MOVS     R0,#+128
+   \       0x5A   0x0004             MOVS     R4,R0
+   \       0x5C   0xE036             B        ??aci_gatt_srv_read_event_2
+    460                  }
+    461              }
+    462              else if(Attribute_Handle == tempCharHandle + 1)
+   \                     ??aci_gatt_srv_read_event_0: (+1)
+   \       0x5E   0x0028             MOVS     R0,R5
+   \       0x60   0xB280             UXTH     R0,R0
+   \       0x62   0x....             LDR      R1,??DataTable10_7
+   \       0x64   0x8809             LDRH     R1,[R1, #+0]
+   \       0x66   0x1C49             ADDS     R1,R1,#+1
+   \       0x68   0x4288             CMP      R0,R1
+   \       0x6A   0xD115             BNE      ??aci_gatt_srv_read_event_3
+    463              {
+    464          #ifdef SENSOR_PRESSURE_TEMPERATURE_EMULATION
+    465                  fdata = 27 + ((uint64_t)rand()*15)/RAND_MAX;
+    466          #else
+    467                  if (GetTemperature(&fdata) != 1)
+   \       0x6C   0xA802             ADD      R0,SP,#+8
+   \       0x6E   0x.... 0x....      BL       GetTemperature
+   \       0x72   0x2801             CMP      R0,#+1
+   \       0x74   0xD001             BEQ      ??aci_gatt_srv_read_event_4
+    468                  {
+    469                      att_err = BLE_ATT_ERR_APPL_MIN;
+   \       0x76   0x2080             MOVS     R0,#+128
+   \       0x78   0x0004             MOVS     R4,R0
+    470                  }
+    471          #endif
+    472                  data_len = 2;
+   \                     ??aci_gatt_srv_read_event_4: (+1)
+   \       0x7A   0x2002             MOVS     R0,#+2
+   \       0x7C   0x4669             MOV      R1,SP
+   \       0x7E   0x8088             STRH     R0,[R1, #+4]
+    473                  temp_val = (int16_t)(fdata * 10);
+   \       0x80   0x9902             LDR      R1,[SP, #+8]
+   \       0x82   0x....             LDR      R0,??DataTable10_10
+   \       0x84   0x.... 0x....      BL       __aeabi_fmul
+   \       0x88   0x.... 0x....      BL       __aeabi_f2iz
+   \       0x8C   0x4669             MOV      R1,SP
+   \       0x8E   0x80C8             STRH     R0,[R1, #+6]
+    474                  data_p = (uint8_t *)&temp_val;
+   \       0x90   0xA801             ADD      R0,SP,#+4
+   \       0x92   0x1C80             ADDS     R0,R0,#+2
+   \       0x94   0x9003             STR      R0,[SP, #+12]
+   \       0x96   0xE019             B        ??aci_gatt_srv_read_event_2
+    475              }
+    476              else if(Attribute_Handle == pressCharHandle + 1)
+   \                     ??aci_gatt_srv_read_event_3: (+1)
+   \       0x98   0x0028             MOVS     R0,R5
+   \       0x9A   0xB280             UXTH     R0,R0
+   \       0x9C   0x....             LDR      R1,??DataTable10_8
+   \       0x9E   0x8809             LDRH     R1,[R1, #+0]
+   \       0xA0   0x1C49             ADDS     R1,R1,#+1
+   \       0xA2   0x4288             CMP      R0,R1
+   \       0xA4   0xD112             BNE      ??aci_gatt_srv_read_event_2
+    477              {
+    478          #ifdef SENSOR_PRESSURE_TEMPERATURE_EMULATION
+    479                  fdata = 1000 + ((uint64_t)rand()*1000)/RAND_MAX;
+    480          #else
+    481                  if (GetPressure(&fdata) != 1)
+   \       0xA6   0xA802             ADD      R0,SP,#+8
+   \       0xA8   0x.... 0x....      BL       GetPressure
+   \       0xAC   0x2801             CMP      R0,#+1
+   \       0xAE   0xD001             BEQ      ??aci_gatt_srv_read_event_5
+    482                  {
+    483                      att_err = BLE_ATT_ERR_APPL_MIN;
+   \       0xB0   0x2080             MOVS     R0,#+128
+   \       0xB2   0x0004             MOVS     R4,R0
+    484                  }
+    485          #endif
+    486                  data_len = 3;
+   \                     ??aci_gatt_srv_read_event_5: (+1)
+   \       0xB4   0x2003             MOVS     R0,#+3
+   \       0xB6   0x4669             MOV      R1,SP
+   \       0xB8   0x8088             STRH     R0,[R1, #+4]
+    487                  press_val = (int32_t)(fdata * 100);
+   \       0xBA   0x9902             LDR      R1,[SP, #+8]
+   \       0xBC   0x....             LDR      R0,??DataTable10_11
+   \       0xBE   0x.... 0x....      BL       __aeabi_fmul
+   \       0xC2   0x.... 0x....      BL       __aeabi_f2iz
+   \       0xC6   0x9004             STR      R0,[SP, #+16]
+    488                  data_p = (uint8_t *)&press_val;
+   \       0xC8   0xA804             ADD      R0,SP,#+16
+   \       0xCA   0x9003             STR      R0,[SP, #+12]
+    489              }
+    490              
+    491          #if ST_OTA_FIRMWARE_UPGRADE_SUPPORT 
+    492              OTA_Read_Char(Connection_Handle, Attribute_Handle,Data_Offset);
+    493          #endif 
+    494          
+    495              aci_gatt_srv_resp(Connection_Handle, Attribute_Handle, att_err, data_len, data_p);
+   \                     ??aci_gatt_srv_read_event_2: (+1)
+   \       0xCC   0x9803             LDR      R0,[SP, #+12]
+   \       0xCE   0x9000             STR      R0,[SP, #+0]
+   \       0xD0   0x4668             MOV      R0,SP
+   \       0xD2   0x8883             LDRH     R3,[R0, #+4]
+   \       0xD4   0x0022             MOVS     R2,R4
+   \       0xD6   0xB2D2             UXTB     R2,R2
+   \       0xD8   0x0029             MOVS     R1,R5
+   \       0xDA   0xB289             UXTH     R1,R1
+   \       0xDC   0x0030             MOVS     R0,R6
+   \       0xDE   0xB280             UXTH     R0,R0
+   \       0xE0   0x.... 0x....      BL       aci_gatt_srv_resp
+    496          }
+   \       0xE4   0xB00B             ADD      SP,SP,#+44
+   \       0xE6   0xBDF0             POP      {R4-R7,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9:
+   \        0x0   0x....'....        DC32     inertialHandle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_1:
+   \        0x0   0x....'....        DC32     acc_service
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_2:
+   \        0x0   0x....'....        DC32     accServHandle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_3:
+   \        0x0   0x....'....        DC32     acc_chars
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10:
+   \        0x0   0x....'....        DC32     request_free_fall_notify
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_1:
+   \        0x0   0x....'....        DC32     freeFallCharHandle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_2:
+   \        0x0   0x....'....        DC32     accCharHandle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_3:
+   \        0x0   0x....'....        DC32     connection_handle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_4:
+   \        0x0   0x....'....        DC32     env_service
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_5:
+   \        0x0   0x....'....        DC32     envSensServHandle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_6:
+   \        0x0   0x....'....        DC32     env_chars
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_7:
+   \        0x0   0x....'....        DC32     tempCharHandle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_8:
+   \        0x0   0x....'....        DC32     pressCharHandle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_9:
+   \        0x0   0x....'....        DC32     pressureHandle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_10:
+   \        0x0   0x4120'0000        DC32     0x41200000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_11:
+   \        0x0   0x42C8'0000        DC32     0x42c80000
+    497          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      24   Acc_Update
+        24   -> aci_gatt_srv_notify
+      16   Add_Acc_Service
+        16   -> aci_gatt_srv_add_service
+        16   -> aci_gatt_srv_get_char_decl_handle
+        16   -> aci_gatt_srv_get_service_handle
+      16   Add_Environmental_Sensor_Service
+        16   -> aci_gatt_srv_add_service
+        16   -> aci_gatt_srv_get_char_decl_handle
+        16   -> aci_gatt_srv_get_service_handle
+      16   Free_Fall_Notify
+        16   -> aci_gatt_srv_notify
+      40   GetAccAxesRaw
+        40   -> __aeabi_f2iz
+        40   -> __aeabi_memset
+        40   -> lsm6dsox_acceleration_raw_get
+        40   -> lsm6dsox_from_fs2_to_mg
+        40   -> lsm6dsox_xl_flag_data_ready_get
+      16   GetFreeFallStatus
+        16   -> lsm6dsox_all_sources_get
+      24   GetPressure
+        24   -> lps22hh_from_lsb_to_hpa
+        24   -> lps22hh_pressure_raw_get
+        24   -> lps22hh_read_reg
+      24   GetTemperature
+        24   -> lps22hh_from_lsb_to_celsius
+        24   -> lps22hh_read_reg
+        24   -> lps22hh_temperature_raw_get
+      16   Press_Update
+        16   -> aci_gatt_srv_notify
+      16   Temp_Update
+        16   -> aci_gatt_srv_notify
+      64   aci_gatt_srv_read_event
+        64   -> GetAccAxesRaw
+        64   -> GetPressure
+        64   -> GetTemperature
+        64   -> __aeabi_f2iz
+        64   -> __aeabi_fmul
+        64   -> aci_gatt_srv_resp
+      32   aci_gatt_srv_write_event
+        32   -> aci_gatt_srv_resp
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable10
+       4  ??DataTable10_1
+       4  ??DataTable10_10
+       4  ??DataTable10_11
+       4  ??DataTable10_2
+       4  ??DataTable10_3
+       4  ??DataTable10_4
+       4  ??DataTable10_5
+       4  ??DataTable10_6
+       4  ??DataTable10_7
+       4  ??DataTable10_8
+       4  ??DataTable10_9
+       4  ??DataTable9
+       4  ??DataTable9_1
+       4  ??DataTable9_2
+       4  ??DataTable9_3
+      88  Acc_Update
+      62  Add_Acc_Service
+      62  Add_Environmental_Sensor_Service
+      50  Free_Fall_Notify
+     108  GetAccAxesRaw
+      36  GetFreeFallStatus
+      66  GetPressure
+      74  GetTemperature
+      46  Press_Update
+      46  Temp_Update
+       2  accCharHandle
+       2  accServHandle
+      72  acc_chars
+      40  acc_service
+      28  accell_cccd
+       1  accell_cccd_buffer
+      12  accell_cccd_val_buffer
+     232  aci_gatt_srv_read_event
+      40  aci_gatt_srv_write_event
+       2  envSensServHandle
+      72  env_chars
+      24  env_descr_val_buffers
+      56  env_descrs
+      40  env_service
+       2  freeFallCharHandle
+      28  free_fall_cccd
+       1  free_fall_cccd_buffer
+      12  free_fall_cccd_val_buffer
+       2  pressCharHandle
+       8  press_char_format
+       2  tempCharHandle
+       8  temp_char_format
+
+ 
+  14 bytes in section .bss
+ 376 bytes in section .data
+  24 bytes in section .rodata
+ 974 bytes in section .text
+ 
+ 974 bytes of CODE  memory
+  24 bytes of CONST memory
+ 390 bytes of DATA  memory
+
+Errors: none
+Warnings: none

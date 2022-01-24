@@ -1,0 +1,693 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.20.1.318/W64 for ARM         15/Dec/2021  10:02:03
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                 =  thumb
+#    Endian                   =  little
+#    Source file              =
+#        C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\DifferentialSteering.c
+#    Command line             =
+#        -f "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Debug\Obj\DifferentialSteering.o.rsp"
+#        ("C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\DifferentialSteering.c" -D USE_FULL_LL_DRIVER -D
+#        STEVAL_IDB011V1 -D CONFIG_DEVICE_BLUENRG_LP -D CONFIG_HW_SMPS_10uH -D
+#        CONFIG_HW_HSE_TUNE=32 -D USER_BUTTON=BSP_PUSH1 -D CONFIG_HW_LS_XTAL -D
+#        BLE_STACK_CUSTOM_CONF -D CLIENT -D USE_HAL_DRIVER -lC
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Debug\List\\" --diag_suppress Pe1665 -o
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion
+#        --no_tbaa --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M0+ -e --fpu=None --dlib_config "C:\Program Files\IAR
+#        Systems\Embedded Workbench 9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick Client\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers\Peripherals_Drivers\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers\CMSIS\Device\ST\BlueNRG_LP\Include\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\hal\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\PKAMGR\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\RNGMGR\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\AESMGR\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\BLECNTR\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers\CMSIS\Include\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers/BSP/STEVAL-IDB011V1/Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers\BSP\Common\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers\BSP\Components\lps22hh_STdC\driver\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Drivers\BSP\Components\lsm6dsox_STdC\driver\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\BLE_Application\layers_inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\Bluetooth_LE\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\BLE_Application\OTA\inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\NVMDB\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\BLE_Application\Profiles\Inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\cryptolib\inc\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\cryptolib\inc\Common\\" -I
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Middlewares\ST\cryptolib\inc\AES\\" -On) --dependencies=n
+#        "C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Debug\Obj\DifferentialSteering.o.d"
+#    Locale                   =  C
+#    List file                =
+#        C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Debug\List\\DifferentialSteering.lst
+#    Object file              =
+#        C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick
+#        Client\Debug\Obj\\DifferentialSteering.o
+#    Runtime model:              
+#      __CPP_Runtime          =  1
+#      __SystemLibrary        =  DLib
+#      __dlib_file_descriptor =  0
+#      __dlib_version         =  6
+#      __iar_require _Printf  =  floats
+#
+###############################################################################
+
+C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick Client\DifferentialSteering.c
+      1          #include "DifferentialSteering.h"
+      2          
+      3          
+      4          
+      5          /* Private typedef -----------------------------------------------------------*/
+      6          /* Private define ------------------------------------------------------------*/
+      7          #ifndef DEBUG
+      8          #define DEBUG   1 // 0
+      9          #endif
+     10          
+     11          #if DEBUG
+     12          #include <stdio.h>
+     13          #define PRINTF(...) printf(__VA_ARGS__)
+     14          #else
+     15          #define PRINTF(...)
+     16          #endif
+     17          
+     18          
+     19          
+
+   \                                 In section .bss, align 2
+     20          int16_t m_fPivYLimit;
+   \                     m_fPivYLimit:
+   \        0x0                      DS8 2
+
+   \                                 In section .bss, align 2
+     21          int16_t m_leftMotor;
+   \                     m_leftMotor:
+   \        0x0                      DS8 2
+
+   \                                 In section .bss, align 2
+     22          int16_t m_rightMotor;
+   \                     m_rightMotor:
+   \        0x0                      DS8 2
+     23          
+     24          
+     25          /**
+     26           * Initialize the threshold at which the pivot action starts.
+     27           *
+     28           * @param fPivYLimit: Threshold. Is measured in units on the Y-axis away from the X-axis (Y=0).
+     29           *                    A greater value will assign more of the joystick's range to pivot actions.
+     30           *                    Allowable range: (0..+127).
+     31           */
+
+   \                                 In section .text, align 2, keep-with-next
+     32          void DifferentialSteering_setup(int16_t fPivYLimit){
+     33              m_leftMotor = 0;
+   \                     DifferentialSteering_setup: (+1)
+   \        0x0   0x2100             MOVS     R1,#+0
+   \        0x2   0x....             LDR      R2,??DataTable3
+   \        0x4   0x8011             STRH     R1,[R2, #+0]
+     34              m_rightMotor = 0;
+   \        0x6   0x....             LDR      R2,??DataTable3_1
+   \        0x8   0x8011             STRH     R1,[R2, #+0]
+     35              m_fPivYLimit = fPivYLimit;
+   \        0xA   0x....             LDR      R1,??DataTable3_2
+   \        0xC   0x8008             STRH     R0,[R1, #+0]
+     36          }
+   \        0xE   0x4770             BX       LR
+     37          
+     38          /**
+     39           * Compute differential steering from (x,y) values.
+     40           *
+     41           * @param XValue: X value in [-127, 127] range.
+     42           * @param YValue: Y value in [-127, 127] range.
+     43           */
+
+   \                                 In section .text, align 2, keep-with-next
+     44          void DifferentialSteering_computeMotors(int16_t XValue, int16_t YValue){
+   \                     DifferentialSteering_computeMotors: (+1)
+   \        0x0   0xB5F1             PUSH     {R0,R4-R7,LR}
+   \        0x2   0xB084             SUB      SP,SP,#+16
+   \        0x4   0x000F             MOVS     R7,R1
+     45              float   nMotPremixL = 0;    // Motor (left)  premixed output        (-127..+127)
+   \        0x6   0x2600             MOVS     R6,#+0
+   \        0x8   0x0030             MOVS     R0,R6
+     46              float   nMotPremixR = 0;    // Motor (right) premixed output        (-127..+127)
+   \        0xA   0x0034             MOVS     R4,R6
+     47              int16_t     nPivSpeed = 0;      // Pivot Speed                          (-127..+127)
+   \        0xC   0x2100             MOVS     R1,#+0
+   \        0xE   0x466A             MOV      R2,SP
+   \       0x10   0x8111             STRH     R1,[R2, #+8]
+     48              float   fPivScale = 0;      // Balance scale b/w drive and pivot    (   0..1   )
+   \       0x12   0x9603             STR      R6,[SP, #+12]
+     49          
+     50              // Calculate Drive Turn output due to Joystick X input
+     51              if (YValue >= 0) {
+   \       0x14   0x0039             MOVS     R1,R7
+   \       0x16   0xB209             SXTH     R1,R1
+   \       0x18   0x2900             CMP      R1,#+0
+   \       0x1A   0xD435             BMI      ??DifferentialSteering_computeMotors_0
+     52                  // Forward
+     53                  nMotPremixL = (XValue >= 0) ? COMPUTERANGE : (COMPUTERANGE + (float)XValue);
+   \       0x1C   0x9904             LDR      R1,[SP, #+16]
+   \       0x1E   0xB209             SXTH     R1,R1
+   \       0x20   0x2900             CMP      R1,#+0
+   \       0x22   0xD401             BMI      ??DifferentialSteering_computeMotors_1
+   \       0x24   0x....             LDR      R5,??DataTable3_3
+   \       0x26   0xE00C             B        ??DifferentialSteering_computeMotors_2
+   \                     ??DifferentialSteering_computeMotors_1: (+1)
+   \       0x28   0x9804             LDR      R0,[SP, #+16]
+   \       0x2A   0xB200             SXTH     R0,R0
+   \       0x2C   0x.... 0x....      BL       __aeabi_i2f
+   \       0x30   0x.... 0x....      BL       __aeabi_f2d
+   \       0x34   0x2200             MOVS     R2,#+0
+   \       0x36   0x....             LDR      R3,??DataTable3_4
+   \       0x38   0x.... 0x....      BL       __aeabi_dadd
+   \       0x3C   0x.... 0x....      BL       __aeabi_d2f
+   \       0x40   0x0005             MOVS     R5,R0
+     54                  nMotPremixR = (XValue >= 0) ? (COMPUTERANGE - (float)XValue) : COMPUTERANGE;
+   \                     ??DifferentialSteering_computeMotors_2: (+1)
+   \       0x42   0x9804             LDR      R0,[SP, #+16]
+   \       0x44   0xB200             SXTH     R0,R0
+   \       0x46   0x2800             CMP      R0,#+0
+   \       0x48   0xD40F             BMI      ??DifferentialSteering_computeMotors_3
+   \       0x4A   0x9804             LDR      R0,[SP, #+16]
+   \       0x4C   0xB200             SXTH     R0,R0
+   \       0x4E   0x.... 0x....      BL       __aeabi_i2f
+   \       0x52   0x.... 0x....      BL       __aeabi_f2d
+   \       0x56   0x0002             MOVS     R2,R0
+   \       0x58   0x000B             MOVS     R3,R1
+   \       0x5A   0x2000             MOVS     R0,#+0
+   \       0x5C   0x....             LDR      R1,??DataTable3_4
+   \       0x5E   0x.... 0x....      BL       __aeabi_dsub
+   \       0x62   0x.... 0x....      BL       __aeabi_d2f
+   \       0x66   0x0004             MOVS     R4,R0
+   \       0x68   0xE000             B        ??DifferentialSteering_computeMotors_4
+   \                     ??DifferentialSteering_computeMotors_3: (+1)
+   \       0x6A   0x....             LDR      R4,??DataTable3_3
+     55                  
+     56                  PRINTF("[a  %f\t%f  ]\r\n", nMotPremixL, nMotPremixR);
+   \                     ??DifferentialSteering_computeMotors_4: (+1)
+   \       0x6C   0x0020             MOVS     R0,R4
+   \       0x6E   0x.... 0x....      BL       __aeabi_f2d
+   \       0x72   0x9000             STR      R0,[SP, #+0]
+   \       0x74   0x9101             STR      R1,[SP, #+4]
+   \       0x76   0x0028             MOVS     R0,R5
+   \       0x78   0x.... 0x....      BL       __aeabi_f2d
+   \       0x7C   0x0002             MOVS     R2,R0
+   \       0x7E   0x000B             MOVS     R3,R1
+   \       0x80   0x....             LDR      R0,??DataTable3_5
+   \       0x82   0x.... 0x....      BL       printf
+   \       0x86   0xE034             B        ??DifferentialSteering_computeMotors_5
+     57                  
+     58              } else {
+     59                  // Reverse
+     60                  nMotPremixL = (XValue >= 0) ? (COMPUTERANGE - (float)XValue) : COMPUTERANGE;
+   \                     ??DifferentialSteering_computeMotors_0: (+1)
+   \       0x88   0x9904             LDR      R1,[SP, #+16]
+   \       0x8A   0xB209             SXTH     R1,R1
+   \       0x8C   0x2900             CMP      R1,#+0
+   \       0x8E   0xD40F             BMI      ??DifferentialSteering_computeMotors_6
+   \       0x90   0x9804             LDR      R0,[SP, #+16]
+   \       0x92   0xB200             SXTH     R0,R0
+   \       0x94   0x.... 0x....      BL       __aeabi_i2f
+   \       0x98   0x.... 0x....      BL       __aeabi_f2d
+   \       0x9C   0x0002             MOVS     R2,R0
+   \       0x9E   0x000B             MOVS     R3,R1
+   \       0xA0   0x2000             MOVS     R0,#+0
+   \       0xA2   0x....             LDR      R1,??DataTable3_4
+   \       0xA4   0x.... 0x....      BL       __aeabi_dsub
+   \       0xA8   0x.... 0x....      BL       __aeabi_d2f
+   \       0xAC   0x0005             MOVS     R5,R0
+   \       0xAE   0xE000             B        ??DifferentialSteering_computeMotors_7
+   \                     ??DifferentialSteering_computeMotors_6: (+1)
+   \       0xB0   0x....             LDR      R5,??DataTable3_3
+     61                  nMotPremixR = (XValue >= 0) ? COMPUTERANGE : (COMPUTERANGE + (float)XValue);
+   \                     ??DifferentialSteering_computeMotors_7: (+1)
+   \       0xB2   0x9804             LDR      R0,[SP, #+16]
+   \       0xB4   0xB200             SXTH     R0,R0
+   \       0xB6   0x2800             CMP      R0,#+0
+   \       0xB8   0xD401             BMI      ??DifferentialSteering_computeMotors_8
+   \       0xBA   0x....             LDR      R4,??DataTable3_3
+   \       0xBC   0xE00C             B        ??DifferentialSteering_computeMotors_9
+   \                     ??DifferentialSteering_computeMotors_8: (+1)
+   \       0xBE   0x9804             LDR      R0,[SP, #+16]
+   \       0xC0   0xB200             SXTH     R0,R0
+   \       0xC2   0x.... 0x....      BL       __aeabi_i2f
+   \       0xC6   0x.... 0x....      BL       __aeabi_f2d
+   \       0xCA   0x2200             MOVS     R2,#+0
+   \       0xCC   0x....             LDR      R3,??DataTable3_4
+   \       0xCE   0x.... 0x....      BL       __aeabi_dadd
+   \       0xD2   0x.... 0x....      BL       __aeabi_d2f
+   \       0xD6   0x0004             MOVS     R4,R0
+     62          
+     63                  PRINTF("[b  %f\t%f  ]\r\n", nMotPremixL, nMotPremixR);
+   \                     ??DifferentialSteering_computeMotors_9: (+1)
+   \       0xD8   0x0020             MOVS     R0,R4
+   \       0xDA   0x.... 0x....      BL       __aeabi_f2d
+   \       0xDE   0x9000             STR      R0,[SP, #+0]
+   \       0xE0   0x9101             STR      R1,[SP, #+4]
+   \       0xE2   0x0028             MOVS     R0,R5
+   \       0xE4   0x.... 0x....      BL       __aeabi_f2d
+   \       0xE8   0x0002             MOVS     R2,R0
+   \       0xEA   0x000B             MOVS     R3,R1
+   \       0xEC   0x....             LDR      R0,??DataTable3_6
+   \       0xEE   0x.... 0x....      BL       printf
+     64              }
+     65          
+     66              // Scale Drive output due to Joystick Y input (throttle)
+     67              nMotPremixL = nMotPremixL * (float)YValue / COMPUTERANGE;
+   \                     ??DifferentialSteering_computeMotors_5: (+1)
+   \       0xF2   0x0038             MOVS     R0,R7
+   \       0xF4   0xB200             SXTH     R0,R0
+   \       0xF6   0x.... 0x....      BL       __aeabi_i2f
+   \       0xFA   0x0029             MOVS     R1,R5
+   \       0xFC   0x.... 0x....      BL       __aeabi_fmul
+   \      0x100   0x.... 0x....      BL       __aeabi_f2d
+   \      0x104   0x2200             MOVS     R2,#+0
+   \      0x106   0x....             LDR      R3,??DataTable3_4
+   \      0x108   0x.... 0x....      BL       __aeabi_ddiv
+   \      0x10C   0x.... 0x....      BL       __aeabi_d2f
+   \      0x110   0x0005             MOVS     R5,R0
+     68              nMotPremixR = nMotPremixR * (float)YValue / COMPUTERANGE;
+   \      0x112   0x0038             MOVS     R0,R7
+   \      0x114   0xB200             SXTH     R0,R0
+   \      0x116   0x.... 0x....      BL       __aeabi_i2f
+   \      0x11A   0x0021             MOVS     R1,R4
+   \      0x11C   0x.... 0x....      BL       __aeabi_fmul
+   \      0x120   0x.... 0x....      BL       __aeabi_f2d
+   \      0x124   0x2200             MOVS     R2,#+0
+   \      0x126   0x....             LDR      R3,??DataTable3_4
+   \      0x128   0x.... 0x....      BL       __aeabi_ddiv
+   \      0x12C   0x.... 0x....      BL       __aeabi_d2f
+   \      0x130   0x0004             MOVS     R4,R0
+     69          
+     70              PRINTF("[c  %f\t%f  ]\r\n", nMotPremixL, nMotPremixR);
+   \      0x132   0x0020             MOVS     R0,R4
+   \      0x134   0x.... 0x....      BL       __aeabi_f2d
+   \      0x138   0x9000             STR      R0,[SP, #+0]
+   \      0x13A   0x9101             STR      R1,[SP, #+4]
+   \      0x13C   0x0028             MOVS     R0,R5
+   \      0x13E   0x.... 0x....      BL       __aeabi_f2d
+   \      0x142   0x0002             MOVS     R2,R0
+   \      0x144   0x000B             MOVS     R3,R1
+   \      0x146   0x....             LDR      R0,??DataTable3_7
+   \      0x148   0x.... 0x....      BL       printf
+     71          
+     72              // Now calculate pivot amount
+     73              // - Strength of pivot (nPivSpeed) based on Joystick X input
+     74              // - Blending of pivot vs drive (fPivScale) based on Joystick Y input
+     75              nPivSpeed = XValue;
+   \      0x14C   0x9804             LDR      R0,[SP, #+16]
+   \      0x14E   0xB200             SXTH     R0,R0
+   \      0x150   0x4669             MOV      R1,SP
+   \      0x152   0x8108             STRH     R0,[R1, #+8]
+     76              
+     77              PRINTF("[d  %d  ]\r\n", nPivSpeed);
+   \      0x154   0x9902             LDR      R1,[SP, #+8]
+   \      0x156   0xB209             SXTH     R1,R1
+   \      0x158   0x....             LDR      R0,??DataTable3_8
+   \      0x15A   0x.... 0x....      BL       printf
+     78          
+     79              //ABS
+     80              if(YValue < 0){
+   \      0x15E   0x0038             MOVS     R0,R7
+   \      0x160   0xB200             SXTH     R0,R0
+   \      0x162   0x2800             CMP      R0,#+0
+   \      0x164   0xD502             BPL      ??DifferentialSteering_computeMotors_10
+     81                  YValue = -YValue;
+   \      0x166   0x0038             MOVS     R0,R7
+   \      0x168   0xB200             SXTH     R0,R0
+   \      0x16A   0x4247             RSBS     R7,R0,#+0
+     82              }
+     83          
+     84              //fPivScale = (ABS(YValue) > m_fPivYLimit) ? 0.0 : (1.0 - ABS(YValue) / m_fPivYLimit);
+     85              fPivScale =(float) ( (YValue > m_fPivYLimit) ? 0.0 : (1.0 - YValue / m_fPivYLimit) );
+   \                     ??DifferentialSteering_computeMotors_10: (+1)
+   \      0x16C   0x....             LDR      R1,??DataTable3_2
+   \      0x16E   0x2000             MOVS     R0,#+0
+   \      0x170   0x5E08             LDRSH    R0,[R1, R0]
+   \      0x172   0x003A             MOVS     R2,R7
+   \      0x174   0xB212             SXTH     R2,R2
+   \      0x176   0x4290             CMP      R0,R2
+   \      0x178   0xDB10             BLT      ??DifferentialSteering_computeMotors_11
+   \                     ??DifferentialSteering_computeMotors_12: (+1)
+   \      0x17A   0x0038             MOVS     R0,R7
+   \      0x17C   0xB200             SXTH     R0,R0
+   \      0x17E   0x2200             MOVS     R2,#+0
+   \      0x180   0x5E89             LDRSH    R1,[R1, R2]
+   \      0x182   0x.... 0x....      BL       __aeabi_idiv
+   \      0x186   0x.... 0x....      BL       __aeabi_i2d
+   \      0x18A   0x0002             MOVS     R2,R0
+   \      0x18C   0x000B             MOVS     R3,R1
+   \      0x18E   0x2000             MOVS     R0,#+0
+   \      0x190   0x....             LDR      R1,??DataTable3_9
+   \      0x192   0x.... 0x....      BL       __aeabi_dsub
+   \      0x196   0x.... 0x....      BL       __aeabi_d2f
+   \      0x19A   0x0006             MOVS     R6,R0
+     86          
+     87          
+     88              PRINTF("[e  %f  ]\r\n", fPivScale);
+   \                     ??DifferentialSteering_computeMotors_11: (+1)
+   \      0x19C   0x0030             MOVS     R0,R6
+   \      0x19E   0x.... 0x....      BL       __aeabi_f2d
+   \      0x1A2   0x0002             MOVS     R2,R0
+   \      0x1A4   0x000B             MOVS     R3,R1
+   \      0x1A6   0x....             LDR      R0,??DataTable3_10
+   \      0x1A8   0x.... 0x....      BL       printf
+     89          
+     90          
+     91              // Calculate final mix of Drive and Pivot
+     92              m_leftMotor  = (1.0 - fPivScale) * nMotPremixL + fPivScale * ( nPivSpeed);
+                                  ^
+Warning[Pa093]: implicit conversion from floating point to integer
+   \      0x1AC   0x0030             MOVS     R0,R6
+   \      0x1AE   0x.... 0x....      BL       __aeabi_f2d
+   \      0x1B2   0x0002             MOVS     R2,R0
+   \      0x1B4   0x000B             MOVS     R3,R1
+   \      0x1B6   0x2000             MOVS     R0,#+0
+   \      0x1B8   0x....             LDR      R1,??DataTable3_9
+   \      0x1BA   0x.... 0x....      BL       __aeabi_dsub
+   \      0x1BE   0x9000             STR      R0,[SP, #+0]
+   \      0x1C0   0x9101             STR      R1,[SP, #+4]
+   \      0x1C2   0x0028             MOVS     R0,R5
+   \      0x1C4   0x.... 0x....      BL       __aeabi_f2d
+   \      0x1C8   0x9A00             LDR      R2,[SP, #+0]
+   \      0x1CA   0x9B01             LDR      R3,[SP, #+4]
+   \      0x1CC   0x.... 0x....      BL       __aeabi_dmul
+   \      0x1D0   0x9000             STR      R0,[SP, #+0]
+   \      0x1D2   0x9101             STR      R1,[SP, #+4]
+   \      0x1D4   0x9802             LDR      R0,[SP, #+8]
+   \      0x1D6   0xB200             SXTH     R0,R0
+   \      0x1D8   0x.... 0x....      BL       __aeabi_i2f
+   \      0x1DC   0x0031             MOVS     R1,R6
+   \      0x1DE   0x.... 0x....      BL       __aeabi_fmul
+   \      0x1E2   0x.... 0x....      BL       __aeabi_f2d
+   \      0x1E6   0x9A00             LDR      R2,[SP, #+0]
+   \      0x1E8   0x9B01             LDR      R3,[SP, #+4]
+   \      0x1EA   0x.... 0x....      BL       __aeabi_dadd
+   \      0x1EE   0x.... 0x....      BL       __aeabi_d2iz
+   \      0x1F2   0x....             LDR      R1,??DataTable3
+   \      0x1F4   0x8008             STRH     R0,[R1, #+0]
+     93              m_rightMotor = (1.0 - fPivScale) * nMotPremixR + fPivScale * (-nPivSpeed);
+                                  ^
+Warning[Pa093]: implicit conversion from floating point to integer
+   \      0x1F6   0x0030             MOVS     R0,R6
+   \      0x1F8   0x.... 0x....      BL       __aeabi_f2d
+   \      0x1FC   0x0002             MOVS     R2,R0
+   \      0x1FE   0x000B             MOVS     R3,R1
+   \      0x200   0x2000             MOVS     R0,#+0
+   \      0x202   0x....             LDR      R1,??DataTable3_9
+   \      0x204   0x.... 0x....      BL       __aeabi_dsub
+   \      0x208   0x9000             STR      R0,[SP, #+0]
+   \      0x20A   0x9101             STR      R1,[SP, #+4]
+   \      0x20C   0x0020             MOVS     R0,R4
+   \      0x20E   0x.... 0x....      BL       __aeabi_f2d
+   \      0x212   0x9A00             LDR      R2,[SP, #+0]
+   \      0x214   0x9B01             LDR      R3,[SP, #+4]
+   \      0x216   0x.... 0x....      BL       __aeabi_dmul
+   \      0x21A   0x9000             STR      R0,[SP, #+0]
+   \      0x21C   0x9101             STR      R1,[SP, #+4]
+   \      0x21E   0x9902             LDR      R1,[SP, #+8]
+   \      0x220   0xB209             SXTH     R1,R1
+   \      0x222   0x4248             RSBS     R0,R1,#+0
+   \      0x224   0x.... 0x....      BL       __aeabi_i2f
+   \      0x228   0x0031             MOVS     R1,R6
+   \      0x22A   0x.... 0x....      BL       __aeabi_fmul
+   \      0x22E   0x.... 0x....      BL       __aeabi_f2d
+   \      0x232   0x9A00             LDR      R2,[SP, #+0]
+   \      0x234   0x9B01             LDR      R3,[SP, #+4]
+   \      0x236   0x.... 0x....      BL       __aeabi_dadd
+   \      0x23A   0x.... 0x....      BL       __aeabi_d2iz
+   \      0x23E   0x....             LDR      R1,??DataTable3_1
+   \      0x240   0x8008             STRH     R0,[R1, #+0]
+     94          }
+   \      0x242   0xB005             ADD      SP,SP,#+20
+   \      0x244   0xBDF0             POP      {R4-R7,PC}
+     95          
+     96          /*
+     97           * Returns the value of the left motor computed in computeMotors method.
+     98           *
+     99           * @return left computed motor, in [-127, 127] range.
+    100           */
+
+   \                                 In section .text, align 2, keep-with-next
+    101          int16_t DifferentialSteering_computedLeftMotor(void) {
+    102              return m_leftMotor;
+   \                     DifferentialSteering_computedLeftMotor: (+1)
+   \        0x0   0x....             LDR      R0,??DataTable3
+   \        0x2   0x2100             MOVS     R1,#+0
+   \        0x4   0x5E40             LDRSH    R0,[R0, R1]
+   \        0x6   0x4770             BX       LR
+    103          }
+    104          
+    105          /*
+    106           * Returns the value of the right motor computed in computeMotors method.
+    107           *
+    108           * @return right computed motor, in [-127, 127] range.
+    109           */
+
+   \                                 In section .text, align 2, keep-with-next
+    110          int16_t DifferentialSteering_computedRightMotor(void) {
+    111              return m_rightMotor;
+   \                     DifferentialSteering_computedRightMotor: (+1)
+   \        0x0   0x....             LDR      R0,??DataTable3_1
+   \        0x2   0x2100             MOVS     R1,#+0
+   \        0x4   0x5E40             LDRSH    R0,[R0, R1]
+   \        0x6   0x4770             BX       LR
+    112          }
+    113          
+    114          /**
+    115           * Return the compute range used in the computeMotors method.
+    116           * 
+    117           * @return the compute range.
+    118           */
+
+   \                                 In section .text, align 2, keep-with-next
+    119          int16_t DifferentialSteering_getComputeRange(void) {
+    120              return COMPUTERANGE;
+   \                     DifferentialSteering_getComputeRange: (+1)
+   \        0x0   0x20FA             MOVS     R0,#+250
+   \        0x2   0x0080             LSLS     R0,R0,#+2
+   \        0x4   0x4770             BX       LR
+    121          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3:
+   \        0x0   0x....'....        DC32     m_leftMotor
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_1:
+   \        0x0   0x....'....        DC32     m_rightMotor
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_2:
+   \        0x0   0x....'....        DC32     m_fPivYLimit
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_3:
+   \        0x0   0x447A'0000        DC32     0x447a0000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_4:
+   \        0x0   0x408F'4000        DC32     0x408f4000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_5:
+   \        0x0   0x....'....        DC32     ?_0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_6:
+   \        0x0   0x....'....        DC32     ?_1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_7:
+   \        0x0   0x....'....        DC32     ?_2
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_8:
+   \        0x0   0x....'....        DC32     ?_3
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_9:
+   \        0x0   0x3FF0'0000        DC32     0x3ff00000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_10:
+   \        0x0   0x....'....        DC32     ?_4
+
+   \                                 In section .rodata, align 4
+   \                     ?_0:
+   \        0x0   0x5B 0x61          DC8 "[a  %f\t%f  ]\015\012"
+
+   \              0x20 0x20    
+
+   \              0x25 0x66    
+
+   \              0x09 0x25    
+
+   \              0x66 0x20    
+
+   \              0x20 0x5D    
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \        0xF                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_1:
+   \        0x0   0x5B 0x62          DC8 "[b  %f\t%f  ]\015\012"
+
+   \              0x20 0x20    
+
+   \              0x25 0x66    
+
+   \              0x09 0x25    
+
+   \              0x66 0x20    
+
+   \              0x20 0x5D    
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \        0xF                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_2:
+   \        0x0   0x5B 0x63          DC8 "[c  %f\t%f  ]\015\012"
+
+   \              0x20 0x20    
+
+   \              0x25 0x66    
+
+   \              0x09 0x25    
+
+   \              0x66 0x20    
+
+   \              0x20 0x5D    
+
+   \              0x0D 0x0A    
+
+   \              0x00
+   \        0xF                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_3:
+   \        0x0   0x5B 0x64          DC8 "[d  %d  ]\015\012"
+
+   \              0x20 0x20    
+
+   \              0x25 0x64    
+
+   \              0x20 0x20    
+
+   \              0x5D 0x0D    
+
+   \              0x0A 0x00
+
+   \                                 In section .rodata, align 4
+   \                     ?_4:
+   \        0x0   0x5B 0x65          DC8 "[e  %f  ]\015\012"
+
+   \              0x20 0x20    
+
+   \              0x25 0x66    
+
+   \              0x20 0x20    
+
+   \              0x5D 0x0D    
+
+   \              0x0A 0x00
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      40   DifferentialSteering_computeMotors
+        40   -> __aeabi_d2f
+        40   -> __aeabi_d2iz
+        40   -> __aeabi_dadd
+        40   -> __aeabi_ddiv
+        40   -> __aeabi_dmul
+        40   -> __aeabi_dsub
+        40   -> __aeabi_f2d
+        40   -> __aeabi_fmul
+        40   -> __aeabi_i2d
+        40   -> __aeabi_i2f
+        40   -> printf
+        40 __aeabi_idiv
+       0   DifferentialSteering_computedLeftMotor
+       0   DifferentialSteering_computedRightMotor
+       0   DifferentialSteering_getComputeRange
+       0   DifferentialSteering_setup
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  ??DataTable3_1
+       4  ??DataTable3_10
+       4  ??DataTable3_2
+       4  ??DataTable3_3
+       4  ??DataTable3_4
+       4  ??DataTable3_5
+       4  ??DataTable3_6
+       4  ??DataTable3_7
+       4  ??DataTable3_8
+       4  ??DataTable3_9
+      16  ?_0
+      16  ?_1
+      16  ?_2
+      12  ?_3
+      12  ?_4
+     582  DifferentialSteering_computeMotors
+       8  DifferentialSteering_computedLeftMotor
+       8  DifferentialSteering_computedRightMotor
+       6  DifferentialSteering_getComputeRange
+      16  DifferentialSteering_setup
+       2  m_fPivYLimit
+       2  m_leftMotor
+       2  m_rightMotor
+
+ 
+   6 bytes in section .bss
+  72 bytes in section .rodata
+ 664 bytes in section .text
+ 
+ 664 bytes of CODE  memory
+  72 bytes of CONST memory
+   6 bytes of DATA  memory
+
+Errors: none
+Warnings: 2

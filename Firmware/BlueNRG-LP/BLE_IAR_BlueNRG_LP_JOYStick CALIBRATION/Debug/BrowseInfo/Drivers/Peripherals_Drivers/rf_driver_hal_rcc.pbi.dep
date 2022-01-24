@@ -1,0 +1,44 @@
+C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Debug\BrowseInfo\Drivers\Peripherals_Drivers\rf_driver_hal_rcc.pbi: \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\src\rf_driver_hal_rcc.c \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_hal.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_ll_system.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\CMSIS\Device\ST\BlueNRG_LP\Include\bluenrg_lpx.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\CMSIS\Device\ST\BlueNRG_LP\Include\bluenrg_lp.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\CMSIS\Include\core_cm0plus.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdint.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\CMSIS\Include\cmsis_version.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\CMSIS\Include\cmsis_compiler.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\CMSIS\Include\cmsis_iccarm.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32\iccarm_builtin.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\CMSIS\Include\mpu_armv7.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Middlewares\ST\hal\Inc\system_util.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Middlewares\ST\hal\Inc\compiler.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\CMSIS\Device\ST\BlueNRG_LP\Include\system_BlueNRG_LP.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Middlewares\ST\hal\Inc\compiler.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\CMSIS\Device\ST\BlueNRG_LP\Include\bluenrg_lpx.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\bluenrg_lp_hal_conf.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_hal_dma.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_hal_def.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stddef.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ysizet.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_ll_dma.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_ll_dmamux.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_hal_adc.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_ll_adc.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_hal_cortex.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_hal_exti.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_hal_flash.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_hal_flash_ex.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_hal_gpio.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_hal_gpio_ex.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_hal_rcc.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_ll_rcc.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_ll_bus.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_hal_rcc_ex.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_ll_exti.h \
+  C:\Users\michele\Desktop\BLE_IAR_BlueNRG_LP_JOYStick\ CALIBRATION\Drivers\Peripherals_Drivers\Inc\rf_driver_ll_pwr.h

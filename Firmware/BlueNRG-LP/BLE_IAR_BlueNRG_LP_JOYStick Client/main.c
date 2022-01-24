@@ -316,9 +316,10 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
 
     if ((slaves.state == SCANNING_DONE)|| (slaves.state == FINISH)){ 
       TIMER_STANDBY = HAL_GetTick();
-      STANBY_STATE = 3;
-      LED_START_TOGGLE(30,100,100);
-      VIBRATION_START_TOGGLE(1,3000,100);
+      if(STANBY_STATE!=4)
+        STANBY_STATE = 3;
+      //LED_START_TOGGLE(30,100,100);
+      //VIBRATION_START_TOGGLE(1,200,100);
       slaves.state = IDLE;
     }
               
@@ -337,11 +338,11 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
           //GOOOO STANDBY
           State_DisconnectRequest();
           TIMER_STANDBY = HAL_GetTick();
-        
-          STANBY_STATE = 3;
+          if(STANBY_STATE!=4)
+            STANBY_STATE = 3;
           
-          LED_START_TOGGLE(5,200,100);
-          VIBRATION_START_TOGGLE(1,3000,100);
+          //LED_START_TOGGLE(5,200,100);
+          //VIBRATION_START_TOGGLE(1,200,100);
 
       }
     }
@@ -373,7 +374,7 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
             //if(PA10__BTNBOOT.State == false){     //Pulsante premuto a massa
           }
               
-              if((PA10__BTNBOOT.State == false)&&((HAL_GetTick()-PA10__BTNBOOT.time_OFFstate)>=3000))  {     //Pulsante premuto a massa
+              if((PA10__BTNBOOT.State == false)&&((HAL_GetTick()-PA10__BTNBOOT.time_OFFstate)>=1000))  {     //Pulsante premuto a massa x piu di 1000 mS
               
                 //Check joy in free run
                 if((ble_data_send.uJoy_x < 10)&&(ble_data_send.uJoy_x > -10)&&
@@ -382,8 +383,8 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
                       TIMER_STANDBY = HAL_GetTick();
                       STANBY_STATE = 2;
                     
-                      LED_START_TOGGLE(30,100,100);
-                      VIBRATION_START_TOGGLE(1,3000,100);
+                      //LED_START_TOGGLE(30,100,100);
+                      //VIBRATION_START_TOGGLE(1,200,100);
                       
                    }                   
                }
@@ -401,11 +402,18 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
           }
       break;
       
-      
       case 3:
+        LED_START_TOGGLE(30,100,100);
+        VIBRATION_START_TOGGLE(0,250,100);
+
+        TIMER_STANDBY = HAL_GetTick();
+        STANBY_STATE = 4;
+      break;
+      
+      case 4:
         if((HAL_GetTick() - TIMER_STANDBY) > 1000){
             TIMER_STANDBY = HAL_GetTick();
-            STANBY_STATE = 4;
+            STANBY_STATE = 5;
             //PRINTF("GO SLEEEEPPPPPPPPPPPPPPPP \r\n");
             
             disable_all();
@@ -414,7 +422,7 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
         }
       break;
         
-      case 4:
+      case 5:
         /*
           ret = HAL_PWR_MNGR_Request(POWER_SAVE_LEVEL_STOP_NOTIMER, wakeupIO, &stopLevel);
 
