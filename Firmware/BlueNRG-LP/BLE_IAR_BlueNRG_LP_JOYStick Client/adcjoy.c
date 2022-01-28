@@ -207,7 +207,7 @@ void ADC_JOY_task(void){
         
         Motor_Convert_Joy(&joy_raw, &ble_data_send);
          
-        PRINTF("%d\t%d\t%d\r\n", ble_data_send.uJoy_x, ble_data_send.uJoy_y, ble_data_send.uvbattery);
+        //PRINTF("%d\t%d\t%d\r\n", ble_data_send.uJoy_x, ble_data_send.uJoy_y, ble_data_send.uvbattery);
         
         /*
         if(campioni_saltare > 1){
@@ -301,8 +301,8 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
 
         
         
-    wheelJOY->uJoy_x = wheelJOY->uJoy_x - 96;
-    wheelJOY->uJoy_y = wheelJOY->uJoy_y + 73;
+    wheelJOY->uJoy_x = wheelJOY->uJoy_x - 68;
+    wheelJOY->uJoy_y = wheelJOY->uJoy_y + 68;
 
     //Ymax = 961
     //Ymin = -795
@@ -314,20 +314,20 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
     
 
     if(wheelJOY->uJoy_y < 0){
-      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,-927,0,-1000,0);
+      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,-932,0,-1000,0);
     }else if(wheelJOY->uJoy_y > 0){
-      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,0,955,0,1000);
+      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,0,943,0,1000);
     }
     if(wheelJOY->uJoy_x < 0){
-      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,-988,0,-1000,0);
+      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,-951,0,-1000,0);
     }else if(wheelJOY->uJoy_x > 0){
-      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,0,904,0,1000);
+      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,0,932,0,1000);
     }
 
 
 
 
-/*
+
     
      //LIMIT
     if(wheelJOY->uJoy_x > 1000)
@@ -342,7 +342,7 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
 
     //Invert x
     //wheelJOY->uJoy_x = wheelJOY->uJoy_x * -1;
-  */
+  
 }
 
 

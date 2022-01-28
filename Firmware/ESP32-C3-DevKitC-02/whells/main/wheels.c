@@ -256,7 +256,7 @@ void wheels_task(void *arg){
 
 
                                 //Motor
-                                if( (wheel_var.vescValueLeft < 0.004) & (wheel_var.vescValueLeft > -0.004)  & (wheel_var.vescValueright < 0.004) & (wheel_var.vescValueright > -0.004) ){
+                                if( (wheel_var.vescValueLeft < 0.005) & (wheel_var.vescValueLeft > -0.005)  & (wheel_var.vescValueright < 0.005) & (wheel_var.vescValueright > -0.005) ){
                                     if(wheel_var.FREE_RUN_REPEAT > 0){
                                         ESP_LOGI(TAGWHEELS, "[MODE]...DutyCycle free run %f , %f ",  wheel_var.vescValueLeft,wheel_var.vescValueright);
                                         Motor_Free();
@@ -315,7 +315,7 @@ void wheels_task(void *arg){
 
 
                                 //Motor
-                                if( (wheel_var.vescValueLeft < 0.004) & (wheel_var.vescValueLeft > -0.004)  & (wheel_var.vescValueright < 0.004) & (wheel_var.vescValueright > -0.004) ){
+                                if( (wheel_var.vescValueLeft < 0.04) & (wheel_var.vescValueLeft > -0.04)  & (wheel_var.vescValueright < 0.04) & (wheel_var.vescValueright > -0.04) ){
                                     if(wheel_var.FREE_RUN_REPEAT > 0){
                                         ESP_LOGI(TAGWHEELS, "[MODE]...CURRENT free run %f , %f ",  wheel_var.vescValueLeft,wheel_var.vescValueright);
 
@@ -375,7 +375,7 @@ void wheels_task(void *arg){
                                 linear_accelerationINT(&linear_acce, &wheel_var, 200);
 
                                 //Motor
-                                if( (wheel_var.ivescValueLeft < 20) & (wheel_var.ivescValueLeft > -20)  & (wheel_var.ivescValueright < 20) & (wheel_var.ivescValueright > -20) ){
+                                if( (wheel_var.ivescValueLeft < 50) & (wheel_var.ivescValueLeft > -50)  & (wheel_var.ivescValueright < 50) & (wheel_var.ivescValueright > -50) ){
                                     if(wheel_var.FREE_RUN_REPEAT > 0){
                                         ESP_LOGI(TAGWHEELS, "[MODE]...RPM free run %d , %d ",  wheel_var.vescValueLeft,wheel_var.vescValueright);
 

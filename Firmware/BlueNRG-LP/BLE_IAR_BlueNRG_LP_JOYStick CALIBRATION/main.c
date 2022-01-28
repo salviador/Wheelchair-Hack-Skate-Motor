@@ -512,6 +512,9 @@ int main(void)
           PRINTF("-------------------------------------------------------\r\n");
           PRINTF("\r\n");
       
+          
+          PRINTF("[adcjoy.c]\r\n");
+          
           PRINTF("[void Motor_Convert_Joy(.....])] , ADJUST OFFSET\r\n");
           
           if(CENTER_X < 0)
