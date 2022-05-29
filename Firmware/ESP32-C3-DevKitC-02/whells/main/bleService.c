@@ -628,11 +628,12 @@ static void gatts_profile_event_handler(esp_gatts_cb_event_t event,
                     xEventGroupSetBits(BLE_event_group, BLECONNECTED_BIT);
 
                     BuzMsg.state = 1;
-                    BuzMsg.timeWaitON = 150;
-                    BuzMsg.timeWaitOFF = 150;
+                    BuzMsg.timeWaitON = 200;
+                    BuzMsg.timeWaitOFF = 250;
                     xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
 
                     //Joystick_profile_tab[JOYSTICK_PROFILE_APP_IDX].conn_id = param->connect.conn_id;
+                    
                     msgLED.state = 1;
                     msgLED.R = 0;
                     msgLED.G = 0;
@@ -693,7 +694,7 @@ static void gatts_profile_event_handler(esp_gatts_cb_event_t event,
             xEventGroupClearBits(BLE_event_group, BLECONNECTED_BIT);
 
             BuzMsg.state = 1;
-            BuzMsg.timeWaitON = 500;
+            BuzMsg.timeWaitON = 100;
             BuzMsg.timeWaitOFF = 150;
             xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
 

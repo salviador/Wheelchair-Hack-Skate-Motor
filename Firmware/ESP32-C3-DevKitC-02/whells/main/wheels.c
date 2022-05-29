@@ -81,7 +81,7 @@ void wheels_task(void *arg){
 
                 //ESP_LOGI(TAGWHEELS, "%d", Joystick_rec.uvbattery);
 
-                ESP_LOGI(TAGWHEELS, "1--= %d,%d, %x",  wheel_var.joyX , wheel_var.joyY, Joystick_rec.buttons );
+                //ESP_LOGI(TAGWHEELS, "1--= %d,%d, %x",  wheel_var.joyX , wheel_var.joyY, Joystick_rec.buttons );
                 /*
                 ESP_LOGI(TAGWHEELS, "%d,%d,%d,%d, %d,%d,%d,%d",  
                                                                 (Joystick_rec.buttons & 0x80),
@@ -229,12 +229,12 @@ void wheels_task(void *arg){
 
                                 if(Joystick_rec.buttons & BUTTON_TURBO){
                                     //HARD MODE
-                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -0.95, 0.95);
-                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -0.95, 0.95);
+                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -0.80, 0.80);
+                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -0.80, 0.80);
                                 }else{
                                     //SOFT MODE
-                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -0.20, 0.20);
-                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -0.20, 0.20);
+                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -0.15, 0.15); //0.20
+                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -0.15, 0.15);
                                     //wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -0.15, 0.15);
                                     //wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -0.15, 0.15);
                                     /*
@@ -290,12 +290,12 @@ void wheels_task(void *arg){
 
                                 if(Joystick_rec.buttons & BUTTON_TURBO){
                                     //HARD MODE
-                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -15.00, 15.0);
-                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -15.00, 15.00);
+                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -20.00, 20.00);
+                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -20.00, 20.00);
                                 }else{
                                     //SOFT MODE
-                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -2.00, 2.00);
-                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -2.00, 2.00);
+                                    wheel_var.vescValueLeft = mapfloat((float)leftMotor, -1000, 1000, -5.00, 5.00);
+                                    wheel_var.vescValueright = mapfloat((float)rightMotor, -1000, 1000, -5.00, 5.00);
                                 }
                                 /*
                                 if((leftMotor < 0)&(rightMotor < 0)){
@@ -350,12 +350,12 @@ void wheels_task(void *arg){
 
                                 if(Joystick_rec.buttons & BUTTON_TURBO){
                                     //HARD MODE
-                                    wheel_var.ivescValueLeft = map(leftMotor, -1000, 1000, -3500, 3500);
-                                    wheel_var.ivescValueright = map(rightMotor, -1000, 1000, -3500, 3500);
+                                    wheel_var.ivescValueLeft = map(leftMotor, -1000, 1000, -2500, 2500);
+                                    wheel_var.ivescValueright = map(rightMotor, -1000, 1000, -2500, 2500);
                                 }else{
                                     //SOFT MODE
-                                    wheel_var.ivescValueLeft = map(leftMotor, -1000, 1000, -2000, 2000);
-                                    wheel_var.ivescValueright = map(rightMotor, -1000, 1000, -2000, 2000);
+                                    wheel_var.ivescValueLeft = map(leftMotor, -1000, 1000, -1500, 1500);  //700
+                                    wheel_var.ivescValueright = map(rightMotor, -1000, 1000, -1500, 1500);
                                 }
                                 /*
                                 if((leftMotor < 0)&(rightMotor < 0)){
@@ -544,10 +544,10 @@ void linear_acceleration_var_resetINT(struct LINEAR_ACC_VAR *var){
 
 void Buzzer_CurrentMode(void){
     BuzMsg.state = 1;
-    BuzMsg.timeWaitON = 150;
-    BuzMsg.timeWaitOFF = 150;
+    BuzMsg.timeWaitON = 200;
+    BuzMsg.timeWaitOFF = 200;
     xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
-    BuzMsg.state = 1;
+/*    BuzMsg.state = 1;
     BuzMsg.timeWaitON = 150;
     BuzMsg.timeWaitOFF = 150;
     xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
@@ -563,13 +563,15 @@ void Buzzer_CurrentMode(void){
     BuzMsg.timeWaitON = 150;
     BuzMsg.timeWaitOFF = 150;
     xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+*/
 }
 
 void Buzzer_RPMMode(void){
     BuzMsg.state = 1;
-    BuzMsg.timeWaitON = 350;
-    BuzMsg.timeWaitOFF = 150;
+    BuzMsg.timeWaitON = 200;
+    BuzMsg.timeWaitOFF = 200;
     xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+  /*
     BuzMsg.state = 1;
     BuzMsg.timeWaitON = 150;
     BuzMsg.timeWaitOFF = 150;
@@ -582,14 +584,16 @@ void Buzzer_RPMMode(void){
     BuzMsg.timeWaitON = 350;
     BuzMsg.timeWaitOFF = 150;
     xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+*/
 }
 
 
 void Buzzer_DutyMode(void){
     BuzMsg.state = 1;
-    BuzMsg.timeWaitON = 150;
-    BuzMsg.timeWaitOFF = 150;
+    BuzMsg.timeWaitON = 200;
+    BuzMsg.timeWaitOFF = 200;
     xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
+/*
     BuzMsg.state = 1;
     BuzMsg.timeWaitON = 150;
     BuzMsg.timeWaitOFF = 150;
@@ -598,4 +602,5 @@ void Buzzer_DutyMode(void){
     BuzMsg.timeWaitON = 150;
     BuzMsg.timeWaitOFF = 150;
     xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);  
+*/
 }
