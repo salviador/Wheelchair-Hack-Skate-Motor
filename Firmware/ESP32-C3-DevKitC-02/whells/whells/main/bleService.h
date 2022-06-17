@@ -71,4 +71,8 @@ EventGroupHandle_t BLE_event_group;
     #define BUTTON_DUDY_MODE       0x04  
     #define BUTTON_RPM_MODE        0x10 
 
+
+    #define BUTTON_MENO        0x20 
+    #define BUTTON_PIU        0x40 
+
 #endif

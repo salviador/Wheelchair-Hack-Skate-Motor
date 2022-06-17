@@ -21,5 +21,34 @@
     void VESC_SET_RPM(uint8_t EXIDL, int32_t valueL,uint8_t EXIDR, int32_t valueR);    // 500 = 500 RPM
 
 
+    void twai_requestDATA_LeftMotor(void);
+    void twai_requestDATA_RightMotor(void);
+
+
+
+    void twai_get_data_task(void *arg);
+
+    QueueHandle_t vsc_data_logL;
+    QueueHandle_t vsc_data_logR;
+    
+    
+    struct VESC_DATACAN{
+        int16_t RPM;
+        //float Amp_Motor; 
+        //float Amp_Input_Current; 
+        //uint8_t Voltage; 
+
+        unsigned long time_update;
+    };
+
+
+
+
+    //unsigned short crc16(unsigned char *buf, unsigned int len);
+ 
+
+
+
+
 #endif
 

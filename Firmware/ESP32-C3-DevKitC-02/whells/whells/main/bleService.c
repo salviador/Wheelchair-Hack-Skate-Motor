@@ -628,7 +628,7 @@ static void gatts_profile_event_handler(esp_gatts_cb_event_t event,
                     xEventGroupSetBits(BLE_event_group, BLECONNECTED_BIT);
 
                     BuzMsg.state = 1;
-                    BuzMsg.timeWaitON = 200;
+                    BuzMsg.timeWaitON = 90;
                     BuzMsg.timeWaitOFF = 250;
                     xQueueSend(buzzer_Queue, &BuzMsg, portMAX_DELAY);
 

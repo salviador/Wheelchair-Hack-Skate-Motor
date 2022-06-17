@@ -75,7 +75,16 @@
 
 
 
+    struct CURRENT_MODE_DATA{
+        int16_t SPUNTO_PARTENZA_H;
+        int16_t SPUNTO_PARTENZA_L;
 
+        int16_t SPUNTO_PARTENZA_ISTERESI;
+
+        float current_soft_var;
+
+
+    };
 
 
 
@@ -103,5 +112,10 @@
     void Buzzer_RPMMode(void);
     void Buzzer_CurrentMode(void);
     
+    void Buzzer_short_beep(void);
+    void Buzzer_short_beepbeep(void);
+    void Buzzer_short_beepbeepbeep(void);
+
+
 #endif
 

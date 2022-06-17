@@ -3,7 +3,8 @@
         "bleservice.h": "c",
         "ledrgb.h": "c",
         "string.h": "c",
-        "type_traits": "c"
+        "type_traits": "c",
+        "sdkconfig.h": "c"
     },
     "idf.adapterTargetName": "esp32c3"
 }
