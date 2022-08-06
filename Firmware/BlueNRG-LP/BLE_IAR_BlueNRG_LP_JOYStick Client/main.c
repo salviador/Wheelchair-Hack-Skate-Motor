@@ -140,7 +140,7 @@ void ModulesTick(void)
 
 ////CONFIG_HW_SMPS_10uH
 
-
+ 
 int main(void)  
 {
   uint8_t ret;
@@ -325,14 +325,14 @@ PRINTF("SYSTEM STARTTTTTTTTTTTTTTTTTTTTTTTTTTT\r\n");
               
 
   
-    // time out
+    // time out (secondi)
     if((HAL_GetTick() - TIMEOUT_STANDBY) >= 1000){
       TIMEOUT_STANDBY = HAL_GetTick();
     
       //Secondi Counter
       TIMEOUT_SECONDI++;
       
-      if(TIMEOUT_SECONDI > 120){
+      if(TIMEOUT_SECONDI > 900){        //120 secondi
           TIMEOUT_SECONDI = 0;
           
           //GOOOO STANDBY

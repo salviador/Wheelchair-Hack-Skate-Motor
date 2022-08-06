@@ -301,8 +301,8 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
 
         
         
-    wheelJOY->uJoy_x = wheelJOY->uJoy_x - 68;
-    wheelJOY->uJoy_y = wheelJOY->uJoy_y + 68;
+    wheelJOY->uJoy_x = wheelJOY->uJoy_x - 59;   
+    wheelJOY->uJoy_y = wheelJOY->uJoy_y + 82;
 
     //Ymax = 961
     //Ymin = -795
@@ -314,14 +314,14 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
     
 
     if(wheelJOY->uJoy_y < 0){
-      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,-932,0,-1000,0);
+      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,-913,0,-1000,0);   //Ymin
     }else if(wheelJOY->uJoy_y > 0){
-      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,0,943,0,1000);
+      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,0,960,0,1000);     //Ymax
     }
     if(wheelJOY->uJoy_x < 0){
-      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,-951,0,-1000,0);
+      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,-926,0,-1000,0);   //Xmin
     }else if(wheelJOY->uJoy_x > 0){
-      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,0,932,0,1000);
+      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,0,841,0,1000);     //Xmax
     }
 
 
