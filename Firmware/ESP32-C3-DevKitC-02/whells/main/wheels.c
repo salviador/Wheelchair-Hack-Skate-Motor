@@ -72,6 +72,8 @@ extern struct VESC_DATACAN VSC_DATA_Right;
 
 
 
+
+
 void wheels_setup(void){
 
     xQueueJOYData = xQueueCreate( 1, sizeof( Joystick_rec ) );
@@ -561,6 +563,44 @@ void wheels_task(void *arg){
                                             //ESP_LOGI(TAGWHEELS, "Current <NORMAL 2> %f",cuurent_mode_data.current_soft_var);
                                         }
 
+
+
+                                        //Correct sterzing friction per girare meglio
+                                        int valxjoy1 = 0;
+                                        float valxjoy1f  = 0.00000;
+
+                                        if(wheel_var.joyY > 300) {
+                                            valxjoy1 =  abs(wheel_var.joyX);
+                                            valxjoy1f  = mapfloat((float)valxjoy1, 0.0, 1000, 0.0 , 2.5);
+
+                                            //ESP_LOGI(TAGWHEELS, "p> %f , %f    ; (%f)", wheel_var.vescValueLeft, wheel_var.vescValueright,
+                                            //                         valxjoy1f);
+
+                                            if (wheel_var.joyX > 50) {
+                                                wheel_var.vescValueright = wheel_var.vescValueright - valxjoy1f;
+
+                                            }else if(wheel_var.joyX < 50) {
+                                                wheel_var.vescValueLeft = wheel_var.vescValueLeft - valxjoy1f;
+                                            }
+
+
+
+                                        }
+
+
+                                        //ESP_LOGI(TAGWHEELS, "> %d , %d    ;  %d , %d   ; %d (%f)", leftMotor, rightMotor,  wheel_var.joyX, wheel_var.joyY,  valxjoy1,valxjoy1f);
+                                        //ESP_LOGI(TAGWHEELS, "> %f , %f    ; (%f)", wheel_var.vescValueLeft, wheel_var.vescValueright,
+                                        //                              valxjoy1f);
+
+
+                                        //ESP_LOGI(TAGWHEELS, "\n");
+
+
+
+
+
+
+
                                     }
                                 }
 
@@ -664,7 +704,7 @@ void wheels_task(void *arg){
                                         linear_acceleration_var_reset(&linear_acce);
                                     }
                                 }else{
-                                    //ESP_LOGI(TAGWHEELS, "[MODE]...CURRENT %f , %f ",  wheel_var.vescValueLeft,wheel_var.vescValueright);
+                                    ESP_LOGI(TAGWHEELS, "[MODE]...CURRENT %f , %f ",  wheel_var.vescValueLeft,wheel_var.vescValueright);
                                     VESC_SET_Current(EXID_LEFT, linear_acce.vsec_acc_left, EXID_RIGHT, linear_acce.vsec_acc_right);
                                     wheel_var.FREE_RUN_REPEAT = 3;
                                 }
