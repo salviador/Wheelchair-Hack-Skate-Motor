@@ -32,6 +32,9 @@
 #include "buzzer.h"
 #include "debugGPIO.h"
 
+#define FILTER_MAC  1
+
+
 struct Led_queue msgLED;
 struct BUZZER_queue BuzMsg;
 
@@ -615,13 +618,14 @@ static void gatts_profile_event_handler(esp_gatts_cb_event_t event,
             ESP_LOGI(GATTS_TABLE_TAG, "ESP_GATTS_CONNECT_EVT ID %d",param->connect.conn_id);
 
             ESP_LOGI(GATTS_TABLE_TAG, "CONNECT ADDDDDRESS= %x %x %x %x", param->connect.remote_bda[0], param->connect.remote_bda[1], param->connect.remote_bda[2], param->connect.remote_bda[3]);
+#ifdef FILTER_MAC
                 if(param->connect.remote_bda[0] == 0x02 && 
                     param->connect.remote_bda[1] == 0x80 && 
                     param->connect.remote_bda[2] == 0xE1 && 
                     param->connect.remote_bda[3] == 0x00 && 
                     param->connect.remote_bda[4] == 0x00 && 
                     param->connect.remote_bda[5] == 0xE0){
-
+#endif
 
                     //MAC UGUALE ******CONNETTI******
 
@@ -664,7 +668,7 @@ static void gatts_profile_event_handler(esp_gatts_cb_event_t event,
                     msgLED.B = 10;
                     msgLED.timeWait = 10;
                     xQueueSend(led_Queue, (void *)&msgLED, portMAX_DELAY);
-
+#ifdef FILTER_MAC
             }else{
 
                 ESP_LOGI(GATTS_TABLE_TAG, "**** RIFIUTO CONNESSIONEE ****");
@@ -674,8 +678,8 @@ static void gatts_profile_event_handler(esp_gatts_cb_event_t event,
                 //Rifiuta connessione
                 esp_ble_gatts_close(gatts_if, param->connect.conn_id);
             }
+#endif
 
-            
             /* start security connect with peer device when receive the connect event sent by the master */
          //   esp_ble_set_encryption(param->connect.remote_bda, ESP_BLE_SEC_ENCRYPT_MITM);
             break;

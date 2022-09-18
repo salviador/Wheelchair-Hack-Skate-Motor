@@ -61,6 +61,7 @@ int rpm_set_speed = 0;
 int rpm_diff_sterzing_auto = 0;
 int rpm_sterzing_max = 0;
 int intRoundfloat = 0;
+int rpm_max_setting_spped;
 
 uint8_t MOTOR_STATE;
 uint8_t tempMOTORSTATE;
@@ -133,7 +134,7 @@ void wheels_task(void *arg){
 
                 //ESP_LOGI(TAGWHEELS, "%d", Joystick_rec.uvbattery);
 
-                //ESP_LOGI(TAGWHEELS, "1--= %d,%d, %x",  wheel_var.joyX , wheel_var.joyY, Joystick_rec.buttons );
+                ESP_LOGI(TAGWHEELS, "1--= %d,%d, %x",  wheel_var.joyX , wheel_var.joyY, Joystick_rec.buttons );
                 /*
                 ESP_LOGI(TAGWHEELS, "%d,%d,%d,%d, %d,%d,%d,%d",  
                                                                 (Joystick_rec.buttons & 0x80),
@@ -420,6 +421,48 @@ void wheels_task(void *arg){
                                     current_guida_auto = 0;
                                     current_set_speed = 0;
                                     current_diff_sterzing_auto = 0;
+
+                                    //Correct sterzing friction per girare meglio
+                                    int valxjoy1 = 0;
+                                    float valxjoy1f  = 0.00000;
+
+                                    float valxjoy1fper  = 0.00000;
+                                    
+
+                                    if(wheel_var.joyY > 100) {
+                                        valxjoy1 =  abs(wheel_var.joyX);
+                                        valxjoy1f  = mapfloat((float)valxjoy1, 0.0, 1000, 0.0 , 15.000);
+
+                                //        ESP_LOGI(TAGWHEELS, "p> %f , %f    ; (%f)", wheel_var.vescValueLeft, wheel_var.vescValueright,
+                                //                               valxjoy1f);
+
+                                        valxjoy1fper = ((valxjoy1f / 1000.0) * wheel_var.joyY) * 2.8000;
+
+                                        if (wheel_var.joyX > 50) {
+                                            wheel_var.vescValueright = wheel_var.vescValueright - valxjoy1fper; //valxjoy1f;
+                                            if(wheel_var.vescValueright < -4.00){
+                                                wheel_var.vescValueright = -4.00;
+                                            }
+
+                                        }else if(wheel_var.joyX < 50) {
+                                            wheel_var.vescValueLeft = wheel_var.vescValueLeft - valxjoy1fper; //valxjoy1f;
+                                            if(wheel_var.vescValueLeft < -4.00){
+                                                wheel_var.vescValueLeft = -4.00;
+                                            }
+                                        }
+                                    }
+
+/*
+                                    ESP_LOGI(TAGWHEELS, "> %d , %d    ;  %d , %d   ; %d (%f)", leftMotor, rightMotor,  wheel_var.joyX, wheel_var.joyY,  valxjoy1,valxjoy1f);
+                                    ESP_LOGI(TAGWHEELS, "> %f , %f    ; (%f) (%f)", wheel_var.vescValueLeft, wheel_var.vescValueright,
+                                                                    valxjoy1f , valxjoy1fper);
+                                    
+                                    ESP_LOGI(TAGWHEELS, "\n");
+
+*/
+
+
+
                                 }else{
 
 
@@ -568,33 +611,44 @@ void wheels_task(void *arg){
                                         //Correct sterzing friction per girare meglio
                                         int valxjoy1 = 0;
                                         float valxjoy1f  = 0.00000;
+                                        float valxjoy1fper  = 0.00000;
+
 
                                         if(wheel_var.joyY > 300) {
                                             valxjoy1 =  abs(wheel_var.joyX);
-                                            valxjoy1f  = mapfloat((float)valxjoy1, 0.0, 1000, 0.0 , 2.5);
+                                            valxjoy1f  = mapfloat((float)valxjoy1, 0.0, 1000, 0.0 , cuurent_mode_data.current_soft_var); //2.5
 
-                                            //ESP_LOGI(TAGWHEELS, "p> %f , %f    ; (%f)", wheel_var.vescValueLeft, wheel_var.vescValueright,
-                                            //                         valxjoy1f);
+                                            valxjoy1fper = ((valxjoy1f / 1000.0) * wheel_var.joyY )  * 2.1500 ;      // FAttore moltiplicazione
+
+
+
+                                         //   ESP_LOGI(TAGWHEELS, "p> %f , %f    ; (%f)", wheel_var.vescValueLeft, wheel_var.vescValueright,
+                                           //                          valxjoy1f);
+
+
 
                                             if (wheel_var.joyX > 50) {
-                                                wheel_var.vescValueright = wheel_var.vescValueright - valxjoy1f;
-
+                                                wheel_var.vescValueright = wheel_var.vescValueright - valxjoy1fper; //valxjoy1f;
+                                                if(wheel_var.vescValueright < - 3.00){
+                                                    wheel_var.vescValueright = -3.00;
+                                                }
                                             }else if(wheel_var.joyX < 50) {
-                                                wheel_var.vescValueLeft = wheel_var.vescValueLeft - valxjoy1f;
+                                                wheel_var.vescValueLeft = wheel_var.vescValueLeft - valxjoy1fper; //valxjoy1f;
+                                                if(wheel_var.vescValueLeft < - 3.00){
+                                                    wheel_var.vescValueLeft = -3.00;
+                                                }
                                             }
-
-
-
                                         }
 
 
-                                        //ESP_LOGI(TAGWHEELS, "> %d , %d    ;  %d , %d   ; %d (%f)", leftMotor, rightMotor,  wheel_var.joyX, wheel_var.joyY,  valxjoy1,valxjoy1f);
-                                        //ESP_LOGI(TAGWHEELS, "> %f , %f    ; (%f)", wheel_var.vescValueLeft, wheel_var.vescValueright,
-                                        //                              valxjoy1f);
+/*
+                                        ESP_LOGI(TAGWHEELS, "> %d , %d    ;  %d , %d   ; %d (%f)", leftMotor, rightMotor,  wheel_var.joyX, wheel_var.joyY,  valxjoy1,valxjoy1f);
+                                        ESP_LOGI(TAGWHEELS, "> %f , %f    ; (%f) (%f)", wheel_var.vescValueLeft, wheel_var.vescValueright,
+                                                                    valxjoy1f , valxjoy1fper);
 
 
-                                        //ESP_LOGI(TAGWHEELS, "\n");
-
+                                        ESP_LOGI(TAGWHEELS, "%f \n", cuurent_mode_data.current_soft_var);
+*/
 
 
 
@@ -704,7 +758,7 @@ void wheels_task(void *arg){
                                         linear_acceleration_var_reset(&linear_acce);
                                     }
                                 }else{
-                                    ESP_LOGI(TAGWHEELS, "[MODE]...CURRENT %f , %f ",  wheel_var.vescValueLeft,wheel_var.vescValueright);
+                                    //ESP_LOGI(TAGWHEELS, "[MODE]...CURRENT %f , %f ",  wheel_var.vescValueLeft,wheel_var.vescValueright);
                                     VESC_SET_Current(EXID_LEFT, linear_acce.vsec_acc_left, EXID_RIGHT, linear_acce.vsec_acc_right);
                                     wheel_var.FREE_RUN_REPEAT = 3;
                                 }
@@ -741,6 +795,8 @@ void wheels_task(void *arg){
 
                                     wheel_var.ivescValueLeft = map(leftMotor, -1000, 1000, -3000, 3000); //2500
                                     wheel_var.ivescValueright = map(rightMotor, -1000, 1000, -3000, 3000);
+
+                                    rpm_max_setting_spped = 3000;
                                 }else{
                                     //SOFT MODE
                                     //wheel_var.ivescValueLeft = map(leftMotor, -1000, 1000, -1800, 1800);  //700
@@ -793,6 +849,7 @@ void wheels_task(void *arg){
 
                                         wheel_var.ivescValueLeft = map( rpm_set_speed - rpm_diff_sterzing_auto, -1000, 1000, -1800, 1800);  //700
                                         wheel_var.ivescValueright = map(rpm_set_speed + rpm_diff_sterzing_auto, -1000, 1000, -1800, 1800);
+                                        rpm_max_setting_spped = 1800;
 
                                         //ESP_LOGI(TAGWHEELS, "[MODE]...RPM <AUTO> (rpm_set_speed) %i    (leftMotor,rightMotor),%i,%i,    (rpm_diff_sterzing_auto)%i",  rpm_set_speed,   leftMotor,rightMotor, rpm_diff_sterzing_auto);
 
@@ -800,6 +857,7 @@ void wheels_task(void *arg){
                                     }else{
                                         wheel_var.ivescValueLeft = map(leftMotor, -1000, 1000, -1800, 1800);  //700
                                         wheel_var.ivescValueright = map(rightMotor, -1000, 1000, -1800, 1800);
+                                        rpm_max_setting_spped = 1800;
                                     }                              
                                 }
                                 /*
@@ -810,6 +868,52 @@ void wheels_task(void *arg){
                                     wheel_var.ivescValueright = tempstrint;
                                 }
                                 */
+
+
+                                //ESP_LOGI(TAGWHEELS, "[MODE]...P %d , %d  ; (%d)",  wheel_var.ivescValueLeft, wheel_var.ivescValueright, (wheel_var.ivescValueLeft-wheel_var.ivescValueright) );
+                                //ESP_LOGI(TAGWHEELS, "");
+
+
+                                //Correct sterzing friction per girare meglio
+                                int valxjoy1 = 0;
+                                int valxjoy1f  = 0;
+                                float valxjoy1fper  = 0.0;
+
+
+                                if(wheel_var.joyY > 100) {
+                                    valxjoy1 =  abs(wheel_var.joyX);
+                                    valxjoy1f  = map(valxjoy1, 0, 1000, 0 , rpm_max_setting_spped); //2.5
+
+                                    if(rpm_max_setting_spped < 2000){
+                                        valxjoy1fper =( ((float)valxjoy1f / (float)rpm_max_setting_spped) * wheel_var.joyY ) * 1.150; //1.20;
+                                    }else{
+                                        valxjoy1fper =( ((float)valxjoy1f / (float)rpm_max_setting_spped) * wheel_var.joyY ) * 2.250;
+                                    }
+
+
+/*
+                                    ESP_LOGI(TAGWHEELS, "p> %d , %d    ; (%d)", wheel_var.ivescValueLeft, wheel_var.ivescValueright,
+                                                             wheel_var.ivescValueLeft - wheel_var.ivescValueright); //valxjoy1f);
+*/
+
+
+                                    if (wheel_var.joyX > 10) {
+                                        wheel_var.ivescValueright = wheel_var.ivescValueright + valxjoy1fper; //valxjoy1f;
+                                    }else if(wheel_var.joyX < 10) {
+                                        wheel_var.ivescValueLeft = wheel_var.ivescValueLeft + valxjoy1fper; // valxjoy1f;
+                                    }
+                                }
+
+
+
+/*
+                                    ESP_LOGI(TAGWHEELS, "d> %d , %d    ; (%d)", wheel_var.ivescValueLeft, wheel_var.ivescValueright,
+                                                             wheel_var.ivescValueLeft - wheel_var.ivescValueright); //valxjoy1f);
+                                    ESP_LOGI(TAGWHEELS,"%d",rpm_max_setting_spped);
+
+*/
+
+
 
 
                                 if((Joystick_rec.buttons & BUTTON_MENO)&&(Button_piu_meno_relase==0)) {
@@ -858,7 +962,7 @@ void wheels_task(void *arg){
 
                                 //Calc Linear ACCELERATION
                                                                  
-                                linear_accelerationINT(&linear_acce, &wheel_var, 200);
+                                linear_accelerationINT(&linear_acce, &wheel_var, 500);
 
                                 //Motor
                                 if( (wheel_var.ivescValueLeft < 50) & (wheel_var.ivescValueLeft > -50)  & (wheel_var.ivescValueright < 50) & (wheel_var.ivescValueright > -50) ){
@@ -871,7 +975,7 @@ void wheels_task(void *arg){
                                         linear_acceleration_var_resetINT(&linear_acce);
                                     }
                                 }else{
-                                    //ESP_LOGI(TAGWHEELS, "[MODE]...RPM %d , %d ",  linear_acce.ivsec_acc_left, linear_acce.ivsec_acc_right);
+                                    //ESP_LOGI(TAGWHEELS, "[MODE]...RPM %d , %d  ; (%d) ",  linear_acce.ivsec_acc_left, linear_acce.ivsec_acc_right, (linear_acce.ivsec_acc_left-linear_acce.ivsec_acc_right));
                                     VESC_SET_RPM(EXID_LEFT, linear_acce.ivsec_acc_left, EXID_RIGHT, linear_acce.ivsec_acc_right);
                                     wheel_var.FREE_RUN_REPEAT = 3;
                                 }
