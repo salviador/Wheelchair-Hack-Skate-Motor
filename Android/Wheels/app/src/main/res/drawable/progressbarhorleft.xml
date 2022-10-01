@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+
+
+        <clip android:clipOrientation="horizontal" android:gravity="left">
+            <shape>
+
+
+                <gradient
+                    android:endColor="#006600"
+                    android:startColor="#eeffa4"
+                    android:useLevel="false"
+                    android:angle="0"
+                    />
+
+
+            </shape>
+            <!--            <color android:color="#485"></color> -->
+
+        </clip>
+
+    </item>
+</selector>

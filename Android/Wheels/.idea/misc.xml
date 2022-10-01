@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Wheels/app/src/main/res/drawable/avd_progress_indeterminate_circular.xml" value="0.2005" />
+        <entry key="..\:/Wheels/app/src/main/res/layout/activity_main.xml" value="0.75" />
+        <entry key="..\:/Wheels/app/src/main/res/layout/activity_main2.xml" value="0.40794979079497906" />
+        <entry key="..\:/Wheels/app/src/main/res/layout/content_main.xml" value="0.41841004184100417" />
+        <entry key="..\:/Wheels/app/src/main/res/layout/fragment_1.xml" value="0.3986220472440945" />
+        <entry key="..\:/Wheels/app/src/main/res/layout/fragment_blank.xml" value="0.40794979079497906" />
+        <entry key="..\:/Wheels/app/src/main/res/layout/nav_graph.xml" value="0.40794979079497906" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="1.708695652173913" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

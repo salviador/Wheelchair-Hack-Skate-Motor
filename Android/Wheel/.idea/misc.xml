@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Wheel/app/src/main/res/drawable/avd_progress_indeterminate_circular.xml" value="0.21" />
+        <entry key="..\:/Wheel/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1785" />
+        <entry key="..\:/Wheel/app/src/main/res/drawable/progressbarbattery.xml" value="0.1385" />
+        <entry key="..\:/Wheel/app/src/main/res/drawable/progressbarthemevertical.xml" value="0.1905" />
+        <entry key="..\:/Wheel/app/src/main/res/drawable/progressbarthemeverticalbattery.xml" value="0.1385" />
+        <entry key="..\:/Wheel/app/src/main/res/drawable/searchico.xml" value="0.211" />
+        <entry key="..\:/Wheel/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Wheel/app/src/main/res/layout/activity_main2.xml" value="0.33" />
+        <entry key="..\:/Wheel/app/src/main/res/layout/activity_scan.xml" value="0.1634963768115942" />
+        <entry key="..\:/Wheel/app/src/main/res/layout/recycler_device.xml" value="0.15" />
+        <entry key="..\:/Wheel/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1905" />
+        <entry key="..\:/Wheel/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1905" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

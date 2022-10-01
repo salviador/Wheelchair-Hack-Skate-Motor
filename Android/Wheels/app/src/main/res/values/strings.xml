@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Wheels</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="telemetria1">TELEMETRIA1</string>
+    <string name="telemetria2">TELEMETRIA2</string>
+    <string name="telemetria3">TELEMETRIA3</string>
+    <string name="telemetria4">TELEMETRIA4</string>
+
+</resources>

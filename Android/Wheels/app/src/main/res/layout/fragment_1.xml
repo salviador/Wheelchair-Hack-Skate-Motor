@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment1" >
+
+
+    <ProgressBar
+        android:id="@+id/progressBarCurrentMRightTop"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="10dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="32dp"
+        android:max="200"
+        android:progress="10"
+        android:progressDrawable="@drawable/progressbarverticaltop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarCurrentMRightBotton"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="10dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="65dp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/progressbatverticalbut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCurrentMRight"
+        android:layout_width="26dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="23dp"
+        android:text="-15.8 A"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarCurrentMRightBotton" />
+
+    <com.ekn.gruzer.gaugelibrary.ArcGauge
+        android:id="@+id/idLabelRPMGauge"
+        android:layout_width="60dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarBattery"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="88dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="16dp"
+
+        android:max="100"
+        android:progress="50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarCurrentMLeftBotton"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="10dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="65dp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/progressbatverticalbut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarCurrentMLeftTop"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="10dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="67dp"
+        android:max="200"
+        android:progress="10"
+        android:progressDrawable="@drawable/progressbarverticaltop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCurrentMLeft"
+        android:layout_width="26dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="4dp"
+        android:text="-15.8 A"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarCurrentMLeftBotton" />
+
+    <TextView
+        android:id="@+id/textViewBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="12.3 V"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarBattery" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="sans-serif"
+        android:text="Distance"
+        android:textSize="8sp"
+        android:textStyle="italic"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDistance"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="15dp"
+        android:text="350 m"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="sans-serif"
+        android:text="Duty"
+        android:textSize="8sp"
+        android:textStyle="italic"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDuty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDuty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="sans-serif"
+        android:text="23 %"
+        android:textSize="8sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="sans-serif"
+        android:text="Amp/H"
+        android:textSize="8sp"
+        android:textStyle="italic"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAmpHour"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewAmpHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="sans-serif"
+        android:text="12 A/h"
+        android:textSize="8sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="2dp"
+        android:text="Amp Left"
+        android:textSize="8sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarCurrentMLeftTop"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="sans-serif"
+        android:text="Amp Right"
+        android:textSize="8sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarCurrentMRightTop"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarCurrentBatterypos"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="40dp"
+        android:layout_height="6dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="5dp"
+        android:max="100"
+        android:min="0"
+        android:progress="100"
+        android:progressDrawable="@drawable/progressbarhorleft"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAmpBattery"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarCurrentBatteryneg"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="40dp"
+        android:layout_height="6dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginBottom="5dp"
+        android:max="50"
+        android:min="0"
+        android:progress="10"
+        android:progressDrawable="@drawable/progressbarhorizright"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAmpBattery"
+        app:layout_constraintEnd_toStartOf="@+id/progressBarCurrentBatterypos"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="sans-serif"
+        android:text="Amp Battery"
+        android:textSize="8sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAmpBattery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewAmpBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif"
+        android:text="12.2 A"
+        android:textSize="10sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
