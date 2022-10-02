@@ -132,37 +132,37 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
                 textViewCurrentMLeft = (TextView) findViewById(R.id.textViewCurrentMLeft);
                 progressBarCurrentMLeftTop = (ProgressBar)findViewById(R.id.progressBarCurrentMLeftTop);
                 progressBarCurrentMLeftBotton = (ProgressBar)findViewById(R.id.progressBarCurrentMLeftBotton);
-                textViewCurrentMLeft.setText("-15.9 A");
-                progressBarCurrentMLeftTop.setProgress(200);
-                progressBarCurrentMLeftBotton.setProgress(100);
+                textViewCurrentMLeft.setText("--.- A");
+                progressBarCurrentMLeftTop.setProgress(0);
+                progressBarCurrentMLeftBotton.setProgress(0);
 
 
                 textViewCurrentMRight = (TextView) findViewById(R.id.textViewCurrentMRight);
                 progressBarCurrentMRightTop = (ProgressBar)findViewById(R.id.progressBarCurrentMRightTop);
                 progressBarCurrentMRightBotton = (ProgressBar)findViewById(R.id.progressBarCurrentMRightBotton);
-                textViewCurrentMRight.setText("-21.8 A");
-                progressBarCurrentMRightTop.setProgress(200);
-                progressBarCurrentMRightBotton.setProgress(100);
+                textViewCurrentMRight.setText("--.- A");
+                progressBarCurrentMRightTop.setProgress(0);
+                progressBarCurrentMRightBotton.setProgress(0);
 
 
                 textViewBattery = (TextView) findViewById(R.id.textViewBattery);
                 progressBarBattery = (ProgressBar)findViewById(R.id.progressBarBattery);
-                textViewBattery.setText("21.4 V");
-                progressBarBattery.setProgress(78);
+                textViewBattery.setText("--.- V");
+                progressBarBattery.setProgress(0);
 
                 textViewDistance = (TextView) findViewById(R.id.textViewDistance);
                 textViewDuty = (TextView) findViewById(R.id.textViewDuty);
                 textViewAmpHour = (TextView) findViewById(R.id.textViewAmpHour);
-                textViewDistance.setText("2505 m");
-                textViewDuty.setText("-85 %");
-                textViewAmpHour.setText("1500.8");
+                textViewDistance.setText("--- m");
+                textViewDuty.setText("-- %");
+                textViewAmpHour.setText("---");
 
                 textViewAmpBattery = (TextView) findViewById(R.id.textViewAmpBattery);
                 progressBarCurrentBatteryneg = (ProgressBar)findViewById(R.id.progressBarCurrentBatteryneg);
                 progressBarCurrentBatterypos = (ProgressBar)findViewById(R.id.progressBarCurrentBatterypos);
-                textViewAmpBattery.setText("0.0 A");
-                progressBarCurrentBatteryneg.setProgress(100);
-                progressBarCurrentBatterypos.setProgress(100);
+                textViewAmpBattery.setText("-.- A");
+                progressBarCurrentBatteryneg.setProgress(0);
+                progressBarCurrentBatterypos.setProgress(0);
 
                 idLabelRPMGauge = (ArcGauge) findViewById(R.id.idLabelRPMGauge);
                 Range range = new Range();
@@ -189,6 +189,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
                 idLabelRPMGauge.setValue(1000);
                 idLabelRPMGauge.setEnabled(true);
                 idLabelRPMGauge.setValueColor(Color.WHITE);
+
                 break;
               case 1:
                 textViewFETLeft = (TextView) findViewById(R.id.textViewFETLeft);
@@ -277,7 +278,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
 
 
       viewModel.getTelemetriaState().observe(this, value ->{
-        Log.i("BLE", "******data****");
+        //Log.i("BLE", "******data****");
 
         if(value.length > 0) {
           switch (value[0]){
@@ -416,7 +417,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               int32_value[1]=value[2];
               int32_value[2]=value[3];
               int32_value[3]=value[4];
-              TachimetroL = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getInt();
+              TachimetroL = ByteBuffer.wrap(int32_value).order(ByteOrder.LITTLE_ENDIAN).getInt();
 
               fvalue[0]=value[5];
               fvalue[1]=value[6];
@@ -431,7 +432,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               int32_value[1]=value[2];
               int32_value[2]=value[3];
               int32_value[3]=value[4];
-              TachimetroR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getInt();
+              TachimetroR = ByteBuffer.wrap(int32_value).order(ByteOrder.LITTLE_ENDIAN).getInt();
               int Tachimetromedia = (TachimetroL + TachimetroR)/2;
               //Da rivedere x trasformare
               textViewDistance.setText(String.valueOf(Tachimetromedia ) + " m");
@@ -517,7 +518,11 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
     }
     private void State_ConnectionGATT(Boolean connectionStateLiveData){
       Log.i("BLE","State_ConnectionGATT " + connectionStateLiveData.toString() );
-
+      if(connectionStateLiveData==false){
+        //finish();
+        //android.os.Process.killProcess(android.os.Process.myPid());
+        //System.exit(0);
+      }
     }
 
 

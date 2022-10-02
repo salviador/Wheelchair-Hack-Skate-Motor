@@ -9,6 +9,9 @@ import android.graphics.drawable.Animatable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +31,9 @@ import no.nordicsemi.android.support.v18.scanner.ScanFilter;
 import no.nordicsemi.android.support.v18.scanner.ScanResult;
 import no.nordicsemi.android.support.v18.scanner.ScanSettings;
 
-public class MainActivity extends Activity {
+
+
+public class MainActivity extends Activity  { //implements View.OnTouchListener
     private boolean is_Scanner_BLE  = false;
 
     public ImageView searchanimation;
@@ -45,7 +50,6 @@ public class MainActivity extends Activity {
     private Intent main2Activity;
 
     private ActivityMainBinding binding;
-
 
 
     @Override
@@ -89,6 +93,9 @@ public class MainActivity extends Activity {
 // SOlo x debug
         main2Activity.putExtra(MainActivity2.EXTRA_DEVICE, "");
         startActivity(main2Activity);*/
+
+
+
     }
 
     @Override
@@ -106,7 +113,7 @@ public class MainActivity extends Activity {
 
                 ((Animatable) (searchanimation.getDrawable())).start();
 
-                scanner.startScan(filters,settings, scanBleCallback);
+                scanner.startScan(filters,settings, scanBleCallback);     // **-----------------------------------------------------------------------------------
                 // scanner.startScan(scanBleCallback);
             }
         }else {
@@ -140,7 +147,7 @@ public class MainActivity extends Activity {
         super.onStart();
         // scanBLEAdapter.clearDevice();
         list_devices.clear();
-    //    scanner.stopScan(scanBleCallback);
+        scanner.stopScan(scanBleCallback);
 
         go_scan_activity();
 
@@ -187,6 +194,7 @@ public class MainActivity extends Activity {
                     ((Animatable) (searchanimation.getDrawable())).stop();
 
                 }
+
                 main2Activity.putExtra(MainActivity2.EXTRA_DEVICE, new_device);
                 startActivity(main2Activity);
                // Toast.makeText(this,new_device.getAddress(), Toast.LENGTH_LONG).show();
@@ -204,9 +212,37 @@ public class MainActivity extends Activity {
         }
     }
 
+/*
+    private float x1,x2;
+    static final int MIN_DISTANCE = 80;
 
+    @Override
+    public boolean onTouch(View view, MotionEvent event) {
+        switch (event.getAction()) {
 
+            case MotionEvent.ACTION_DOWN:
+                x1 = event.getX();
+//                return true;
+                break;
+            case MotionEvent.ACTION_UP:
+                x2 = event.getX();
+                float deltaX = x2 - x1;
+                if (Math.abs(deltaX) > MIN_DISTANCE)
+                {
+                    Toast.makeText(this, "left2right swipe", Toast.LENGTH_SHORT).show ();
+                }
+                else
+                {
+                    // consider as something else - a screen tap for example
+                    Toast.makeText(this, "swipe", Toast.LENGTH_SHORT).show ();
 
+                }
+                break;
+        }
+        return super.onTouchEvent(event);
+      //  return false;        //return false;
+    }
+*/
 
     //Scan CallBack
 
@@ -246,6 +282,16 @@ public class MainActivity extends Activity {
 
 
 
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+
+        // this.finish();
+        android.os.Process.killProcess(android.os.Process.myPid());
+
+        return super.onTouchEvent(event);
+
+    }
 
 
 }

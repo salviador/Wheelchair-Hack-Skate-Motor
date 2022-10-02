@@ -290,7 +290,7 @@ public class Main2_activity extends AppCompatActivity {
                         int32_value[1]=value[2];
                         int32_value[2]=value[3];
                         int32_value[3]=value[4];
-                        TachimetroL = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getInt();
+                        TachimetroL = ByteBuffer.wrap(int32_value).order(ByteOrder.LITTLE_ENDIAN).getInt();
 
                         fvalue[0]=value[5];
                         fvalue[1]=value[6];
@@ -305,7 +305,7 @@ public class Main2_activity extends AppCompatActivity {
                         int32_value[1]=value[2];
                         int32_value[2]=value[3];
                         int32_value[3]=value[4];
-                        TachimetroR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getInt();
+                        TachimetroR = ByteBuffer.wrap(int32_value).order(ByteOrder.LITTLE_ENDIAN).getInt();
                         int Tachimetromedia = (TachimetroL + TachimetroR)/2;
                         //Da rivedere x trasformare
                         idLabelDistanceMeter.setText(String.valueOf(Tachimetromedia ) + " m");
@@ -337,7 +337,7 @@ public class Main2_activity extends AppCompatActivity {
 
     //CallBack observer livedata ---> stato connessione
     private void State_Connection(ConnectionState connectionStateLiveData){
-     //   Log.d(TAG, "Connessione Stato: " + connectionStateLiveData.toString());
+        Log.d(TAG, "Connessione Stato: " + connectionStateLiveData.toString());
     }
     private void State_ConnectionGATT(Boolean connectionStateLiveData){
         //Toast.makeText(this,"State_ConnectionGATT " + connectionStateLiveData.toString() , Toast.LENGTH_LONG).show();
