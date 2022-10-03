@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item>
 
-        <clip android:clipOrientation="horizontal" android:gravity="left">
+        <clip android:clipOrientation="vertical" android:gravity="bottom">
             <shape>
 
 
                 <gradient
-                    android:endColor="#0ba60b"
-                    android:startColor="#dc0e0e"
+                    android:endColor="#c9ff78"
+                    android:startColor="#004f0c"
                     android:useLevel="false"
-                    android:angle="0"
+                    android:angle="90"
                     />
 
 
@@ -20,6 +19,5 @@
 
         </clip>
     </item>
-
 
 </selector>

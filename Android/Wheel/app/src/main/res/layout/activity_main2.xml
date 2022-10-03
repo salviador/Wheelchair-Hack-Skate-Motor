@@ -10,6 +10,34 @@
     android:keepScreenOn="true">
 
     <TextView
+        android:id="@+id/idLabelBatteryPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="100 %"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idLabelBatteryVolt" />
+
+    <ProgressBar
+        android:id="@+id/idProgressBarBatteryNEG"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="120dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="47dp"
+        android:background="#121111"
+        android:max="100"
+        android:min="0"
+        android:progress="10"
+        android:progressDrawable="@drawable/progressbar_hor_neg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider7" />
+
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,16 +55,17 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="sans-serif"
-        android:text="RPM"
 
+        android:text="RPM"
         android:textColor="#CCFFFFFF"
         android:textStyle="italic"
         android:typeface="sans"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idProgressBarBattery" />
+        app:layout_constraintTop_toBottomOf="@+id/idLabelCurrentBattery" />
 
     <TextView
         android:id="@+id/textView3"
@@ -104,30 +133,41 @@
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ProgressBar
-        android:id="@+id/idProgressBarBattery"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="0dp"
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginTop="18dp"
+        android:text="Battery Amp"
+        android:textColor="#CCFFFFFF"
+        android:textStyle="italic"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider7" />
+
+    <ProgressBar
+        android:id="@+id/idProgressBarBatteryPOS"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="120dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="85dp"
         android:background="#121111"
         android:max="100"
         android:min="0"
-        android:progress="10"
-        android:progressDrawable="@drawable/progressbarbattery"
+        android:progress="50"
+        android:progressDrawable="@drawable/progressbar_hor_pos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idLabelBatteryVolt" />
-
+        app:layout_constraintTop_toBottomOf="@+id/divider7" />
 
     <com.ekn.gruzer.gaugelibrary.ArcGauge
         android:id="@+id/idLabelRPMGauge"
         android:layout_width="200dp"
         android:layout_height="200dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -136,20 +176,74 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
         android:fontFamily="sans-serif"
         android:text="Distance"
         android:textColor="#CCFFFFFF"
         android:textStyle="italic"
         android:typeface="sans"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idProgressBarBattery" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="Temp Fet Left"
+        android:textColor="#CCFFFFFF"
+        android:textStyle="italic"
+        android:typeface="sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider8" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="sans-serif"
+        android:text="Temp Fet Right"
+        android:textColor="#CCFFFFFF"
+        android:textStyle="italic"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider8" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif"
+        android:text="Temp Motor Left"
+        android:textColor="#CCFFFFFF"
+        android:textStyle="italic"
+        android:typeface="sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idLabelTempLeftFet" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="sans-serif"
+        android:text="Temp Motor Left"
+        android:textColor="#CCFFFFFF"
+        android:textStyle="italic"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idLabelTempRightFet" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif"
         android:text="Amp/H"
@@ -157,7 +251,7 @@
         android:textStyle="italic"
         android:typeface="sans"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idProgressBarBattery" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
         android:id="@+id/textView15"
@@ -166,7 +260,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif"
-        android:text="Current"
+        android:text="Duty Cycle R"
         android:textColor="#CCFFFFFF"
         android:textStyle="italic"
         android:typeface="sans"
@@ -180,7 +274,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif"
-        android:text="Duty Cycle"
+        android:text="Duty Cycle L"
         android:textColor="#CCFFFFFF"
         android:textStyle="italic"
         android:typeface="sans"
@@ -191,35 +285,76 @@
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="sans-serif"
         android:text="Joystick"
         android:textColor="#CCFFFFFF"
         android:textStyle="italic"
         android:typeface="sans"
         app:layout_constraintEnd_toStartOf="@+id/divider4"
-        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toEndOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/idLabelTempLeftMotor" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="160dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/panelBackground"
+        android:backgroundTint="#FFFFFF"
+        android:foregroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idLabelTempRightMotor" />
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="380dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/panelBackground"
+        android:backgroundTint="#FFFFFF"
+        android:foregroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idLabelRPMGauge" />
 
     <TextView
-        android:id="@+id/idLabelJoyBattery"
+        android:id="@+id/idLabelJoyMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="2.9 V"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="RPM"
+        android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/idProgressBarJoyBattery"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif"
+        android:text="Limit"
+        android:textColor="#CCFFFFFF"
+        android:textStyle="italic"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="sans-serif"
         android:text="Battery"
         android:textColor="#CCFFFFFF"
@@ -228,17 +363,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider3" />
 
+    <ProgressBar
+        android:id="@+id/idProgressBarJoyBattery"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="68dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:max="100"
+        android:progress="60"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
     <TextView
-        android:id="@+id/idLabelJoyMode"
+        android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="RPM"
-        android:textAlignment="viewStart"
-        android:textColor="#FFFFFF"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif"
+        android:text="Mode"
+        android:textColor="#CCFFFFFF"
+        android:textStyle="italic"
+        android:typeface="sans"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
     <View
         android:id="@+id/divider3"
@@ -250,52 +399,39 @@
         android:backgroundTint="#FFFFFF"
         android:foregroundTint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idLabelRPMGauge" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="sans-serif"
-        android:text="Limit"
-        android:textColor="#CCFFFFFF"
-        android:textStyle="italic"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idLabelJoyMode" />
+        app:layout_constraintTop_toBottomOf="@+id/idLabelTempLeftMotor" />
 
     <TextView
         android:id="@+id/idLabelJoyLimit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:text="1500"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/idProgressBarJoyBattery"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
-    <ProgressBar
-        android:id="@+id/idProgressBarJoyBattery"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="68dp"
-        android:layout_height="15dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:max="100"
-        android:progress="60"
-        app:layout_constraintStart_toStartOf="parent"
+    <TextView
+        android:id="@+id/idLabelJoyBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="2.9 V"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/idProgressBarJoyBattery"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <View
-        android:id="@+id/divider2"
+        android:id="@+id/divider6"
         android:layout_width="380dp"
         android:layout_height="2dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:background="?attr/panelBackground"
         android:backgroundTint="#FFFFFF"
@@ -303,44 +439,88 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idLabelJoyLimit" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="sans-serif"
-        android:text="Mode"
-        android:textColor="#CCFFFFFF"
-        android:textStyle="italic"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider4" />
+        app:layout_constraintTop_toBottomOf="@+id/idLabelCurrentBattery" />
 
     <View
-        android:id="@+id/divider4"
-        android:layout_width="160dp"
-        android:layout_height="3dp"
-        android:layout_marginTop="30dp"
+        android:id="@+id/divider7"
+        android:layout_width="380dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="16dp"
         android:background="?attr/panelBackground"
         android:backgroundTint="#FFFFFF"
         android:foregroundTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idLabelRPMGauge" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idLabelBatteryVolt" />
 
     <TextView
         android:id="@+id/idLabelDistanceMeter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
         android:text="350 m"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/idLabelTempLeftFet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="5dp"
+        android:text="22.4 °C"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/idLabelTempRightFet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="32dp"
+        android:text="22.4 °C"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/idLabelTempLeftMotor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="5dp"
+        android:text="22.4 °C"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/idLabelTempRightMotor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="32dp"
+        android:text="22.4 °C"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/idLabelCurrentBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="3.4 A"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idProgressBarBatteryPOS" />
 
     <TextView
         android:id="@+id/idLabelAmperOra"
@@ -354,52 +534,146 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView
-        android:id="@+id/idLabelCurrentBattery"
+        android:id="@+id/idLabelDutyCycleR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="6dp"
-        android:text="3.5 A"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:text="21 %"
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toStartOf="@+id/progressBarCurrentBattery"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
-        android:id="@+id/idLabelDutyCycle"
+        android:id="@+id/idLabelDutyCycleL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
         android:text="23 %"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/progressBarDuty"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <ProgressBar
-        android:id="@+id/progressBarDuty"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="7dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:progressDrawable="@drawable/progressbarthemevertical"
-        android:max="100"
-        android:min="-100"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <ProgressBar
-        android:id="@+id/progressBarCurrentBattery"
+        android:id="@+id/progressBarCurrentMleftPOS"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="7dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:max="200"
+        android:min="0"
+        android:progress="37"
+        android:progressDrawable="@drawable/progressbar_ver_pos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider7" />
+
+    <ProgressBar
+        android:id="@+id/progressBarDutyleftPOS"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="7dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:max="100"
-        android:min="-10"
-        android:progressDrawable="@drawable/progressbarthemeverticalbattery"
+        android:min="0"
+        android:progress="100"
+        android:progressDrawable="@drawable/progressbar_ver_pos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <ProgressBar
+        android:id="@+id/progressBarDutyRightPOS"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="7dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:max="100"
+        android:min="0"
+        android:progress="100"
+        android:progressDrawable="@drawable/progressbar_ver_pos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <ProgressBar
+        android:id="@+id/progressBarCurrentMleftNEG"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="7dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:max="100"
+        android:min="0"
+        android:progress="0"
+        android:progressDrawable="@drawable/progressbar_ver_neg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarCurrentMleftPOS" />
+
+    <ProgressBar
+        android:id="@+id/progressBarDutyLeftNEG"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="7dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:max="100"
+        android:min="0"
+        android:progress="100"
+        android:progressDrawable="@drawable/progressbar_ver_neg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarDutyleftPOS" />
+
+    <ProgressBar
+        android:id="@+id/progressBarDutyRightNEG"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="7dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:max="100"
+        android:min="0"
+        android:progress="100"
+        android:progressDrawable="@drawable/progressbar_ver_neg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarDutyRightPOS" />
+
+    <ProgressBar
+        android:id="@+id/progressBarCurrentMrightNEG"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="7dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:max="100"
+        android:min="0"
+        android:progress="100"
+        android:progressDrawable="@drawable/progressbar_ver_neg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarCurrentMlrightPOS" />
+
+    <ProgressBar
+        android:id="@+id/progressBarCurrentMlrightPOS"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="7dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:max="200"
+        android:min="0"
+        android:progress="100"
+        android:progressDrawable="@drawable/progressbar_ver_pos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider7" />
+
+    <ProgressBar
+        android:id="@+id/progressBarVoltBattery"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="400dp"
+        android:layout_height="9dp"
+        android:max="100"
+        android:progress="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idLabelBatteryVolt" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

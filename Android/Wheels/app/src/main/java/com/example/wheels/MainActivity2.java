@@ -84,9 +84,16 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
     public TextView textViewFETRight;
     public TextView textViewMotorTempRight;
 
+    public TextView textViewBatteryPerc;
 
 
 
+  public TextView textVievDutyLeft;
+  public ProgressBar progressBarDutyLeftPOS;
+  public ProgressBar progressBarButyLeftNEG;
+  public TextView textViewDutyRight;
+  public ProgressBar progressBarDutyRightPOS;
+  public ProgressBar progressBarDutyRightNEG;
 
 
 
@@ -178,17 +185,20 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
                 Range range3 = new Range();
                 range3.setColor(Color.parseColor("#df2b1e"));
                 range3.setFrom(1200.0);
-                range3.setTo(2500.0);
+                range3.setTo(3000);
                 //add color ranges to gauge
                 idLabelRPMGauge.addRange(range);
                 idLabelRPMGauge.addRange(range2);
                 idLabelRPMGauge.addRange(range3);
                 //set min max and current value
                 idLabelRPMGauge.setMinValue(0);
-                idLabelRPMGauge.setMaxValue(2500);
-                idLabelRPMGauge.setValue(1000);
+                idLabelRPMGauge.setMaxValue(3000);
+                idLabelRPMGauge.setValue(0);
                 idLabelRPMGauge.setEnabled(true);
                 idLabelRPMGauge.setValueColor(Color.WHITE);
+
+                textViewBatteryPerc = (TextView) findViewById(R.id.textViewBatteryPerc);
+                textViewBatteryPerc.setText("-- %");
 
                 break;
               case 1:
@@ -196,6 +206,19 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
                 textViewMotorTempLeft = (TextView) findViewById(R.id.textViewMotorTempLeft);
                 textViewFETRight = (TextView) findViewById(R.id.textViewFETRight);
                 textViewMotorTempRight = (TextView) findViewById(R.id.textViewMotorTempRight);
+
+                textVievDutyLeft = (TextView) findViewById(R.id.textVievDutyLeft);
+                progressBarDutyLeftPOS = (ProgressBar) findViewById(R.id.progressBarDutyLeftPOS);
+                progressBarButyLeftNEG = (ProgressBar) findViewById(R.id.progressBarButyLeftNEG);
+                textViewDutyRight = (TextView) findViewById(R.id.textViewDutyRight);
+                progressBarDutyRightPOS = (ProgressBar) findViewById(R.id.progressBarDutyRightPOS);
+                progressBarDutyRightNEG = (ProgressBar) findViewById(R.id.progressBarDutyRightNEG);
+                textVievDutyLeft.setText("-- %");
+                textViewDutyRight.setText("-- %");
+                progressBarDutyLeftPOS.setProgress(0);
+                progressBarButyLeftNEG.setProgress(0);
+                progressBarDutyRightPOS.setProgress(0);
+                progressBarDutyRightNEG.setProgress(0);
                 break;
               case 2:
                 Log.i("MAIN2", "position3");
@@ -305,6 +328,12 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[2]=value[9];
               fvalue[3]=value[10];
               DutyCycle_L = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
+              if(viewPager.getCurrentItem()==1) {
+                textVievDutyLeft.setText(String.format("%.1f", DutyCycle_L) + " %");
+                int[] p3 = double_progressbar_float(DutyCycle_L, 10);
+                progressBarDutyLeftPOS.setProgress(p3[0]);
+                progressBarButyLeftNEG.setProgress(p3[1]);
+              }
               break;
             case 'b':
               //VESC_DATACAN_CAN_PACKET_STATUS_1_Right
@@ -312,26 +341,35 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               int16_value[1]=value[2];
               RPM_R = ByteBuffer.wrap(int16_value).order(ByteOrder.LITTLE_ENDIAN).getShort();
               float RPM_Media = (RPM_L + RPM_R) / 2;
-              idLabelRPMGauge.setValue((int)RPM_Media);
-
+              if(viewPager.getCurrentItem()==0) {
+                idLabelRPMGauge.setValue((int) RPM_Media);
+              }
               fvalue[0]=value[3];
               fvalue[1]=value[4];
               fvalue[2]=value[5];
               fvalue[3]=value[6];
               float CurrentM_R = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-              textViewCurrentMRight.setText( String.format("%.1f",CurrentM_R) + " A");
-              int[] p1 = double_progressbar_float(CurrentM_R, 10);
-              progressBarCurrentMRightTop.setProgress(p1[0]);
-              progressBarCurrentMRightBotton.setProgress(p1[1]);
-
+              if(viewPager.getCurrentItem()==0) {
+                textViewCurrentMRight.setText(String.format("%.1f", CurrentM_R) + " A");
+                int[] p1 = double_progressbar_float(CurrentM_R, 10);
+                progressBarCurrentMRightTop.setProgress(p1[0]);
+                progressBarCurrentMRightBotton.setProgress(p1[1]);
+              }
               fvalue[0]=value[7];
               fvalue[1]=value[8];
               fvalue[2]=value[9];
               fvalue[3]=value[10];
               DutyCycle_R = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
               float DutyMedia = (DutyCycle_L + DutyCycle_R)/2;
-              textViewDuty.setText( String.format("%.1f",DutyMedia) + " %");
-
+              if(viewPager.getCurrentItem()==0) {
+                textViewDuty.setText(String.format("%.1f", DutyMedia) + " %");
+              }
+              if(viewPager.getCurrentItem()==1) {
+                textViewDutyRight.setText(String.format("%.1f", DutyCycle_R) + " %");
+                int[] p8 = double_progressbar_float(DutyCycle_R, 10);
+                progressBarDutyRightPOS.setProgress(p8[0]);
+                progressBarDutyRightNEG.setProgress(p8[1]);
+              }
               break;
             case 'c':
               //VESC_DATACAN_CAN_PACKET_STATUS_2_Left
@@ -340,7 +378,6 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[2]=value[3];
               fvalue[3]=value[4];
               Amp_HoursL = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-
               break;
             case 'd':
               //VESC_DATACAN_CAN_PACKET_STATUS_2_Rihght
@@ -350,8 +387,9 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[3]=value[4];
               Amp_HoursR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
               float Amp_HourMedia = (Amp_HoursL + Amp_HoursR)/2;
-              textViewAmpHour.setText(String.format("%.1f",Amp_HourMedia));
-
+              if(viewPager.getCurrentItem()==0) {
+                textViewAmpHour.setText(String.format("%.1f", Amp_HourMedia));
+              }
               break;
             case 'e':
               //VESC_DATACAN_CAN_PACKET_STATUS_4_Left
@@ -405,11 +443,12 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[3]=value[12];
               Current_INR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
               float CurrentINmedia = (Current_INL+Current_INR)/2;
-              textViewAmpBattery.setText(String.format("%.1f",CurrentINmedia) + " A");
-              int[] p2 = double_progressbar_float(CurrentINmedia, 10);
-              progressBarCurrentBatterypos.setProgress(p2[0]);
-              progressBarCurrentBatteryneg.setProgress(p2[1]);
-
+              if(viewPager.getCurrentItem()==0) {
+                textViewAmpBattery.setText(String.format("%.1f", CurrentINmedia) + " A");
+                int[] p2 = double_progressbar_float(CurrentINmedia, 10);
+                progressBarCurrentBatterypos.setProgress(p2[0]);
+                progressBarCurrentBatteryneg.setProgress(p2[1]);
+              }
               break;
             case 'g':
               //VESC_DATACAN_CAN_PACKET_STATUS_5_Left
@@ -435,24 +474,50 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               TachimetroR = ByteBuffer.wrap(int32_value).order(ByteOrder.LITTLE_ENDIAN).getInt();
               int Tachimetromedia = (TachimetroL + TachimetroR)/2;
               //Da rivedere x trasformare
-              textViewDistance.setText(String.valueOf(Tachimetromedia ) + " m");
-
+              if(viewPager.getCurrentItem()==0) {
+                textViewDistance.setText(String.valueOf(Tachimetromedia) + " m");
+              }
               fvalue[0]=value[5];
               fvalue[1]=value[6];
               fvalue[2]=value[7];
               fvalue[3]=value[8];
               VbatteryR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
               float Vbatterymedia = (VbatteryL + VbatteryR)/2;
-              textViewBattery.setText(String.format("%.1f",Vbatterymedia) + " V");
-              float calcPerc = (float) (((Vbatterymedia - 19.64) * 0.0556) * 100);
-              if(Vbatterymedia>=23.25){ //60%
-                progressBarBattery.setProgressTintList(ColorStateList.valueOf(Color.BLUE));
-              }else if(Vbatterymedia<23.25){
-                progressBarBattery.setProgressTintList(ColorStateList.valueOf(Color.YELLOW));
-              }else if(Vbatterymedia<22.6){ //30%
-                progressBarBattery.setProgressTintList(ColorStateList.valueOf(Color.RED));
+              if(viewPager.getCurrentItem()==0) {
+                textViewBattery.setText(String.format("%.1f", Vbatterymedia) + " V");
+
+                if (Vbatterymedia > 25.200001) {
+                  Vbatterymedia = (float) 25.2000;
+                }
+                ;
+                if (Vbatterymedia < 19.640000000) {
+                  Vbatterymedia = (float) 19.640000000;
+                }
+                ;
+                double calcPerc = 0.00;
+                if (Vbatterymedia > 22.24) {
+//Polynomnial fitting
+                  calcPerc = ((Math.pow(Vbatterymedia, 3) * 1.6921) +
+                          (Math.pow(Vbatterymedia, 2) * -126.6400) +
+                          (Vbatterymedia * 3176.7377) - 26611.4262);
+                } else if ((Vbatterymedia > 21.65) && (Vbatterymedia <= 22.24)) {
+                  calcPerc = ((Math.pow(Vbatterymedia, 2) * 5.107) +
+                          (Vbatterymedia * -208.58) + 2126.715);
+                } else {
+                  calcPerc = (Vbatterymedia - 19.64) / 2.010 * 5;
+                }
+                if (calcPerc < 0.00) calcPerc = 0.000;
+
+                if (Vbatterymedia >= 23.25) { //60%
+                  progressBarBattery.setProgressTintList(ColorStateList.valueOf(Color.BLUE));
+                } else if ((Vbatterymedia < 23.25) && (Vbatterymedia >= 22.6)) {
+                  progressBarBattery.setProgressTintList(ColorStateList.valueOf(Color.YELLOW));
+                } else if (Vbatterymedia < 22.6) { //30%
+                  progressBarBattery.setProgressTintList(ColorStateList.valueOf(Color.RED));
+                }
+                progressBarBattery.setProgress((int) calcPerc);
+                textViewBatteryPerc.setText(String.format("%d", (int) calcPerc) + " %");
               }
-              progressBarBattery.setProgress((int)calcPerc);
 
               break;
             default:

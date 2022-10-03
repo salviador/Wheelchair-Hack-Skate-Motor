@@ -7,6 +7,58 @@
     android:layout_height="match_parent"
     tools:context=".Fragment2" >
 
+    <ProgressBar
+        android:id="@+id/progressBarButyLeftNEG"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="10dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="20dp"
+        android:max="100"
+        android:progress="50"
+        android:progressDrawable="@drawable/progressbatverticalbut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarDutyRightNEG"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="10dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="20dp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/progressbatverticalbut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarDutyLeftPOS"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="10dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progress="100"
+        android:progressDrawable="@drawable/progressbarverticaltop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMotorTempLeft" />
+
+    <ProgressBar
+        android:id="@+id/progressBarDutyRightPOS"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="10dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="55dp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/progressbarverticaltop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMotorTempRight" />
+
     <TextView
         android:id="@+id/textViewMotorTempRight"
         android:layout_width="wrap_content"
@@ -30,11 +82,33 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
+        android:id="@+id/textVievDutyLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="47dp"
+        android:text="30 %"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/progressBarDutyLeftPOS" />
+
+    <TextView
+        android:id="@+id/textViewDutyRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="47dp"
+        android:text="30 %"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/progressBarDutyRightPOS" />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:text="Temp FET"
         android:textSize="8sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +162,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="50dp"
         android:text="Temp FET"
         android:textSize="8sp"
