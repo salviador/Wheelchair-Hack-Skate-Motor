@@ -29,6 +29,7 @@ import com.example.wheels.Ble_Manager.BLE_ViewModel;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.Arrays;
 
 import no.nordicsemi.android.ble.livedata.state.ConnectionState;
 
@@ -41,6 +42,9 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
 
     private Intent ScanActivity;
     private BLE_ViewModel viewModel;
+
+    public float[] VbatteryAverage;
+    public int VbatteryAverageCounter=0;
 
     public float VbatteryL = 0;
     public float VbatteryR = 0;
@@ -55,6 +59,8 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
     public short RPM_L = 0;
     public short RPM_R = 0;
 
+  public boolean page0 = false;
+  public boolean page1 = false;
 
 //Fragment1
     public TextView textViewCurrentMLeft;
@@ -97,7 +103,6 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
 
 
 
-
   public ViewPager viewPager;
 
 
@@ -114,6 +119,9 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
         ScanActivity = new Intent(this, MainActivity.class);
         final String deviceName = device.getName();
         final String deviceAddress = device.getAddress();
+
+        VbatteryAverage = new float[10];
+
 
 
 
@@ -200,6 +208,8 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
                 textViewBatteryPerc = (TextView) findViewById(R.id.textViewBatteryPerc);
                 textViewBatteryPerc.setText("-- %");
 
+                page0 = true;
+
                 break;
               case 1:
                 textViewFETLeft = (TextView) findViewById(R.id.textViewFETLeft);
@@ -219,6 +229,8 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
                 progressBarButyLeftNEG.setProgress(0);
                 progressBarDutyRightPOS.setProgress(0);
                 progressBarDutyRightNEG.setProgress(0);
+
+                page1 = true;
                 break;
               case 2:
                 Log.i("MAIN2", "position3");
@@ -316,7 +328,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[2]=value[5];
               fvalue[3]=value[6];
               float CurrentM_L = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-              if(viewPager.getCurrentItem()==0){
+              if(page0 && (viewPager.getCurrentItem()==0)){
                 textViewCurrentMLeft.setText( String.format("%.1f",CurrentM_L) + " A");
                 int[] p = double_progressbar_float(CurrentM_L, 10);
                 progressBarCurrentMLeftTop.setProgress(p[0]);
@@ -328,7 +340,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[2]=value[9];
               fvalue[3]=value[10];
               DutyCycle_L = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-              if(viewPager.getCurrentItem()==1) {
+              if((page1 && viewPager.getCurrentItem()==1)) {
                 textVievDutyLeft.setText(String.format("%.1f", DutyCycle_L) + " %");
                 int[] p3 = double_progressbar_float(DutyCycle_L, 10);
                 progressBarDutyLeftPOS.setProgress(p3[0]);
@@ -341,7 +353,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               int16_value[1]=value[2];
               RPM_R = ByteBuffer.wrap(int16_value).order(ByteOrder.LITTLE_ENDIAN).getShort();
               float RPM_Media = (RPM_L + RPM_R) / 2;
-              if(viewPager.getCurrentItem()==0) {
+              if(page0 && (viewPager.getCurrentItem()==0)) {
                 idLabelRPMGauge.setValue((int) RPM_Media);
               }
               fvalue[0]=value[3];
@@ -349,7 +361,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[2]=value[5];
               fvalue[3]=value[6];
               float CurrentM_R = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-              if(viewPager.getCurrentItem()==0) {
+              if(page0 && (viewPager.getCurrentItem()==0)) {
                 textViewCurrentMRight.setText(String.format("%.1f", CurrentM_R) + " A");
                 int[] p1 = double_progressbar_float(CurrentM_R, 10);
                 progressBarCurrentMRightTop.setProgress(p1[0]);
@@ -361,10 +373,10 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[3]=value[10];
               DutyCycle_R = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
               float DutyMedia = (DutyCycle_L + DutyCycle_R)/2;
-              if(viewPager.getCurrentItem()==0) {
+              if(page0 && (viewPager.getCurrentItem()==0)) {
                 textViewDuty.setText(String.format("%.1f", DutyMedia) + " %");
               }
-              if(viewPager.getCurrentItem()==1) {
+              if(page1 && (viewPager.getCurrentItem()==1)) {
                 textViewDutyRight.setText(String.format("%.1f", DutyCycle_R) + " %");
                 int[] p8 = double_progressbar_float(DutyCycle_R, 10);
                 progressBarDutyRightPOS.setProgress(p8[0]);
@@ -387,8 +399,8 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[3]=value[4];
               Amp_HoursR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
               float Amp_HourMedia = (Amp_HoursL + Amp_HoursR)/2;
-              if(viewPager.getCurrentItem()==0) {
-                textViewAmpHour.setText(String.format("%.1f", Amp_HourMedia));
+              if(page0 && (viewPager.getCurrentItem()==0)) {
+                textViewAmpHour.setText(String.format("%.3f", Amp_HoursL));
               }
               break;
             case 'e':
@@ -398,7 +410,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[2]=value[3];
               fvalue[3]=value[4];
               float temperature_FETL = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-              if(viewPager.getCurrentItem()==1){
+              if(page1 && (viewPager.getCurrentItem()==1)){
                 textViewFETLeft.setText( String.format("%.1f",temperature_FETL) + " °C");
               }
 
@@ -407,7 +419,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[2]=value[7];
               fvalue[3]=value[8];
               float temperature_MOTORL = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-              if(viewPager.getCurrentItem()==1){
+              if(page1 && (viewPager.getCurrentItem()==1)){
                 textViewMotorTempLeft.setText( String.format("%.1f",temperature_MOTORL) + " °C");
               }
 
@@ -424,7 +436,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[2]=value[3];
               fvalue[3]=value[4];
               float temperature_FETR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-              if(viewPager.getCurrentItem()==1){
+              if(page1 && (viewPager.getCurrentItem()==1)){
                 textViewFETRight.setText( String.format("%.1f",temperature_FETR) + " °C");
               }
 
@@ -433,7 +445,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[2]=value[7];
               fvalue[3]=value[8];
               float temperature_MOTORR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-              if(viewPager.getCurrentItem()==1){
+              if(page1 && (viewPager.getCurrentItem()==1)){
                 textViewMotorTempRight.setText( String.format("%.1f",temperature_MOTORR) + " °C");
               }
 
@@ -443,7 +455,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[3]=value[12];
               Current_INR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
               float CurrentINmedia = (Current_INL+Current_INR)/2;
-              if(viewPager.getCurrentItem()==0) {
+              if(page0 && (viewPager.getCurrentItem()==0)) {
                 textViewAmpBattery.setText(String.format("%.1f", CurrentINmedia) + " A");
                 int[] p2 = double_progressbar_float(CurrentINmedia, 10);
                 progressBarCurrentBatterypos.setProgress(p2[0]);
@@ -474,7 +486,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               TachimetroR = ByteBuffer.wrap(int32_value).order(ByteOrder.LITTLE_ENDIAN).getInt();
               int Tachimetromedia = (TachimetroL + TachimetroR)/2;
               //Da rivedere x trasformare
-              if(viewPager.getCurrentItem()==0) {
+              if(page0 && (viewPager.getCurrentItem()==0)) {
                 textViewDistance.setText(String.valueOf(Tachimetromedia) + " m");
               }
               fvalue[0]=value[5];
@@ -483,7 +495,18 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               fvalue[3]=value[8];
               VbatteryR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
               float Vbatterymedia = (VbatteryL + VbatteryR)/2;
-              if(viewPager.getCurrentItem()==0) {
+
+              VbatteryAverage[VbatteryAverageCounter] = Vbatterymedia;
+              VbatteryAverageCounter++;
+              VbatteryAverageCounter = VbatteryAverageCounter % 10;
+              float vbata=0;
+              for (int i = 0; i < 10; i++) {
+                vbata += VbatteryAverage[VbatteryAverageCounter];
+              }
+             Vbatterymedia = vbata / 10;
+
+
+              if(page0 && (viewPager.getCurrentItem()==0)) {
                 textViewBattery.setText(String.format("%.1f", Vbatterymedia) + " V");
 
                 if (Vbatterymedia > 25.200001) {

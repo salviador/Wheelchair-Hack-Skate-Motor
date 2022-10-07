@@ -34,7 +34,8 @@ public class Main2_activity extends AppCompatActivity {
     private BLE_ViewModel viewModel;
 
 
-
+    public float[] VbatteryAverage;
+    public int VbatteryAverageCounter=0;
     public float VbatteryL = 0;
     public float VbatteryR = 0;
     public int TachimetroL = 0;
@@ -108,6 +109,7 @@ public class Main2_activity extends AppCompatActivity {
         ScanActivity = new Intent(this, Scan.class);
         final String deviceName = device.getName();
         final String deviceAddress = device.getAddress();
+        VbatteryAverage = new float[10];
 
 
         // This callback will only be called when MyFragment is at least Started.
@@ -151,7 +153,7 @@ public class Main2_activity extends AppCompatActivity {
         idProgressBarBatteryNEG.setProgress(0);
         idProgressBarBatteryPOS = (ProgressBar)findViewById(R.id.idProgressBarBatteryPOS);
         idProgressBarBatteryPOS.setProgress(0);
-        idLabelCurrentBattery = (TextView)findViewById(R.id.idLabelDutyCycleR);
+        idLabelCurrentBattery = (TextView)findViewById(R.id.idLabelCurrentBattery);
         idLabelCurrentBattery.setText("-.- A");
 
         progressBarDutyleftPOS = (ProgressBar)findViewById(R.id.progressBarDutyleftPOS);
@@ -258,16 +260,14 @@ public class Main2_activity extends AppCompatActivity {
         byte[] int16_value =  new byte[2];
         byte[] int32_value =  new byte[4];
 
-
         viewModel.getTelemetriaState().observe(this, value ->{
             if(value.length > 0) {
-                switch (value[0]){
+                switch (value[0]) {
                     case 'a':
                         //VESC_DATACAN_CAN_PACKET_STATUS_1_Left
                         int16_value[0]=value[1];
                         int16_value[1]=value[2];
                         RPM_L = ByteBuffer.wrap(int16_value).order(ByteOrder.LITTLE_ENDIAN).getShort();
-halfGauge.setValue((int)RPM_L); //DEBUG
 
                         fvalue[0]=value[3];
                         fvalue[1]=value[4];
@@ -275,12 +275,10 @@ halfGauge.setValue((int)RPM_L); //DEBUG
                         fvalue[3]=value[6];
                         float CurrentM_L = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
 //                        String spercentage = String.format("%.2f%%",percentage);
-                        // idLabelCurrentLeft.setText( String.valueOf(CurrentM_L) + " A");
                         idLabelCurrentLeft.setText( String.format("%.2f",CurrentM_L) + " A");
                         int[] p = double_progressbar_float(CurrentM_L, 10);
                         progressBarCurrentMleftPOS.setProgress(p[0]);
                         progressBarCurrentMleftNEG.setProgress(p[1]);
-
 
                         fvalue[0]=value[7];
                         fvalue[1]=value[8];
@@ -292,7 +290,6 @@ halfGauge.setValue((int)RPM_L); //DEBUG
                         int[] p3 = double_progressbar_float(DutyCycle_L, 10);
                         progressBarDutyleftPOS.setProgress(p3[0]);
                         progressBarDutyLeftNEG.setProgress(p3[1]);
-
                         break;
                     case 'b':
                         //VESC_DATACAN_CAN_PACKET_STATUS_1_Right
@@ -300,7 +297,7 @@ halfGauge.setValue((int)RPM_L); //DEBUG
                         int16_value[1]=value[2];
                         RPM_R = ByteBuffer.wrap(int16_value).order(ByteOrder.LITTLE_ENDIAN).getShort();
                         float RPM_Media = (RPM_L + RPM_R) / 2;
-//                        halfGauge.setValue((int)RPM_Media);
+                        halfGauge.setValue((int)RPM_Media);
 
                         fvalue[0]=value[3];
                         fvalue[1]=value[4];
@@ -312,9 +309,6 @@ halfGauge.setValue((int)RPM_L); //DEBUG
                         progressBarCurrentMlrightPOS.setProgress(p1[0]);
                         progressBarCurrentMrightNEG.setProgress(p1[1]);
 
-
-
-
                         fvalue[0]=value[7];
                         fvalue[1]=value[8];
                         fvalue[2]=value[9];
@@ -324,7 +318,6 @@ halfGauge.setValue((int)RPM_L); //DEBUG
                         int[] p4 = double_progressbar_float(DutyCycle_R, 10);
                         progressBarDutyRightPOS.setProgress(p4[0]);
                         progressBarDutyRightNEG.setProgress(p4[1]);
-
                         break;
                     case 'c':
                         //VESC_DATACAN_CAN_PACKET_STATUS_2_Left
@@ -333,7 +326,7 @@ halfGauge.setValue((int)RPM_L); //DEBUG
                         fvalue[2]=value[3];
                         fvalue[3]=value[4];
                         Amp_HoursL = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-idLabelAmperOra.setText(String.format("%.2f",Amp_HoursL) + " A/h"); //DEBUG
+      //      Log.i("TELEMETRIA", "Amp_HoursL=" + String.format("%.4f",Amp_HoursL));
 
                         break;
                     case 'd':
@@ -343,9 +336,11 @@ idLabelAmperOra.setText(String.format("%.2f",Amp_HoursL) + " A/h"); //DEBUG
                         fvalue[2]=value[3];
                         fvalue[3]=value[4];
                         Amp_HoursR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-                        float Amp_HourMedia = (Amp_HoursL + Amp_HoursR)/2;
-//                        idLabelAmperOra.setText(String.format("%.2f",Amp_HourMedia) + " A/h");
 
+           // Log.i("TELEMETRIA", "Amp_HoursR=" + String.format("%.4f",Amp_HoursR));
+
+                       // float Amp_HourMedia = (Amp_HoursL + Amp_HoursR)/2;
+                        idLabelAmperOra.setText(String.format("%.3f",Amp_HoursL) + " A/h");
                         break;
                     case 'e':
                         //VESC_DATACAN_CAN_PACKET_STATUS_4_Left
@@ -368,12 +363,6 @@ idLabelAmperOra.setText(String.format("%.2f",Amp_HoursL) + " A/h"); //DEBUG
                         fvalue[2]=value[11];
                         fvalue[3]=value[12];
                         Current_INL = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-idLabelCurrentBattery.setText(String.format("%.1f",Current_INL) + " A");    //DEBUG
-int[] p6 = double_progressbar_float(Current_INL, 10);    //DEBUG
-idProgressBarBatteryPOS.setProgress(p6[0]);    //DEBUG
-idProgressBarBatteryNEG.setProgress(p6[1]);    //DEBUG
-
-
                         break;
                     case 'f':
                         //VESC_DATACAN_CAN_PACKET_STATUS_4_Right
@@ -397,11 +386,12 @@ idProgressBarBatteryNEG.setProgress(p6[1]);    //DEBUG
                         fvalue[3]=value[12];
                         Current_INR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
                         float CurrentINmedia = (Current_INL+Current_INR)/2;
-//                        idLabelCurrentBattery.setText(String.format("%.1f",CurrentINmedia) + " A");
-//                        int[] p2 = double_progressbar_float(CurrentINmedia, 10);
-//                        idProgressBarBatteryPOS.setProgress(p2[0]);
-//                        idProgressBarBatteryNEG.setProgress(p2[1]);
-//                        break;
+                        idLabelCurrentBattery.setText(String.format("%.1f",CurrentINmedia) + " A");
+                        int[] p2 = double_progressbar_float(CurrentINmedia, 10);
+                        idProgressBarBatteryPOS.setProgress(p2[0]);
+                        idProgressBarBatteryNEG.setProgress(p2[1]);
+                        break;
+
                     case 'g':
                         //VESC_DATACAN_CAN_PACKET_STATUS_5_Left
                         int32_value[0]=value[1];
@@ -409,45 +399,16 @@ idProgressBarBatteryNEG.setProgress(p6[1]);    //DEBUG
                         int32_value[2]=value[3];
                         int32_value[3]=value[4];
                         TachimetroL = ByteBuffer.wrap(int32_value).order(ByteOrder.LITTLE_ENDIAN).getInt();
-idLabelDistanceMeter.setText(String.valueOf(TachimetroL ) + " m"); //DEBUG
+//                        Log.i("TELEMETRIA", "TachimetroL=" + TachimetroL);
 
                         fvalue[0]=value[5];
                         fvalue[1]=value[6];
                         fvalue[2]=value[7];
                         fvalue[3]=value[8];
                         VbatteryL = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-idLabelBatteryVolt.setText(String.format("%.1f",VbatteryL) + " V"); //DEBUG
-if(VbatteryL>25.200001){
-    VbatteryL = (float)25.2000;
-};
-if(VbatteryL<19.640000000){
-    VbatteryL = (float)19.640000000;
-};
-double calcPerc = 0.00;
-if(VbatteryL > 22.24) {
-//Polynomnial
-    calcPerc = ((Math.pow(VbatteryL, 3) * 1.6921) +
-            (Math.pow(VbatteryL, 2) * -126.6400) +
-            (VbatteryL * 3176.7377) - 26611.4262);
-}else if((VbatteryL > 21.65)&&(VbatteryL <= 22.24)) {
-    calcPerc = ((Math.pow(VbatteryL, 2) * 5.107) +
-            (VbatteryL * -208.58) + 2126.715);
-}else{
-    calcPerc = (VbatteryL-19.64)/2.010*5;
-}
-if(calcPerc<0.00) calcPerc = 0.000;
-
-if(VbatteryL>=23.25){ //60% //DEBUG
-    progressBarVoltBattery.setProgressTintList(ColorStateList.valueOf(Color.BLUE)); //DEBUG
-}else if((VbatteryL<23.25)&&(VbatteryL>=22.6)){ //DEBUG
-    progressBarVoltBattery.setProgressTintList(ColorStateList.valueOf(Color.YELLOW)); //DEBUG
-}else if(VbatteryL<22.6){ //30% //DEBUG
-    progressBarVoltBattery.setProgressTintList(ColorStateList.valueOf(Color.RED)); //DEBUG
-} //DEBUG
-progressBarVoltBattery.setProgress((int)calcPerc); //DEBUG
-idLabelBatteryPercent.setText(String.format("%d", (int)calcPerc) + " %");
-
+//                        Log.i("TELEMETRIA", "VbatteryL=" + String.format("%.4f",VbatteryL));
                         break;
+
                     case 'h':
                         //VESC_DATACAN_CAN_PACKET_STATUS_5_Right
                         int32_value[0]=value[1];
@@ -457,7 +418,8 @@ idLabelBatteryPercent.setText(String.format("%d", (int)calcPerc) + " %");
                         TachimetroR = ByteBuffer.wrap(int32_value).order(ByteOrder.LITTLE_ENDIAN).getInt();
                         int Tachimetromedia = (TachimetroL + TachimetroR)/2;
                         //Da rivedere x trasformare
-//                        idLabelDistanceMeter.setText(String.valueOf(Tachimetromedia ) + " m");
+                        idLabelDistanceMeter.setText(String.valueOf(Tachimetromedia ) + " m");
+   //                     Log.i("TELEMETRIA", "TachimetroR=" + TachimetroR);
 
                         fvalue[0]=value[5];
                         fvalue[1]=value[6];
@@ -465,7 +427,30 @@ idLabelBatteryPercent.setText(String.format("%d", (int)calcPerc) + " %");
                         fvalue[3]=value[8];
                         VbatteryR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
                         float Vbatterymedia = (VbatteryL + VbatteryR)/2;
-/*                        idLabelBatteryVolt.setText(String.format("%.1f",Vbatterymedia) + " V");
+
+
+
+                        VbatteryAverage[VbatteryAverageCounter] = Vbatterymedia;
+                        VbatteryAverageCounter++;
+                        VbatteryAverageCounter = VbatteryAverageCounter % 10;
+                        float vbata=0;
+                        for (int i = 0; i < 10; i++) {
+                            vbata += VbatteryAverage[VbatteryAverageCounter];
+                        }
+                        Vbatterymedia = vbata / 10;
+
+
+
+
+
+
+
+
+
+
+
+
+                        idLabelBatteryVolt.setText(String.format("%.1f",Vbatterymedia) + " V");
                         if(Vbatterymedia>25.200001){
                             Vbatterymedia = (float)25.2000;
                         };
@@ -497,24 +482,17 @@ idLabelBatteryPercent.setText(String.format("%d", (int)calcPerc) + " %");
                         progressBarVoltBattery.setProgress((int)calcPercB);
                         idLabelBatteryPercent.setText(String.format("%d", (int)calcPercB) + " %");
 
-*/
+//                        Log.i("TELEMETRIA", "VbatteryR=" + String.format("%.4f",VbatteryR));
 
-
-                        break;
-                    default:
                         break;
                 }
 
 
 
+
             }
-
-
         });
     }
-
-
-
 
 
 
