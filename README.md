@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <h1 align="center"> ESP32 & Battery </h1>
+  <h1 align="center"> ESP32 & Battery 6S lipo </h1>
 
   <img src="centralina.png" width="300" />
   <img src="centralina2.png" width="300" />
