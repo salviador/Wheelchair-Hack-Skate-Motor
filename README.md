@@ -23,7 +23,7 @@
 
   <img src="joystickBLE.png" width="300" />
   <img src="joystickBLE2.png" width="300" />
-  <img src="joy.png" width="300" />
+  <img src="Joy.png" width="300" />
 </p>
 
 
