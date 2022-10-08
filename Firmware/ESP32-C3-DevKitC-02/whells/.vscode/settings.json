@@ -4,7 +4,9 @@
         "ledrgb.h": "c",
         "string.h": "c",
         "type_traits": "c",
-        "sdkconfig.h": "c"
+        "sdkconfig.h": "c",
+        "differentialsteering.h": "c",
+        "debuggpio.h": "c"
     },
     "idf.adapterTargetName": "esp32c3"
 }

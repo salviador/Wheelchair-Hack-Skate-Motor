@@ -17,6 +17,8 @@
 
 #include "debugGPIO.h"
 #include "freertos/semphr.h"
+#include "bleService.h"
+
 
 #define USB_DEVICE_CONF0_REG        (0x60043018)
 #define USB_DEVICE_USB_PAD_ENABLE   (BIT(14))
@@ -28,6 +30,20 @@
 
 struct VESC_DATACAN VSC_DATA_Left;
 struct VESC_DATACAN VSC_DATA_Right;
+
+struct VESC_DATACAN_CAN_PACKET_STATUS_1 VESC_DATACAN_CAN_PACKET_STATUS_1_Left; 
+struct VESC_DATACAN_CAN_PACKET_STATUS_1 VESC_DATACAN_CAN_PACKET_STATUS_1_Right; 
+
+struct VESC_DATACAN_CAN_PACKET_STATUS_2 VESC_DATACAN_CAN_PACKET_STATUS_2_Left; 
+struct VESC_DATACAN_CAN_PACKET_STATUS_2 VESC_DATACAN_CAN_PACKET_STATUS_2_Right; 
+
+struct VESC_DATACAN_CAN_PACKET_STATUS_4 VESC_DATACAN_CAN_PACKET_STATUS_4_Left; 
+struct VESC_DATACAN_CAN_PACKET_STATUS_4 VESC_DATACAN_CAN_PACKET_STATUS_4_Right; 
+
+struct VESC_DATACAN_CAN_PACKET_STATUS_5 VESC_DATACAN_CAN_PACKET_STATUS_5_Left; 
+struct VESC_DATACAN_CAN_PACKET_STATUS_5 VESC_DATACAN_CAN_PACKET_STATUS_5_Right; 
+
+
 /*
 
 #define RX_BUFFER_SIZE 100
@@ -110,6 +126,10 @@ void twai_transmit_task(void *arg)
 //SUL VSC ABILITARE SOLO
 //"CAN_STATUS_1" 1Hz
 
+//SUL VSC ABILITARE 
+//"CAN_STATUS_1_2_3_4_5" 1Hz
+
+
 
 void twai_receive_task(void *arg)
 {
@@ -119,8 +139,29 @@ void twai_receive_task(void *arg)
     uint16_t commandvsc;
     uint8_t dalalenght;
 
+    int16_t temp16;
+    int32_t temp32;
+    uint32_t utemp32;
+    uint16_t utemp16;
+
     VSC_DATA_Right.time_update = 0;
     VSC_DATA_Left.time_update = 0;
+
+    VESC_DATACAN_CAN_PACKET_STATUS_1_Left.type_message = 'a';
+    VESC_DATACAN_CAN_PACKET_STATUS_1_Right.type_message = 'b';
+    VESC_DATACAN_CAN_PACKET_STATUS_2_Left.type_message = 'c';
+    VESC_DATACAN_CAN_PACKET_STATUS_2_Right.type_message = 'd';
+    VESC_DATACAN_CAN_PACKET_STATUS_4_Left.type_message = 'e';
+    VESC_DATACAN_CAN_PACKET_STATUS_4_Right.type_message = 'f';
+    VESC_DATACAN_CAN_PACKET_STATUS_5_Left.type_message = 'g';
+    VESC_DATACAN_CAN_PACKET_STATUS_5_Right.type_message = 'h';
+
+
+
+    //uint8_t databuffer[sizeof(VSC_DATA_Left)];
+    uint8_t *bytePtr;
+    size_t xBytesSent;
+
 
 
     while(1) {
@@ -146,14 +187,33 @@ void twai_receive_task(void *arg)
                             VSC_DATA_Left.RPM = VSC_DATA_Left.RPM | rx_message.data[1] << 16;
                             VSC_DATA_Left.RPM = VSC_DATA_Left.RPM | rx_message.data[2] << 8;
                             VSC_DATA_Left.RPM = VSC_DATA_Left.RPM | rx_message.data[3];
-
+                            VESC_DATACAN_CAN_PACKET_STATUS_1_Left.RPM = VSC_DATA_Left.RPM;
                             VSC_DATA_Left.time_update = xTaskGetTickCount();
 
-
                             xQueueOverwrite(vsc_data_logL, &VSC_DATA_Left);
-
-
+                            //Current
+                            temp16 = rx_message.data[4] << 8;
+                            temp16 = temp16 | rx_message.data[5];
+                            VESC_DATACAN_CAN_PACKET_STATUS_1_Left.Current =  (float)temp16 / 10;
+                            //ESP_LOGI(TAGCAN, "current = %i, %f", temp16, VSC_DATA_Left.Current);
+                            //Duty
+                            temp16 = rx_message.data[6] << 8;
+                            temp16 = temp16 | rx_message.data[7];
+                            VESC_DATACAN_CAN_PACKET_STATUS_1_Left.Duty_Motor =  (float)temp16 / 10;
+                            //ESP_LOGI(TAGCAN, "duty = %i, %f", temp16, VSC_DATA_Left.Duty_Motor);
                             //ESP_LOGI(TAGCAN, "RPM Spped = %i", VSC_DATA_Left.RPM);
+                            //invia al BLE
+                            if(BLE_SendNotification_Queue != NULL){
+                                if(xMessageBufferSpacesAvailable(BLE_SendNotification_Queue) > sizeof(VESC_DATACAN_CAN_PACKET_STATUS_1_Left)){
+                                   bytePtr = (uint8_t*)&VESC_DATACAN_CAN_PACKET_STATUS_1_Left;
+                                   xBytesSent = xMessageBufferSend(BLE_SendNotification_Queue, bytePtr, sizeof(VESC_DATACAN_CAN_PACKET_STATUS_1_Left) , 0);
+                                }
+                            }
+                            else{
+
+                                ESP_LOGI(TAGCAN, "****BLE_SendNotification_Queue***** = %d", BLE_SendNotification_Queue);
+                            }
+
                         }else if(idvsc == 6){
                             //https://dongilc.gitbook.io/openrobot-inc/tutorials/control-with-can
                             VSC_DATA_Right.RPM = 0;
@@ -161,17 +221,210 @@ void twai_receive_task(void *arg)
                             VSC_DATA_Right.RPM = VSC_DATA_Right.RPM | rx_message.data[1] << 16;
                             VSC_DATA_Right.RPM = VSC_DATA_Right.RPM | rx_message.data[2] << 8;
                             VSC_DATA_Right.RPM = VSC_DATA_Right.RPM | rx_message.data[3];
+                            VESC_DATACAN_CAN_PACKET_STATUS_1_Right.RPM = VSC_DATA_Right.RPM;
 
                             VSC_DATA_Right.time_update = xTaskGetTickCount();
 
                             xQueueOverwrite(vsc_data_logR, &VSC_DATA_Right);
-
+                            //Current
+                            temp16 = rx_message.data[4] << 8;
+                            temp16 = temp16 | rx_message.data[5];
+                            VESC_DATACAN_CAN_PACKET_STATUS_1_Right.Current =  (float)temp16 / 10;
+                            //Duty
+                            temp16 = rx_message.data[6] << 8;
+                            temp16 = temp16 | rx_message.data[7];
+                            VESC_DATACAN_CAN_PACKET_STATUS_1_Right.Duty_Motor =  (float)temp16 / 10;
                             //ESP_LOGI(TAGCAN, "RPM Spped = %i", VSC_DATA_Right.RPM);
+                            //invia al BLE
+                            if(BLE_SendNotification_Queue != NULL){
+                                if(xMessageBufferSpacesAvailable(BLE_SendNotification_Queue) > sizeof(VESC_DATACAN_CAN_PACKET_STATUS_1_Right)){
+                                    bytePtr = (uint8_t*)&VESC_DATACAN_CAN_PACKET_STATUS_1_Right;
+                                    xBytesSent = xMessageBufferSend(BLE_SendNotification_Queue, bytePtr, sizeof(VESC_DATACAN_CAN_PACKET_STATUS_1_Right) , 0);
+                                }
+                            }
+                            else{
+
+                                ESP_LOGI(TAGCAN, "****BLE_SendNotification_Queue***** = %d", BLE_SendNotification_Queue);
+                            }
+
                         }
                     }                
                 break;
-            }
 
+                case 0x0E00:
+                    if(dalalenght == 8){
+                        if(idvsc == 5){
+                            //https://dongilc.gitbook.io/openrobot-inc/tutorials/control-with-can
+                            utemp32 = 0;
+                            utemp32 = utemp32 << 24;
+                            utemp32 = utemp32 | rx_message.data[1] << 16;
+                            utemp32 = utemp32 | rx_message.data[2] << 8;
+                            utemp32 = utemp32 | rx_message.data[3];
+                            VESC_DATACAN_CAN_PACKET_STATUS_2_Left.Amp_Hours = (float)utemp32 / 10000;
+                            //ESP_LOGI(TAGCAN, "AMP/h = %f", VSC_DATA_Left.Amp_Hours);               
+                            //invia al BLE
+                            if(BLE_SendNotification_Queue != NULL){
+                                if(xMessageBufferSpacesAvailable(BLE_SendNotification_Queue) > sizeof(VESC_DATACAN_CAN_PACKET_STATUS_2_Left)){
+                                    bytePtr = (uint8_t*)&VESC_DATACAN_CAN_PACKET_STATUS_2_Left;
+                                    xBytesSent = xMessageBufferSend(BLE_SendNotification_Queue, bytePtr, sizeof(VESC_DATACAN_CAN_PACKET_STATUS_2_Left) , 0);
+                                }
+                            }
+                            else{
+
+                                ESP_LOGI(TAGCAN, "****BLE_SendNotification_Queue***** = %d", BLE_SendNotification_Queue);
+                            }
+
+                        }else if(idvsc == 6){
+                            //https://dongilc.gitbook.io/openrobot-inc/tutorials/control-with-can
+                            utemp32 = 0;
+                            utemp32 = utemp32 << 24;
+                            utemp32 = utemp32 | rx_message.data[1] << 16;
+                            utemp32 = utemp32 | rx_message.data[2] << 8;
+                            utemp32 = utemp32 | rx_message.data[3];
+                            VESC_DATACAN_CAN_PACKET_STATUS_2_Right.Amp_Hours = (float)utemp32 / 10000;
+                            //ESP_LOGI(TAGCAN, "AMP/h = %f", VSC_DATA_Left.Amp_Hours);                        
+                            //invia al BLE
+                            if(BLE_SendNotification_Queue != NULL){
+                                if(xMessageBufferSpacesAvailable(BLE_SendNotification_Queue) > sizeof(VESC_DATACAN_CAN_PACKET_STATUS_2_Right)){
+                                    bytePtr = (uint8_t*)&VESC_DATACAN_CAN_PACKET_STATUS_2_Right;
+                                    xBytesSent = xMessageBufferSend(BLE_SendNotification_Queue, bytePtr, sizeof(VESC_DATACAN_CAN_PACKET_STATUS_2_Right) , 0);
+                                }
+                            }
+                            else{
+
+                                ESP_LOGI(TAGCAN, "****BLE_SendNotification_Queue***** = %d", BLE_SendNotification_Queue);
+                            }
+                        }
+                    }                
+                break;
+                case 0x1000:
+                    if(dalalenght == 8){
+                        if(idvsc == 5){
+                            //https://dongilc.gitbook.io/openrobot-inc/tutorials/control-with-can
+                            //Temp FET
+                            temp16 = rx_message.data[0] << 8;
+                            temp16 = temp16 | rx_message.data[1];
+                            VESC_DATACAN_CAN_PACKET_STATUS_4_Left.temperature_FET =  (float)temp16 / 10;
+                            //ESP_LOGI(TAGCAN, "TEMP FET = %i, %f", temp16, VSC_DATA_Left.temperature_FET);
+                            //Temp MOTOR
+                            temp16 = rx_message.data[2] << 8;
+                            temp16 = temp16 | rx_message.data[3];
+                            VESC_DATACAN_CAN_PACKET_STATUS_4_Left.temperature_MOTOR =  (float)temp16 / 10;
+                            //ESP_LOGI(TAGCAN, "TEMP MOTOR = %i, %f", temp16, VSC_DATA_Left.temperature_MOTOR);
+                            //Current IN
+                            temp16 = rx_message.data[4] << 8;
+                            temp16 = temp16 | rx_message.data[5];
+                            VESC_DATACAN_CAN_PACKET_STATUS_4_Left.Current_IN =  (float)temp16 / 10;
+                            //ESP_LOGI(TAGCAN, "current IN = %i, %f", temp16, VSC_DATA_Left.Current_IN);
+                            //invia al BLE
+                            if(BLE_SendNotification_Queue != NULL){
+                                if(xMessageBufferSpacesAvailable(BLE_SendNotification_Queue) > sizeof(VESC_DATACAN_CAN_PACKET_STATUS_4_Left)){
+                                    bytePtr = (uint8_t*)&VESC_DATACAN_CAN_PACKET_STATUS_4_Left;
+                                    xBytesSent = xMessageBufferSend(BLE_SendNotification_Queue, bytePtr, sizeof(VESC_DATACAN_CAN_PACKET_STATUS_4_Left) , 0);
+                                }
+                            }
+                            else{
+
+                                ESP_LOGI(TAGCAN, "****BLE_SendNotification_Queue***** = %d", BLE_SendNotification_Queue);
+                            }
+
+                        }else if(idvsc == 6){
+                            //https://dongilc.gitbook.io/openrobot-inc/tutorials/control-with-can
+                            //Temp FET
+                            temp16 = rx_message.data[0] << 8;
+                            temp16 = temp16 | rx_message.data[1];
+                            VESC_DATACAN_CAN_PACKET_STATUS_4_Right.temperature_FET =  (float)temp16 / 10;
+                            //ESP_LOGI(TAGCAN, "TEMP FET = %i, %f", temp16, VSC_DATA_Right.temperature_FET);
+                            //Temp MOTOR
+                            temp16 = rx_message.data[2] << 8;
+                            temp16 = temp16 | rx_message.data[3];
+                            VESC_DATACAN_CAN_PACKET_STATUS_4_Right.temperature_MOTOR =  (float)temp16 / 10;
+                            //ESP_LOGI(TAGCAN, "TEMP MOTOR = %i, %f", temp16, VSC_DATA_Right.temperature_MOTOR);
+                            //Current IN
+                            temp16 = rx_message.data[4] << 8;
+                            temp16 = temp16 | rx_message.data[5];
+                            VESC_DATACAN_CAN_PACKET_STATUS_4_Right.Current_IN =  (float)temp16 / 10;
+                            //ESP_LOGI(TAGCAN, "current IN = %i, %f", temp16, VSC_DATA_Right.Current_IN);
+                            //invia al BLE
+                            if(BLE_SendNotification_Queue != NULL){
+                                if(xMessageBufferSpacesAvailable(BLE_SendNotification_Queue) > sizeof(VESC_DATACAN_CAN_PACKET_STATUS_4_Right)){
+                                    bytePtr = (uint8_t*)&VESC_DATACAN_CAN_PACKET_STATUS_4_Right;
+                                    xBytesSent = xMessageBufferSend(BLE_SendNotification_Queue, bytePtr, sizeof(VESC_DATACAN_CAN_PACKET_STATUS_4_Right) , 0);
+                                }
+                            }
+                            else{
+
+                                ESP_LOGI(TAGCAN, "****BLE_SendNotification_Queue***** = %d", BLE_SendNotification_Queue);
+                            }
+
+                        }
+                    }                
+                break;
+                case 0x1B00:
+                    //RPM
+                    if(dalalenght == 8){
+                        if(idvsc == 5){
+                            //https://dongilc.gitbook.io/openrobot-inc/tutorials/control-with-can
+                            temp32 = 0;
+                            temp32 = rx_message.data[0] << 24;
+                            temp32 = temp32 | rx_message.data[1] << 16;
+                            temp32 = temp32 | rx_message.data[2] << 8;
+                            temp32 = temp32 | rx_message.data[3];
+                            VESC_DATACAN_CAN_PACKET_STATUS_5_Left.Tachimetro = temp32;
+                            ESP_LOGI(TAGCAN, "Tachimetro = %i", VESC_DATACAN_CAN_PACKET_STATUS_5_Left.Tachimetro);
+
+                            //Ving
+                            utemp16 = rx_message.data[4] << 8;
+                            utemp16 = utemp16 | rx_message.data[5];
+                            VESC_DATACAN_CAN_PACKET_STATUS_5_Left.Vbattery =  (float)utemp16 / 10;
+                            //ESP_LOGI(TAGCAN, "V battery = %i, %f", utemp16, VSC_DATA_Left.Vbattery);
+
+                            //invia al BLE
+                            if(BLE_SendNotification_Queue != NULL){
+                                if(xMessageBufferSpacesAvailable(BLE_SendNotification_Queue) > sizeof(VESC_DATACAN_CAN_PACKET_STATUS_5_Left)){
+                                    bytePtr = (uint8_t*)&VESC_DATACAN_CAN_PACKET_STATUS_5_Left;
+                                    xBytesSent = xMessageBufferSend(BLE_SendNotification_Queue, bytePtr, sizeof(VESC_DATACAN_CAN_PACKET_STATUS_5_Left) , 0);
+                                }
+                            }
+                            else{
+
+                                ESP_LOGI(TAGCAN, "****BLE_SendNotification_Queue***** = %d", BLE_SendNotification_Queue);
+                            }
+
+                        }else if(idvsc == 6){
+                            //https://dongilc.gitbook.io/openrobot-inc/tutorials/control-with-can
+                            temp32 = 0;
+                            temp32 = rx_message.data[0] << 24;
+                            temp32 = temp32 | rx_message.data[1] << 16;
+                            temp32 = temp32 | rx_message.data[2] << 8;
+                            temp32 = temp32 | rx_message.data[3];
+                            VESC_DATACAN_CAN_PACKET_STATUS_5_Right.Tachimetro = temp32;
+                            //ESP_LOGI(TAGCAN, "Tachimetro = %i", VSC_DATA_Right.Tachimetro);
+
+                            //Ving
+                            utemp16 = rx_message.data[4] << 8;
+                            utemp16 = utemp16 | rx_message.data[5];
+                            VESC_DATACAN_CAN_PACKET_STATUS_5_Right.Vbattery =  (float)utemp16 / 10;
+                            //ESP_LOGI(TAGCAN, "V battery = %i, %f", utemp16, VSC_DATA_Right.Vbattery);
+
+                            //invia al BLE
+                            if(BLE_SendNotification_Queue != NULL){
+                                if(xMessageBufferSpacesAvailable(BLE_SendNotification_Queue) > sizeof(VESC_DATACAN_CAN_PACKET_STATUS_5_Right)){
+                                    bytePtr = (uint8_t*)&VESC_DATACAN_CAN_PACKET_STATUS_5_Right;
+                                    xBytesSent = xMessageBufferSend(BLE_SendNotification_Queue, bytePtr, sizeof(VESC_DATACAN_CAN_PACKET_STATUS_5_Right) , 0);
+                                }
+                            }
+                            else{
+
+                                ESP_LOGI(TAGCAN, "****BLE_SendNotification_Queue***** = %d", BLE_SendNotification_Queue);
+                            }
+                        }
+                    }                
+                break;
+
+            }
+            //ESP_LOGI(TAGCAN, "task stack: %d", uxTaskGetStackHighWaterMark(NULL));
+           // ESP_LOGI(TAGCAN, "task heap: %d", xPortGetFreeHeapSize());
 
 
         }
@@ -639,7 +892,8 @@ void VESC_setup(void)
     vsc_data_logL = xQueueCreate( 1, sizeof(VSC_DATA_Left) );
     vsc_data_logR = xQueueCreate( 1, sizeof(VSC_DATA_Right) );
 
-    xTaskCreatePinnedToCore(twai_receive_task, "TWAI_rx", 4096, NULL, tskIDLE_PRIORITY, NULL, tskNO_AFFINITY);
+//tskIDLE_PRIORITY
+    xTaskCreatePinnedToCore(twai_receive_task, "TWAI_rx", 4096, NULL, tskIDLE_PRIORITY+1, NULL, tskNO_AFFINITY);
     
     //xTaskCreatePinnedToCore(twai_get_data_task, "TWAI_tx", 4096, NULL, tskIDLE_PRIORITY + 3, NULL, tskNO_AFFINITY);
 

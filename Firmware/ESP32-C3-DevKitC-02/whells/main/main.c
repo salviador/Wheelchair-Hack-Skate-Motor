@@ -21,6 +21,7 @@
 #include <esp_types.h>
 #include "esp_intr.h"
 #include "freertos/queue.h"
+#include "freertos/message_buffer.h"
 
 
 #include "main.h"
@@ -63,14 +64,18 @@ void app_main(void)
 
     //WHEELS
     wheels_setup();
-    xTaskCreatePinnedToCore(wheels_task, "WHEELS", 4096, NULL, tskIDLE_PRIORITY, NULL, tskIDLE_PRIORITY+3);
+    xTaskCreatePinnedToCore(wheels_task, "WHEELS", 4096, NULL, tskIDLE_PRIORITY+4, NULL, tskIDLE_PRIORITY+3);
 
     //wii joystick
     wii_setup();
 
+
     //BLE GATT SERVER Setup
     BLE_Service_Start();
-    xTaskCreate(&Send_BLE_Notification_Task, "BLE Send Task Notify", 2048, NULL, tskIDLE_PRIORITY, NULL);
+
+
+    //Solo x Test
+//    xTaskCreate(BLE_Send_Data, "SEND", 2048, NULL, tskIDLE_PRIORITY, NULL);
 
 
 }
@@ -84,12 +89,8 @@ void app_main(void)
 
 
 
-//Send 4 byte
-void BLE_Send_Data (uint8_t *data){
 
-    xQueueSend(BLE_SendNotification_Queue, data, portMAX_DELAY);
 
-}
 
 
 

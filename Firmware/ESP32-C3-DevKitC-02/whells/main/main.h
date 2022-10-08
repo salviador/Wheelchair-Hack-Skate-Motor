@@ -9,7 +9,6 @@
 #include "freertos/queue.h"
 #include "freertos/event_groups.h"
 
-    void BLE_Send_Data (uint8_t *data );
 
 
 #endif

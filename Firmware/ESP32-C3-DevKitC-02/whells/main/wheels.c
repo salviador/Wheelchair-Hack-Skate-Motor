@@ -112,6 +112,8 @@ void wheels_setup(void){
     wheel_var.FREE_RUN_REPEAT_TIMEOUT = 5 ;
 }
 
+long timeTDBGelaspe=0;
+
 
 void wheels_task(void *arg){
     //Code x sedia 
@@ -133,8 +135,13 @@ void wheels_task(void *arg){
                 wheel_var.joyY = Joystick_rec.uJoy_y;
 
                 //ESP_LOGI(TAGWHEELS, "%d", Joystick_rec.uvbattery);
+/*
+                long timeTDBGelaspestop = xTaskGetTickCount() - timeTDBGelaspe;               
+                timeTDBGelaspe = xTaskGetTickCount();
 
-                ESP_LOGI(TAGWHEELS, "1--= %d,%d, %x",  wheel_var.joyX , wheel_var.joyY, Joystick_rec.buttons );
+                ESP_LOGI(TAGWHEELS, "1--= %d,%d, %x,  [ %lu ]",  wheel_var.joyX , wheel_var.joyY, Joystick_rec.buttons,  (timeTDBGelaspestop*10)  );
+*/
+
                 /*
                 ESP_LOGI(TAGWHEELS, "%d,%d,%d,%d, %d,%d,%d,%d",  
                                                                 (Joystick_rec.buttons & 0x80),
@@ -422,7 +429,7 @@ void wheels_task(void *arg){
                                     current_set_speed = 0;
                                     current_diff_sterzing_auto = 0;
 
-                                    //Correct sterzing friction per girare meglio
+                                    //Correct sterzing friction per girare meglio ************************************
                                     int valxjoy1 = 0;
                                     float valxjoy1f  = 0.00000;
 
@@ -436,7 +443,7 @@ void wheels_task(void *arg){
                                 //        ESP_LOGI(TAGWHEELS, "p> %f , %f    ; (%f)", wheel_var.vescValueLeft, wheel_var.vescValueright,
                                 //                               valxjoy1f);
 
-                                        valxjoy1fper = ((valxjoy1f / 1000.0) * wheel_var.joyY) * 2.8000;
+                                        valxjoy1fper = ((valxjoy1f / 1000.0) * wheel_var.joyY) * 2.000;     // FAttore moltiplicazione
 
                                         if (wheel_var.joyX > 50) {
                                             wheel_var.vescValueright = wheel_var.vescValueright - valxjoy1fper; //valxjoy1f;
@@ -990,6 +997,9 @@ void wheels_task(void *arg){
 
 
                     }//FINE FRENO else NORMAL MODE
+
+                    //ESP_LOGI(TAGWHEELS, "task stack: %d", uxTaskGetStackHighWaterMark(NULL));
+                    //ESP_LOGI(TAGWHEELS, "task heap: %d", xPortGetFreeHeapSize());
 
 
                 xSemaphoreGive( xSemaphoreWHEELS );

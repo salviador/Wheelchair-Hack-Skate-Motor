@@ -7,14 +7,27 @@
     #include <string.h>
 #include "freertos/queue.h"
 #include "freertos/event_groups.h"
+#include "freertos/message_buffer.h"
+
+
+#include "esp_gap_ble_api.h"
+#include "esp_gatts_api.h"
+#include "esp_bt_defs.h"
+#include "esp_bt_main.h"
+
 
 void BLE_Service_Start(void);
 void Send_BLE_Notification_Task(void *pvParameter);
+void disconnected(esp_ble_gatts_cb_param_t *param);
 
 
-QueueHandle_t BLE_SendNotification_Queue;
+//QueueHandle_t BLE_SendNotification_Queue;
+MessageBufferHandle_t BLE_SendNotification_Queue;
+
 EventGroupHandle_t BLE_event_group;
 #define BIT_0	( 1 << 0 )
+#define BIT_1	( 1 << 1 )
+#define BIT_2	( 1 << 2 )
 
 
     /* Attributes State Machine */
@@ -27,10 +40,19 @@ EventGroupHandle_t BLE_event_group;
 
         IDX_CHAR_B,
         IDX_CHAR_VAL_B,
+
+
         /*
         IDX_CHAR_C,
         IDX_CHAR_VAL_C,
         */
+        IDX_CHAR_TELEMETRIA,        
+        IDX_CHAR_VAL_TELEMETRIA,
+        IDX_CHAR_CFG_TELEMETRIA,
+
+
+
+
         HRS_IDX_NB,
     };
 
@@ -74,5 +96,13 @@ EventGroupHandle_t BLE_event_group;
 
     #define BUTTON_MENO        0x20 
     #define BUTTON_PIU        0x40 
+
+
+
+
+void connected(esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
+
+   // void BLE_Send_Data (void *pvParameter);
+
 
 #endif

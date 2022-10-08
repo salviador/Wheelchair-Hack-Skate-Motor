@@ -34,10 +34,8 @@
     
     struct VESC_DATACAN{
         int16_t RPM;
-        //float Amp_Motor; 
-        //float Amp_Input_Current; 
-        //uint8_t Voltage; 
 
+        //uint8_t Voltage; 
         unsigned long time_update;
     };
 
@@ -46,6 +44,57 @@
 
     //unsigned short crc16(unsigned char *buf, unsigned int len);
  
+
+
+
+
+
+    struct VESC_DATACAN_CAN_PACKET_STATUS_1{
+        //dati x far riconoscere al BLE che pacchetto è e che tipo
+        uint8_t type_message;
+     //   uint8_t len_message;
+
+        //
+        int16_t RPM;
+        float Current; 
+        float Duty_Motor; 
+    }__attribute__((packed));
+    struct VESC_DATACAN_CAN_PACKET_STATUS_2{
+        //dati x far riconoscere al BLE che pacchetto è e che tipo
+        uint8_t type_message;
+     //   uint8_t len_message;
+
+        float Amp_Hours; 
+    }__attribute__((packed));
+    struct VESC_DATACAN_CAN_PACKET_STATUS_4{
+        //dati x far riconoscere al BLE che pacchetto è e che tipo
+        uint8_t type_message;
+      //  uint8_t len_message;
+
+        float temperature_FET; 
+        float temperature_MOTOR; 
+        float Current_IN; 
+    }__attribute__((packed));
+    struct VESC_DATACAN_CAN_PACKET_STATUS_5{
+        //dati x far riconoscere al BLE che pacchetto è e che tipo
+        uint8_t type_message;
+     //   uint8_t len_message;
+
+        int32_t Tachimetro;
+        float Vbattery; 
+    }__attribute__((packed));
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
