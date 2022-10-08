@@ -80,6 +80,7 @@ public class Main2_activity extends AppCompatActivity {
     public  TextView idLabelBatteryPercent;
 
 
+    private Intent mainActivity;
 
 
 
@@ -304,6 +305,7 @@ public class Main2_activity extends AppCompatActivity {
                         fvalue[2]=value[5];
                         fvalue[3]=value[6];
                         float CurrentM_R = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
+
                         idLabelCurrentRight.setText( String.format("%.1f",CurrentM_R) + " A");
                         int[] p1 = double_progressbar_float(CurrentM_R, 10);
                         progressBarCurrentMlrightPOS.setProgress(p1[0]);
@@ -417,8 +419,11 @@ public class Main2_activity extends AppCompatActivity {
                         int32_value[3]=value[4];
                         TachimetroR = ByteBuffer.wrap(int32_value).order(ByteOrder.LITTLE_ENDIAN).getInt();
                         int Tachimetromedia = (TachimetroL + TachimetroR)/2;
+                        float Tachimetromediaf = ((float) Tachimetromedia) / (float)299.3333333;
+                        int Tachimetromediafi =  (int)Tachimetromediaf;
+
                         //Da rivedere x trasformare
-                        idLabelDistanceMeter.setText(String.valueOf(Tachimetromedia ) + " m");
+                        idLabelDistanceMeter.setText(String.valueOf(Tachimetromediafi ) + " m");
    //                     Log.i("TELEMETRIA", "TachimetroR=" + TachimetroR);
 
                         fvalue[0]=value[5];
@@ -492,6 +497,11 @@ public class Main2_activity extends AppCompatActivity {
 
             }
         });
+
+
+
+        mainActivity = new Intent(this, MainActivity.class);
+
     }
 
 
@@ -541,6 +551,14 @@ public class Main2_activity extends AppCompatActivity {
     }
     private void State_ConnectionGATT(Boolean connectionStateLiveData){
         //Toast.makeText(this,"State_ConnectionGATT " + connectionStateLiveData.toString() , Toast.LENGTH_LONG).show();
+        if(connectionStateLiveData==false){
+            mainActivity.putExtra(MainActivity.EXTRA_DEVICE2, "exit");
+            startActivity(mainActivity);
+
+            //finish();
+            //android.os.Process.killProcess(android.os.Process.myPid());
+            //System.exit(0);
+        }
 
     }
 

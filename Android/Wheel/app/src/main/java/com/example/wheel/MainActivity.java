@@ -35,6 +35,9 @@ import no.nordicsemi.android.support.v18.scanner.ScanSettings;
 
 public class MainActivity extends AppCompatActivity {
     private boolean is_Scanner_BLE  = false;
+    public static final String EXTRA_DEVICE2 = "no.nordicsemi.android.blinky.EXIT";
+    private boolean end = false;
+
 
     public ImageView searchanimation;
 
@@ -117,6 +120,18 @@ public class MainActivity extends AppCompatActivity {
       //  Intent inain2 = new Intent(MainActivity.this, Main2_activity.class);
      //   this.startActivity(inain2);
 
+        end = false;
+
+        final Intent intent = getIntent();
+        final String pe = intent.getStringExtra(EXTRA_DEVICE2);
+        if ((pe != null) && pe.equals("exit")) {
+            finish();
+            android.os.Process.killProcess(android.os.Process.myPid());
+            end = true;
+            return;
+        }
+
+
     }
 
 
@@ -156,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 1) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 //Permission Granted
-                go_scan_activity();
+           //     go_scan_activity();
 //Perform operations here only which requires permission
             } else {
                 Toast.makeText(this, "Abilitare i permessi!", Toast.LENGTH_LONG).show();
@@ -173,7 +188,14 @@ public class MainActivity extends AppCompatActivity {
         list_devices.clear();
         scanner.stopScan(scanBleCallback);
 
-        go_scan_activity();
+        if(end== false) {
+            go_scan_activity();
+        }
+        if(end== true) {
+            finish();
+            android.os.Process.killProcess(android.os.Process.myPid());
+
+        }
 
     }
 

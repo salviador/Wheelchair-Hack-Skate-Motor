@@ -16,6 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.view.GestureDetectorCompat;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -105,6 +106,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
 
   public ViewPager viewPager;
 
+  private Intent mainActivity;
 
 
   @Override
@@ -484,10 +486,12 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               int32_value[2]=value[3];
               int32_value[3]=value[4];
               TachimetroR = ByteBuffer.wrap(int32_value).order(ByteOrder.LITTLE_ENDIAN).getInt();
-              int Tachimetromedia = (TachimetroL + TachimetroR)/2;
+              int Tachimetromedia = (TachimetroL + TachimetroR)/2   ;
+              float Tachimetromediaf = ((float) Tachimetromedia) / (float)299.3333333;
+              int Tachimetromediafi =  (int)Tachimetromediaf;
               //Da rivedere x trasformare
               if(page0 && (viewPager.getCurrentItem()==0)) {
-                textViewDistance.setText(String.valueOf(Tachimetromedia) + " m");
+                textViewDistance.setText(String.valueOf(Tachimetromediafi) + " m");
               }
               fvalue[0]=value[5];
               fvalue[1]=value[6];
@@ -557,7 +561,20 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
 
 
 
+      mainActivity = new Intent(this, MainActivity.class);
 
+      OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+        @Override
+        public void handleOnBackPressed() {
+          // Handle the back button event
+
+          mainActivity.putExtra(MainActivity.EXTRA_DEVICE2, "exit");
+          startActivity(mainActivity);
+
+
+        }
+      };
+      this.getOnBackPressedDispatcher().addCallback(this, callback);
 
 
 
@@ -607,6 +624,9 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
     private void State_ConnectionGATT(Boolean connectionStateLiveData){
       Log.i("BLE","State_ConnectionGATT " + connectionStateLiveData.toString() );
       if(connectionStateLiveData==false){
+        mainActivity.putExtra(MainActivity.EXTRA_DEVICE2, "exit");
+        startActivity(mainActivity);
+
         //finish();
         //android.os.Process.killProcess(android.os.Process.myPid());
         //System.exit(0);
@@ -620,6 +640,14 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
     viewModel.disconnect();
   }
 
+  @Override
+  public void onBackPressed() {
+    super.onBackPressed();
+
+
+
+  }
+
 
 
   @Override
@@ -630,7 +658,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
 
 
    // this.finish();
-    android.os.Process.killProcess(android.os.Process.myPid());
+   // android.os.Process.killProcess(android.os.Process.myPid());
 
     return super.onTouchEvent(event);
 
