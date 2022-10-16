@@ -314,14 +314,14 @@ void Motor_Convert_Joy(struct CHART_data_TX *bleJOY, struct CHART_data_TX *wheel
     
 
     if(wheelJOY->uJoy_y < 0){
-      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,-913,0,-1000,0);   //Ymin
+      wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,-912,0,-1000,0);   //Ymin
     }else if(wheelJOY->uJoy_y > 0){
       wheelJOY->uJoy_y= map(wheelJOY->uJoy_y,0,960,0,1000);     //Ymax
     }
     if(wheelJOY->uJoy_x < 0){
-      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,-926,0,-1000,0);   //Xmin
+      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,-925,0,-1000,0);   //Xmin
     }else if(wheelJOY->uJoy_x > 0){
-      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,0,841,0,1000);     //Xmax
+      wheelJOY->uJoy_x= map(wheelJOY->uJoy_x,0,941,0,1000);     //Xmax
     }
 
 

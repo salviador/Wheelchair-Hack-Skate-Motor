@@ -625,7 +625,7 @@ void wheels_task(void *arg){
                                             valxjoy1 =  abs(wheel_var.joyX);
                                             valxjoy1f  = mapfloat((float)valxjoy1, 0.0, 1000, 0.0 , cuurent_mode_data.current_soft_var); //2.5
 
-                                            valxjoy1fper = ((valxjoy1f / 1000.0) * wheel_var.joyY )  * 2.1500 ;      // FAttore moltiplicazione
+                                            valxjoy1fper = ((valxjoy1f / 1000.0) * wheel_var.joyY )  * 2.000 ;      // FAttore moltiplicazione
 
 
 
@@ -636,13 +636,13 @@ void wheels_task(void *arg){
 
                                             if (wheel_var.joyX > 50) {
                                                 wheel_var.vescValueright = wheel_var.vescValueright - valxjoy1fper; //valxjoy1f;
-                                                if(wheel_var.vescValueright < - 3.00){
-                                                    wheel_var.vescValueright = -3.00;
+                                                if(wheel_var.vescValueright < -1.50){
+                                                    wheel_var.vescValueright = -1.50;
                                                 }
                                             }else if(wheel_var.joyX < 50) {
                                                 wheel_var.vescValueLeft = wheel_var.vescValueLeft - valxjoy1fper; //valxjoy1f;
-                                                if(wheel_var.vescValueLeft < - 3.00){
-                                                    wheel_var.vescValueLeft = -3.00;
+                                                if(wheel_var.vescValueLeft < -1.50){
+                                                    wheel_var.vescValueLeft = -1.50;
                                                 }
                                             }
                                         }
