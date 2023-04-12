@@ -135,12 +135,13 @@ void wheels_task(void *arg){
                 wheel_var.joyY = Joystick_rec.uJoy_y;
 
                 //ESP_LOGI(TAGWHEELS, "%d", Joystick_rec.uvbattery);
-/*
+                
+                /*
                 long timeTDBGelaspestop = xTaskGetTickCount() - timeTDBGelaspe;               
                 timeTDBGelaspe = xTaskGetTickCount();
 
                 ESP_LOGI(TAGWHEELS, "1--= %d,%d, %x,  [ %lu ]",  wheel_var.joyX , wheel_var.joyY, Joystick_rec.buttons,  (timeTDBGelaspestop*10)  );
-*/
+                */
 
                 /*
                 ESP_LOGI(TAGWHEELS, "%d,%d,%d,%d, %d,%d,%d,%d",  
@@ -447,14 +448,14 @@ void wheels_task(void *arg){
 
                                         if (wheel_var.joyX > 50) {
                                             wheel_var.vescValueright = wheel_var.vescValueright - valxjoy1fper; //valxjoy1f;
-                                            if(wheel_var.vescValueright < -4.00){
-                                                wheel_var.vescValueright = -4.00;
+                                            if(wheel_var.vescValueright < -2.00){
+                                                wheel_var.vescValueright = -2.00;
                                             }
 
                                         }else if(wheel_var.joyX < 50) {
                                             wheel_var.vescValueLeft = wheel_var.vescValueLeft - valxjoy1fper; //valxjoy1f;
-                                            if(wheel_var.vescValueLeft < -4.00){
-                                                wheel_var.vescValueLeft = -4.00;
+                                            if(wheel_var.vescValueLeft < -2.00){
+                                                wheel_var.vescValueLeft = -2.00;
                                             }
                                         }
                                     }
@@ -862,9 +863,9 @@ void wheels_task(void *arg){
 
 
                                     }else{
-                                        wheel_var.ivescValueLeft = map(leftMotor, -1000, 1000, -1800, 1800);  //700
-                                        wheel_var.ivescValueright = map(rightMotor, -1000, 1000, -1800, 1800);
-                                        rpm_max_setting_spped = 1800;
+                                        wheel_var.ivescValueLeft = map(leftMotor, -1000, 1000, -2500, 2500);  //700
+                                        wheel_var.ivescValueright = map(rightMotor, -1000, 1000, -2500, 2500);
+                                        rpm_max_setting_spped = 2500;
                                     }                              
                                 }
                                 /*

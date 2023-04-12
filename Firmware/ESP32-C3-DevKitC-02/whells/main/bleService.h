@@ -105,4 +105,25 @@ void connected(esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
    // void BLE_Send_Data (void *pvParameter);
 
 
+
+
+
+
+
+
+    struct JOYSTICK_BATTERY_DATA{
+        //dati x far riconoscere al BLE che pacchetto è e che tipo
+        uint8_t type_message;
+     //   uint8_t len_message;
+        int16_t Battery;
+    }__attribute__((packed));
+
+
+
+
+
+
+
+
+
 #endif

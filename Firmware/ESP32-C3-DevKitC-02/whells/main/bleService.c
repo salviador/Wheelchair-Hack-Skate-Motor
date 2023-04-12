@@ -74,7 +74,8 @@ const int BLECONNECTED_BIT_TELEMETRIA =  BIT_2;
 
 
 
-
+struct JOYSTICK_BATTERY_DATA JOYSTICK_BATTERY_DATA_telemetry; 
+unsigned long time_JOY_Send_Telemetry = 0;
 
 
 
@@ -667,6 +668,31 @@ static void gatts_profile_event_handler(esp_gatts_cb_event_t event,
                         memcpy(&ble_data_receiver, param->write.value, param->write.len);
                         //xQueueSend(xQueueJOYData, &ble_data_receiver, (15 / portTICK_PERIOD_MS) );
                         xQueueOverwrite(xQueueJOYData, &ble_data_receiver);
+
+                        
+
+                        //Aggiorna la Telemetria del Joystick(Battery Level) sulla APP Android
+
+                        if((pdTICKS_TO_MS(xTaskGetTickCount() - time_JOY_Send_Telemetry)) > 2000){
+                            time_JOY_Send_Telemetry = xTaskGetTickCount();
+
+                            //ESP_LOGI(GATTS_TABLE_TAG, "time_JOY_Send_Telemetry **UPDATE**");
+
+                            JOYSTICK_BATTERY_DATA_telemetry.type_message = 't';
+                            JOYSTICK_BATTERY_DATA_telemetry.Battery = ble_data_receiver.uvbattery;
+                            if(BLE_SendNotification_Queue != NULL){
+                                if(xMessageBufferSpacesAvailable(BLE_SendNotification_Queue) > sizeof(JOYSTICK_BATTERY_DATA_telemetry)){
+                                    uint8_t * bytePtr = (uint8_t*)&JOYSTICK_BATTERY_DATA_telemetry;
+                                    size_t xBytesSent = xMessageBufferSend(BLE_SendNotification_Queue, bytePtr, sizeof(JOYSTICK_BATTERY_DATA_telemetry) , 0);
+                                }
+                            }
+
+                        }
+
+
+
+
+
                     }
                 }
             }

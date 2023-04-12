@@ -59,9 +59,11 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
     public float Current_INR = 0;
     public short RPM_L = 0;
     public short RPM_R = 0;
+    public short JOYBattery = 0;
 
   public boolean page0 = false;
   public boolean page1 = false;
+  public boolean page2 = false;
 
 //Fragment1
     public TextView textViewCurrentMLeft;
@@ -102,6 +104,7 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
   public ProgressBar progressBarDutyRightPOS;
   public ProgressBar progressBarDutyRightNEG;
 
+  public TextView textViewJOYBatt;
 
 
   public ViewPager viewPager;
@@ -235,6 +238,10 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
                 page1 = true;
                 break;
               case 2:
+                textViewJOYBatt = (TextView) findViewById(R.id.textViewJOYBatt);
+                page2 = true;
+
+
                 Log.i("MAIN2", "position3");
                 break;
               case 3:
@@ -547,6 +554,35 @@ public class MainActivity2 extends FragmentActivity { //Activity ,FragmentActivi
               }
 
               break;
+
+
+            case 't':
+              //JOYSTICK_BATTERY_DATA_telemetry
+              int16_value[0]=value[1];
+              int16_value[1]=value[2];
+              JOYBattery = ByteBuffer.wrap(int16_value).order(ByteOrder.LITTLE_ENDIAN).getShort();
+              if(page2 && (viewPager.getCurrentItem()==2)) {
+                textViewJOYBatt.setText(String.format("%.2f", (float)JOYBattery/1000.00) + " V");
+              }
+//                        Log.i("TELEMETRIA", "TachimetroL=" + TachimetroL);
+
+              break;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             default:
               break;
           }

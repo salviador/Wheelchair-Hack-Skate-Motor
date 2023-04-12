@@ -48,6 +48,7 @@ public class Main2_activity extends AppCompatActivity {
     public float Current_INR = 0;
     public short RPM_L = 0;
     public short RPM_R = 0;
+    public short JOYBattery = 0;
 
 
 
@@ -78,6 +79,8 @@ public class Main2_activity extends AppCompatActivity {
 
     public  ProgressBar progressBarVoltBattery;
     public  TextView idLabelBatteryPercent;
+
+    public TextView idLabelJoyBattery;
 
 
     private Intent mainActivity;
@@ -187,6 +190,8 @@ public class Main2_activity extends AppCompatActivity {
         idLabelBatteryPercent.setText("-- %");
 
 
+        idLabelJoyBattery = (TextView)findViewById(R.id.idLabelJoyBattery);
+        idLabelJoyBattery.setText("--");
 
 
 
@@ -490,6 +495,20 @@ public class Main2_activity extends AppCompatActivity {
 //                        Log.i("TELEMETRIA", "VbatteryR=" + String.format("%.4f",VbatteryR));
 
                         break;
+
+
+                    case 't':
+                        //JOYSTICK_BATTERY_DATA_telemetry
+                        int16_value[0]=value[1];
+                        int16_value[1]=value[2];
+                        JOYBattery = ByteBuffer.wrap(int16_value).order(ByteOrder.LITTLE_ENDIAN).getShort();
+                        idLabelJoyBattery.setText(String.format("%.2f", (float)JOYBattery/1000.00) + " V");
+
+//                        Log.i("TELEMETRIA", "TachimetroL=" + TachimetroL);
+
+                        break;
+
+
                 }
 
 
