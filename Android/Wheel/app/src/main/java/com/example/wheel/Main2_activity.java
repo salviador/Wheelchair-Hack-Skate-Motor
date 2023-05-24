@@ -33,11 +33,24 @@ public class Main2_activity extends AppCompatActivity {
     private  Intent ScanActivity;
     private BLE_ViewModel viewModel;
 
-
+    float Vbatterymedia;
+    //FIR average filter
     public float[] VbatteryAverage;
     public int VbatteryAverageCounter=0;
-    public float VbatteryL = 0;
-    public float VbatteryR = 0;
+    //IIR biquad Filter
+    public float VbatteryIIROut,VbatteryFilter_out;
+    public IIR_Biquads VbatterymediaIIR_Biquads;
+
+    public float[] circularBuffBattColor = new float[30];
+    public int icircularBuffBattColor=0;
+    public float Vbatterycolor=3.5F;
+
+    public float VbatteryL = 0,VbatteryLout;
+    public IIR_Biquads VbatteryLIIR_Biquads;
+    public float VbatteryR = 0,VbatteryRout;
+    public IIR_Biquads VbatteryRIIR_Biquads;
+
+
     public int TachimetroL = 0;
     public int TachimetroR = 0;
     public float Amp_HoursL = 0;
@@ -81,7 +94,8 @@ public class Main2_activity extends AppCompatActivity {
     public  TextView idLabelBatteryPercent;
 
     public TextView idLabelJoyBattery;
-
+    public ProgressBar ProgressBarJoyBattery;
+    public TextView textViewPercJoyBatt;
 
     private Intent mainActivity;
 
@@ -106,6 +120,17 @@ public class Main2_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        VbatterymediaIIR_Biquads = new IIR_Biquads( 0.0004259715733236303,0.0008519431466472606, 0.0004259715733236303,
+                -1.9407775999921872 * -1,  0.9424814862854817 * -1);
+        VbatterymediaIIR_Biquads.setValues(25.0F);
+
+        //Fs 3Hz; Fc 0.02Hz;
+        VbatteryLIIR_Biquads = new IIR_Biquads( 0.0004259715733236303,0.0008519431466472606, 0.0004259715733236303,
+                -1.9407775999921872 * -1,  0.9424814862854817 * -1);
+
+        VbatteryRIIR_Biquads = new IIR_Biquads( 0.0004259715733236303,0.0008519431466472606, 0.0004259715733236303,
+                -1.9407775999921872 * -1,  0.9424814862854817 * -1);
+
 
         final Intent intent = getIntent();
         final Device device = intent.getParcelableExtra(EXTRA_DEVICE);
@@ -114,6 +139,7 @@ public class Main2_activity extends AppCompatActivity {
         final String deviceName = device.getName();
         final String deviceAddress = device.getAddress();
         VbatteryAverage = new float[10];
+
 
 
         // This callback will only be called when MyFragment is at least Started.
@@ -192,8 +218,10 @@ public class Main2_activity extends AppCompatActivity {
 
         idLabelJoyBattery = (TextView)findViewById(R.id.idLabelJoyBattery);
         idLabelJoyBattery.setText("--");
-
-
+        ProgressBarJoyBattery = (ProgressBar)findViewById(R.id.idProgressBarJoyBattery);
+        ProgressBarJoyBattery.setProgress(0);
+        textViewPercJoyBatt = (TextView)findViewById(R.id.textViewPercJoyBatt);
+        textViewPercJoyBatt.setText("-- %");
 
 
 
@@ -413,7 +441,11 @@ public class Main2_activity extends AppCompatActivity {
                         fvalue[2]=value[7];
                         fvalue[3]=value[8];
                         VbatteryL = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-//                        Log.i("TELEMETRIA", "VbatteryL=" + String.format("%.4f",VbatteryL));
+
+                        VbatteryLIIR_Biquads.setValues(VbatteryL);
+                        VbatteryLout = VbatteryLIIR_Biquads.Calc_IIR(VbatteryL);
+
+                        //Log.i("TELEMETRIA", "VbatteryLout=" + String.format("%.4f",VbatteryLout));
                         break;
 
                     case 'h':
@@ -436,10 +468,14 @@ public class Main2_activity extends AppCompatActivity {
                         fvalue[2]=value[7];
                         fvalue[3]=value[8];
                         VbatteryR = ByteBuffer.wrap(fvalue).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-                        float Vbatterymedia = (VbatteryL + VbatteryR)/2;
 
+                        VbatteryRIIR_Biquads.setValues(VbatteryR);
+                        VbatteryRout = VbatteryRIIR_Biquads.Calc_IIR(VbatteryR);
 
+                        Vbatterymedia = (VbatteryLout + VbatteryRout)/2;
 
+                        /*
+                         //FIR Filter
                         VbatteryAverage[VbatteryAverageCounter] = Vbatterymedia;
                         VbatteryAverageCounter++;
                         VbatteryAverageCounter = VbatteryAverageCounter % 10;
@@ -448,47 +484,93 @@ public class Main2_activity extends AppCompatActivity {
                             vbata += VbatteryAverage[VbatteryAverageCounter];
                         }
                         Vbatterymedia = vbata / 10;
+                        */
+
+                        //IIR Biquad Filter
+                                //https://www.earlevel.com/main/2010/12/20/biquad-calculator/
+                                //https://www.earlevel.com/main/2003/02/28/biquads/
+                                //https://www.earlevel.com/main/2021/09/02/biquad-calculator-v3/
+                        VbatterymediaIIR_Biquads.setValues(Vbatterymedia);
+                        VbatteryIIROut = VbatterymediaIIR_Biquads.Calc_IIR(Vbatterymedia);
 
 
 
-
-
-
-
-
-
-
-
-
-                        idLabelBatteryVolt.setText(String.format("%.1f",Vbatterymedia) + " V");
-                        if(Vbatterymedia>25.200001){
-                            Vbatterymedia = (float)25.2000;
+                        VbatteryFilter_out = VbatteryIIROut;
+                        idLabelBatteryVolt.setText(String.format("%.1f",VbatteryIIROut) + " V");
+                        if(VbatteryFilter_out>25.200001){
+                            VbatteryFilter_out = (float)25.2000;
                         };
-                        if(Vbatterymedia<19.640000000){
-                            Vbatterymedia = (float)19.640000000;
+                        if(VbatteryFilter_out<19.640000000){
+                            VbatteryFilter_out = (float)19.640000000;
                         };
                         double calcPercB = 0.00;
-                        if(Vbatterymedia > 22.24) {
+                        if(VbatteryFilter_out > 22.24) {
 //Polynomnial
-                            calcPercB = ((Math.pow(Vbatterymedia, 3) * 1.6921) +
-                                    (Math.pow(Vbatterymedia, 2) * -126.6400) +
-                                    (Vbatterymedia * 3176.7377) - 26611.4262);
-                        }else if((Vbatterymedia > 21.65)&&(Vbatterymedia <= 22.24)) {
-                            calcPercB = ((Math.pow(Vbatterymedia, 2) * 5.107) +
-                                    (Vbatterymedia * -208.58) + 2126.715);
+                            calcPercB = ((Math.pow(VbatteryFilter_out, 3) * 1.6921) +
+                                    (Math.pow(VbatteryFilter_out, 2) * -126.6400) +
+                                    (VbatteryFilter_out * 3176.7377) - 26611.4262);
+                        }else if((VbatteryFilter_out > 21.65)&&(VbatteryFilter_out <= 22.24)) {
+                            calcPercB = ((Math.pow(VbatteryFilter_out, 2) * 5.107) +
+                                    (VbatteryFilter_out * -208.58) + 2126.715);
                         }else{
-                            calcPercB = (Vbatterymedia-19.64)/2.010*5;
+                            calcPercB = (VbatteryFilter_out-19.64)/2.010*5;
                         }
                         if(calcPercB<0.00) calcPercB = 0.000;
 
-
-                        if(Vbatterymedia>=23.25){ //60%
+                        //color battery level
+                        /*
+                        if(VbatteryFilter_out>=23.25){ //60%
                             progressBarVoltBattery.setProgressTintList(ColorStateList.valueOf(Color.BLUE));
-                        }else if((Vbatterymedia<23.25)&&(Vbatterymedia>=22.6)){
+                        }else if((VbatteryFilter_out<23.25)&&(VbatteryFilter_out>=22.6)){
                             progressBarVoltBattery.setProgressTintList(ColorStateList.valueOf(Color.YELLOW));
-                        }else if(Vbatterymedia<22.6){ //30%
+                        }else if(VbatteryFilter_out<22.6){ //30%
                             progressBarVoltBattery.setProgressTintList(ColorStateList.valueOf(Color.RED));
                         }
+                        */
+
+                        if(VbatteryFilter_out>=23.25){ //60%
+                            circularBuffBattColor[icircularBuffBattColor] = 3.500F;
+                            icircularBuffBattColor = icircularBuffBattColor + 1;
+                            icircularBuffBattColor = icircularBuffBattColor % 30;
+
+                        }else if((VbatteryFilter_out<23.25)&&(VbatteryFilter_out>=22.6)){
+                            circularBuffBattColor[icircularBuffBattColor] = 2.500F;
+                            icircularBuffBattColor = icircularBuffBattColor + 1;
+                            icircularBuffBattColor = icircularBuffBattColor % 30;
+
+                        }else if(VbatteryFilter_out<22.6){ //30%
+                            circularBuffBattColor[icircularBuffBattColor] = 1.500F;
+                            icircularBuffBattColor = icircularBuffBattColor + 1;
+                            icircularBuffBattColor = icircularBuffBattColor % 30;
+                        }
+
+
+                        float vbata=0;
+                        for (int i = 0; i < 30; i++) {
+                            vbata += circularBuffBattColor[i];
+                        }
+                        Vbatterycolor = vbata / 30;
+                        if((Vbatterycolor>=3.000)&(Vbatterycolor<4.000)){ //60%
+                            progressBarVoltBattery.setProgressTintList(ColorStateList.valueOf(Color.BLUE));
+                        }else if((Vbatterycolor>=2.000)&(Vbatterycolor<3.000)){
+                            progressBarVoltBattery.setProgressTintList(ColorStateList.valueOf(Color.YELLOW));
+                        }else if(Vbatterycolor<2.000){ //30%
+                            progressBarVoltBattery.setProgressTintList(ColorStateList.valueOf(Color.RED));
+                        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         progressBarVoltBattery.setProgress((int)calcPercB);
                         idLabelBatteryPercent.setText(String.format("%d", (int)calcPercB) + " %");
 
@@ -504,7 +586,19 @@ public class Main2_activity extends AppCompatActivity {
                         JOYBattery = ByteBuffer.wrap(int16_value).order(ByteOrder.LITTLE_ENDIAN).getShort();
                         idLabelJoyBattery.setText(String.format("%.2f", (float)JOYBattery/1000.00) + " V");
 
-//                        Log.i("TELEMETRIA", "TachimetroL=" + TachimetroL);
+                        //1.00*2 = 2.0 V min  --- 1.5*2 = 3 V max
+                        float Vbattjoy = (float) ((float)JOYBattery/1000.00);
+                        if(Vbattjoy > 3.00){
+                            Vbattjoy = 3.00F;
+                        }
+                        if(Vbattjoy < 2.00){
+                            Vbattjoy = 2.00F;
+                        }
+                        float calcPercBjoy = (Vbattjoy - 2.0F) * (100/(3.0F - 2.0F));
+                        ProgressBarJoyBattery.setProgress((int)calcPercBjoy);
+                        textViewPercJoyBatt.setText(String.format("%d", (int)calcPercBjoy) + " %");
+
+                        //Log.i("TELEMETRIA", "JOYBattery=" + JOYBattery);
 
                         break;
 
